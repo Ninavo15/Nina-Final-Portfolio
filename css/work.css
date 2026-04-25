@@ -1,0 +1,217 @@
+.work-content {
+  padding: 3rem 3rem 4rem;
+}
+
+/* ── Header row ── */
+.work-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 0.0625rem solid #642052;
+}
+
+.work-title {
+  font-family: "Newsreader", serif;
+  font-size: 4.25rem;
+  font-weight: 700;
+  color: #642052;
+  margin: 0;
+  line-height: 1;
+}
+
+.work-subtitle {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.875rem;
+  color: #b89aaa;
+  letter-spacing: 0.05em;
+  margin: 0.4rem 0 0;
+}
+
+.work-filters {
+  display: flex;
+  gap: 0.625rem;
+  padding-top: 0.75rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+  border: 0.0625rem solid #642052;
+  background: none;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: #642052;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #642052;
+  color: #fff;
+}
+
+/* ── Featured card ── */
+.project-featured {
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0.125rem 1rem rgba(0, 0, 0, 0.06);
+  text-decoration: none;
+  display: block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-featured:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.featured-img {
+  width: 100%;
+  height: 18rem;
+  object-fit: cover;
+  display: block;
+}
+
+.featured-img-placeholder {
+  width: 100%;
+  height: 18rem;
+  background: #d4ceca;
+}
+
+.featured-info {
+  padding: 1.25rem 1.5rem 1.75rem;
+  background: #faf7f5;
+}
+
+.featured-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.project-tags {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.project-tag {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #b089a8;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  background: none;
+}
+
+.project-tag + .project-tag::before {
+  content: " · ";
+  color: #c9afc4;
+  font-weight: 400;
+  margin: 0 0.25rem;
+}
+
+.project-arrow {
+  font-size: 1.25rem;
+  color: #b89aaa;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.project-featured:hover .project-arrow,
+.project-card:hover .project-arrow {
+  color: #642052;
+  transform: translateX(0.25rem);
+}
+
+.featured-name {
+  font-family: "Newsreader", serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.5rem;
+}
+
+.featured-desc {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9375rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Secondary cards grid ── */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0.125rem 1rem rgba(0, 0, 0, 0.06);
+  text-decoration: none;
+  display: block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+  width: 100%;
+  height: 11rem;
+  object-fit: cover;
+  display: block;
+}
+
+.card-img-placeholder {
+  width: 100%;
+  height: 11rem;
+  background: #d4ceca;
+}
+
+.card-info {
+  padding: 0.875rem 1rem 1.25rem;
+  background: #faf7f5;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.card-name {
+  font-family: "Newsreader", serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.25rem;
+}
+
+.card-desc {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.8125rem;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}

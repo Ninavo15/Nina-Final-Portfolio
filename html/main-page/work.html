@@ -2,23 +2,124 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script>var _cursorKill=document.createElement("style");_cursorKill.textContent="*,a,button,[href],[tabindex]{cursor:none!important}";document.head.appendChild(_cursorKill);</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Work — Nina Vo</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=Newsreader:ital,wght@0,400;1,400&display=swap"
       rel="stylesheet"
     />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../../css/main.css" />
-    <link rel="stylesheet" href="../../css/nav.css" />
-    <link rel="stylesheet" href="../../css/footer.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/components/cursor.css" />
+    <link rel="stylesheet" href="../../css/components/nav.css" />
+    <link rel="stylesheet" href="../../css/work.css" />
+    <link rel="stylesheet" href="../../css/components/footer.css" />
   </head>
   <body>
     <div id="nav-placeholder"></div>
     <main class="page-body">
-      <!-- Work content goes here -->
+      <div class="work-content">
+        <!-- Header -->
+        <div class="work-header">
+          <div>
+            <h1 class="work-title">My Projects</h1>
+            <p class="work-subtitle">newest — oldest</p>
+          </div>
+          <div class="work-filters">
+            <button class="filter-btn active" data-filter="all">ALL</button>
+            <button class="filter-btn" data-filter="web">WEB</button>
+            <button class="filter-btn" data-filter="3d">3D</button>
+            <button class="filter-btn" data-filter="ui">UI</button>
+          </div>
+        </div>
+
+        <!-- Featured project -->
+        <a
+          href="../project/project1.html"
+          class="project-featured fade-up"
+          data-categories="web,ui"
+        >
+          <div class="featured-img-placeholder"></div>
+          <div class="featured-info">
+            <div class="featured-meta">
+              <div class="project-tags">
+                <span class="project-tag">UI DESIGN</span>
+                <span class="project-tag">WEBSITE</span>
+              </div>
+            </div>
+            <h2 class="featured-name">YumMeal Website</h2>
+            <p class="featured-desc">
+              An all-in-one meal planning web app that helps users plan their meals, find recipes, and save and share their own recipe with everyone
+            </p>
+          </div>
+        </a>
+
+        <!-- Secondary cards -->
+        <div class="projects-grid">
+          <a
+            href="../project/project2.html"
+            class="project-card fade-up"
+            data-categories="web"
+          >
+            <div class="card-img-placeholder"></div>
+            <div class="card-info">
+              <div class="card-meta">
+                <div class="project-tags">
+                  <span class="project-tag">WEB DEV</span>
+                </div>
+              </div>
+              <h3 class="card-name">Project</h3>
+              <p class="card-desc">
+                Brief description of this project and what you built.
+              </p>
+            </div>
+          </a>
+          <a
+            href="../project/project3.html"
+            class="project-card fade-up"
+            data-categories="3d"
+          >
+            <div class="card-img-placeholder"></div>
+            <div class="card-info">
+              <div class="card-meta">
+                <div class="project-tags">
+                  <span class="project-tag">3D</span>
+                </div>
+              </div>
+              <h3 class="card-name">Project</h3>
+              <p class="card-desc">
+                Brief description of this project and what you built.
+              </p>
+            </div>
+          </a>
+          <a
+            href="../project/project4.html"
+            class="project-card fade-up"
+            data-categories="ui"
+          >
+            <div class="card-img-placeholder"></div>
+            <div class="card-info">
+              <div class="card-meta">
+                <div class="project-tags">
+                  <span class="project-tag">GAME DEV</span>
+                </div>
+              </div>
+              <h3 class="card-name">Project</h3>
+              <p class="card-desc">
+                Brief description of this project and what you built.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
     </main>
     <div id="footer-placeholder"></div>
     <script src="../../js/components.js"></script>
+    <script src="../../js/animations.js"></script>
+    <script src="../../js/work.js"></script>
   </body>
 </html>

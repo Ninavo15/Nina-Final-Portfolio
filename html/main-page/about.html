@@ -2,24 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script>var _cursorKill=document.createElement("style");_cursorKill.textContent="*,a,button,[href],[tabindex]{cursor:none!important}";document.head.appendChild(_cursorKill);</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About — Nina Vo</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=Newsreader:ital,wght@0,400;1,400&display=swap"
       rel="stylesheet"
     />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../../css/main.css" />
-    <link rel="stylesheet" href="../../css/nav.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/components/cursor.css" />
+    <link rel="stylesheet" href="../../css/components/nav.css" />
     <link rel="stylesheet" href="../../css/about.css" />
-    <link rel="stylesheet" href="../../css/footer.css" />
+    <link rel="stylesheet" href="../../css/components/footer.css" />
   </head>
   <body>
     <div id="nav-placeholder"></div>
     <main class="page-body">
       <!-- Bio -->
-      <div class="bio-section">
-        <img src="../../image/nina.jpg" alt="Nina Vo" class="bio-photo" />
+      <div class="bio-section fade-up">
+        <div class="bio-photo-wrap">
+          <img src="../../image/nina.jpg" alt="Nina Vo" class="bio-photo" />
+        </div>
         <div class="bio-left">
           <div class="bio-name-row">
             <h1 class="bio-name">Nina Vo</h1>
@@ -58,17 +65,18 @@
             <span class="field-value"
               >A student based in Vancouver with a huge passion for building
               digital experiences across web, mobile and game — blending
-              engineering and UI design to make interactions feel effortless.</span
+              engineering and UI design to make interactions feel
+              effortless.</span
             >
           </div>
         </div>
       </div>
 
       <!-- TABLE OF NINA header -->
-      <div class="about-header table-header">TABLE OF NINA</div>
+      <div class="about-header table-header fade-up">TABLE OF NINA</div>
 
       <!-- Table -->
-      <div class="info-table">
+      <div class="info-table fade-up">
         <!-- Education -->
         <div class="table-row">
           <div class="row-label">Education</div>
@@ -130,10 +138,20 @@
                 Tech skills <span class="arrow">&#8964;</span>
               </div>
               <div class="sub-content">
-                <ul>
-                  <li>HTML/CSS / JavaScript</li>
-                  <li>Java</li>
-                </ul>
+                <div class="two-col">
+                  <ul>
+                    <li>HTML/CSS / JavaScript</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                  </ul>
+                  <ul>
+                    <li>React.js</li>
+                    <li>Node.js + Express.js</li>
+                    <li>MongoDB</li>
+                    <li>JavaScript</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -145,26 +163,58 @@
           <div class="row-content">
             <div class="sub-section last">
               <div class="sub-header expandable">
-                Design software <span class="arrow">&#8964;</span>
+                Software <span class="arrow">&#8964;</span>
               </div>
               <div class="sub-content">
-                <div class="two-col">
-                  <ul>
-                    <li>Maya</li>
-                    <li>Blender</li>
-                    <li>IbisPaint</li>
-                    <li>Procreate</li>
-                    <li>Adobe Illustrator</li>
-                    <li>Adobe Photoshop</li>
-                  </ul>
-                  <ul>
-                    <li>Adobe Premiere Pro</li>
-                    <li>Filmora 9</li>
-                    <li>CapCut</li>
-                    <li>Visual Studio Code</li>
-                    <li>Eclipse</li>
-                    <li>Figma</li>
-                  </ul>
+                <div class="software-grid">
+                  <div class="software-item">
+                    <div class="software-icon-box"><img src="../../image/software logo/blender.jpeg" alt="Blender" class="software-logo software-logo--sq" /></div>
+                    <span>Blender</span>
+                  </div>
+                  <div class="software-item">
+                    <div class="software-icon-box"><img src="../../image/software logo/ibis.jpeg" alt="IbisPaint" class="software-logo software-logo--sq" /></div>
+                    <span>IbisPaint</span>
+                  </div>
+                  <div class="software-item">
+                    <div class="software-icon-box"><img src="../../image/software logo/pro.jpeg" alt="Procreate" class="software-logo software-logo--sq" /></div>
+                    <span>Procreate</span>
+                  </div>
+                  <div class="software-item">
+                    <div class="software-icon-box"><img src="../../image/software logo/ilustrator.png" alt="Adobe Illustrator" class="software-logo" /></div>
+                    <span>Illustrator</span>
+                  </div>
+                  <div class="software-item">
+                    <div class="software-icon-box"><img src="../../image/software logo/photoshop.png" alt="Adobe Photoshop" class="software-logo" /></div>
+                    <span>Photoshop</span>
+                  </div>
+                  <div class="software-item">
+                    <div class="software-icon-box"><img src="../../image/software logo/premier.png" alt="Adobe Premiere Pro" class="software-logo" /></div>
+                    <span>Premiere Pro</span>
+                  </div>
+                  <div class="software-item">
+                    <div class="software-icon-box"><img src="../../image/software logo/after effect.png" alt="After Effects" class="software-logo" /></div>
+                    <span>After Effects</span>
+                  </div>
+                  <div class="software-item">
+                    <div class="software-icon-box"><img src="../../image/software logo/filmora.jpeg" alt="Filmora" class="software-logo software-logo--sq" /></div>
+                    <span>Filmora</span>
+                  </div>
+                  <div class="software-item">
+                    <div class="software-icon-box"><img src="../../image/software logo/figma.png" alt="Figma" class="software-logo" /></div>
+                    <span>Figma</span>
+                  </div>
+                  <div class="software-item">
+                    <div class="software-icon-box"><img src="../../image/software logo/Visual Code.jpeg" alt="VS Code" class="software-logo software-logo--sq" /></div>
+                    <span>VS Code</span>
+                  </div>
+                  <div class="software-item">
+                    <div class="software-icon-box"><img src="../../image/software logo/eclipse.jpeg" alt="Eclipse" class="software-logo software-logo--sq" /></div>
+                    <span>Eclipse</span>
+                  </div>
+                  <div class="software-item">
+                    <div class="software-icon-box"><img src="../../image/software logo/unity.jpeg" alt="Unity" class="software-logo software-logo--sq" /></div>
+                    <span>Unity</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -173,30 +223,23 @@
       </div>
 
       <!-- Quote -->
-      <div class="quote-section">
-        <div class="stars">&#10022; &nbsp; &#10022; &nbsp; &#10022;</div>
+      <div class="quote-section fade-up">
+        <span class="quote-star quote-star--l1">&#9734;</span>
+        <span class="quote-star quote-star--l2">&#9734;</span>
+        <span class="quote-star quote-star--l3">&#9734;</span>
+        <span class="quote-star quote-star--r1">&#9734;</span>
+        <span class="quote-star quote-star--r2">&#9734;</span>
+        <span class="quote-star quote-star--r3">&#9734;</span>
         <p class="quote-text">
-          "I love building worlds that feel warm,<br />whimsical at heart, and
+          "I love building worlds that feel warm, whimsical at heart, and
           thoughtfully crafted."
         </p>
         <p class="quote-sig">- Nina Vo -</p>
-        <div class="stars">&#10022; &nbsp; &#10022; &nbsp; &#10022;</div>
       </div>
     </main>
     <div id="footer-placeholder"></div>
     <script src="../../js/components.js"></script>
-    <script>
-      document.querySelectorAll(".sub-header.expandable").forEach(header => {
-        const content = header.nextElementSibling;
-        const arrow = header.querySelector(".arrow");
-        content.classList.add("collapsed");
-        arrow.style.transform = "rotate(-90deg)";
-
-        header.addEventListener("click", () => {
-          const collapsed = content.classList.toggle("collapsed");
-          arrow.style.transform = collapsed ? "rotate(-90deg)" : "rotate(0deg)";
-        });
-      });
-    </script>
+    <script src="../../js/expand.js"></script>
+    <script src="../../js/animations.js"></script>
   </body>
 </html>
