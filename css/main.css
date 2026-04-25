@@ -1,0 +1,95 @@
+/* ── Reset ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Variables ── */
+:root {
+  --brand: #962d7a;
+  --font: "DM Sans", sans-serif;
+  --card-bg: rgba(250, 243, 248, 0.97);
+  --accent: #1a6ed8;
+  --text: #111;
+  --muted: #555;
+  --divider: #ddd;
+  --texture: url("../image/bg texture.jpg");
+}
+
+/* ── Base body ── */
+body {
+  background: var(--brand);
+  position: relative;
+}
+
+/* ── Card ── */
+.airdrop-card {
+  background: var(--card-bg);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  animation: popUp 0.45s cubic-bezier(0.34, 1.45, 0.64, 1) both;
+}
+
+@keyframes popUp {
+  from {
+    opacity: 0;
+    transform: scale(0.72) translateY(3.125rem);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.ad-body {
+  padding: 2rem 1.875rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ad-title {
+  font-family: var(--font);
+  font-weight: 700;
+  color: var(--text);
+}
+
+.ad-sub {
+  font-family: var(--font);
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.ad-hr {
+  height: 0.03125rem;
+  background: var(--divider);
+}
+
+.ad-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background: none;
+  border: none;
+  font-family: var(--font);
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  color: var(--accent);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.ad-btn:hover {
+  background: #f4ecf6;
+}
+.ad-btn:active {
+  transform: scale(0.97);
+}

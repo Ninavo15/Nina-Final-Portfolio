@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nina Vo — Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=Newsreader:ital,wght@0,400;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" as="image" href="../../image/bg texture.jpg" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/welcome.css" />
+  </head>
+  <body>
+    <!-- Loading overlay (removed after animation) -->
+    <div id="loading-overlay">
+      <div class="airdrop-card">
+        <div class="ad-body">
+          <div class="icon-wrap" id="iconWrap">
+            <div class="spinner-ring"></div>
+            <div class="check-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+          </div>
+          <p class="ad-title" id="adTitle">Receiving&hellip;</p>
+          <p class="ad-sub">Nina Vo's Portfolio</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Welcome content (revealed after loading) -->
+    <div id="welcome-content">
+      <!-- Folder stack (back → front) -->
+      <div class="folder folder-resume" data-page="resume">
+        <span class="folder-tab" data-page="resume">RESUME</span>
+      </div>
+      <div class="folder folder-extra" data-page="extra">
+        <span class="folder-tab" data-page="extra">EXTRA</span>
+      </div>
+      <div class="folder folder-work" data-page="work">
+        <span class="folder-tab" data-page="work">WORK</span>
+      </div>
+      <div class="folder folder-about" data-page="about">
+        <span class="folder-tab" data-page="about">ABOUT</span>
+
+      </div>
+
+      <!-- Notepad -->
+      <div class="notepad">
+        <img class="note-img" src="../../image/note.png" alt="notepad" />
+        <img class="clip-img" src="../../image/clip.png" alt="binder clip" />
+      </div>
+    </div>
+
+    <script src="../../js/welcome.js"></script>
+  </body>
+</html>

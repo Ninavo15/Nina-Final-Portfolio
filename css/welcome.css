@@ -1,0 +1,302 @@
+body {
+  min-height: 100dvh;
+  overflow: hidden;
+  font-family: var(--font);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: var(--texture) center / cover no-repeat;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Loading overlay ── */
+#loading-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transition: opacity 0.5s ease;
+}
+
+#loading-overlay.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#loading-overlay .airdrop-card {
+  width: 22.5rem;
+}
+
+#loading-overlay .ad-title {
+  font-size: 1.875rem;
+  transition: opacity 0.35s ease;
+}
+
+.icon-wrap {
+  width: 3.5rem;
+  height: 3.5rem;
+  position: relative;
+}
+
+.spinner-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 0.25rem solid rgba(26, 110, 216, 0.18);
+  border-top-color: var(--accent);
+  animation: spin 0.9s linear infinite;
+  transition:
+    opacity 0.45s ease,
+    transform 0.45s ease;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.check-circle {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #34c759;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.65);
+  transition:
+    opacity 0.45s ease 0.2s,
+    transform 0.5s cubic-bezier(0.34, 1.4, 0.64, 1) 0.2s;
+}
+
+.check-circle svg {
+  width: 1.75rem;
+  height: 1.75rem;
+  stroke: #fff;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.check-circle svg path {
+  stroke-dasharray: 40;
+  stroke-dashoffset: 40;
+  transition: stroke-dashoffset 0.45s ease 0.55s;
+}
+
+.icon-wrap.done .spinner-ring {
+  opacity: 0;
+  transform: scale(1.15);
+}
+.icon-wrap.done .check-circle {
+  opacity: 1;
+  transform: scale(1);
+}
+.icon-wrap.done .check-circle svg path {
+  stroke-dashoffset: 0;
+}
+
+/* ── Welcome content ── */
+#welcome-content {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#welcome-content.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#welcome-content.visible .folder {
+  animation: folderSlideUp 0.6s cubic-bezier(0.34, 1.2, 0.64, 1) both;
+}
+
+#welcome-content.visible .folder-resume {
+  animation-delay: 0s;
+}
+#welcome-content.visible .folder-extra {
+  animation-delay: 0.08s;
+}
+#welcome-content.visible .folder-work {
+  animation-delay: 0.16s;
+}
+#welcome-content.visible .folder-about {
+  animation-delay: 0.24s;
+}
+
+@keyframes folderSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(3.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#welcome-content.visible .notepad {
+  animation: notepadFadeIn 0.6s ease 0.4s both;
+}
+
+@keyframes notepadFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ── Folders ── */
+.folder {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.folder::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../image/folder_texture.png") 50% / cover no-repeat;
+  opacity: 0.58;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.folder-resume {
+  top: 10vh;
+  background: #764969;
+  z-index: 1;
+}
+.folder-extra {
+  top: 21vh;
+  background: #445881;
+  z-index: 2;
+}
+.folder-work {
+  top: 32vh;
+  background: #6491b1;
+  z-index: 3;
+}
+.folder-about {
+  top: 43vh;
+  background: #f0b8d0;
+  z-index: 4;
+}
+
+/* ── Folder tabs ── */
+.folder-tab {
+  position: absolute;
+  transform: translateY(-100%);
+  width: 12.1875rem;
+  height: 3.4375rem;
+  display: inline-flex;
+  align-items: flex-end;
+  padding-bottom: 0.125rem;
+  justify-content: center;
+  border-radius: 1.8125rem 1.8125rem 0 0;
+  background: inherit;
+  overflow: hidden;
+  isolation: isolate;
+  color: #fcfff1;
+  text-align: center;
+  font-family: "Newsreader", serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.folder-resume:hover {
+  background: #f6f1ed;
+}
+.folder-extra:hover {
+  background: #f6f1ed;
+}
+.folder-work:hover {
+  background: #f6f1ed;
+}
+.folder-about:hover {
+  background: #f6f1ed;
+}
+
+.folder-resume:hover .folder-tab {
+  color: #764969;
+}
+.folder-extra:hover .folder-tab {
+  color: #445881;
+}
+.folder-work:hover .folder-tab {
+  color: #6491b1;
+}
+.folder-about:hover .folder-tab {
+  color: #f0b8d0;
+}
+
+.folder-tab::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../image/folder_texture.png") 50% / cover no-repeat;
+  opacity: 0.58;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.folder-resume .folder-tab {
+  right: 8%;
+}
+.folder-extra .folder-tab {
+  left: 18%;
+}
+.folder-work .folder-tab {
+  left: 43%;
+}
+.folder-about .folder-tab {
+  left: 0;
+  border-radius: 0 1.8125rem 0 0;
+}
+
+
+/* ── Notepad ── */
+.notepad {
+  position: fixed;
+  top: 40vh;
+  left: 10vw;
+  width: clamp(17.5rem, 40vw, 34.375rem);
+  z-index: 10;
+  transform: rotate(-2deg);
+}
+
+.note-img {
+  width: 100%;
+  display: block;
+  filter: drop-shadow(0.375rem 0.625rem 1.75rem rgba(0, 0, 0, 0.25));
+}
+
+.clip-img {
+  position: absolute;
+  top: -18%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24%;
+  z-index: 11;
+}

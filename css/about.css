@@ -1,0 +1,265 @@
+.page-body {
+  padding: 3rem 3rem 4rem;
+}
+
+/* ── Headers ── */
+.about-header {
+  background: #642052;
+  color: #fff;
+  font-family: "Newsreader", serif;
+  font-weight: bold;
+  font-size: 1.875rem;
+  letter-spacing: 0.08em;
+  padding: 1.25rem 0.625rem 0.625rem;
+  text-align: left;
+}
+
+
+.table-header {
+  margin-top: 4rem;
+  text-align: left;
+  font-family: "Newsreader", serif;
+}
+
+/* ── Bio ── */
+.bio-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  padding: 2rem 0 0;
+  position: relative;
+}
+
+
+.bio-left {
+  flex: 1;
+  font-family: "DM Sans", sans-serif;
+}
+
+.bio-name-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.bio-name {
+  font-family: "Newsreader", serif;
+  font-size: 4.25rem;
+  font-weight: 700;
+  color: #642052;
+  margin: 0;
+  line-height: 1;
+}
+
+.bio-field {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 1rem 0;
+  border-bottom: 0.0625rem solid #642052;
+}
+
+.bio-field.last-field {
+  border-bottom: none;
+}
+
+.field-label {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #7a5a6e;
+  min-width: 9.375rem;
+  flex-shrink: 0;
+  padding-top: 0.1875rem;
+}
+
+.field-value {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.7;
+}
+
+.bio-photo {
+  width: 21.25rem;
+  height: 26.25rem;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  flex-shrink: 0;
+  border: 0.25rem solid #642052;
+}
+
+/* ── Table ── */
+.info-table {
+  border: 0.09375rem solid #b89aaa;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.875rem;
+  color: #1a1a1a;
+}
+
+.table-row {
+  display: flex;
+  border-bottom: 0.09375rem solid #b89aaa;
+}
+
+
+.table-row.last-row {
+  border-bottom: none;
+}
+
+.row-label {
+  width: 10rem;
+  flex-shrink: 0;
+  padding: 1.25rem 1.125rem;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #642052;
+  border-right: 0.09375rem solid #b89aaa;
+}
+
+.row-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-section {
+  padding: 1.125rem 1.5rem;
+  border-bottom: 0.0625rem solid #ddd0d8;
+}
+
+.sub-section.last {
+  border-bottom: none;
+}
+
+.sub-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #642052;
+  margin-bottom: 0.625rem;
+}
+
+.sub-header.expandable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.sub-header.expandable:hover {
+  opacity: 0.75;
+}
+
+.arrow {
+  color: #642052;
+  font-size: 1.125rem;
+  transition: transform 0.25s ease;
+  display: inline-block;
+}
+
+.sub-content {
+  overflow: hidden;
+  transition: opacity 0.25s ease, max-height 0.35s ease;
+  max-height: 37.5rem;
+  opacity: 1;
+}
+
+.sub-content.collapsed {
+  max-height: 0;
+  opacity: 0;
+}
+
+.sub-header.expandable:has(+ .sub-content.collapsed) {
+  margin-bottom: 0;
+}
+
+.sub-section p {
+  margin: 0;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.two-col {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.two-col ul,
+.sub-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.two-col ul li,
+.sub-section ul li {
+  font-size: 0.9375rem;
+  line-height: 2;
+}
+
+.two-col ul li::before,
+.sub-section ul li::before {
+  content: "• ";
+  color: #642052;
+}
+
+/* ── Quote ── */
+.quote-section {
+  padding: 3rem 1.25rem 4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stars {
+  color: #c4a0b8;
+  font-size: 1.25rem;
+  letter-spacing: 0.375rem;
+}
+
+.quote-text {
+  font-family: "Caveat", cursive;
+  font-size: 3rem;
+  color: #642052;
+  line-height: 1.5;
+  margin: 0.5rem 0 0;
+}
+
+.quote-sig {
+  font-family: "Caveat", cursive;
+  font-size: 2rem;
+  color: #642052;
+  margin: 0.25rem 0 0.5rem;
+}
+
+/* ── Social links ── */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.social-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 0.125rem solid #642052;
+  color: #642052;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.375rem;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.social-icon:hover {
+  background: #642052;
+  color: #fff;
+}

@@ -1,0 +1,118 @@
+/* ── Page background + texture ── */
+body {
+  min-height: 100dvh;
+  background: #962d7a;
+  overflow-x: hidden;
+  font-family: var(--font);
+}
+
+
+/* ── Shared site navbar ── */
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5.625rem;
+  background: #962d7a;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 2rem 0;
+  gap: 0.5rem;
+  z-index: 500;
+  overflow: hidden;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.site-nav.scrolled {
+  border-bottom: 1.25rem solid #f6f1ed;
+}
+
+.site-nav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--texture) center / cover no-repeat;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.nav-tab {
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 0.125rem;
+  width: 12.1875rem;
+  height: 3.4375rem;
+  border-radius: 1.8125rem 1.8125rem 0 0;
+  font-family: "Newsreader", serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 100%;
+  color: #fcfff1;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+  overflow: hidden;
+  isolation: isolate;
+  position: relative;
+}
+
+.nav-tab::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../image/folder_texture.png") 50% / cover no-repeat;
+  opacity: 0.58;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.tab-about {
+  background: #f0b8d0;
+}
+.tab-extra {
+  background: #445881;
+}
+.tab-work {
+  background: #6491b1;
+}
+.tab-resume {
+  background: #764969;
+}
+
+.tab-about.active,
+.tab-about:hover {
+  background: #f6f1ed;
+  color: #f0b8d0;
+}
+.tab-extra.active,
+.tab-extra:hover {
+  background: #f6f1ed;
+  color: #445881;
+}
+.tab-work.active,
+.tab-work:hover {
+  background: #f6f1ed;
+  color: #6491b1;
+}
+.tab-resume.active,
+.tab-resume:hover {
+  background: #f6f1ed;
+  color: #764969;
+}
+
+.nav-tab.active::after,
+.nav-tab:hover::after {
+  opacity: 0;
+}
+
+/* ── Page body under the navbar ── */
+.page-body {
+  background: #f6f1ed;
+  margin-top: 5.625rem;
+  min-height: 100dvh;
+}
