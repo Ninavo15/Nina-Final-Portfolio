@@ -1,7 +1,8 @@
 (function () {
   // Inject cursor:none via JS — immune to linter stripping, won't trigger MutationObserver
   const cursorKill = document.createElement("style");
-  cursorKill.textContent = "*, *::before, *::after, a, button, input, select, textarea, [href], [tabindex], [role='button'] { cursor: none !important; }";
+  cursorKill.textContent =
+    "*, *::before, *::after, a, button, input, select, textarea, [href], [tabindex], [role='button'] { cursor: none !important; }";
   document.head.appendChild(cursorKill);
 
   const ZOOM = 2.5;
@@ -10,7 +11,8 @@
 
   const wrap = document.createElement("div");
   wrap.className = "magnifier-wrap";
-  wrap.style.cssText = "display:none;position:fixed;pointer-events:none;z-index:99999;";
+  wrap.style.cssText =
+    "display:none;position:fixed;pointer-events:none;z-index:99999;";
 
   const lens = document.createElement("div");
   lens.className = "magnifier-lens";
@@ -22,7 +24,8 @@
   handle.className = "magnifier-handle";
 
   const cloneRoot = document.createElement("div");
-  cloneRoot.style.cssText = "position:absolute;transform-origin:0 0;pointer-events:none;overflow:visible;";
+  cloneRoot.style.cssText =
+    "position:absolute;transform-origin:0 0;pointer-events:none;overflow:visible;";
 
   lens.appendChild(cloneRoot);
   lens.appendChild(glare);
@@ -31,33 +34,40 @@
   document.body.appendChild(wrap);
 
   let hoverCSS = "";
+  let fixedClones = []; // track cloned fixed elements to update on scroll
 
   function buildClone() {
     cloneRoot.innerHTML = "";
-    cloneRoot.style.width  = window.innerWidth + "px";
-    cloneRoot.style.height = Math.max(document.body.scrollHeight, window.innerHeight) + "px";
+    fixedClones = [];
+    cloneRoot.style.width = window.innerWidth + "px";
+    cloneRoot.style.height =
+      Math.max(document.body.scrollHeight, window.innerHeight) + "px";
 
-    Array.from(document.body.children).forEach(child => {
+    Array.from(document.body.children).forEach((child) => {
       if (child === wrap) return;
       const node = child.cloneNode(true);
       if (window.getComputedStyle(child).position === "fixed") {
         const r = child.getBoundingClientRect();
         node.style.position = "absolute";
-        node.style.top  = (r.top + window.scrollY) + "px";
         node.style.left = r.left + "px";
         node.style.width = r.width + "px";
+        node.style.top = r.top + window.scrollY + "px";
+        // Remember viewport top so we can keep it in sync on scroll
+        fixedClones.push({ node, viewportTop: r.top });
       }
       cloneRoot.appendChild(node);
     });
 
-    cloneRoot.querySelectorAll(".fade-up").forEach(el => el.classList.add("visible"));
-    cloneRoot.querySelectorAll("script").forEach(el => el.remove());
+    cloneRoot
+      .querySelectorAll(".fade-up")
+      .forEach((el) => el.classList.add("visible"));
+    cloneRoot.querySelectorAll("script").forEach((el) => el.remove());
 
     if (!hoverCSS) {
       const extraCSS = [];
-      Array.from(document.styleSheets).forEach(sheet => {
+      Array.from(document.styleSheets).forEach((sheet) => {
         try {
-          Array.from(sheet.cssRules).forEach(rule => {
+          Array.from(sheet.cssRules).forEach((rule) => {
             if (rule.selectorText && rule.selectorText.includes(":hover")) {
               const sel = rule.selectorText.replace(/:hover/g, "._hovered");
               extraCSS.push(sel + "{" + rule.style.cssText + "}");
@@ -87,7 +97,7 @@
     // Watching style would fire on every cursor:none change and wipe hover state
     new MutationObserver((mutations) => {
       // Ignore mutations from inside the magnifier (e.g. _hovered class on clone)
-      if (mutations.every(m => wrap.contains(m.target))) return;
+      if (mutations.every((m) => wrap.contains(m.target))) return;
       scheduleRebuild();
     }).observe(document.body, {
       subtree: true,
@@ -120,13 +130,17 @@
   }
 
   let lastHovered = [];
-  let curMx = -1, curMy = -1;
+  let curMx = -1,
+    curMy = -1;
 
   function updateLens(mx, my) {
     const docY = my + window.scrollY;
     cloneRoot.style.transform = "scale(" + ZOOM + ")";
-    cloneRoot.style.left = (R - ZOOM * mx) + "px";
-    cloneRoot.style.top  = (R - ZOOM * docY) + "px";
+    cloneRoot.style.left = R - ZOOM * mx + "px";
+    cloneRoot.style.top = R - ZOOM * docY + "px";
+    fixedClones.forEach(({ node, viewportTop }) => {
+      node.style.top = viewportTop + window.scrollY + "px";
+    });
   }
 
   document.addEventListener("mousemove", (e) => {
@@ -135,11 +149,11 @@
 
     wrap.style.display = "block";
     wrap.style.left = curMx + "px";
-    wrap.style.top  = curMy + "px";
+    wrap.style.top = curMy + "px";
 
     updateLens(curMx, curMy);
 
-    lastHovered.forEach(el => el.classList.remove("_hovered"));
+    lastHovered.forEach((el) => el.classList.remove("_hovered"));
     lastHovered = [];
     const hit = document.elementFromPoint(curMx, curMy);
     if (hit && !wrap.contains(hit)) {

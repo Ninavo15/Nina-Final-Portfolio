@@ -44,10 +44,6 @@ summary, details {
   z-index: 2;
 }
 
-.magnifier-frame {
-  pointer-events: none;
-}
-
 /* Handle */
 .magnifier-handle {
   position: absolute;
