@@ -2,10 +2,28 @@
   background: #642052;
   color: #fff;
   font-family: "DM Sans", sans-serif;
+  overflow: visible;
 }
 
 .footer-main {
-  padding: 3.5rem 3rem 2.5rem;
+  padding: 3.5rem 3rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow: visible;
+}
+
+.footer-right {
+  flex-shrink: 0;
+  line-height: 0;
+  margin-top: -10rem;
+}
+
+.footer-id-card {
+  width: 50rem;
+  display: block;
+  transform: rotate(-9deg);
+  transform-origin: bottom right;
 }
 
 .footer-title {
