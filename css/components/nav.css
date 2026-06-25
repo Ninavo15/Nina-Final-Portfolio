@@ -1,9 +1,19 @@
 /* ── Page background + texture ── */
+html {
+  background: #642052;
+}
+
 body {
   min-height: 100dvh;
   background: #962d7a;
   overflow-x: hidden;
   font-family: var(--font);
+  display: flex;
+  flex-direction: column;
+}
+
+.page-body {
+  flex: 1;
 }
 
 

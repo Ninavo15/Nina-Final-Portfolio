@@ -41,4 +41,18 @@ Promise.all([
   window.addEventListener("scroll", () => {
     nav.classList.toggle("scrolled", window.scrollY > 20);
   });
+
+  const footer = document.querySelector(".site-footer");
+  if (footer) {
+    const footerObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          footer.classList.add("footer-visible");
+          footerObserver.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    footerObserver.observe(footer);
+  }
 });
