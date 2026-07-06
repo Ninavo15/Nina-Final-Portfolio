@@ -341,13 +341,13 @@
 }
 
 .quote-stars--tr {
-  top: 3rem;
-  right: 4rem;
+  top: 10rem;
+  right: 2rem;
 }
 
 .quote-stars--bl {
-  bottom: 3rem;
-  left: 4rem;
+  bottom: 10rem;
+  left: 2rem;
 }
 
 .quote-star {
@@ -364,43 +364,42 @@
 }
 
 .quote-star--1 {
-  font-size: 3.25rem;
+  font-size: 4.25rem;
 }
 
 .quote-star--2 {
-  font-size: 1.75rem;
+  font-size: 2.75rem;
   transition-delay: 0.1s;
 }
 
 .quote-star--3 {
-  font-size: 1.1rem;
+  font-size: 2.1rem;
   transition-delay: 0.2s;
 }
 
 .quote-stars--tr .quote-star--1 {
-  top: 3.5rem;
+  top: 5.5rem;
   right: 0.5rem;
 }
 .quote-stars--tr .quote-star--2 {
-  top: 1.5rem;
-  right: 3.5rem;
+  top: 2rem;
+  right: 4.3rem;
 }
 .quote-stars--tr .quote-star--3 {
-  top: 0;
-  right: 6.25rem;
+  right: 9.25rem;
 }
 
 .quote-stars--bl .quote-star--1 {
-  bottom: 3.5rem;
+  bottom: 5.5rem;
   left: 0.5rem;
 }
 .quote-stars--bl .quote-star--2 {
-  bottom: 1.5rem;
-  left: 3.5rem;
+  bottom: 2rem;
+  left: 4rem;
 }
 .quote-stars--bl .quote-star--3 {
-  bottom: 0;
-  left: 6.25rem;
+  bottom: 0.5rem;
+  left: 9.25rem;
 }
 
 .word-cycle {
@@ -508,6 +507,37 @@
 .featured-view-all:hover {
   opacity: 1;
   gap: 0.6rem;
+}
+
+/* ── Featured project cards ──
+   work.css's .project-card/.card-img are now built for the Work page's
+   full-screen slide layout, so this preview grid needs its own compact
+   card look (scoped so it doesn't touch the Work page itself). */
+.projects-grid-top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.featured-section .project-card {
+  min-height: 0;
+  display: block;
+  padding: 0;
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0.125rem 1rem rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.featured-section .project-card:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.featured-section .card-img,
+.featured-section .card-img-placeholder {
+  height: 20rem;
 }
 
 /* ── Social links ── */
