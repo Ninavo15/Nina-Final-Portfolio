@@ -364,23 +364,43 @@
 }
 
 .quote-star--1 {
-  top: 0;
-  right: 0;
   font-size: 3.25rem;
 }
 
 .quote-star--2 {
-  top: 3.75rem;
-  right: 3.25rem;
   font-size: 1.75rem;
   transition-delay: 0.1s;
 }
 
 .quote-star--3 {
-  top: 1.25rem;
-  right: 6.25rem;
   font-size: 1.1rem;
   transition-delay: 0.2s;
+}
+
+.quote-stars--tr .quote-star--1 {
+  top: 3.5rem;
+  right: 0.5rem;
+}
+.quote-stars--tr .quote-star--2 {
+  top: 1.5rem;
+  right: 3.5rem;
+}
+.quote-stars--tr .quote-star--3 {
+  top: 0;
+  right: 6.25rem;
+}
+
+.quote-stars--bl .quote-star--1 {
+  bottom: 3.5rem;
+  left: 0.5rem;
+}
+.quote-stars--bl .quote-star--2 {
+  bottom: 1.5rem;
+  left: 3.5rem;
+}
+.quote-stars--bl .quote-star--3 {
+  bottom: 0;
+  left: 6.25rem;
 }
 
 .word-cycle {
