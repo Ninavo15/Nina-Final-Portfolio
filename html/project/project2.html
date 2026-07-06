@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../../css/components/cursor.css" />
     <link rel="stylesheet" href="../../css/components/nav.css" />
     <link rel="stylesheet" href="../../css/project.css" />
+    <link rel="stylesheet" href="../../css/projects/project2.css" />
     <link rel="stylesheet" href="../../css/components/footer.css" />
   </head>
   <body>
@@ -25,7 +26,16 @@
         <div class="project-content">
 
       <!-- Hero -->
-      <div class="project-hero"></div>
+      <div class="project-hero">
+        <video
+          autoplay
+          loop
+          muted
+          playsinline
+          poster="../../image/project 2/recipe remix-poster.png"
+          src="../../image/project 2/recipe remix.mp4"
+        ></video>
+      </div>
 
       <!-- Header -->
       <div class="project-header">
@@ -41,9 +51,20 @@
       <div class="project-body" id="overview">
         <div class="project-overview">
           <p class="section-label">Overview</p>
-          <p>RecipeRemix is an AI-driven website that generates personalised recipe suggestions by combining user dietary preferences, available ingredients, and a taste for cross-cultural cuisine mixing. Users answer a short onboarding flow about their restrictions and favourite cuisines, and the app surfaces recipes that blend traditions in unexpected but delicious ways — think Korean-Mexican fusion or Vietnamese-Italian mashups. The project explores how AI can make cooking more adventurous and accessible.</p>
+          <p>RecipeRemix is not just a standard recipe finder but a computational creative AI system that generates novel yet cookable fusion-remix recipes from user-provided ingredients and preferences such as allergies, dietary restrictions, and time limits. 
+          The system grounds creativity in real recipe patterns through retrieval-augmented generation (RAG) and improves feasibility through a preference-aware validation and sanity-check layer before giving the recipe to you. By adding a blueprint intermediary layer, constraint-aware validation, iterative refinement through feedback, vision-based ingredient extraction from fridge photographs, and AI-generated food photography, the system expands upon traditional retrieval-augmented generation.
+          </p>
+
+          <p class="section-label" style="margin-top: 2rem;">Motivation</p>
+          <p>Coming up with good recipes can take a lot of time, and sometimes I cannot think of anything to cook or lack the ingredients. This system generates creative recipe remixes based on users&rsquo; preferences and ingredients, which helps them a lot with preparation and cooking.
+          Moreover, this will not be generated blindly. First, it will extract common patterns and pertinent genuine recipes from a dataset using retrieval-augmented generation. Then it will produce a structured mix recipe and check on preferences and logic before finalizing the recipe.</p>
         </div>
         <aside class="project-meta">
+          <span class="meta-label">Links</span>
+            <div class="meta-links">
+              <a href="https://youtu.be/8Db_5zS5X_4?si=xS2p6tUrgqRRmsgd" class="meta-link-btn" target="_blank"><i class="ri-external-link-line"></i> View Live</a>
+              <a href="https://github.com/Ninavo15/Recipe-Remix" class="meta-link-btn" target="_blank"><i class="ri-github-fill"></i> View Code</a>
+            </div>
           <div class="meta-group">
             <span class="meta-label">Role</span>
             <span class="meta-value">Web Developer</span>
@@ -60,14 +81,108 @@
             <span class="meta-label">Tools</span>
             <div class="meta-tools">
               <span class="tool-chip">
-                <img src="../../image/software logo/Visual Code.jpeg" alt="VS Code" /> VS Code
+                <img src="../../image/project 2/openai-icon.png" alt="OpenAI" /> OpenAI
               </span>
               <span class="tool-chip">
-                <img src="../../image/software logo/figma.png" alt="Figma" /> Figma
+                <img src="../../image/project 2/streamlit-icon.png" alt="Streamlit" /> Streamlit
+              </span>
+              <span class="tool-chip">
+                <img src="../../image/software logo/Visual Code.jpeg" alt="VS Code" /> VS Code
               </span>
             </div>
           </div>
         </aside>
+      </div>
+
+      <!-- Architecture -->
+      <div class="project-architecture" id="architecture">
+        <p class="section-label">Architecture</p>
+        <p class="architecture-text">Single-file Streamlit app (<code>app.py</code>, ~2,000 lines) with a companion offline data-collection script (<code>fetch_spoonacular.py</code>). No backend server, no database &mdash; everything runs in-process with CSV as the datastore and Streamlit <code>session_state</code> as the only persistence layer.</p>
+      </div>
+
+      <!-- Tech Stack -->
+      <div class="project-techstack" id="tech-stack">
+        <p class="section-label">Tech Stack</p>
+        <div class="techstack-columns">
+          <div class="techstack-col">
+            <h4>Frontend / App Framework</h4>
+            <ul>
+              <li><strong>Streamlit</strong> &mdash; web UI (app.py): sidebar inputs, <code>st.container()</code> layout, <code>st.session_state</code> for cross-rerun state, <code>st.cache_data</code>/<code>st.cache_resource</code> for memoization</li>
+            </ul>
+          </div>
+          <div class="techstack-col">
+            <h4>AI / ML</h4>
+            <ul>
+              <li><strong>OpenAI API</strong> (openai SDK) &mdash; <strong>gpt-4o-mini</strong> for RAG recipe generation &amp; refinement</li>
+              <li><strong>GPT-4o (vision)</strong> &mdash; fridge/pantry photo ingredient extraction</li>
+              <li><strong>DALL&middot;E 3</strong> &mdash; dish photography generation</li>
+              <li><strong>scikit-learn</strong> &mdash; TfidfVectorizer + cosine_similarity for recipe retrieval</li>
+            </ul>
+          </div>
+          <div class="techstack-col">
+            <h4>Data</h4>
+            <ul>
+              <li><strong>pandas</strong>, <strong>numpy</strong> &mdash; data handling</li>
+              <li><strong>CSV</strong> (recipes_cleaned.csv) &mdash; 17 cuisines &times; ~8 recipes, sourced via Spoonacular API</li>
+              <li><strong>requests</strong> &mdash; offline data collection (fetch_spoonacular.py)</li>
+            </ul>
+          </div>
+          <div class="techstack-col">
+            <h4>Other &amp; Config</h4>
+            <ul>
+              <li><strong>Pillow (PIL)</strong> &mdash; image handling, base64 encoding for vision input</li>
+              <li><strong>python-dotenv</strong> &mdash; env var / secrets loading</li>
+              <li><strong>.env</strong> + <strong>.streamlit/secrets.toml</strong> &mdash; API key config (OpenAI, Spoonacular)</li>
+              <li><strong>Local venv</strong> &mdash; environment</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pipeline -->
+      <div class="project-pipeline" id="pipeline">
+        <p class="section-label">Pipeline</p>
+        <p class="pipeline-intro">The core algorithm <span class="pipeline-ref">app.py:995&ndash;1930</span></p>
+        <ol class="pipeline-steps">
+          <li>
+            <h4>Ingredient parsing &amp; normalization</h4>
+            <p>User text or vision-extracted list &rarr; <code>parse_user_ingredients</code> &rarr; normalized via <code>NORMALIZATION_MAP</code> (e.g. &ldquo;tomatoes&rdquo;&rarr;&ldquo;tomato&rdquo;) and <code>STOP_INGREDIENT_WORDS</code> stripped (units, prep adjectives).</p>
+          </li>
+          <li>
+            <h4>Retrieval <span class="pipeline-ref">retrieve_recipes, app.py:995</span></h4>
+            <p>Hybrid scoring: TF-IDF (1&ndash;2 grams, English stopwords) cosine similarity between query (ingredients+cuisines+diet) and each recipe&rsquo;s concatenated search_text, plus a rule-based score (+0.9 per ingredient overlap, &minus;0.1 per missing item, &minus;100 allergy violation, &minus;50 diet violation, &minus;5 over time limit, +2 cuisine match). Hard filters applied sequentially &mdash; allergy &rarr; diet &rarr; time &rarr; cuisine &rarr; ingredient-overlap &mdash; with graceful fallback to the unfiltered set if a filter empties results. Sorted by overlap &rarr; final_score &rarr; similarity &rarr; time; top-5 returned.</p>
+          </li>
+          <li>
+            <h4>Cuisine inference <span class="pipeline-ref">infer_cuisine_from_text, app.py:705</span></h4>
+            <p>Keyword scoring against 17 cuisines&rsquo; keyword lists, plus a bonus-weighted &ldquo;unique marker&rdquo; dictionary (e.g. &ldquo;gochujang&rdquo;&rarr;Korean +3) for recipes whose dataset cuisine tag is missing/&ldquo;unknown&rdquo;.</p>
+          </li>
+          <li>
+            <h4>Blueprint synthesis <span class="pipeline-ref">build_blueprint, app.py:1084</span></h4>
+            <p>A structured intermediate representation (not raw LLM output) combining: dish type (rule-based from DISH_TYPE_RULES), core ingredients (user + pantry extras from CUISINE_PANTRY), cooking methods extracted from retrieved recipes&rsquo; instruction text via keyword matching, flavor profile (spicy/bright/creamy/savory heuristics), and estimated time (median of retrieved recipes, capped at the user&rsquo;s max).</p>
+          </li>
+          <li>
+            <h4>RAG generation <span class="pipeline-ref">generate_recipe_remix, app.py:1172</span></h4>
+            <p>The blueprint + top-3 retrieved recipes (truncated ingredient/instruction text) are injected into a structured prompt to GPT-4o-mini, constrained to strict JSON output; falls back to a rule-based template generator (<code>template_fallback</code>) if the API call fails or returns malformed JSON.</p>
+          </li>
+          <li>
+            <h4>Validation &amp; self-correction <span class="pipeline-ref">validate_recipe / revise_recipe_from_report, app.py:1349</span></h4>
+            <p>Checks ingredient usage, allergy/diet safety, time, step count, and cuisine coherence against CUISINE_KEYWORDS; on failure, deterministically patches in missing cuisine pantry items and re-validates &mdash; no LLM re-call needed.</p>
+          </li>
+          <li>
+            <h4>Image generation <span class="pipeline-ref">generate_recipe_image, app.py:1452</span></h4>
+            <p>Builds a descriptive prompt from the recipe + blueprint (plating style chosen by dish type), calls DALL&middot;E 3, and downloads the result via urllib.</p>
+          </li>
+          <li>
+            <h4>Iterative refinement <span class="pipeline-ref">generate_refined_recipe, app.py:1604</span></h4>
+            <p>Spice/complexity delta sliders (&minus;2..+2) and a cuisine-swap selector are converted to natural-language instructions and re-sent to GPT-4o-mini with the current recipe + hard constraints, producing a new validated recipe and image.</p>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Data -->
+      <div class="project-data" id="data">
+        <p class="section-label">Data</p>
+        <p class="data-text"><code>recipes_cleaned.csv</code> &mdash; 17 cuisines &times; ~8 recipes each, scraped via <code>fetch_spoonacular.py</code> from the Spoonacular complexSearch/recipes/{id}/information endpoints, with a local JSON cache (<code>spoonacular_cache.json</code>) to avoid redundant API calls, and a title-keyword override table to fix cuisine mislabeling.</p>
       </div>
 
       <!-- Gallery -->
