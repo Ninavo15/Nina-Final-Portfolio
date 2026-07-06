@@ -46,6 +46,11 @@
     Array.from(document.body.children).forEach((child) => {
       if (child === wrap) return;
       const node = child.cloneNode(true);
+
+      node.style.setProperty("pointer-events", "none", "important");
+      node
+        .querySelectorAll("*")
+        .forEach((el) => el.style.setProperty("pointer-events", "none", "important"));
       if (window.getComputedStyle(child).position === "fixed") {
         const r = child.getBoundingClientRect();
         node.style.position = "absolute";
