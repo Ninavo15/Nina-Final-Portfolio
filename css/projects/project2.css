@@ -99,6 +99,21 @@
   color: #642052;
 }
 
+.pipeline-diagram {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.pipeline-diagram img {
+  width: 100%;
+  max-width: 16rem;
+  height: auto;
+  display: block;
+  border-radius: 0.75rem;
+  border: 0.0625rem solid #e8e2e0;
+}
+
 .pipeline-steps {
   list-style: none;
   counter-reset: pipeline;
