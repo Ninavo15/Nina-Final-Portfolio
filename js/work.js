@@ -1,17 +1,53 @@
 const filterBtns = document.querySelectorAll(".filter-btn");
-const cards = document.querySelectorAll(".project-card");
+const sections = Array.from(document.querySelectorAll(".work-section"));
+
+const setActive = (id) => {
+  filterBtns.forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.filter === id);
+  });
+};
 
 filterBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
-    filterBtns.forEach((b) => b.classList.remove("active"));
-    btn.classList.add("active");
+    setActive(btn.dataset.filter);
 
-    const filter = btn.dataset.filter;
+    if (btn.dataset.filter === "all") {
+      document.querySelector(".work-content").scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
 
-    cards.forEach((el) => {
-      const categories = el.dataset.categories?.split(",") ?? [];
-      const show = filter === "all" || categories.includes(filter);
-      el.style.display = show ? "" : "none";
-    });
+    document.getElementById(btn.dataset.filter)?.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 });
+
+const projectCards = document.querySelectorAll(".project-card");
+
+if (projectCards.length) {
+  const cardObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        entry.target.classList.toggle("card-active", entry.isIntersecting);
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  projectCards.forEach((card) => cardObserver.observe(card));
+}
+
+if (sections.length) {
+  const triggerOffset = 160;
+
+  const updateActive = () => {
+    let current = null;
+    for (const section of sections) {
+      if (section.getBoundingClientRect().top - triggerOffset <= 0) {
+        current = section;
+      }
+    }
+    setActive(current ? current.id : "all");
+  };
+
+  window.addEventListener("scroll", updateActive, { passive: true });
+  updateActive();
+}

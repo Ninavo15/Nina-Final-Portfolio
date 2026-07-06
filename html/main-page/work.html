@@ -22,7 +22,8 @@
     <div id="nav-placeholder"></div>
     <main class="page-body">
       <div class="work-content">
-        <!-- Header -->
+
+        <!-- Page header -->
         <div class="work-header">
           <div>
             <h1 class="work-title">My Works</h1>
@@ -31,178 +32,195 @@
           <div class="work-filters">
             <button class="filter-btn active" data-filter="all">ALL</button>
             <button class="filter-btn" data-filter="web">WEB</button>
-            <button class="filter-btn" data-filter="application">
-              APPLICATION
-            </button>
+            <button class="filter-btn" data-filter="application">APPLICATION</button>
             <button class="filter-btn" data-filter="game">GAME</button>
           </div>
         </div>
 
-        <!-- Top row: 2 cards -->
-        <div class="projects-grid-top">
-          <a
-            href="../project/project1.html"
-            class="project-card fade-up"
-            data-categories="web"
-          >
-            <img
-              class="card-img card-img--lg"
-              src="../../image/project cover/Yumm.jpg"
-              alt="YumMeal"
-            />
-            <div class="card-info">
-              <div class="card-meta">
-                <div class="project-tags">
-                  <span class="project-tag">UI DESIGN</span>
-                  <span class="project-tag">WEBSITE</span>
-                </div>
-              </div>
-              <h3 class="card-name">YumMeal Website</h3>
-              <p class="card-desc">
-                An all-in-one meal planning web app that helps users plan their meals, find recipes, share their own recipes, and save their favorite dishes.
-              </p>
-            </div>
-          </a>
-          <a
-            href="../project/project2.html"
-            class="project-card fade-up"
-            data-categories="web"
-          >
-            <div class="card-img-placeholder card-img--lg"></div>
-            <div class="card-info">
-              <div class="card-meta">
-                <div class="project-tags">
-                  <span class="project-tag">AI</span>
+        <!-- 01 Web -->
+        <section class="work-section" id="web">
+          <div class="section-left">
+            <span class="section-num">01</span>
+            <h2 class="section-title">Web</h2>
+            <p class="section-sub">Full-stack sites and web apps &mdash; from recipe platforms to AI-driven tools.</p>
+          </div>
+          <div class="section-right">
+            <div class="projects-grid-cat">
 
-                  <span class="project-tag">WEBSITE</span>
+              <a href="../project/project1.html" class="project-card">
+                <div class="project-card-inner">
+                  <img class="card-img" src="../../image/project cover/Yumm.jpg" alt="YumMeal" />
+                  <div class="card-info">
+                    <div class="card-meta">
+                      <div class="project-tags">
+                        <span class="project-tag">UI DESIGN</span>
+                        <span class="project-tag">WEBSITE</span>
+                      </div>
+                    </div>
+                    <h3 class="card-name">YumMeal Website</h3>
+                    <p class="card-desc">
+                      An all-in-one meal planning web app that helps users plan their meals, find recipes, share their own recipes, and save their favorite dishes.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <h3 class="card-name">RecipeRemix</h3>
-              <p class="card-desc">
-                AI-powered recipe recommendation website that suggests meals based on user preferences and dietary restrictions and give cuisine mix recipes.
-              </p>
-            </div>
-          </a>
-        </div>
+              </a>
 
-        <!-- Bottom row: 3 cards -->
-        <div class="projects-grid">
-          <a
-            href="../project/project3.html"
-            class="project-card fade-up"
-            data-categories="application"
-          >
-            <div class="card-img-placeholder"></div>
-            <div class="card-info">
-              <div class="card-meta">
-                <div class="project-tags">
-                  <span class="project-tag">UI/UX</span>
-                  <span class="project-tag">APPLICATION</span>
+              <a href="../project/project2.html" class="project-card">
+                <div class="project-card-inner">
+                  <div class="card-img-placeholder"></div>
+                  <div class="card-info">
+                    <div class="card-meta">
+                      <div class="project-tags">
+                        <span class="project-tag">AI</span>
+                        <span class="project-tag">WEBSITE</span>
+                      </div>
+                    </div>
+                    <h3 class="card-name">RecipeRemix</h3>
+                    <p class="card-desc">
+                      AI-powered recipe recommendation website that suggests meals based on user preferences and dietary restrictions and give cuisine mix recipes.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <h3 class="card-name">DormMate</h3>
-              <p class="card-desc">
-                Brief description of this project and what you built.
-              </p>
-            </div>
-          </a>
-          <a
-            href="../project/project4.html"
-            class="project-card fade-up"
-            data-categories="game"
-          >
-            <div class="card-img-placeholder"></div>
-            <div class="card-info">
-              <div class="card-meta">
-                <div class="project-tags">
-                  <span class="project-tag">GAME DEV</span> 
-                  <span class="project-tag">3D VR</span>
+              </a>
 
+              <a href="../project/project8.html" class="project-card">
+                <div class="project-card-inner">
+                  <div class="card-img-placeholder"></div>
+                  <div class="card-info">
+                    <div class="card-meta">
+                      <div class="project-tags">
+                        <span class="project-tag">Website</span>
+                      </div>
+                    </div>
+                    <h3 class="card-name">Lumious Etching</h3>
+                    <p class="card-desc">
+                      Brief description of this project and what you built.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <h3 class="card-name">Witch Caper</h3>
-              <p class="card-desc">
-                Brief description of this project and what you built.
-              </p>
-            </div>
-          </a>
-          <a
-            href="../project/project5.html"
-            class="project-card fade-up"
-            data-categories="game"
-          >
-            <div class="card-img-placeholder"></div>
-            <div class="card-info">
-              <div class="card-meta">
-                <div class="project-tags">
-                  <span class="project-tag">3D Game Developer</span>
-                  <span class="project-tag">3D Modeling</span>
-                </div>
-              </div>
-              <h3 class="card-name">Pitfall</h3>
-              <p class="card-desc">
-                Brief description of this project and what you built.
-              </p>
-            </div>
-          </a>
+              </a>
 
-          <a
-            href="../project/project6.html"
-            class="project-card fade-up"
-            data-categories="game"
-          >
-            <div class="card-img-placeholder"></div>
-            <div class="card-info">
-              <div class="card-meta">
-                <div class="project-tags">
-                  <span class="project-tag">Interactive Simulation</span>
-                </div>
-              </div>
-              <h3 class="card-name">All Made From Mom Luv</h3>
-              <p class="card-desc">
-                Brief description of this project and what you built.
-              </p>
             </div>
-          </a>
+          </div>
+        </section>
 
-          <a
-            href="../project/project7.html"
-            class="project-card fade-up"
-            data-categories="game"
-          >
-            <div class="card-img-placeholder"></div>
-            <div class="card-info">
-              <div class="card-meta">
-                <div class="project-tags">
-                  <span class="project-tag">Game Developer</span>
-                  <span class="project-tag">UI</span>
+        <!-- 02 Application -->
+        <section class="work-section" id="application">
+          <div class="section-left">
+            <span class="section-num">02</span>
+            <h2 class="section-title">App</h2>
+            <p class="section-sub">Mobile apps designed around a real, everyday problem.</p>
+          </div>
+          <div class="section-right">
+            <div class="projects-grid-cat">
+
+              <a href="../project/project3.html" class="project-card">
+                <div class="project-card-inner">
+                  <div class="card-img-placeholder"></div>
+                  <div class="card-info">
+                    <div class="card-meta">
+                      <div class="project-tags">
+                        <span class="project-tag">UI/UX</span>
+                        <span class="project-tag">APPLICATION</span>
+                      </div>
+                    </div>
+                    <h3 class="card-name">DormMate</h3>
+                    <p class="card-desc">
+                      Brief description of this project and what you built.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <h3 class="card-name">Mystic Trail</h3>
-              <p class="card-desc">
-                Brief description of this project and what you built.
-              </p>
+              </a>
+
             </div>
-          </a>
-          <a
-            href="../project/project8.html"
-            class="project-card fade-up"
-            data-categories="web"
-          >
-            <div class="card-img-placeholder"></div>
-            <div class="card-info">
-              <div class="card-meta">
-                <div class="project-tags">
-                  <span class="project-tag">Website</span>
-              </div>
-              </div>
-              <h3 class="card-name">Lumious Etching</h3>
-              <p class="card-desc">
-                Brief description of this project and what you built.
-              </p>
+          </div>
+        </section>
+
+        <!-- 03 Game -->
+        <section class="work-section" id="game">
+          <div class="section-left">
+            <span class="section-num">03</span>
+            <h2 class="section-title">Game</h2>
+            <p class="section-sub">3D games, VR experiences, and interactive simulations built from scratch.</p>
+          </div>
+          <div class="section-right">
+            <div class="projects-grid-cat">
+
+              <a href="../project/project4.html" class="project-card">
+                <div class="project-card-inner">
+                  <div class="card-img-placeholder"></div>
+                  <div class="card-info">
+                    <div class="card-meta">
+                      <div class="project-tags">
+                        <span class="project-tag">GAME DEV</span>
+                        <span class="project-tag">3D VR</span>
+                      </div>
+                    </div>
+                    <h3 class="card-name">Witch Caper</h3>
+                    <p class="card-desc">
+                      Brief description of this project and what you built.
+                    </p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="../project/project5.html" class="project-card">
+                <div class="project-card-inner">
+                  <div class="card-img-placeholder"></div>
+                  <div class="card-info">
+                    <div class="card-meta">
+                      <div class="project-tags">
+                        <span class="project-tag">3D Game Developer</span>
+                        <span class="project-tag">3D Modeling</span>
+                      </div>
+                    </div>
+                    <h3 class="card-name">Pitfall</h3>
+                    <p class="card-desc">
+                      Brief description of this project and what you built.
+                    </p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="../project/project6.html" class="project-card">
+                <div class="project-card-inner">
+                  <div class="card-img-placeholder"></div>
+                  <div class="card-info">
+                    <div class="card-meta">
+                      <div class="project-tags">
+                        <span class="project-tag">Interactive Simulation</span>
+                      </div>
+                    </div>
+                    <h3 class="card-name">All Made From Mom Luv</h3>
+                    <p class="card-desc">
+                      Brief description of this project and what you built.
+                    </p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="../project/project7.html" class="project-card">
+                <div class="project-card-inner">
+                  <div class="card-img-placeholder"></div>
+                  <div class="card-info">
+                    <div class="card-meta">
+                      <div class="project-tags">
+                        <span class="project-tag">Game Developer</span>
+                        <span class="project-tag">UI</span>
+                      </div>
+                    </div>
+                    <h3 class="card-name">Mystic Trail</h3>
+                    <p class="card-desc">
+                      Brief description of this project and what you built.
+                    </p>
+                  </div>
+                </div>
+              </a>
+
             </div>
-          </a>
-        </div>
+          </div>
+        </section>
+
       </div>
     </main>
     <div id="footer-placeholder"></div>
