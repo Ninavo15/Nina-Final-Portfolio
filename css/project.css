@@ -168,9 +168,11 @@
 }
 
 .project-body,
+.project-code,
 .project-techstack,
 .project-typespec,
 .project-colorspec,
+.project-logo,
 .project-gallery {
   scroll-margin-top: 6.5rem;
 }
@@ -312,6 +314,7 @@
   background: #e8e2e0;
   border-radius: 0.75rem;
   overflow: hidden;
+  aspect-ratio: 8 / 5;
 }
 
 .gallery-item img {
