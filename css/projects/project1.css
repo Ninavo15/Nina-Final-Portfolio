@@ -23,54 +23,36 @@
   margin: 1.5rem 0 1rem;
 }
 
-.code-schema-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.code-schema-list li {
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.9375rem;
-  color: #444;
-  line-height: 1.6;
-  padding-left: 1rem;
-  position: relative;
-}
-
-.code-schema-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.55em;
-  width: 0.35rem;
-  height: 0.35rem;
-  border-radius: 50%;
-  background: #d8c3d1;
-}
-
-.code-schema-list li strong {
-  color: #1a1a1a;
-  font-weight: 600;
-}
-
 .code-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  gap: 1.25rem;
+  gap: 1.5rem;
   margin-top: 1.5rem;
   align-items: start;
 }
 
-.code-grid img {
+.code-item {
+  margin: 0;
+}
+
+.code-item img {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 0.75rem;
   border: 0.0625rem solid #e8e2e0;
+}
+
+.code-item figcaption {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.875rem;
+  color: #444;
+  margin-top: 0.625rem;
+}
+
+.code-item figcaption strong {
+  color: #1a1a1a;
+  font-weight: 600;
 }
 
 /* ── Tech stack ── */
