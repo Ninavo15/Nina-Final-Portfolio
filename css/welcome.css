@@ -207,3 +207,50 @@ body::before {
   width: 24%;
   z-index: 11;
 }
+
+/* ── Responsive intro ── */
+@media (max-width: 48rem) {
+  .folder-tab {
+    width: 8.5rem;
+    height: 2.75rem;
+    font-size: 1.375rem;
+  }
+
+  .folder-resume .folder-tab {
+    right: 4%;
+  }
+  .folder-extra .folder-tab {
+    left: 12%;
+  }
+  .folder-work .folder-tab {
+    left: 38%;
+  }
+
+  .notepad {
+    left: 6vw;
+    width: clamp(14rem, 55vw, 22rem);
+  }
+}
+
+@media (max-width: 30rem) {
+  .folder-tab {
+    width: 6.5rem;
+    height: 2.25rem;
+    font-size: 1.05rem;
+  }
+
+  .folder-resume .folder-tab {
+    right: 2%;
+  }
+  .folder-extra .folder-tab {
+    left: 8%;
+  }
+  .folder-work .folder-tab {
+    left: 34%;
+  }
+
+  .notepad {
+    left: 4vw;
+    width: clamp(12rem, 60vw, 18rem);
+  }
+}

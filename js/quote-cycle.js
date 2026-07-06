@@ -2,6 +2,7 @@
   const el = document.querySelector(".word-cycle");
   const wrapper = document.querySelector(".quote-scroll-wrapper");
   const hint = document.querySelector(".quote-scroll-hint");
+  const stars = document.querySelectorAll(".quote-star");
 
   if (!wrapper || !el) return;
 
@@ -37,6 +38,11 @@
         hintHidden = false;
       }
     }
+
+    stars.forEach((star) => {
+      const step = parseInt(star.dataset.step, 10);
+      star.classList.toggle("visible", idx >= step);
+    });
 
     if (idx === lastIdx) return;
     lastIdx = idx;

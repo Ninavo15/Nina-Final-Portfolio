@@ -158,3 +158,56 @@
   line-height: 1.65;
   margin: 0;
 }
+
+/* ── Responsive extra ── */
+@media (max-width: 62rem) {
+  .extra-section {
+    grid-template-columns: 1fr;
+  }
+
+  .section-left {
+    position: static;
+    height: auto;
+    border-right: none;
+    border-bottom: 0.0625rem solid #e8e2e0;
+    padding: 2rem 1.5rem;
+  }
+
+  .section-right,
+  .section-right--film {
+    padding: 1.5rem;
+  }
+
+  .extra-header {
+    padding: 2rem 1.5rem 1.5rem;
+  }
+
+  .extra-title {
+    font-size: 3rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.625rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .extra-title {
+    font-size: 2.25rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-sub {
+    max-width: none;
+  }
+}

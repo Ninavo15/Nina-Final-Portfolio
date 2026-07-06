@@ -7,14 +7,12 @@
 }
 
 .footer-left,
-.footer-right,
 .footer-bottom {
   opacity: 0;
   transition: opacity 0.6s ease;
 }
 
 .site-footer.footer-visible .footer-left,
-.site-footer.footer-visible .footer-right,
 .site-footer.footer-visible .footer-bottom {
   opacity: 1;
 }
@@ -22,7 +20,6 @@
 .footer-main {
   padding: 3.5rem 3rem 2.5rem;
   position: relative;
-  height: 29rem;
 }
 
 /* ── Left content ── */
@@ -71,7 +68,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  margin-top: 10rem;
+  margin-top: 1.5rem;
 }
 
 .footer-contact p {
@@ -81,30 +78,12 @@
   line-height: 1.8;
 }
 
-/* ── ID card ── */
-.footer-right {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  line-height: 0;
-}
-
-.footer-id-card {
-  width: 64rem;
-  display: block;
-  filter: drop-shadow(0 1rem 2.5rem rgba(0, 0, 0, 0.4));
-  clip-path: inset(13rem 0 0 0);
-  margin-right: -10rem;
-  margin-top: 3rem;
-}
-
 /* ── Bottom bar ── */
 .footer-bottom {
   border-top: 0.0625rem solid rgba(255, 255, 255, 0.2);
   padding: 1rem 3rem;
   text-align: center;
-  margin-top: 10rem;
+  margin-top: 2rem;
 }
 
 .footer-bottom p {
@@ -112,4 +91,35 @@
   font-size: 0.8125rem;
   opacity: 0.7;
   letter-spacing: 0.04em;
+}
+
+/* ── Responsive footer ── */
+@media (max-width: 64rem) {
+  .footer-main {
+    padding: 3rem 1.5rem 2rem;
+  }
+
+  .footer-title {
+    font-size: 3.5rem;
+  }
+
+  .footer-bottom {
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .footer-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .footer-title {
+    font-size: 2.25rem;
+  }
+
+  .footer-socials {
+    flex-wrap: wrap;
+  }
 }

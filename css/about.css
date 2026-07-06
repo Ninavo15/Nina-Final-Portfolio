@@ -146,6 +146,7 @@
 
 .row-content {
   flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
 }
@@ -330,6 +331,58 @@
   max-width: 56rem;
 }
 
+/* ── Quote stars ── */
+.quote-stars {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.quote-stars--tr {
+  top: 3rem;
+  right: 4rem;
+}
+
+.quote-stars--bl {
+  bottom: 3rem;
+  left: 4rem;
+}
+
+.quote-star {
+  position: absolute;
+  color: #642052;
+  opacity: 0;
+  transform: scale(0.4) rotate(-20deg);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.quote-star.visible {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+.quote-star--1 {
+  top: 0;
+  right: 0;
+  font-size: 3.25rem;
+}
+
+.quote-star--2 {
+  top: 3.75rem;
+  right: 3.25rem;
+  font-size: 1.75rem;
+  transition-delay: 0.1s;
+}
+
+.quote-star--3 {
+  top: 1.25rem;
+  right: 6.25rem;
+  font-size: 1.1rem;
+  transition-delay: 0.2s;
+}
+
 .word-cycle {
   display: inline-block;
   font-weight: 700;
@@ -463,4 +516,99 @@
 .social-icon:hover {
   background: #642052;
   color: #fff;
+}
+
+/* ── Responsive about ── */
+@media (max-width: 64rem) {
+  .page-body {
+    padding: 2.5rem 2rem 3rem;
+  }
+
+  .quote-section {
+    padding: 4rem 3rem;
+  }
+
+  .quote-text,
+  .quote-sig {
+    font-size: 2.75rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .page-body {
+    padding: 2rem 1.5rem 3rem;
+  }
+
+  .bio-section {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .bio-photo-wrap {
+    width: 14rem;
+    margin: 0 auto;
+  }
+
+  .bio-left {
+    margin-top: 0;
+  }
+
+  .bio-greeting {
+    font-size: 2.75rem;
+  }
+
+  .bio-text {
+    font-size: 1rem;
+  }
+
+  .row-label {
+    width: 9rem;
+  }
+
+  .quote-section {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .quote-text,
+  .quote-sig {
+    font-size: 1.75rem;
+  }
+
+  .featured-section {
+    padding: 3rem 1.5rem 3.5rem;
+  }
+
+  .featured-title {
+    font-size: 2rem;
+  }
+
+  .software-grid {
+    grid-template-columns: repeat(3, max-content);
+    gap: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .bio-greeting {
+    font-size: 2.25rem;
+  }
+
+  .table-row {
+    flex-direction: column;
+  }
+
+  .row-label {
+    width: 100%;
+    border-right: none;
+    border-bottom: 0.09375rem solid #b89aaa;
+  }
+
+  .quote-text,
+  .quote-sig {
+    font-size: 1.375rem;
+  }
+
+  .software-grid {
+    grid-template-columns: repeat(2, max-content);
+  }
 }

@@ -373,3 +373,51 @@
 .project-next:hover .next-arrow {
   transform: translateX(0.5rem);
 }
+
+/* ── Responsive project pages ── */
+@media (max-width: 56rem) {
+  .project-header {
+    padding: 2rem 1.5rem;
+  }
+
+  .project-title {
+    font-size: 2.5rem;
+  }
+
+  .project-body {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .project-outcome,
+  .project-techstack,
+  .project-typespec,
+  .project-colorspec,
+  .project-gallery {
+    padding: 2rem 1.5rem;
+  }
+
+  .project-next {
+    padding: 2rem 1.5rem;
+  }
+
+  .next-name {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 36rem) {
+  .project-title {
+    font-size: 2rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item--wide,
+  .gallery-item--lg {
+    grid-column: span 1;
+  }
+}

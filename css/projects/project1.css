@@ -271,3 +271,23 @@
   font-size: 0.8125rem;
   color: #444;
 }
+
+/* ── Responsive ── */
+@media (max-width: 40rem) {
+  .techstack-columns {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .type-familycards {
+    grid-template-columns: 1fr;
+  }
+
+  .scale-row-head {
+    flex-wrap: wrap;
+  }
+
+  .scale-row-meta {
+    white-space: normal;
+  }
+}

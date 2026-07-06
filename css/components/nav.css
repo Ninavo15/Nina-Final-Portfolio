@@ -126,3 +126,31 @@ body {
   margin-top: 5.625rem;
   min-height: 100dvh;
 }
+
+/* ── Responsive nav ── */
+@media (max-width: 48rem) {
+  .site-nav {
+    padding: 0 1rem;
+    gap: 0.25rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .site-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-tab {
+    width: 7.5rem;
+    height: 3.0625rem;
+    font-size: 1.375rem;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 30rem) {
+  .nav-tab {
+    width: 6rem;
+    font-size: 1.125rem;
+  }
+}
