@@ -12,26 +12,9 @@ const pageURLs = {
   resume:"../main-page/resume.html",
 };
 
-// ── Loading sequence ──
-const overlay = document.getElementById("loading-overlay");
-const wrap = document.getElementById("iconWrap");
-const title = document.getElementById("adTitle");
+// ── Reveal content ──
 const welcomeContent = document.getElementById("welcome-content");
-
-setTimeout(() => {
-  title.style.opacity = "0";
-  setTimeout(() => {
-    title.textContent = "Received!";
-    title.style.opacity = "1";
-  }, 350);
-  wrap.classList.add("done");
-
-  setTimeout(() => {
-    overlay.classList.add("fade-out");
-    welcomeContent.classList.add("visible");
-    setTimeout(() => overlay.remove(), 500);
-  }, 900);
-}, 3000);
+welcomeContent.classList.add("visible");
 
 // ── Folder navigation ──
 document.querySelectorAll(".folder").forEach((folder) => {

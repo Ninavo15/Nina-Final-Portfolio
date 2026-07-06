@@ -3,23 +3,256 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 1 — Nina Vo</title>
+    <title>YumMeal — Nina Vo</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=Newsreader:ital,wght@0,400;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=Newsreader:ital,wght@0,400;1,400&family=Passion+One:wght@400;700;900&family=Noto+Sans:ital,wght@0,400;1,400&display=swap"
       rel="stylesheet"
     />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../../css/main.css">
-  <link rel="stylesheet" href="../../css/components/cursor.css" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/components/cursor.css" />
     <link rel="stylesheet" href="../../css/components/nav.css" />
+    <link rel="stylesheet" href="../../css/project.css" />
+    <link rel="stylesheet" href="../../css/projects/project1.css" />
     <link rel="stylesheet" href="../../css/components/footer.css" />
   </head>
   <body>
     <div id="nav-placeholder"></div>
+
     <main class="page-body">
-      <!-- Project content goes here -->
+      <div class="project-layout">
+
+        <div id="quicknav-placeholder"></div>
+
+        <div class="project-content">
+
+      <!-- Hero -->
+      <div class="project-hero">
+        <img src="../../image/project cover/Yumm.jpg" alt="YumMeal cover" />
+      </div>
+
+      <!-- Header -->
+      <div class="project-header">
+        <div class="project-tags-row">
+          <span class="project-type-tag">UI Design</span>
+          <span class="project-type-tag">Website</span>
+        </div>
+        <h1 class="project-title">YumMeal Website</h1>
+        <p class="project-tagline">An all-in-one meal planning web app for finding, sharing, and saving recipes.</p>
+      </div>
+
+      <!-- Overview + Meta -->
+      <div class="project-body" id="overview" data-nav-label="Overview &amp; Outcome">
+        <div class="project-overview">
+          <p class="section-label">Overview</p>
+          <p>YumMeal is a full-stack recipe platform that allows users to search recipes (provided by the Spoonacular API), browse community recipe submissions, favourite recipes, write reviews, create and share their own recipes, and plan weekly meal schedules. The application also supports administrative features such as user management, team recipe creation, and content moderation, with role-based access enforced through authentication and protected routes. </p>
+
+          <p class="section-label" style="margin-top: 2rem;">Why This App</p>
+          <p>My team built YumMeal out of a frustration we kept running into ourselves: staring at random ingredients in the fridge, searching recipe after recipe, and never landing on something that actually matched what we had &mdash; then forgetting the recipes we did like by the next time we needed them. YumMeal exists to fix that: search by the ingredients already on hand, save the recipes worth returning to, and stop starting from zero every time you cook.</p>
+
+          <p class="section-label" style="margin-top: 2rem;">Outcome</p>
+          <p>Building YumMeal expanded my understanding of web development as a whole. One of the biggest lessons was learning how to store and handle data correctly &mdash; structuring it so it stays organized, and making sure it can be retrieved and modified safely. It also gave me a much clearer picture of how the frontend and backend actually work together, from authentication to API calls, rather than treating each side as its own isolated piece.</p>
+        </div>
+        <aside class="project-meta">
+          <div class="meta-group">
+            <span class="meta-label">Links</span>
+            <div class="meta-links">
+              <a href="https://www.youtube.com/watch?v=8BvaCZqYPzE" class="meta-link-btn" target="_blank"><i class="ri-external-link-line"></i> View Live</a>
+              <a href="https://github.com/Ninavo15/iat459-final-project/tree/main" class="meta-link-btn" target="_blank"><i class="ri-github-fill"></i> View Code</a>
+            </div>
+          </div>
+          <div class="meta-group">
+            <span class="meta-label">Role</span>
+            <span class="meta-value">UI &amp; Full Stack Developer</span>
+          </div>
+          <div class="meta-group">
+            <span class="meta-label">Year</span>
+            <span class="meta-value">Spring 2026</span>
+          </div>
+          <div class="meta-group">
+            <span class="meta-label">Type</span>
+            <span class="meta-value">Academic Project</span>
+          </div>
+          <div class="meta-group">
+            <span class="meta-label">Collaboration</span>
+            <span class="meta-value">Cas Sugihwo</span>
+          </div>
+          <div class="meta-group">
+            <span class="meta-label">Tools</span>
+            <div class="meta-tools">
+              <span class="tool-chip">
+                <img src="../../image/software logo/figma.png" alt="Figma" /> Figma
+              </span>
+              <span class="tool-chip">
+                <img src="../../image/software logo/Visual Code.jpeg" alt="VS Code" /> VS Code
+              </span>
+              <span class="tool-chip">
+                <img src="../../image/software logo/postman.svg" alt="Postman" /> Postman
+              </span>
+              <span class="tool-chip">
+                <img src="../../image/software logo/mongodb.svg" alt="MongoDB" /> MongoDB
+              </span>
+              <span class="tool-chip">
+                <img src="../../image/software logo/github.svg" alt="GitHub" /> GitHub
+              </span>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Tech Stack -->
+      <div class="project-techstack" id="tech-stack">
+        <p class="section-label">Tech Stack</p>
+        <div class="techstack-columns">
+          <div class="techstack-col">
+            <h4>Frontend</h4>
+            <ul>
+              <li><strong>React 19</strong> (react, react-dom) — bootstrapped with react-scripts (Create React App)</li>
+              <li><strong>React Router v7</strong> (react-router-dom) — client-side routing, plus custom ProtectedRoute / AdminProtectedRoute guards</li>
+              <li><strong>jwt-decode</strong> — reads JWT payload client-side for auth context</li>
+              <li><strong>lucide-react</strong> + <strong>remixicon</strong> — icon libraries</li>
+              <li><strong>Testing Library</strong> (@testing-library/react, jest-dom, user-event) — component tests</li>
+              <li>Plain CSS per component/page (no CSS-in-JS or Tailwind/Bootstrap) — one .css file per .js component</li>
+            </ul>
+          </div>
+          <div class="techstack-col">
+            <h4>Backend</h4>
+            <ul>
+              <li><strong>Node.js + Express 5</strong></li>
+              <li><strong>MongoDB + Mongoose 9</strong> — models: User, Favourite, MealPlan, Review, TeamRecipe, UserRecipe2</li>
+              <li><strong>jsonwebtoken</strong> — auth token issuing/verification (authMiddleWare.js, verifyAdmin.js)</li>
+              <li><strong>bcryptjs</strong> — password hashing</li>
+              <li><strong>cors</strong>, <strong>dotenv</strong></li>
+              <li><a href="https://spoonacular.com/food-api" target="_blank" rel="noopener"><strong>Spoonacular API</strong></a> — recipe search &amp; ingredient data</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Typography -->
+      <div class="project-typespec" id="typography">
+        <p class="section-label">Typography</p>
+        <div class="type-familycards">
+          <div class="type-familycard">
+            <h4>Passion One</h4>
+            <p class="familycard-role">Headings: for impact.</p>
+            <p class="familycard-meta">400 &middot; 700 &middot; 900</p>
+          </div>
+          <div class="type-familycard">
+            <h4>Noto Sans</h4>
+            <p class="familycard-role">Body text: for reading.</p>
+            <p class="familycard-meta">100&ndash;900 + italic &middot; 112+ uses across component CSS</p>
+          </div>
+        </div>
+
+        <div class="type-scale">
+          <p class="scale-group-label">Display, Passion One</p>
+
+          <div class="scale-row">
+            <div class="scale-row-head">
+              <span class="scale-row-name">Title <code>h1</code></span>
+              <span class="scale-row-meta">--fontsize-title &middot; 7rem / 112px</span>
+            </div>
+            <p class="scale-sample demo-title">Welcome,</p>
+          </div>
+
+          <div class="scale-row">
+            <div class="scale-row-head">
+              <span class="scale-row-name">Header <code>h2</code></span>
+              <span class="scale-row-meta">--fontsize-header &middot; 5.5rem / 88px</span>
+            </div>
+            <p class="scale-sample demo-header">Recipes of weeks</p>
+          </div>
+
+          <div class="scale-row">
+            <div class="scale-row-head">
+              <span class="scale-row-name">Subheader <code>h3</code></span>
+              <span class="scale-row-meta">--fontsize-subheader &middot; 4.35rem / 69.6px</span>
+            </div>
+            <p class="scale-sample demo-subheader">Discover new recipes</p>
+          </div>
+
+          <p class="scale-group-label scale-group-label--spaced">Body, Noto Sans</p>
+
+          <div class="scale-row scale-row--last">
+            <div class="scale-row-head">
+              <span class="scale-row-name">Paragraph <code>p</code></span>
+              <span class="scale-row-meta">--fontsize-paragraph &middot; 1rem / 16px</span>
+            </div>
+            <p class="scale-sample demo-paragraph">Find dishes based on ingredients you already have, save favorites, and share your own recipes with the community.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Color Palette -->
+      <div class="project-colorspec" id="color-palette">
+        <p class="section-label">Color Palette</p>
+        <div class="color-swatches">
+          <div class="swatch">
+            <span class="swatch-color" style="background:#f6f1ed"></span>
+            <span class="swatch-name">--color-white0</span>
+            <span class="swatch-hex">#f6f1ed</span>
+            <span class="swatch-role">page background (cream)</span>
+          </div>
+          <div class="swatch">
+            <span class="swatch-color" style="background:#e1dad7"></span>
+            <span class="swatch-name">--color-white1</span>
+            <span class="swatch-hex">#e1dad7</span>
+            <span class="swatch-role">secondary background</span>
+          </div>
+          <div class="swatch">
+            <span class="swatch-color" style="background:#570000"></span>
+            <span class="swatch-name">--color-red0</span>
+            <span class="swatch-hex">#570000</span>
+            <span class="swatch-role">body text (dark red)</span>
+          </div>
+          <div class="swatch">
+            <span class="swatch-color" style="background:#9e3b3b"></span>
+            <span class="swatch-name">--color-red1</span>
+            <span class="swatch-hex">#9e3b3b</span>
+            <span class="swatch-role">headings (muted red)</span>
+          </div>
+          <div class="swatch">
+            <span class="swatch-color" style="background:#e47281"></span>
+            <span class="swatch-name">--color-pink0</span>
+            <span class="swatch-hex">#e47281</span>
+            <span class="swatch-role">accent</span>
+          </div>
+          <div class="swatch">
+            <span class="swatch-color" style="background:#e98c00"></span>
+            <span class="swatch-name">--color-yellow0</span>
+            <span class="swatch-hex">#e98c00</span>
+            <span class="swatch-role">accent</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery -->
+      <div class="project-gallery" id="gallery">
+        <p class="section-label">Process &amp; Screens</p>
+        <div class="gallery-grid">
+          <div class="gallery-item gallery-item--wide"></div>
+          <div class="gallery-item gallery-item--sq"></div>
+          <div class="gallery-item gallery-item--sq"></div>
+          <div class="gallery-item gallery-item--lg"></div>
+        </div>
+      </div>
+
+      <!-- Next project -->
+      <a href="project2.html" class="project-next">
+        <div>
+          <p class="next-label">Next Project</p>
+          <p class="next-name">RecipeRemix</p>
+        </div>
+        <i class="ri-arrow-right-line next-arrow"></i>
+      </a>
+
+        </div>
+      </div>
     </main>
     <div id="footer-placeholder"></div>
     <script src="../../js/components.js"></script>
+    <script src="../../js/animations.js"></script>
+    <script src="../../js/project-quicknav.js"></script>
   </body>
 </html>

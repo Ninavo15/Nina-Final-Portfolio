@@ -3,23 +3,99 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project — Nina Vo</title>
+    <title>Pitfall — Nina Vo</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=Newsreader:ital,wght@0,400;1,400&display=swap"
       rel="stylesheet"
     />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../../css/main.css">
-  <link rel="stylesheet" href="../../css/components/cursor.css" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/components/cursor.css" />
     <link rel="stylesheet" href="../../css/components/nav.css" />
+    <link rel="stylesheet" href="../../css/project.css" />
     <link rel="stylesheet" href="../../css/components/footer.css" />
   </head>
   <body>
     <div id="nav-placeholder"></div>
     <main class="page-body">
-      <!-- Project content goes here -->
+      <div class="project-layout">
+
+        <div id="quicknav-placeholder"></div>
+
+        <div class="project-content">
+
+      <!-- Hero -->
+      <div class="project-hero"></div>
+
+      <!-- Header -->
+      <div class="project-header">
+        <div class="project-tags-row">
+          <span class="project-type-tag">3D Game Dev</span>
+          <span class="project-type-tag">3D Modeling</span>
+        </div>
+        <h1 class="project-title">Pitfall</h1>
+        <p class="project-tagline">A 3D platformer built around hand-modelled environments and physics-based traps.</p>
+      </div>
+
+      <!-- Overview + Meta -->
+      <div class="project-body" id="overview">
+        <div class="project-overview">
+          <p class="section-label">Overview</p>
+          <p>Pitfall is a 3D platformer where every level is a hand-crafted obstacle course filled with traps, moving platforms, and tight jumps. The project was as much about 3D modelling as it was about game design — every asset in the game was built from scratch in Blender before being imported into Unity. The design challenge was creating levels that felt fair but punishing, with a visual style that made the hazards both beautiful and dangerous.</p>
+        </div>
+        <aside class="project-meta">
+          <div class="meta-group">
+            <span class="meta-label">Role</span>
+            <span class="meta-value">3D Artist &amp; Game Developer</span>
+          </div>
+          <div class="meta-group">
+            <span class="meta-label">Year</span>
+            <span class="meta-value">2024</span>
+          </div>
+          <div class="meta-group">
+            <span class="meta-label">Type</span>
+            <span class="meta-value">Academic Project</span>
+          </div>
+          <div class="meta-group">
+            <span class="meta-label">Tools</span>
+            <div class="meta-tools">
+              <span class="tool-chip">
+                <img src="../../image/software logo/unity.jpeg" alt="Unity" /> Unity
+              </span>
+              <span class="tool-chip">
+                <img src="../../image/software logo/blender.jpeg" alt="Blender" /> Blender
+              </span>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Gallery -->
+      <div class="project-gallery" id="gallery">
+        <p class="section-label">Screens &amp; Models</p>
+        <div class="gallery-grid">
+          <div class="gallery-item gallery-item--wide"></div>
+          <div class="gallery-item gallery-item--sq"></div>
+          <div class="gallery-item gallery-item--sq"></div>
+          <div class="gallery-item gallery-item--lg"></div>
+        </div>
+      </div>
+
+      <!-- Next project -->
+      <a href="project1.html" class="project-next">
+        <div>
+          <p class="next-label">Back to First</p>
+          <p class="next-name">YumMeal Website</p>
+        </div>
+        <i class="ri-arrow-right-line next-arrow"></i>
+      </a>
+
+        </div>
+      </div>
     </main>
     <div id="footer-placeholder"></div>
     <script src="../../js/components.js"></script>
+    <script src="../../js/animations.js"></script>
+    <script src="../../js/project-quicknav.js"></script>
   </body>
 </html>

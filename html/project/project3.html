@@ -3,23 +3,99 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project — Nina Vo</title>
+    <title>DormMate — Nina Vo</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=Newsreader:ital,wght@0,400;1,400&display=swap"
       rel="stylesheet"
     />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../../css/main.css">
-  <link rel="stylesheet" href="../../css/components/cursor.css" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/components/cursor.css" />
     <link rel="stylesheet" href="../../css/components/nav.css" />
+    <link rel="stylesheet" href="../../css/project.css" />
     <link rel="stylesheet" href="../../css/components/footer.css" />
   </head>
   <body>
     <div id="nav-placeholder"></div>
     <main class="page-body">
-      <!-- Project content goes here -->
+      <div class="project-layout">
+
+        <div id="quicknav-placeholder"></div>
+
+        <div class="project-content">
+
+      <!-- Hero -->
+      <div class="project-hero"></div>
+
+      <!-- Header -->
+      <div class="project-header">
+        <div class="project-tags-row">
+          <span class="project-type-tag">UI/UX</span>
+          <span class="project-type-tag">Application</span>
+        </div>
+        <h1 class="project-title">DormMate</h1>
+        <p class="project-tagline">A mobile app designed to make dorm life easier for university students.</p>
+      </div>
+
+      <!-- Overview + Meta -->
+      <div class="project-body" id="overview">
+        <div class="project-overview">
+          <p class="section-label">Overview</p>
+          <p>DormMate is a mobile application concept built around the real challenges of living in student dormitories — shared spaces, conflicting schedules, noise complaints, and lost maintenance requests. The app gives residents a central hub for chore scheduling, roommate communication, maintenance ticketing, and community events. The design focused on reducing friction for everyday dorm interactions so students can spend more time on what matters.</p>
+        </div>
+        <aside class="project-meta">
+          <div class="meta-group">
+            <span class="meta-label">Role</span>
+            <span class="meta-value">UI/UX Designer</span>
+          </div>
+          <div class="meta-group">
+            <span class="meta-label">Year</span>
+            <span class="meta-value">2024</span>
+          </div>
+          <div class="meta-group">
+            <span class="meta-label">Type</span>
+            <span class="meta-value">Academic Project</span>
+          </div>
+          <div class="meta-group">
+            <span class="meta-label">Tools</span>
+            <div class="meta-tools">
+              <span class="tool-chip">
+                <img src="../../image/software logo/figma.png" alt="Figma" /> Figma
+              </span>
+              <span class="tool-chip">
+                <img src="../../image/software logo/photoshop.png" alt="Photoshop" /> Photoshop
+              </span>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Gallery -->
+      <div class="project-gallery" id="gallery">
+        <p class="section-label">Process &amp; Screens</p>
+        <div class="gallery-grid">
+          <div class="gallery-item gallery-item--wide"></div>
+          <div class="gallery-item gallery-item--tall"></div>
+          <div class="gallery-item gallery-item--tall"></div>
+          <div class="gallery-item gallery-item--lg"></div>
+        </div>
+      </div>
+
+      <!-- Next project -->
+      <a href="project4.html" class="project-next">
+        <div>
+          <p class="next-label">Next Project</p>
+          <p class="next-name">Witch Caper</p>
+        </div>
+        <i class="ri-arrow-right-line next-arrow"></i>
+      </a>
+
+        </div>
+      </div>
     </main>
     <div id="footer-placeholder"></div>
     <script src="../../js/components.js"></script>
+    <script src="../../js/animations.js"></script>
+    <script src="../../js/project-quicknav.js"></script>
   </body>
 </html>
