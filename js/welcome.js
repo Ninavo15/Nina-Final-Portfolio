@@ -8,8 +8,8 @@ const navOrder = { about: 0, extra: 1, work: 2, resume: 3 };
 const pageURLs = {
   about: "../main-page/about.html",
   extra: "../main-page/extra.html",
-  work:  "../main-page/work.html",
-  resume:"../main-page/resume.html",
+  work: "../main-page/work.html",
+  resume: "../main-page/resume.html",
 };
 
 // ── Reveal content ──
@@ -20,58 +20,73 @@ welcomeContent.classList.add("visible");
 document.querySelectorAll(".folder").forEach((folder) => {
   folder.addEventListener("click", () => goToPage(folder.dataset.page));
 });
+// nav bar on the destination page, at any viewport width.
+function getNavMetrics() {
+  const w = window.innerWidth;
+  if (w <= 384)
+    return {
+      tabW: 73.6,
+      tabH: 40,
+      fontSize: 13,
+      gap: 3.2,
+      padL: 8,
+      radius: 20,
+    };
+  if (w <= 480)
+    return { tabW: 96, tabH: 49, fontSize: 18, gap: 4, padL: 16, radius: 29 };
+  if (w <= 768)
+    return { tabW: 120, tabH: 49, fontSize: 22, gap: 4, padL: 16, radius: 29 };
+  return { tabW: 195, tabH: 55, fontSize: 32, gap: 8, padL: 32, radius: 29 };
+}
 
 function goToPage(targetPage) {
   const folders = [...document.querySelectorAll(".folder")];
-  const tabs    = [...document.querySelectorAll(".folder-tab")];
+  const tabs = [...document.querySelectorAll(".folder-tab")];
   const notepad = document.querySelector(".notepad");
-
 
   // Snap folders + notepad to their settled state before measuring
   folders.forEach((f) => {
     f.style.animation = "none";
-    f.style.opacity   = "1";
+    f.style.opacity = "1";
     f.style.transform = "none";
   });
   notepad.style.animation = "none";
-  notepad.style.opacity   = "1";
+  notepad.style.opacity = "1";
   void document.body.offsetWidth;
 
   // Measure where each tab actually sits on screen right now
   const rects = tabs.map((t) => t.getBoundingClientRect());
 
-  const targetTop = 35;
-  const tabW = 195;
-  const gap  = 8;
-  const padL = 32;
+  const { tabW, tabH, fontSize, gap, padL, radius } = getNavMetrics();
+  const targetTop = 90 - tabH;
 
   // Build ghost elements that look exactly like the tabs at their current positions.
   // Using ghosts avoids every CSS-inheritance and stacking-context issue with the
   // original absolute-positioned tabs.
   const ghosts = tabs.map((tab, i) => {
-    const r    = rects[i];
+    const r = rects[i];
     const page = tab.dataset.page;
-    const g    = document.createElement("div");
+    const g = document.createElement("div");
     g.textContent = tab.textContent.trim();
     Object.assign(g.style, {
-      position:      "fixed",
-      top:           r.top  + "px",
-      left:          r.left + "px",
-      width:         "195px",
-      height:        "55px",
-      background:    originalColors[page],
-      borderRadius:  "29px 29px 0 0",
-      zIndex:        "300",
-      fontFamily:    '"Newsreader", serif',
-      fontSize:      "32px",
-      fontWeight:    "400",
-      color:         "#fcfff1",
-      display:       "inline-flex",
-      alignItems:    "flex-end",
-      justifyContent:"center",
+      position: "fixed",
+      top: r.top + "px",
+      left: r.left + "px",
+      width: tabW + "px",
+      height: tabH + "px",
+      background: originalColors[page],
+      borderRadius: radius + "px " + radius + "px 0 0",
+      zIndex: "300",
+      fontFamily: '"Newsreader", serif',
+      fontSize: fontSize + "px",
+      fontWeight: "400",
+      color: "#fcfff1",
+      display: "inline-flex",
+      alignItems: "flex-end",
+      justifyContent: "center",
       paddingBottom: "2px",
       pointerEvents: "none",
-      transition:    "none",
+      transition: "none",
     });
     document.body.appendChild(g);
     tab.style.visibility = "hidden";
@@ -80,8 +95,8 @@ function goToPage(targetPage) {
 
   // Fade notepad and folder bodies
   Object.assign(notepad.style, {
-    transition:    "opacity 0.3s ease",
-    opacity:       "0",
+    transition: "opacity 0.3s ease",
+    opacity: "0",
     pointerEvents: "none",
   });
   folders.forEach((f) =>
@@ -96,7 +111,7 @@ function goToPage(targetPage) {
   // Phase 1: shoot up with expo ease-out (snappy lift, gentle arrival)
   ghosts.forEach((g) => {
     g.style.transition = "top 0.4s cubic-bezier(0.22, 1, 0.36, 1)";
-    g.style.top        = targetTop + "px";
+    g.style.top = targetTop + "px";
   });
 
   // Phase 2: slide into nav positions — starts at 220ms so it overlaps with
@@ -105,20 +120,20 @@ function goToPage(targetPage) {
     ghosts.forEach((g, i) => {
       const pos = navOrder[tabs[i].dataset.page];
       g.style.transition = "left 0.35s cubic-bezier(0.65, 0, 0.35, 1)";
-      g.style.left       = padL + pos * (tabW + gap) + "px";
+      g.style.left = padL + pos * (tabW + gap) + "px";
     });
 
     // Fade in the page-body area so it's already visible before navigation
     const pageBody = document.createElement("div");
     Object.assign(pageBody.style, {
-      position:   "fixed",
-      top:        "90px",
-      left:       "0",
-      right:      "0",
-      bottom:     "0",
+      position: "fixed",
+      top: "90px",
+      left: "0",
+      right: "0",
+      bottom: "0",
       background: "#f6f1ed",
-      zIndex:     "200",
-      opacity:    "0",
+      zIndex: "200",
+      opacity: "0",
       transition: "opacity 0.35s ease",
     });
     document.body.appendChild(pageBody);
@@ -130,3 +145,4 @@ function goToPage(targetPage) {
     window.location.href = pageURLs[targetPage];
   }, 650);
 }
+
