@@ -24,7 +24,9 @@ body {
 .fade-up {
   opacity: 0;
   transform: translateY(2rem);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 .fade-up.visible {

@@ -45,7 +45,9 @@
   letter-spacing: 0.06em;
   color: #642052;
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
 .filter-btn:hover,
@@ -139,7 +141,9 @@
 .project-arrow {
   font-size: 1.25rem;
   color: #b89aaa;
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
   display: inline-block;
 }
 
@@ -158,7 +162,9 @@
   text-decoration: none;
   opacity: 0;
   transform: translateY(1.25rem);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 .project-card.card-active {
@@ -171,7 +177,9 @@
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 0.125rem 1rem rgba(0, 0, 0, 0.06);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .project-card:hover .project-card-inner {
@@ -181,14 +189,14 @@
 
 .card-img {
   width: 100%;
-  height: 30rem;
+  height: 40rem;
   object-fit: cover;
   display: block;
 }
 
 .card-img-placeholder {
   width: 100%;
-  height: 30rem;
+  height: 34rem;
   background: #d4ceca;
 }
 
@@ -255,6 +263,12 @@
 
   .work-filters {
     flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 59.375rem) {
+  .project-card {
+    padding: 2.25rem 0;
   }
 }
 

@@ -252,7 +252,9 @@
   border-radius: 999px;
   padding: 0.35rem 0.875rem;
   text-decoration: none;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
 .meta-link-btn:hover {
@@ -333,9 +335,16 @@
   aspect-ratio: 16 / 6;
 }
 
-.gallery-item--sq { aspect-ratio: 1; }
-.gallery-item--tall { aspect-ratio: 3 / 4; }
-.gallery-item--lg { aspect-ratio: 4 / 3; grid-column: span 2; }
+.gallery-item--sq {
+  aspect-ratio: 1;
+}
+.gallery-item--tall {
+  aspect-ratio: 3 / 4;
+}
+.gallery-item--lg {
+  aspect-ratio: 4 / 3;
+  grid-column: span 2;
+}
 
 /* ── Next project ── */
 .project-next {

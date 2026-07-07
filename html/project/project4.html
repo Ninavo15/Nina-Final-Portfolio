@@ -8,7 +8,10 @@
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=Newsreader:ital,wght@0,400;1,400&display=swap"
       rel="stylesheet"
     />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../../css/main.css" />
     <link rel="stylesheet" href="../../css/components/cursor.css" />
     <link rel="stylesheet" href="../../css/components/nav.css" />
@@ -19,77 +22,94 @@
     <div id="nav-placeholder"></div>
     <main class="page-body">
       <div class="project-layout">
-
         <div id="quicknav-placeholder"></div>
 
         <div class="project-content">
+          <!-- Hero -->
+          <div class="project-hero"></div>
 
-      <!-- Hero -->
-      <div class="project-hero"></div>
+          <!-- Header -->
+          <div class="project-header">
+            <div class="project-tags-row">
+              <span class="project-type-tag">Game Dev</span>
+              <span class="project-type-tag">3D VR</span>
+            </div>
+            <h1 class="project-title">Witch Caper</h1>
+            <p class="project-tagline">
+              A 3D VR game where you play as a witch navigating enchanted
+              environments.
+            </p>
+          </div>
 
-      <!-- Header -->
-      <div class="project-header">
-        <div class="project-tags-row">
-          <span class="project-type-tag">Game Dev</span>
-          <span class="project-type-tag">3D VR</span>
-        </div>
-        <h1 class="project-title">Witch Caper</h1>
-        <p class="project-tagline">A 3D VR game where you play as a witch navigating enchanted environments.</p>
-      </div>
+          <!-- Overview + Meta -->
+          <div class="project-body" id="overview">
+            <div class="project-overview">
+              <p class="section-label">Overview</p>
+              <p>
+                Witch Caper is an immersive VR experience built in Unity where
+                players step into the shoes of a young witch exploring a
+                mysterious, spell-filled world. The game combines puzzle-solving
+                with exploration mechanics, using VR hand-tracking to let
+                players cast spells, interact with objects, and uncover hidden
+                secrets. The project was a deep dive into 3D environment design,
+                VR interaction patterns, and building an atmosphere that feels
+                magical from the inside out.
+              </p>
+            </div>
+            <aside class="project-meta">
+              <div class="meta-group">
+                <span class="meta-label">Role</span>
+                <span class="meta-value">Game Developer &amp; 3D Artist</span>
+              </div>
+              <div class="meta-group">
+                <span class="meta-label">Year</span>
+                <span class="meta-value">2024</span>
+              </div>
+              <div class="meta-group">
+                <span class="meta-label">Type</span>
+                <span class="meta-value">Academic Project</span>
+              </div>
+              <div class="meta-group">
+                <span class="meta-label">Tools</span>
+                <div class="meta-tools">
+                  <span class="tool-chip">
+                    <img
+                      src="../../image/software logo/unity.jpeg"
+                      alt="Unity"
+                    />
+                    Unity
+                  </span>
+                  <span class="tool-chip">
+                    <img
+                      src="../../image/software logo/blender.jpeg"
+                      alt="Blender"
+                    />
+                    Blender
+                  </span>
+                </div>
+              </div>
+            </aside>
+          </div>
 
-      <!-- Overview + Meta -->
-      <div class="project-body" id="overview">
-        <div class="project-overview">
-          <p class="section-label">Overview</p>
-          <p>Witch Caper is an immersive VR experience built in Unity where players step into the shoes of a young witch exploring a mysterious, spell-filled world. The game combines puzzle-solving with exploration mechanics, using VR hand-tracking to let players cast spells, interact with objects, and uncover hidden secrets. The project was a deep dive into 3D environment design, VR interaction patterns, and building an atmosphere that feels magical from the inside out.</p>
-        </div>
-        <aside class="project-meta">
-          <div class="meta-group">
-            <span class="meta-label">Role</span>
-            <span class="meta-value">Game Developer &amp; 3D Artist</span>
-          </div>
-          <div class="meta-group">
-            <span class="meta-label">Year</span>
-            <span class="meta-value">2024</span>
-          </div>
-          <div class="meta-group">
-            <span class="meta-label">Type</span>
-            <span class="meta-value">Academic Project</span>
-          </div>
-          <div class="meta-group">
-            <span class="meta-label">Tools</span>
-            <div class="meta-tools">
-              <span class="tool-chip">
-                <img src="../../image/software logo/unity.jpeg" alt="Unity" /> Unity
-              </span>
-              <span class="tool-chip">
-                <img src="../../image/software logo/blender.jpeg" alt="Blender" /> Blender
-              </span>
+          <!-- Gallery -->
+          <div class="project-gallery" id="gallery">
+            <p class="section-label">Screens &amp; Models</p>
+            <div class="gallery-grid">
+              <div class="gallery-item gallery-item--wide"></div>
+              <div class="gallery-item gallery-item--sq"></div>
+              <div class="gallery-item gallery-item--sq"></div>
+              <div class="gallery-item gallery-item--lg"></div>
             </div>
           </div>
-        </aside>
-      </div>
 
-      <!-- Gallery -->
-      <div class="project-gallery" id="gallery">
-        <p class="section-label">Screens &amp; Models</p>
-        <div class="gallery-grid">
-          <div class="gallery-item gallery-item--wide"></div>
-          <div class="gallery-item gallery-item--sq"></div>
-          <div class="gallery-item gallery-item--sq"></div>
-          <div class="gallery-item gallery-item--lg"></div>
-        </div>
-      </div>
-
-      <!-- Next project -->
-      <a href="project5.html" class="project-next">
-        <div>
-          <p class="next-label">Next Project</p>
-          <p class="next-name">Pitfall</p>
-        </div>
-        <i class="ri-arrow-right-line next-arrow"></i>
-      </a>
-
+          <!-- Next project -->
+          <a href="project5.html" class="project-next">
+            <div>
+              <p class="next-label">Next Project</p>
+              <p class="next-name">Pitfall</p>
+            </div>
+            <i class="ri-arrow-right-line next-arrow"></i>
+          </a>
         </div>
       </div>
     </main>
