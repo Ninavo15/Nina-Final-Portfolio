@@ -5,7 +5,7 @@ html {
 
 body {
   min-height: 100dvh;
-  background: #962d7a;
+  background: #ca91b4;
   overflow-x: hidden;
   font-family: var(--font);
   display: flex;
@@ -24,7 +24,7 @@ body {
   left: 0;
   right: 0;
   height: 5.625rem;
-  background: #962d7a;
+  background: #ca91b4;
   display: flex;
   align-items: flex-end;
   padding: 0 2rem 0;
@@ -36,15 +36,6 @@ body {
 
 .site-nav.scrolled {
   box-shadow: 0 1.25rem 0 #f6f1ed;
-}
-
-.site-nav::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("../../image/bg texture.jpg") center / cover no-repeat;
-  opacity: 0.5;
-  pointer-events: none;
 }
 
 .nav-tab {

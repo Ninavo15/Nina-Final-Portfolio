@@ -158,7 +158,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 3rem 0;
+  padding: 2.5rem 0;
   text-decoration: none;
   opacity: 0;
   transform: translateY(1.25rem);
@@ -189,14 +189,14 @@
 
 .card-img {
   width: 100%;
-  height: 40rem;
+  height: 50rem;
   object-fit: cover;
   display: block;
 }
 
 .card-img-placeholder {
   width: 100%;
-  height: 34rem;
+  height: 50rem;
   background: #d4ceca;
 }
 

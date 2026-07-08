@@ -101,8 +101,8 @@
 /* ── Hero ── */
 .project-hero {
   width: 100%;
-  height: 58vh;
-  min-height: 18rem;
+  height: 70vh;
+  min-height: 24rem;
   background: #d4ceca;
   overflow: hidden;
 }
@@ -177,7 +177,8 @@
 .project-architecture,
 .project-pipeline,
 .project-data,
-.project-gallery {
+.project-gallery,
+.project-more {
   scroll-margin-top: 6.5rem;
 }
 
@@ -201,6 +202,70 @@
   color: #444;
   line-height: 1.85;
   margin: 0;
+}
+
+/* ── Tech stack ── */
+.project-techstack {
+  padding: 3rem;
+  border-bottom: 0.0625rem solid #e8e2e0;
+}
+
+.techstack-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  margin-top: 1.5rem;
+}
+
+.techstack-col h4 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 0.875rem;
+}
+
+.techstack-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.techstack-col li {
+  position: relative;
+  padding-left: 1.1rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9375rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+.techstack-col li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65rem;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+  background: #b89aaa;
+}
+
+.techstack-col li strong {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.techstack-col li code {
+  font-family: "DM Sans", sans-serif;
+  background: #f4f0ee;
+  border-radius: 0.3rem;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.875rem;
+  color: #642052;
 }
 
 /* ── Meta sidebar ── */
@@ -346,31 +411,102 @@
   grid-column: span 2;
 }
 
-/* ── Next project ── */
-.project-next {
+/* ── Gallery carousel ── */
+.gallery-carousel {
+  margin-top: 1.5rem;
+}
+
+.carousel-viewport {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: #e8e2e0;
+  box-shadow: 0 0.5rem 1.875rem rgba(0, 0, 0, 0.12);
+}
+
+.carousel-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.carousel-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background: #ddd0d8;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.carousel-dot:hover {
+  background: #b089a8;
+}
+
+.carousel-dot.is-active {
+  background: #642052;
+  transform: scale(1.25);
+}
+
+/* ── More projects ── */
+.project-more {
+  padding: 2.5rem 3rem 3rem;
+}
+
+.more-projects-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.more-project-link {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2.5rem 3rem;
+  padding: 1.75rem 0;
+  border-bottom: 0.0625rem solid #e8e2e0;
   text-decoration: none;
   transition: background 0.2s ease;
 }
 
-.project-next:hover {
+.more-project-link:last-child {
+  border-bottom: none;
+}
+
+.more-project-link:hover {
   background: #faf7f5;
 }
 
-.next-label {
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: #b89aaa;
-  margin: 0 0 0.4rem;
-}
-
-.next-name {
+.more-project-name {
   font-family: "Newsreader", serif;
   font-size: 2.25rem;
   font-weight: 400;
@@ -379,14 +515,14 @@
   line-height: 1.15;
 }
 
-.next-arrow {
+.more-project-arrow {
   font-size: 2rem;
   color: #642052;
   transition: transform 0.2s ease;
   flex-shrink: 0;
 }
 
-.project-next:hover .next-arrow {
+.more-project-link:hover .more-project-arrow {
   transform: translateX(0.5rem);
 }
 
@@ -414,12 +550,17 @@
     padding: 2rem 1.5rem;
   }
 
-  .project-next {
-    padding: 2rem 1.5rem;
+  .project-more {
+    padding: 2rem 1.5rem 2.5rem;
   }
 
-  .next-name {
+  .more-project-name {
     font-size: 1.75rem;
+  }
+
+  .techstack-columns {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
 

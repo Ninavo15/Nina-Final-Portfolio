@@ -1,0 +1,354 @@
+/* ── Code ── */
+.project-code {
+  padding: 3rem;
+  border-bottom: 0.0625rem solid #e8e2e0;
+}
+
+.code-intro {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9375rem;
+  color: #888;
+  margin: 1.5rem 0 1rem;
+}
+
+.code-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  align-items: start;
+}
+
+.code-item {
+  margin: 0;
+}
+
+.code-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.75rem;
+  border: 0.0625rem solid #e8e2e0;
+}
+
+.code-item figcaption {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.875rem;
+  color: #444;
+  line-height: 1.6;
+  margin-top: 0.625rem;
+}
+
+.code-item figcaption strong {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.code-item figcaption code {
+  background: #f4f0ee;
+  border-radius: 0.25rem;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.85em;
+  color: #642052;
+}
+
+/* ── Key features ── */
+.project-features {
+  padding: 3rem;
+  border-bottom: 0.0625rem solid #e8e2e0;
+  scroll-margin-top: 6.5rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.feature-card {
+  border: 0.0625rem solid #e8e2e0;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+.feature-card h4 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 0.75rem;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.feature-file {
+  font-family: monospace;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #b089a8;
+}
+
+.feature-card p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9375rem;
+  color: #444;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.feature-card p code {
+  background: #f4f0ee;
+  border-radius: 0.25rem;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.85em;
+  color: #642052;
+}
+
+/* ── Typography / color spec sections ── */
+.project-typespec,
+.project-colorspec {
+  padding: 3rem;
+  border-bottom: 0.0625rem solid #e8e2e0;
+}
+
+.spec-intro {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9375rem;
+  color: #888;
+  margin: 1.5rem 0 1rem;
+}
+
+.spec-intro code {
+  background: #f4f0ee;
+  border-radius: 0.25rem;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.85em;
+  color: #642052;
+}
+
+/* ── Font family cards ── */
+.type-familycards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.type-familycard {
+  border: 0.0625rem solid #e8e2e0;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+.type-familycard h4 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  margin: 0 0 0.5rem;
+}
+
+.familycard-role {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9375rem;
+  color: #444;
+  margin: 0 0 0.75rem;
+}
+
+.familycard-meta {
+  font-family: monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  color: #b089a8;
+  margin: 0;
+}
+
+/* ── Type scale ── */
+.scale-group-label {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #b89aaa;
+  margin: 0 0 0.5rem;
+}
+
+.scale-group-label--spaced {
+  margin-top: 2.5rem;
+}
+
+.scale-row {
+  padding: 1.25rem 0;
+  border-bottom: 0.0625rem solid #e8e2e0;
+}
+
+.scale-row--last {
+  border-bottom: none;
+}
+
+.scale-row-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.scale-row-name {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.scale-row-name code {
+  font-family: monospace;
+  font-weight: 400;
+  color: #b089a8;
+  margin-left: 0.35rem;
+}
+
+.scale-row-meta {
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: #888;
+  white-space: nowrap;
+}
+
+.scale-sample {
+  margin: 0;
+  line-height: 1.15;
+  color: #1a1a1a;
+  overflow-wrap: break-word;
+}
+
+.scale-sample-source {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.75rem;
+  color: #b089a8;
+  margin: 0.5rem 0 0;
+}
+
+.demo-h1 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 900;
+  font-size: clamp(1.6rem, 6vw, 3.2rem);
+}
+
+.demo-h2 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.4rem, 4vw, 2.5rem);
+}
+
+.demo-h3 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 400;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+}
+
+.demo-h4 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.demo-paragraph {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+  max-width: 40rem;
+}
+
+.spec-note {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.875rem;
+  color: #888;
+  line-height: 1.7;
+  margin: 1.5rem 0 0;
+}
+
+.spec-note strong {
+  color: #444;
+}
+
+.spec-note code {
+  background: #f4f0ee;
+  border-radius: 0.25rem;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.85em;
+  color: #642052;
+}
+
+/* ── Color swatches ── */
+.color-swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.swatch {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.swatch-color {
+  width: 100%;
+  height: 4rem;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid rgba(0, 0, 0, 0.08);
+  display: block;
+}
+
+.swatch-color--bordered {
+  border: 0.0625rem solid #ddd;
+}
+
+.swatch-name {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #642052;
+}
+
+.swatch-hex {
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+}
+
+.swatch-role {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.8125rem;
+  color: #444;
+}
+
+/* ── Responsive ── */
+@media (max-width: 40rem) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .type-familycards {
+    grid-template-columns: 1fr;
+  }
+
+  .scale-row-head {
+    flex-wrap: wrap;
+  }
+
+  .scale-row-meta {
+    white-space: normal;
+  }
+}

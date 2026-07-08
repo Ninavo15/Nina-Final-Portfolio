@@ -9,9 +9,8 @@
 
 /* ── Variables ── */
 :root {
-  --brand: #962d7a;
+  --brand: #ca91b4;
   --font: "DM Sans", sans-serif;
-  --texture: url("../image/bg texture.jpg");
 }
 
 /* ── Base body ── */
