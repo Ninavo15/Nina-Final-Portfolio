@@ -2,27 +2,29 @@
   padding: 0;
 }
 
-/* ── Header row ── */
+/* ── Header: title, subtitle and filters stacked and centred ── */
 .work-header {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 3rem 3rem 2.5rem;
-  border-bottom: 0.0625rem solid #e8e2e0;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  padding: 3.5rem 3rem 3rem;
 }
 
 .work-title {
-  font-family: "Newsreader", serif;
-  font-size: 4.25rem;
+  font-family: var(--font-display);
+  font-size: var(--text-page-hero);
   font-weight: 700;
+  letter-spacing: -0.02em;
   color: #642052;
   margin: 0;
   line-height: 1;
 }
 
 .work-subtitle {
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.875rem;
+  font-family: var(--font-body);
+  font-size: var(--text-small);
   color: #b89aaa;
   letter-spacing: 0.05em;
   margin: 0.4rem 0 0;
@@ -30,8 +32,8 @@
 
 .work-filters {
   display: flex;
+  justify-content: center;
   gap: 0.625rem;
-  padding-top: 0.75rem;
 }
 
 .filter-btn {
@@ -39,8 +41,8 @@
   border-radius: 999px;
   border: 0.0625rem solid #642052;
   background: none;
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.8125rem;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
   font-weight: 500;
   letter-spacing: 0.06em;
   color: #642052;
@@ -53,62 +55,42 @@
 .filter-btn:hover,
 .filter-btn.active {
   background: #642052;
-  color: #fff;
+  color: var(--text-light);
 }
 
-/* ── Section layout (numbered sections, like extra.html) ── */
+/* ── Category sections, each with its own title (same as Extra) ── */
 .work-section {
-  display: grid;
-  grid-template-columns: 22rem 1fr;
-  border-top: 0.0625rem solid #e8e2e0;
-  scroll-margin-top: 5.625rem;
+  padding: 3.5rem 3rem 1.5rem;
+  scroll-margin-top: 6.625rem;
 }
 
-.section-left {
-  position: sticky;
-  top: 5.625rem;
-  height: calc(100vh - 5.625rem);
-  align-self: start;
+.section-head {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 3rem;
-  border-right: 0.0625rem solid #e8e2e0;
-}
-
-.section-num {
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  color: #b89aaa;
-  margin-bottom: 0.75rem;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.125rem;
+  padding-bottom: 1.125rem;
+  border-bottom: 0.0625rem solid #e3d6dc;
 }
 
 .section-title {
-  font-family: "Newsreader", serif;
-  font-size: 3.75rem;
-  font-weight: 400;
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: #642052;
-  margin: 0 0 1.25rem;
-  line-height: 1.1;
+  margin: 0;
+  line-height: 1;
 }
 
 .section-sub {
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.9375rem;
+  margin: 0 0 0 auto;
+  max-width: 28rem;
+  font-family: var(--font-body);
+  font-size: var(--text-small);
   color: #6b5b65;
-  line-height: 1.75;
-  max-width: 16rem;
-}
-
-.section-right {
-  padding: 2.5rem;
-}
-
-.projects-grid-cat {
-  display: flex;
-  flex-direction: column;
+  line-height: 1.6;
+  text-align: right;
 }
 
 .project-tags {
@@ -119,8 +101,8 @@
 }
 
 .project-tag {
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.6875rem;
+  font-family: var(--font-body);
+  font-size: var(--text-tag);
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -138,28 +120,15 @@
   margin: 0 0.25rem;
 }
 
-.project-arrow {
-  font-size: 1.25rem;
-  color: #b89aaa;
-  transition:
-    color 0.2s ease,
-    transform 0.2s ease;
-  display: inline-block;
-}
-
-.project-featured:hover .project-arrow,
-.project-card:hover .project-arrow {
-  color: #642052;
-  transform: translateX(0.25rem);
-}
-
-.project-card {
-  min-height: 100vh;
+/* ── Case-study rows: image and text side by side, alternating ── */
+.project-case {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 2.5rem 0;
+  align-items: center;
+  gap: 3.5rem;
+  padding: 3rem 0;
+  border-bottom: 0.0625rem solid #e8e2e0;
   text-decoration: none;
+  color: inherit;
   opacity: 0;
   transform: translateY(1.25rem);
   transition:
@@ -167,133 +136,132 @@
     transform 0.6s ease;
 }
 
-.project-card.card-active {
+.project-case:last-child {
+  border-bottom: none;
+}
+
+.project-case.card-active {
   opacity: 1;
   transform: translateY(0);
 }
 
-.project-card-inner {
-  background: #fff;
-  border-radius: 1rem;
+.project-case--flip {
+  flex-direction: row-reverse;
+}
+
+.case-media {
+  flex: 1.2;
+  min-width: 0;
+  border-radius: 1.125rem;
   overflow: hidden;
-  box-shadow: 0 0.125rem 1rem rgba(0, 0, 0, 0.06);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  box-shadow: 0 0.5rem 1.5rem rgba(100, 32, 82, 0.1);
 }
 
-.project-card:hover .project-card-inner {
-  transform: translateY(-0.25rem);
-  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
-}
-
-.card-img {
+.case-img {
   width: 100%;
-  height: 50rem;
+  height: 22.5rem;
   object-fit: cover;
   display: block;
+  transition: transform 0.5s ease;
 }
 
-.card-img-placeholder {
-  width: 100%;
-  height: 50rem;
+.project-case:hover .case-img {
+  transform: scale(1.03);
+}
+
+.case-img--placeholder {
   background: #d4ceca;
 }
 
-.card-info {
-  padding: 0.875rem 1rem 1.25rem;
-  background: #faf7f5;
+.case-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.card-meta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
+/* Category pill, colour-coded like the nav tabs */
+.case-cat {
+  align-self: flex-start;
+  padding: 0.375rem 0.75rem;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: var(--text-tag);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.case-cat--web {
+  background: #6491b1;
+  color: #10243a;
+}
+
+.case-cat--application {
+  background: #f0b8d0;
+  color: #642052;
+}
+
+.case-cat--game {
+  background: #445881;
+  color: var(--text-light);
 }
 
 .card-name {
-  font-family: "Newsreader", serif;
-  font-size: 1.25rem;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 1.5rem + 1.4vw, 3rem);
   font-weight: 700;
-  color: #1a1a1a;
-  margin: 0 0 0.25rem;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: #642052;
+  margin: 0;
 }
 
 .card-desc {
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.8125rem;
-  color: #666;
-  line-height: 1.5;
+  font-family: var(--font-body);
+  font-size: var(--text-lead);
+  line-height: 1.7;
+  color: #4a4447;
   margin: 0;
 }
 
 /* ── Responsive work ── */
 @media (max-width: 62rem) {
-  .work-section {
-    grid-template-columns: 1fr;
-  }
-
-  .section-left {
-    position: static;
-    height: auto;
-    border-right: none;
-    border-bottom: 0.0625rem solid #e8e2e0;
-    padding: 2rem 1.5rem;
-  }
-
-  .section-right {
-    padding: 1.5rem;
-  }
-
   .work-header {
-    flex-direction: column;
-    align-items: flex-start;
     gap: 1rem;
-    padding: 2rem 1.5rem 1.5rem;
-  }
-
-  .work-title {
-    font-size: 3rem;
-  }
-
-  .section-title {
-    font-size: 2.5rem;
+    padding: 2.5rem 1.5rem 2rem;
   }
 
   .work-filters {
     flex-wrap: wrap;
   }
-}
 
-@media (max-width: 59.375rem) {
-  .project-card {
-    padding: 2.25rem 0;
-  }
-}
-
-@media (max-width: 48rem) {
-  .card-img,
-  .card-img-placeholder {
-    height: 18rem;
+  .work-section {
+    padding: 2.5rem 1.5rem 1rem;
   }
 
-  .project-card {
+  .section-sub {
+    margin-left: 0;
+    text-align: left;
+  }
+
+  /* Stack image over text */
+  .project-case,
+  .project-case--flip {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
     padding: 2rem 0;
+  }
+
+  .case-img {
+    height: 18rem;
   }
 }
 
 @media (max-width: 30rem) {
-  .work-title {
-    font-size: 2.25rem;
+  .case-img {
+    height: 13rem;
   }
 
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .card-img,
-  .card-img-placeholder {
-    height: 14rem;
-  }
 }

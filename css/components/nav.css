@@ -17,92 +17,136 @@ body {
 }
 
 
+/* Plum frame thickness */
+:root {
+  --frame: 1rem;
+}
+
 /* ── Shared site navbar ── */
+
 .site-nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 5.625rem;
-  background: #ca91b4;
+  height: calc(5.625rem + var(--frame));
+  background: linear-gradient(
+    to bottom,
+    #ca91b4 calc(100% - var(--frame)),
+    #642052 0
+  );
   display: flex;
   align-items: flex-end;
-  padding: 0 2rem 0;
+  padding: 0 2rem var(--frame);
   gap: 0.5rem;
   z-index: 500;
   overflow: hidden;
   transition: background 0.4s ease, box-shadow 0.4s ease;
 }
 
-.site-nav.scrolled {
-  box-shadow: 0 1.25rem 0 #f6f1ed;
-}
 
 .nav-tab {
+  --tab-bg: transparent;
+  --tab-radius: 1.8125rem;
   display: inline-flex;
   align-items: flex-end;
   justify-content: center;
   padding-bottom: 0.125rem;
   width: 12.1875rem;
   height: 3.4375rem;
-  border-radius: 1.8125rem 1.8125rem 0 0;
-  font-family: "Newsreader", serif;
+  font-family: var(--font-display);
   font-size: 2rem;
-  font-weight: 400;
+  /* Same styling as the home page name (.home-name) */
+  font-weight: 700;
+  letter-spacing: -0.02em;
   line-height: 100%;
-  color: #fcfff1;
+  color: var(--text-light);
   text-decoration: none;
   cursor: pointer;
-  transition:
-    background 0.2s ease,
-    color 0.2s ease;
-  overflow: hidden;
+  transition: color 0.2s ease;
   isolation: isolate;
   position: relative;
 }
 
+/* Tab shape drawn behind the label */
+.nav-tab::before,
 .nav-tab::after {
   content: "";
   position: absolute;
   inset: 0;
+  border-radius: var(--tab-radius) var(--tab-radius) 0 0;
+  pointer-events: none;
+}
+
+.nav-tab::before {
+  background: var(--tab-bg);
+  /* Soft shadow up and around each tab so they lift off the bar */
+  box-shadow: 0 -0.125rem 0.625rem rgba(60, 10, 45, 0.22);
+  transition: background 0.2s ease;
+  z-index: -2;
+}
+
+/* Home only*/
+.tab-home::before,
+.tab-home::after {
+  transform: perspective(6rem) rotateX(14deg);
+  transform-origin: bottom left;
+}
+
+.tab-home::before {
+  box-shadow: 0 -0.125rem 0.625rem rgba(60, 10, 45, 0.22);
+}
+
+.nav-tab::after {
   background: url("../image/folder_texture.png") 50% / cover no-repeat;
   opacity: 0.58;
   mix-blend-mode: multiply;
-  pointer-events: none;
   z-index: -1;
 }
 
+/* Home: the big plum folder tab on the left */
+.tab-home {
+  --tab-bg: #642052;
+  --tab-radius: 1.75rem;
+  margin-right: auto;
+  width: 35rem;
+  height: 4.75rem;
+  letter-spacing: 0.02em;
+  justify-content: flex-start;
+  padding-left: 2rem;
+}
+
 .tab-about {
-  background: #f0b8d0;
+  --tab-bg: #f0b8d0;
 }
 .tab-extra {
-  background: #445881;
+  --tab-bg: #445881;
 }
 .tab-work {
-  background: #6491b1;
+  --tab-bg: #6491b1;
 }
 .tab-resume {
-  background: #764969;
+  --tab-bg: #764969;
 }
 
 .tab-about.active,
 .tab-about:hover {
-  background: #f6f1ed;
+  --tab-bg: #f6f1ed;
   color: #f0b8d0;
 }
 .tab-extra.active,
 .tab-extra:hover {
-  background: #f6f1ed;
+  --tab-bg: #f6f1ed;
   color: #445881;
 }
 .tab-work.active,
 .tab-work:hover {
-  background: #f6f1ed;
+  --tab-bg: #f6f1ed;
   color: #6491b1;
 }
 .tab-resume.active,
 .tab-resume:hover {
-  background: #f6f1ed;
+  --tab-bg: #f6f1ed;
   color: #764969;
 }
 
@@ -111,17 +155,63 @@ body {
   opacity: 0;
 }
 
+/* Active tab runs down through the plum strip into the cream page */
+.nav-tab.active:not(.tab-home)::before {
+  box-shadow:
+    0 var(--frame) 0 #f6f1ed,
+    0 -0.125rem 0.625rem rgba(60, 10, 45, 0.22);
+}
+
+/* Home tab keeps its look on hover */
+.tab-home:hover::after {
+  opacity: 0.58;
+}
+
+/* Give the label room above/below so tall symbols aren't clipped by the
+   text-clipped gradient; negative margin keeps its position unchanged */
+.tab-home-label {
+  display: inline-block;
+  padding: 0.35em 0;
+  margin: -0.35em 0;
+}
+
+/* Home tab hover: characters take a static blend of the other tabs' colours */
+.tab-home:hover .tab-home-label {
+  background: linear-gradient(90deg, #f0b8d0, #6491b1, #445881, #764969);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 /* ── Page body under the navbar ── */
 .page-body {
   background: #f6f1ed;
   margin-top: 5.625rem;
   min-height: 100dvh;
+  /* Plum frame on the top and sides, in the home tab color */
+  border: var(--frame) solid #642052;
+  border-bottom: none;
+  position: relative;
+}
+
+/* Repaint the top border on its own layer so content that
+   hangs upward (e.g. the About ID card) sits beneath it */
+.page-body::before {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--frame));
+  left: calc(-1 * var(--frame));
+  right: calc(-1 * var(--frame));
+  height: var(--frame);
+  background: #642052;
+  z-index: 10;
+  pointer-events: none;
 }
 
 /* ── Responsive nav ── */
 @media (max-width: 48rem) {
   .site-nav {
-    padding: 0 1rem;
+    padding: 0 1rem var(--frame);
     gap: 0.25rem;
     overflow-x: auto;
     scrollbar-width: none;
@@ -131,11 +221,21 @@ body {
     display: none;
   }
 
+  :root {
+    --frame: 0.5rem;
+  }
+
   .nav-tab {
     width: 7.5rem;
     height: 3.0625rem;
     font-size: 1.375rem;
     flex-shrink: 0;
+  }
+
+  .tab-home {
+    width: 11rem;
+    height: 3.75rem;
+    padding-left: 1.25rem;
   }
 }
 
@@ -144,11 +244,16 @@ body {
     width: 6rem;
     font-size: 1.125rem;
   }
+
+  .tab-home {
+    width: 9rem;
+    padding-left: 1rem;
+  }
 }
 
 @media (max-width: 24rem) {
   .site-nav {
-    padding: 0 0.5rem;
+    padding: 0 0.5rem var(--frame);
     gap: 0.2rem;
   }
 
@@ -156,6 +261,12 @@ body {
     width: 4.6rem;
     height: 2.5rem;
     font-size: 0.8125rem;
-    border-radius: 1.25rem 1.25rem 0 0;
+    --tab-radius: 1.25rem;
+  }
+
+  .tab-home {
+    width: 6.9rem;
+    height: 3rem;
+    padding-left: 0.75rem;
   }
 }

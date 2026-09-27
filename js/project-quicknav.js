@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   };
 
-  const triggerOffset = 120; // px below the fixed nav bar
+  const triggerOffset = 176; // px below the fixed nav bar + quick nav bar
 
   const updateActive = () => {
     let current = sections[0];

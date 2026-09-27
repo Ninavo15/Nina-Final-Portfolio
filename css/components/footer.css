@@ -1,7 +1,7 @@
 .site-footer {
   background: #642052;
-  color: #fff;
-  font-family: "DM Sans", sans-serif;
+  color: var(--text-light);
+  font-family: var(--font-body);
   position: relative;
   overflow: visible;
 }
@@ -20,23 +20,28 @@
 .footer-main {
   padding: 3.5rem 3rem 2.5rem;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
 }
 
 /* ── Left content ── */
 .footer-title {
-  font-family: "Newsreader", serif;
+  font-family: var(--font-display);
   font-size: 5rem;
-  font-weight: 400;
-  line-height: 1.15;
+  /* Same styling as the home page name (.home-name) */
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
   margin: 0 0 2rem;
 }
 
 .footer-open {
-  font-size: 0.875rem;
+  font-size: var(--text-small);
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-light);
   margin: -0.75rem 0 1.75rem;
 }
 
@@ -51,7 +56,7 @@
   height: 3.5rem;
   background: rgba(255, 255, 255, 0.18);
   border-radius: 0.5rem;
-  color: #fff;
+  color: var(--text-light);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,9 +78,310 @@
 
 .footer-contact p {
   margin: 0;
-  font-size: 1rem;
-  opacity: 0.85;
+  font-size: var(--text-body);
   line-height: 1.8;
+}
+
+/* ── Right: phone chat ──
+   Class names avoid the word "phone": ad blockers hide elements like
+   .footer-phone as if they were phone-number widgets. */
+.footer-chat-wrap {
+  position: relative;
+  width: 35rem;
+  flex-shrink: 0;
+  align-self: stretch;
+  min-height: 30rem;
+  /* reach the footer's top edge and the bottom bar line */
+  margin: -3.5rem 0 -4.5rem;
+  overflow: hidden;
+  color: #f0b8d0;
+}
+
+.footer-device {
+  position: absolute;
+  left: 9.375rem;
+  top: 1.25rem;
+  width: 20.625rem;
+  height: 40rem;
+  padding: 0.875rem;
+  background: #4a1540;
+  border: 0.1875rem solid #f0b8d0;
+  border-radius: 2.75rem;
+  box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.35);
+}
+
+.device-btn {
+  position: absolute;
+  width: 0.3125rem;
+  border-radius: 0.1875rem;
+  background: #f0b8d0;
+}
+
+.device-btn--power {
+  right: -0.5rem;
+  top: 7.5rem;
+  height: 3.5rem;
+}
+
+.device-btn--vol-up {
+  left: -0.5rem;
+  top: 6.25rem;
+  height: 2.125rem;
+}
+
+.device-btn--vol-down {
+  left: -0.5rem;
+  top: 9.125rem;
+  height: 2.125rem;
+}
+
+.device-screen {
+  height: 100%;
+  border-radius: 2rem;
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.device-notch {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.625rem;
+}
+
+.device-notch span {
+  width: 5.375rem;
+  height: 1.375rem;
+  border-radius: 0.75rem;
+  background: #4a1540;
+}
+
+.device-header {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.75rem 1.125rem;
+  border-bottom: 0.0625rem solid #f0e4ea;
+}
+
+.device-avatar {
+  width: 2.375rem;
+  height: 2.375rem;
+  border-radius: 50%;
+  background: #f0b8d0;
+  flex-shrink: 0;
+}
+
+.device-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.0625rem;
+}
+
+.device-name {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #642052;
+}
+
+.device-status {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.75rem;
+  color: #4d7a36;
+}
+
+.device-status-dot {
+  width: 0.4375rem;
+  height: 0.4375rem;
+  border-radius: 50%;
+  background: #8fc46f;
+}
+
+.device-chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  padding: 1rem;
+}
+
+.device-time {
+  align-self: center;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #a58a9b;
+}
+
+.chat-bubble {
+  max-width: 78%;
+  margin: 0;
+  padding: 0.6875rem 0.9375rem;
+  font-size: var(--text-body);
+  line-height: 1.4;
+  color: #642052;
+}
+
+.chat-bubble--them {
+  align-self: flex-start;
+  background: #f3e8ee;
+  border-radius: 1.125rem 1.125rem 1.125rem 0.3125rem;
+}
+
+.chat-bubble--me {
+  align-self: flex-end;
+  background: #f0b8d0;
+  border-radius: 1.125rem 1.125rem 0.3125rem 1.125rem;
+}
+
+.chat-typing {
+  align-self: flex-start;
+  display: flex;
+  gap: 0.3125rem;
+  padding: 0.6875rem 0.875rem;
+  background: #f3e8ee;
+  border-radius: 1rem;
+}
+
+.chat-typing span {
+  width: 0.4375rem;
+  height: 0.4375rem;
+  border-radius: 50%;
+  background: #a58a9b;
+}
+
+.chat-typing span:nth-child(2) {
+  opacity: 0.7;
+}
+
+.chat-typing span:nth-child(3) {
+  opacity: 0.4;
+}
+
+/* ── Chat animation (driven by js/components.js) ──
+   While .is-playing, bubbles stay hidden until .is-shown; the typing
+   dots appear on whoever is "typing" next. */
+.device-chat.is-playing .chat-bubble:not(.is-shown),
+.device-chat.is-playing .chat-typing:not(.is-typing) {
+  display: none;
+}
+
+.chat-bubble.is-shown {
+  animation: chatPop 0.35s cubic-bezier(0.34, 1.4, 0.64, 1) both;
+}
+
+.chat-bubble--them.is-shown {
+  transform-origin: bottom left;
+}
+
+.chat-bubble--me.is-shown {
+  transform-origin: bottom right;
+}
+
+.chat-typing.is-typing {
+  animation: chatPop 0.25s ease both;
+}
+
+/* Fade the whole conversation out before it replays */
+.device-chat {
+  transition: opacity 0.4s ease;
+}
+
+.device-chat.is-clearing {
+  opacity: 0;
+}
+
+/* Your side typing: pink, on the right */
+.chat-typing--me {
+  align-self: flex-end;
+  background: #f0b8d0;
+}
+
+.chat-typing--me span {
+  background: #642052;
+}
+
+.device-chat.is-playing .chat-typing span {
+  animation: chatDot 1s ease-in-out infinite;
+}
+
+.device-chat.is-playing .chat-typing span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.device-chat.is-playing .chat-typing span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes chatPop {
+  from {
+    opacity: 0;
+    transform: scale(0.6) translateY(0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes chatDot {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-0.25rem);
+  }
+}
+
+/* Handwritten note + sparkles around the phone */
+.footer-chat-note {
+  position: absolute;
+  left: 0;
+  top: 9.375rem;
+  font-family: var(--font-hand);
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--text-light);
+  transform: rotate(-8deg);
+}
+
+/* Doodles are CSS backgrounds, not inline <svg>: Live Server injects its
+   reload script before every </svg> in an .html file, which broke this
+   partial and dropped the phone. */
+.footer-chat-arrow {
+  position: absolute;
+  left: 2.5rem;
+  top: 12.25rem;
+  width: 5.625rem;
+  height: 3.125rem;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 90 50' fill='none' stroke='%23f6f1ee' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 8c24 4 50 16 72 32'/%3E%3Cpath d='M62 38l16 3-4-15'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+}
+
+.footer-spark {
+  position: absolute;
+  background: center / contain no-repeat;
+}
+
+.footer-spark--lg {
+  left: 31.25rem;
+  top: 4.375rem;
+  width: 1.875rem;
+  height: 1.875rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fcfff1' d='M12 2 q1.6 8.4 10 10 q-8.4 1.6-10 10 q-1.6-8.4-10-10 q8.4-1.6 10-10z'/%3E%3C/svg%3E");
+}
+
+.footer-spark--sm {
+  left: 6rem;
+  top: 3.75rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23f0b8d0' d='M12 2 q1.6 8.4 10 10 q-8.4 1.6-10 10 q-1.6-8.4-10-10 q8.4-1.6 10-10z'/%3E%3C/svg%3E");
 }
 
 /* ── Bottom bar ── */
@@ -88,15 +394,38 @@
 
 .footer-bottom p {
   margin-top: 1.2rem;
-  font-size: 0.8125rem;
-  opacity: 0.7;
+  font-size: var(--text-xs);
   letter-spacing: 0.04em;
 }
 
 /* ── Responsive footer ── */
+@media (max-width: 80rem) {
+  .footer-chat-wrap {
+    width: 24rem;
+  }
+
+  .footer-device {
+    left: 2rem;
+  }
+
+  .footer-chat-note,
+  .footer-chat-arrow,
+  .footer-spark--sm {
+    display: none;
+  }
+
+  .footer-spark--lg {
+    left: 21rem;
+  }
+}
+
 @media (max-width: 64rem) {
   .footer-main {
     padding: 3rem 1.5rem 2rem;
+  }
+
+  .footer-chat-wrap {
+    margin: -3rem 0 -4rem;
   }
 
   .footer-title {
@@ -111,6 +440,11 @@
 @media (max-width: 48rem) {
   .footer-title {
     font-size: 3rem;
+  }
+
+  /* No room beside the contact info on small screens */
+  .footer-chat-wrap {
+    display: none;
   }
 }
 

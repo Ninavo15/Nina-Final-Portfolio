@@ -1,20 +1,9 @@
-// Hide system cursor immediately — runs synchronously before any async scripts
-(function () {
-  const s = document.createElement("style");
-  s.textContent =
-    "*,a,button,input,select,textarea,[href],[tabindex],[role='button']{cursor:none!important}";
-  document.head.appendChild(s);
-})();
-
 let page = window.location.pathname.split("/").pop().replace(".html", "");
 if (page === "" || page === "index") page = "about";
 
 const _self = document.currentScript;
 const _base = _self ? _self.src.replace(/components\.js$/, "") : "../../js/";
 const rootPrefix = _base.replace(/js\/?$/, "");
-const cursorScript = document.createElement("script");
-cursorScript.src = _base + "cursor.js";
-document.head.appendChild(cursorScript);
 
 async function loadPartial(placeholderId, file) {
   const res = await fetch(file);
@@ -41,10 +30,12 @@ Promise.all([
 
   const footer = document.querySelector(".site-footer");
   if (footer) {
+    const playChat = setupFooterChat(footer);
     const footerObserver = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           footer.classList.add("footer-visible");
+          playChat();
           footerObserver.disconnect();
         }
       },
@@ -53,6 +44,55 @@ Promise.all([
     footerObserver.observe(footer);
   }
 });
+
+// ── Footer phone chat: messages arrive one by one, with typing dots ──
+function setupFooterChat(footer) {
+  const chat = footer.querySelector(".device-chat");
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+  if (!chat || reduceMotion) return () => {};
+
+  const bubbles = [...chat.querySelectorAll(".chat-bubble")];
+  const typing = chat.querySelector(".chat-typing");
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+
+  // Hide everything until the footer scrolls into view
+  chat.classList.add("is-playing");
+
+  const showTyping = (isMe) => {
+    typing.classList.toggle("chat-typing--me", isMe);
+    typing.classList.add("is-typing");
+  };
+  const hideTyping = () => typing.classList.remove("is-typing");
+
+  const playOnce = async () => {
+    for (const bubble of bubbles) {
+      const isMe = bubble.classList.contains("chat-bubble--me");
+      showTyping(isMe);
+      await wait(isMe ? 1400 : 900);
+      hideTyping();
+      bubble.classList.add("is-shown");
+      await wait(700);
+    }
+    // Visitor starts typing again, then the chat clears and replays
+    showTyping(false);
+    await wait(2500);
+    chat.classList.add("is-clearing");
+    await wait(450);
+    hideTyping();
+    bubbles.forEach((bubble) => bubble.classList.remove("is-shown"));
+    chat.classList.remove("is-clearing");
+  };
+
+  return async () => {
+    await wait(500);
+    while (true) {
+      await playOnce();
+      await wait(600);
+    }
+  };
+}
 
 // ── Back to top ──
 (function () {
@@ -67,7 +107,7 @@ Promise.all([
       border-radius: 50%;
       border: none;
       background: #642052;
-      color: #fff;
+      color: var(--text-light);
       font-size: 1.25rem;
       display: flex;
       align-items: center;

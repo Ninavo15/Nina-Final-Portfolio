@@ -7,20 +7,26 @@ const setActive = (id) => {
   });
 };
 
-filterBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    setActive(btn.dataset.filter);
+// Alternate image left/right across whichever projects are showing
+const reflowSides = () => {
+  const visible = document.querySelectorAll(".work-section:not([hidden]) .project-case");
+  visible.forEach((card, i) => card.classList.toggle("project-case--flip", i % 2 === 1));
+};
 
-    if (btn.dataset.filter === "all") {
-      document.querySelector(".work-content").scrollIntoView({ behavior: "smooth", block: "start" });
-      return;
-    }
-
-    document.getElementById(btn.dataset.filter)?.scrollIntoView({ behavior: "smooth", block: "start" });
+// Show only the section that matches the tag ("all" shows every section)
+const applyFilter = (id) => {
+  setActive(id);
+  sections.forEach((section) => {
+    section.hidden = id !== "all" && section.id !== id;
   });
+  reflowSides();
+};
+
+filterBtns.forEach((btn) => {
+  btn.addEventListener("click", () => applyFilter(btn.dataset.filter));
 });
 
-const projectCards = document.querySelectorAll(".project-card");
+const projectCards = document.querySelectorAll(".project-case");
 
 if (projectCards.length) {
   const cardObserver = new IntersectionObserver(
@@ -35,19 +41,4 @@ if (projectCards.length) {
   projectCards.forEach((card) => cardObserver.observe(card));
 }
 
-if (sections.length) {
-  const triggerOffset = 160;
-
-  const updateActive = () => {
-    let current = null;
-    for (const section of sections) {
-      if (section.getBoundingClientRect().top - triggerOffset <= 0) {
-        current = section;
-      }
-    }
-    setActive(current ? current.id : "all");
-  };
-
-  window.addEventListener("scroll", updateActive, { passive: true });
-  updateActive();
-}
+applyFilter("all");

@@ -7,8 +7,9 @@ if (filmCards.length) {
         entry.target.classList.toggle('film-active', entry.isIntersecting);
       });
     },
-    { threshold: 0.4 }
+    { threshold: 0.2 }
   );
 
   filmCards.forEach((card) => filmObserver.observe(card));
 }
+

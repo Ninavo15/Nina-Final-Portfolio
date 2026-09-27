@@ -10,7 +10,31 @@
 /* ── Variables ── */
 :root {
   --brand: #ca91b4;
-  --font: "DM Sans", sans-serif;
+  --text-light: #f6f1ee; /* all light text on dark / plum backgrounds */
+
+  /* Fonts: one display serif, one body sans, one handwritten accent */
+  --font-display: "Newsreader", serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-hand: "Caveat", cursive;
+  --font: var(--font-body);
+
+  /* Type scale — use these instead of one-off sizes */
+  --text-h1: clamp(2.25rem, 1.5rem + 3.2vw, 4.25rem); /* page titles */
+  --text-page-hero: clamp(2.75rem, 1.6rem + 4vw, 5.25rem); /* centred Work / Extra titles */
+  --text-h2: clamp(2rem, 1.4rem + 2.6vw, 3.75rem); /* section headings */
+  --text-lead: 1.125rem; /* intro paragraphs */
+  --text-body: 1rem;
+  --text-small: 0.875rem; /* subtitles, captions */
+  --text-xs: 0.8125rem; /* card descriptions, buttons */
+  --text-label: 0.75rem; /* small uppercase labels */
+  --text-tag: 0.6875rem; /* project tags */
+  --label-spacing: 0.16em;
+}
+
+@media (max-width: 48rem) {
+  :root {
+    --text-lead: 1rem;
+  }
 }
 
 /* ── Base body ── */
