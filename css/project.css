@@ -503,6 +503,75 @@
   transform: scale(1.25);
 }
 
+/* ── Coming soon (case study not written yet) ── */
+.project-soon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  margin: 3rem;
+  padding: 4rem 2rem;
+  background: #fffdfb;
+  border: 0.125rem dashed #e0c5d3;
+  border-radius: 1.5rem;
+  scroll-margin-top: 10.5rem;
+}
+
+.project-soon-icon {
+  font-size: 2.25rem;
+  color: #b0508a;
+}
+
+.project-soon-title {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: #642052;
+  margin: 0;
+}
+
+.project-soon-text {
+  max-width: 26rem;
+  font-family: var(--font-body);
+  font-size: var(--text-lead);
+  line-height: 1.6;
+  color: #6b5b65;
+  margin: 0;
+}
+
+.project-soon-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  border: 0.0625rem solid #642052;
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: 600;
+  color: #642052;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.project-soon-link:hover {
+  background: #642052;
+  color: var(--text-light);
+}
+
+@media (max-width: 48rem) {
+  .project-soon {
+    margin: 2rem 1.5rem;
+    padding: 3rem 1.25rem;
+  }
+}
+
 /* ── More projects ── */
 .project-more {
   padding: 2.5rem 3rem 3rem;

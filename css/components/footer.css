@@ -294,7 +294,7 @@
   opacity: 0;
 }
 
-/* Your side typing: pink, on the right */
+/* Your side typing with pink color, on the right */
 .chat-typing--me {
   align-self: flex-end;
   background: #f0b8d0;
@@ -350,9 +350,7 @@
   transform: rotate(-8deg);
 }
 
-/* Doodles are CSS backgrounds, not inline <svg>: Live Server injects its
-   reload script before every </svg> in an .html file, which broke this
-   partial and dropped the phone. */
+/* Doodles */
 .footer-chat-arrow {
   position: absolute;
   left: 2.5rem;
@@ -363,25 +361,23 @@
     center / contain no-repeat;
 }
 
+/* Sparkles use the Remix Icon "ri-shining-fill" icon */
 .footer-spark {
   position: absolute;
-  background: center / contain no-repeat;
+  line-height: 1;
+  color: var(--text-light);
 }
 
 .footer-spark--lg {
   left: 31.25rem;
   top: 4.375rem;
-  width: 1.875rem;
-  height: 1.875rem;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fcfff1' d='M12 2 q1.6 8.4 10 10 q-8.4 1.6-10 10 q-1.6-8.4-10-10 q8.4-1.6 10-10z'/%3E%3C/svg%3E");
+  font-size: 1.875rem;
 }
 
 .footer-spark--sm {
   left: 6rem;
   top: 3.75rem;
-  width: 1.25rem;
-  height: 1.25rem;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23f0b8d0' d='M12 2 q1.6 8.4 10 10 q-8.4 1.6-10 10 q-1.6-8.4-10-10 q8.4-1.6 10-10z'/%3E%3C/svg%3E");
+  font-size: 1.25rem;
 }
 
 /* ── Bottom bar ── */
@@ -442,7 +438,6 @@
     font-size: 3rem;
   }
 
-  /* No room beside the contact info on small screens */
   .footer-chat-wrap {
     display: none;
   }

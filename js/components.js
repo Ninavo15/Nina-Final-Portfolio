@@ -57,7 +57,7 @@ function setupFooterChat(footer) {
   const typing = chat.querySelector(".chat-typing");
   const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 
-  // Hide everything until the footer scrolls into view
+  // Hide chat until the footer is in frame
   chat.classList.add("is-playing");
 
   const showTyping = (isMe) => {
