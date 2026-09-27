@@ -353,12 +353,12 @@
 /* Doodles */
 .footer-chat-arrow {
   position: absolute;
-  left: 2.5rem;
-  top: 12.25rem;
-  width: 5.625rem;
-  height: 3.125rem;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 90 50' fill='none' stroke='%23f6f1ee' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 8c24 4 50 16 72 32'/%3E%3Cpath d='M62 38l16 3-4-15'/%3E%3C/svg%3E")
-    center / contain no-repeat;
+  left: 3rem;
+  top: 11.75rem;
+  font-size: 2.75rem;
+  line-height: 1;
+  color: var(--text-light);
+  transform: rotate(80deg);
 }
 
 /* Sparkles use the Remix Icon "ri-shining-fill" icon */

@@ -3,11 +3,13 @@
 }
 
 /* ── Hero: photo collage + greeting ── */
+/* Collage + intro sit together as one group, centred on the page */
 .about-hero {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 4.5rem;
-  padding: 2rem 2rem 4.5rem;
+  padding: 2.5rem 2rem 4.5rem;
 }
 
 .about-collage {
@@ -58,8 +60,54 @@
   z-index: 3;
 }
 
+/* Handwritten notes + arrows pointing at the photos */
+.collage-note {
+  position: absolute;
+  z-index: 5;
+  font-family: var(--font-hand);
+  font-size: 1.625rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  color: #b0508a;
+}
+
+.collage-arrow {
+  position: absolute;
+  z-index: 5;
+  font-size: 2.5rem;
+  line-height: 1;
+  color: #b0508a;
+}
+
+/* "me wearing Ao Dai"t */
+.collage-note--main {
+  top: 0.25rem;
+  left: 18rem;
+  transform: rotate(-4deg);
+}
+
+.collage-arrow--main {
+  top: 1rem;
+  left: 15rem;
+  transform: scaleY(-1) scaleX(-1) rotate(15deg);
+}
+
+/* "Smileeee 0.<"*/
+.collage-note--bottom {
+  left: -3.25rem;
+  bottom: 4.25rem;
+  transform: rotate(-6deg);
+}
+
+.collage-arrow--bottom {
+  left: 2.25rem;
+  bottom: 2.5rem;
+  transform: rotate(35deg);
+}
+
 .about-intro {
-  flex: 1;
+  flex: 0 1 40rem;
   min-width: 0;
   display: flex;
   flex-direction: column;
@@ -615,6 +663,16 @@
 @media (max-width: 48rem) {
   .page-body {
     padding: 2rem 1.5rem 3rem;
+  }
+
+  /* Notes don't fit around the smaller phone collage */
+  .collage-note,
+  .collage-arrow {
+    display: none;
+  }
+
+  .about-hero {
+    padding-top: 2rem;
   }
 
   /* Collage on top, text below */

@@ -1,5 +1,5 @@
 let page = window.location.pathname.split("/").pop().replace(".html", "");
-if (page === "" || page === "index") page = "about";
+if (page === "" || page === "index") page = "home";
 
 const _self = document.currentScript;
 const _base = _self ? _self.src.replace(/components\.js$/, "") : "../../js/";

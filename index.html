@@ -14,233 +14,194 @@
     />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/components/nav.css" />
-    <link rel="stylesheet" href="css/about.css" />
-    <link rel="stylesheet" href="css/work.css" />
+    <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/components/footer.css" />
   </head>
-  <body>
+  <body class="home-page">
     <div id="nav-placeholder"></div>
     <main class="page-body">
-      <!-- Hero: photo collage + greeting -->
-      <section class="about-hero">
-        <div class="about-collage" aria-label="Photos of Nina">
-          <img
-            class="collage-img collage-img--main"
-            src="image/me/me.JPG"
-            alt="Nina smiling and holding a paper fan"
-          />
-          <img
-            class="collage-img collage-img--side"
-            src="image/me/me1.jpg"
-            alt="Nina holding a teddy bear at a café"
-          />
-          <img
-            class="collage-img collage-img--bottom"
-            src="image/me/me3.JPG"
-            alt="Nina taking a photo by the harbour in Vancouver"
-          />
-        </div>
-
-        <div class="about-intro">
-          <span class="about-hello">nice to meet you!</span>
-          <h1 class="about-title">Hello There,</h1>
-          <p class="bio-text">
-            I'm Nina Vo, a student based in Vancouver with a huge passion for
-            <span class="bio-highlight">building digital experiences.</span>
+      <!-- Hero: intro on the left, ID card hangs on the right -->
+      <div class="home-hero">
+        <div class="home-intro">
+          <p class="home-eyebrow">
+            DEVELOPER <span aria-hidden="true">✦</span> UI/UX DESIGNER
+            <span aria-hidden="true">✦</span> 3D ARTIST
           </p>
-          <p class="bio-text">
-            I create
-            <span class="bio-highlight">interactive products</span> across web,
-            mobile and game — blending engineering and
-            <span class="bio-highlight">UI design</span> to make interactions
-            feel effortless.
+          <p class="home-hello">Hello there, I'm</p>
+          <h1 class="home-name">Nina Vo</h1>
+          <p class="home-bio">
+            A student based in Vancouver with a huge passion for building
+            digital experiences — blending engineering and UI design to make
+            interactions feel effortless.
           </p>
-          <div class="about-facts">
-            <span class="fact-pill">Vancouver, BC</span>
-            <span class="fact-pill">Simon Fraser University · 2023 – now</span>
-            <span class="fact-pill">Web · Mobile · Game</span>
+          <div class="home-actions">
+            <a href="html/main-page/work.html" class="home-btn home-btn--primary">
+              Open my work <i class="ri-arrow-right-line" aria-hidden="true"></i>
+            </a>
+            <a
+              href="Nina Vo Resume.pdf"
+              target="_blank"
+              rel="noopener"
+              class="home-btn home-btn--outline"
+            >
+              <i class="ri-file-text-line" aria-hidden="true"></i> Resume
+            </a>
+            <span class="home-status">
+              <span class="home-status-dot" aria-hidden="true"></span>Open for
+              work
+            </span>
           </div>
         </div>
-      </section>
 
-      <!-- Toolkit: numbered columns like the Work / Extra pages -->
-      <section class="about-toolkit">
-        <div class="toolkit-head">
-          <h2 class="toolkit-title">My toolkit</h2>
+        <div class="home-note" aria-hidden="true">
+          <span class="home-note-text">that's me!</span>
+          <span class="home-note-arrow">⤴</span>
         </div>
-        <div class="toolkit-cols">
-          <div class="toolkit-col toolkit-col--personal">
-            <span class="toolkit-num">01</span>
-            <h3 class="toolkit-col-title">Personal</h3>
-            <ul class="toolkit-list">
-              <li>Time Management</li>
-              <li>Detail-Oriented</li>
-              <li>Collaboration</li>
-              <li>Problem Solving</li>
-              <li>Creative</li>
-            </ul>
-          </div>
-          <div class="toolkit-col toolkit-col--design">
-            <span class="toolkit-num">02</span>
-            <h3 class="toolkit-col-title">Design</h3>
-            <ul class="toolkit-list">
-              <li>2D Design</li>
-              <li>3D Modeling</li>
-              <li>UI/UX</li>
-              <li>Animation</li>
-              <li>Video Editing</li>
-            </ul>
-          </div>
-          <div class="toolkit-col toolkit-col--tech">
-            <span class="toolkit-num">03</span>
-            <h3 class="toolkit-col-title">Tech</h3>
-            <ul class="toolkit-list">
-              <li>HTML / CSS</li>
-              <li>JavaScript</li>
-              <li>Java</li>
-              <li>Python</li>
-              <li>React.js</li>
-              <li>Node.js</li>
-              <li>Express.js</li>
-              <li>MongoDB</li>
-            </ul>
-          </div>
-        </div>
-      </section>
 
-      <!-- Software strip -->
-      <section class="about-software">
-        <span class="toolkit-num">04 · Software I use</span>
-        <div class="software-strip">
-          <div class="software-chip">
-            <img src="image/software logo/blender.jpeg" alt="Blender" class="software-logo" loading="lazy" />
-            <span>Blender</span>
-          </div>
-          <div class="software-chip">
-            <img src="image/software logo/ibis.jpeg" alt="IbisPaint" class="software-logo" loading="lazy" />
-            <span>IbisPaint</span>
-          </div>
-          <div class="software-chip">
-            <img src="image/software logo/pro.jpeg" alt="Procreate" class="software-logo" loading="lazy" />
-            <span>Procreate</span>
-          </div>
-          <div class="software-chip">
-            <img src="image/software logo/ilustrator.png" alt="Adobe Illustrator" class="software-logo" loading="lazy" />
-            <span>Illustrator</span>
-          </div>
-          <div class="software-chip">
-            <img src="image/software logo/photoshop.png" alt="Adobe Photoshop" class="software-logo" loading="lazy" />
-            <span>Photoshop</span>
-          </div>
-          <div class="software-chip">
-            <img src="image/software logo/premier.png" alt="Adobe Premiere Pro" class="software-logo" loading="lazy" />
-            <span>Premiere Pro</span>
-          </div>
-          <div class="software-chip">
-            <img src="image/software logo/after effect.png" alt="After Effects" class="software-logo" loading="lazy" />
-            <span>After Effects</span>
-          </div>
-          <div class="software-chip">
-            <img src="image/software logo/filmora.jpeg" alt="Filmora" class="software-logo" loading="lazy" />
-            <span>Filmora</span>
-          </div>
-          <div class="software-chip">
-            <img src="image/software logo/figma.png" alt="Figma" class="software-logo" loading="lazy" />
-            <span>Figma</span>
-          </div>
-          <div class="software-chip">
-            <img src="image/software logo/Visual Code.jpeg" alt="VS Code" class="software-logo" loading="lazy" />
-            <span>VS Code</span>
-          </div>
-          <div class="software-chip">
-            <img src="image/software logo/eclipse.jpeg" alt="Eclipse" class="software-logo" loading="lazy" />
-            <span>Eclipse</span>
-          </div>
-          <div class="software-chip">
-            <img src="image/software logo/unity.jpeg" alt="Unity" class="software-logo" loading="lazy" />
-            <span>Unity</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- My Life: masonry wall of photos -->
-      <section class="about-life">
-        <div class="life-head">
-          <span class="toolkit-num">05 · My Life</span>
-          <span class="life-note">a few of my favourite moments</span>
-        </div>
-        <div class="snap-wall">
-          <div class="snap-item snap-item--a fade-up">
-            <!-- add <img src="image/..." alt="..." /> here -->
-          </div>
-          <div class="snap-item snap-item--b fade-up">
-            <!-- add <img src="image/..." alt="..." /> here -->
-          </div>
-          <div class="snap-item snap-item--c fade-up">
-            <!-- add <img src="image/..." alt="..." /> here -->
-          </div>
-          <div class="snap-item snap-item--d fade-up">
-            <!-- add <img src="image/..." alt="..." /> here -->
-          </div>
-          <div class="snap-item snap-item--b fade-up">
-            <!-- add <img src="image/..." alt="..." /> here -->
-          </div>
-          <div class="snap-item snap-item--a fade-up">
-            <!-- add <img src="image/..." alt="..." /> here -->
-          </div>
-          <div class="snap-item snap-item--c fade-up">
-            <!-- add <img src="image/..." alt="..." /> here -->
-          </div>
-          <div class="snap-item snap-item--d fade-up">
-            <!-- add <img src="image/..." alt="..." /> here -->
-          </div>
-          <div class="snap-item snap-item--a fade-up">
-            <!-- add <img src="image/..." alt="..." /> here -->
-          </div>
-          <div class="snap-item snap-item--c fade-up">
-            <!-- add <img src="image/..." alt="..." /> here -->
-          </div>
-          <div class="snap-item snap-item--b fade-up">
-            <!-- add <img src="image/..." alt="..." /> here -->
-          </div>
-          <div class="snap-item snap-item--d fade-up">
-            <!-- add <img src="image/..." alt="..." /> here -->
-          </div>
-        </div>
-      </section>
-
-      <!-- Quote -->
-      <div class="quote-scroll-wrapper">
-        <div class="quote-section">
-          <div class="quote-stars quote-stars--tr" aria-hidden="true">
-            <i class="ri-star-fill quote-star quote-star--1" data-step="0"></i>
-            <i class="ri-star-fill quote-star quote-star--2" data-step="1"></i>
-            <i class="ri-star-fill quote-star quote-star--3" data-step="2"></i>
-          </div>
-          <div class="quote-stars quote-stars--bl" aria-hidden="true">
-            <i class="ri-star-fill quote-star quote-star--1" data-step="0"></i>
-            <i class="ri-star-fill quote-star quote-star--2" data-step="1"></i>
-            <i class="ri-star-fill quote-star quote-star--3" data-step="2"></i>
-          </div>
-          <p class="quote-text">
-            "I love building products that are<br />
-            <span
-              class="word-cycle"
-              data-words='["helpful","responsiveness","beautifully designed"]'
-              >helpful</span
-            >"
-          </p>
-          <p class="quote-sig">— Nina Vo —</p>
-          <div class="quote-scroll-hint">
-            <span class="scroll-label">SCROLL</span>
-            <span class="scroll-arrow"></span>
-          </div>
+        <div class="home-photo-wrap">
+          <img
+            src="image/id card.png"
+            alt="Nina Vo ID Card"
+            class="home-photo"
+          />
         </div>
       </div>
+      <!-- Featured Works: all projects -->
+      <section class="home-works">
+        <div class="home-works-header">
+          <h2 class="home-works-title">Featured Works</h2>
+          <a href="html/main-page/work.html" class="home-works-view-all"
+            >View All <i class="ri-arrow-right-line"></i
+          ></a>
+        </div>
+        <div class="home-works-grid">
+          <a href="html/project/project1.html" class="home-work-card fade-up">
+            <img
+              class="home-work-img"
+              style="object-position: top"
+              src="image/project cover/Yumm.jpg"
+              alt="YumMeal"
+            />
+            <div class="home-work-info">
+              <div class="home-work-tags">
+                <span class="home-work-tag">UI DESIGN</span>
+                <span class="home-work-tag">WEBSITE</span>
+              </div>
+              <h3 class="home-work-name">YumMeal Website</h3>
+              <p class="home-work-desc">
+                An all-in-one meal planning web app that helps users plan their meals, find recipes, share their own recipes, and save their favorite dishes.
+              </p>
+            </div>
+          </a>
+          <a href="html/project/project2.html" class="home-work-card fade-up">
+            <img
+              class="home-work-img"
+              style="object-position: left top"
+              src="image/project 2/recipe remix-poster.jpg"
+              alt="RecipeRemix"
+            />
+            <div class="home-work-info">
+              <div class="home-work-tags">
+                <span class="home-work-tag">AI</span>
+                <span class="home-work-tag">WEBSITE</span>
+              </div>
+              <h3 class="home-work-name">RecipeRemix</h3>
+              <p class="home-work-desc">
+                AI-powered recipe recommendation website that suggests meals based on user preferences and dietary restrictions and give cuisine mix recipes.
+              </p>
+            </div>
+          </a>
+          <a href="html/project/project8.html" class="home-work-card fade-up">
+            <img
+              class="home-work-img"
+              style="object-position: 10% 0%"
+              src="image/project 3/Luminous Etching.png"
+              alt="Luminous Etching"
+            />
+            <div class="home-work-info">
+              <div class="home-work-tags">
+                <span class="home-work-tag">Website</span>
+              </div>
+              <h3 class="home-work-name">Luminous Etching</h3>
+              <p class="home-work-desc">
+                Brief description of this project and what you built.
+              </p>
+            </div>
+          </a>
+          <a href="html/project/project3.html" class="home-work-card fade-up">
+            <div class="home-work-img home-work-img--placeholder"></div>
+            <div class="home-work-info">
+              <div class="home-work-tags">
+                <span class="home-work-tag">UI/UX</span>
+                <span class="home-work-tag">APPLICATION</span>
+              </div>
+              <h3 class="home-work-name">DormMate</h3>
+              <p class="home-work-desc">
+                Brief description of this project and what you built.
+              </p>
+            </div>
+          </a>
+          <a href="html/project/project4.html" class="home-work-card fade-up">
+            <div class="home-work-img home-work-img--placeholder"></div>
+            <div class="home-work-info">
+              <div class="home-work-tags">
+                <span class="home-work-tag">GAME DEV</span>
+                <span class="home-work-tag">3D VR</span>
+              </div>
+              <h3 class="home-work-name">Witch Caper</h3>
+              <p class="home-work-desc">
+                Brief description of this project and what you built.
+              </p>
+            </div>
+          </a>
+          <a href="html/project/project5.html" class="home-work-card fade-up">
+            <div class="home-work-img home-work-img--placeholder"></div>
+            <div class="home-work-info">
+              <div class="home-work-tags">
+                <span class="home-work-tag">3D Game Developer</span>
+                <span class="home-work-tag">3D Modeling</span>
+              </div>
+              <h3 class="home-work-name">Pitfall</h3>
+              <p class="home-work-desc">
+                Brief description of this project and what you built.
+              </p>
+            </div>
+          </a>
+          <a href="html/project/project6.html" class="home-work-card fade-up">
+            <div class="home-work-img home-work-img--placeholder"></div>
+            <div class="home-work-info">
+              <div class="home-work-tags">
+                <span class="home-work-tag">Interactive Simulation</span>
+              </div>
+              <h3 class="home-work-name">All Made From Mom Luv</h3>
+              <p class="home-work-desc">
+                Brief description of this project and what you built.
+              </p>
+            </div>
+          </a>
+          <a href="html/project/project7.html" class="home-work-card fade-up">
+            <img
+              class="home-work-img"
+              style="object-position: center 30%"
+              src="image/mystic/Instruction.png"
+              alt="Mystic Trails title screen"
+            />
+            <div class="home-work-info">
+              <div class="home-work-tags">
+                <span class="home-work-tag">Game Developer</span>
+                <span class="home-work-tag">UI</span>
+              </div>
+              <h3 class="home-work-name">Mystic Trail</h3>
+              <p class="home-work-desc">
+                Brief description of this project and what you built.
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
     </main>
     <div id="footer-placeholder"></div>
     <script src="js/components.js"></script>
     <script src="js/animations.js"></script>
-    <script src="js/quote-cycle.js"></script>
   </body>
 </html>
