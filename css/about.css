@@ -3,7 +3,6 @@
 }
 
 /* ── Hero: photo collage + greeting ── */
-/* Collage + intro sit together as one group, centred on the page */
 .about-hero {
   display: flex;
   align-items: center;
@@ -295,6 +294,23 @@
   text-align: center;
 }
 
+/* ── Experience ── */
+.about-experience {
+  padding: 0 2rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.experience-text {
+  font-family: var(--font-body);
+  font-size: var(--text-lead);
+  line-height: 1.8;
+  color: #3f3a3d;
+  margin: 0;
+}
+
 /* ── My Life: masonry wall of photos ── */
 .about-life {
   padding: 0 2rem 5rem;
@@ -323,26 +339,27 @@
 
 .snap-item {
   break-inside: avoid;
-  margin-bottom: 1.125rem;
-  border-radius: 0.875rem;
-  overflow: hidden;
-  background: #e8dde2;
-}
-
-/* Placeholder heights; a real photo sets its own height */
-.snap-item--a { height: 16.25rem; }
-.snap-item--b { height: 11.25rem; }
-.snap-item--c { height: 13.75rem; }
-.snap-item--d { height: 18.75rem; }
-
-.snap-item:has(img) {
-  height: auto;
+  margin: 0 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .snap-item img {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 0.875rem;
+  box-shadow: 0 0.5rem 1.25rem rgba(60, 10, 45, 0.12);
+}
+
+/* Short handwritten caption under each photo */
+.snap-item figcaption {
+  font-family: var(--font-hand);
+  font-size: 1.375rem;
+  line-height: 1.2;
+  color: #642052;
+  padding: 0 0.25rem;
 }
 
 /* ── Quote ── */
@@ -646,6 +663,7 @@
 
   .about-toolkit,
   .about-software,
+  .about-experience,
   .about-life {
     padding-left: 0;
     padding-right: 0;
@@ -734,7 +752,11 @@
   }
 
   .snap-item {
-    margin-bottom: 0.625rem;
+    margin-bottom: 1rem;
+  }
+
+  .snap-item figcaption {
+    font-size: 1.125rem;
   }
 
   .life-note {

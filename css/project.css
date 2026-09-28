@@ -47,13 +47,14 @@
   font-weight: 600;
   letter-spacing: var(--label-spacing);
   text-transform: uppercase;
-  color: #642052;
+  color: #b89aaa;
   text-decoration: none;
-  transition: gap 0.2s ease;
+  transition: color 0.2s ease;
 }
 
+/* Same hover as the section links: muted mauve → plum */
 .quicknav-return:hover {
-  gap: 0.875rem;
+  color: #642052;
 }
 
 .quicknav-list {
