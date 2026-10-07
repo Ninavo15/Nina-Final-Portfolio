@@ -82,13 +82,13 @@
 /* "me wearing Ao Dai"t */
 .collage-note--main {
   top: 0.25rem;
-  left: 18rem;
+  left: 17rem;
   transform: rotate(-4deg);
 }
 
 .collage-arrow--main {
   top: 1rem;
-  left: 15rem;
+  left: 14.25rem;
   transform: scaleY(-1) scaleX(-1) rotate(15deg);
 }
 
@@ -134,10 +134,16 @@
 
 .bio-text {
   max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   font-family: var(--font-body);
-  font-size: var(--text-lead);
-  line-height: 1.8;
+  font-size: var(--text-body);
+  line-height: 1.75;
   color: #3f3a3d;
+}
+
+.bio-text p {
   margin: 0;
 }
 

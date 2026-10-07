@@ -36,18 +36,198 @@
               <span class="project-type-tag">Application</span>
             </div>
             <h1 class="project-title">DormMate</h1>
+            <p class="project-tagline">
+              A mobile app for residence life. Students report maintenance
+              issues and answer building notices, and residence staff manage
+              them from one dashboard.
+            </p>
           </div>
 
-          <!-- Coming soon: this case study isn't written yet -->
-          <div class="project-soon" id="coming-soon" data-nav-label="Coming soon">
-            <i class="ri-shining-fill project-soon-icon" aria-hidden="true"></i>
-            <h2 class="project-soon-title">Coming soon</h2>
-            <p class="project-soon-text">
-              I'm still putting this project's story together. Check back soon!
+          <!-- Overview + Meta -->
+          <div class="project-body" id="overview">
+            <div class="project-overview">
+              <p class="section-label">The Problem</p>
+              <p>
+                Dorm maintenance runs on emails and paper notices. Students
+                don't know whether anyone saw their report or when it will be
+                fixed. Staff get every request in the same inbox, so a flooded
+                bathroom can sit behind a slow Wi-Fi complaint. Notices like
+                pest inspections go up on doors, and changing the time means
+                tracking someone down.
+              </p>
+
+              <p class="section-label" style="margin-top: 2rem">The Idea</p>
+              <p>
+                DormMate puts all of this in one app with two sides: one for
+                students and one for staff. Students report issues with photos,
+                set priority with a limited supply of urgent tokens, and track
+                each fix from Pending to Completed. Staff manage tickets and
+                post announcements from one dashboard.
+              </p>
+            </div>
+            <aside class="project-meta">
+              <span class="meta-label">Links</span>
+              <div class="meta-links">
+                <a
+                  href="https://github.sfu.ca/taa47/DormMate_App"
+                  class="meta-link-btn"
+                  target="_blank"
+                  rel="noopener"
+                  ><i class="ri-github-fill"></i> View Code</a
+                >
+              </div>
+              <div class="meta-group">
+                <span class="meta-label">Role</span>
+                <span class="meta-value">UI Designer &amp; Front-end Developer</span>
+              </div>
+              <div class="meta-group">
+                <span class="meta-label">Year</span>
+                <span class="meta-value">Fall 2025</span>
+              </div>
+              <div class="meta-group">
+                <span class="meta-label">Type</span>
+                <span class="meta-value">Academic Project</span>
+              </div>
+              <div class="meta-group">
+                <span class="meta-label">Team</span>
+                <span class="meta-value">Nina Vo &amp; Tawshif Al Mehrab</span>
+              </div>
+              <div class="meta-group">
+                <span class="meta-label">Platform</span>
+                <span class="meta-value">iOS &amp; Android (Expo)</span>
+              </div>
+            </aside>
+          </div>
+
+          <!-- How it works -->
+          <div class="project-techstack" id="how-it-works">
+            <p class="section-label">How It Works</p>
+            <div class="techstack-columns">
+              <div class="techstack-col">
+                <h4>Student</h4>
+                <ul>
+                  <li>
+                    Opens a dashboard showing their room, open issues, and new
+                    announcements.
+                  </li>
+                  <li>
+                    Reports an issue by choosing up to two categories
+                    (electrical, plumbing, damage, parking, Wi-Fi, other),
+                    describing it, and taking photos with the camera.
+                  </li>
+                  <li>
+                    Spends a token to set priority:
+                    <strong>red for urgent</strong> (4 per student) or
+                    <strong>blue for normal</strong> (10 per student). The
+                    limit stops students from marking everything urgent.
+                  </li>
+                  <li>
+                    Follows the report on a tracker: Pending &rarr; In Progress
+                    &rarr; Completed.
+                  </li>
+                  <li>
+                    Reads announcements, acknowledges them, or requests a
+                    different time for things like a pest inspection.
+                  </li>
+                </ul>
+              </div>
+              <div class="techstack-col">
+                <h4>Staff</h4>
+                <ul>
+                  <li>Sees a dashboard of incoming work.</li>
+                  <li>
+                    Manages all reports in one list, with colour-coded status
+                    badges.
+                  </li>
+                  <li>
+                    Opens a ticket and moves it between Pending, In Progress,
+                    and Completed.
+                  </li>
+                  <li>
+                    Writes announcements with a category, a priority, a date, a
+                    time window, and a confirmation step before sending.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- My contribution -->
+          <div class="project-techstack" id="my-contribution">
+            <p class="section-label">My Contribution</p>
+            <p class="outcome-text" style="margin-top: 0; max-width: 46rem">
+              I designed the app's visual design and owned the front end: how
+              every screen looks, feels, and moves.
             </p>
-            <a href="../main-page/work.html" class="project-soon-link">
-              <i class="ri-arrow-left-line" aria-hidden="true"></i> Back to all projects
-            </a>
+            <div class="techstack-columns">
+              <div class="techstack-col">
+                <h4>Design &amp; UI</h4>
+                <ul>
+                  <li>
+                    <strong>UI polish across the whole app</strong> &mdash;
+                    restyled every student and staff screen so they share the
+                    same spacing, colours, cards, and headers, from the welcome
+                    and login screens through to the staff ticket view.
+                  </li>
+                  <li>
+                    <strong>Announcements and acknowledgement</strong> &mdash;
+                    designed the student announcement feed and detail screen,
+                    with an &ldquo;Urgent&rdquo; badge, an Acknowledge button,
+                    and a path to the time-change request.
+                  </li>
+                  <li>
+                    <strong>Report and progress screens</strong> &mdash;
+                    designed the report-history list and the step-by-step
+                    progress tracker, so students can see exactly where their
+                    issue is.
+                  </li>
+                  <li>
+                    <strong>Icons and visual assets</strong> &mdash; added the
+                    category icons, the red and blue token graphics, and the
+                    map pin.
+                  </li>
+                </ul>
+              </div>
+              <div class="techstack-col">
+                <h4>Features &amp; Engineering</h4>
+                <ul>
+                  <li>
+                    <strong>Scheduling: time-change requests</strong> &mdash;
+                    built the flow where a student picks a new date and a start
+                    and end time to request a different slot for a building
+                    notice. Staff use the same date and time-window pickers to
+                    schedule announcements.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tech Stack -->
+          <div class="project-techstack" id="tech-stack">
+            <p class="section-label">Tech Stack</p>
+            <div class="techstack-columns">
+              <div class="techstack-col">
+                <h4>Front end</h4>
+                <ul>
+                  <li><strong>React Native</strong> + <strong>TypeScript</strong></li>
+                  <li><strong>Expo Router</strong> &mdash; file-based, typed routes</li>
+                  <li><strong>DateTimePicker</strong> &mdash; date and time-window scheduling</li>
+                  <li><strong>react-native-modal</strong> &mdash; confirmation and detail sheets</li>
+                  <li><strong>Expo Haptics</strong> &mdash; touch feedback</li>
+                </ul>
+              </div>
+              <div class="techstack-col">
+                <h4>Backend &amp; device</h4>
+                <ul>
+                  <li><strong>Firebase Auth</strong> &mdash; sign-in for students and staff</li>
+                  <li><strong>Cloud Firestore</strong> &mdash; reports, tickets, announcements</li>
+                  <li><strong>AsyncStorage</strong> &mdash; local storage</li>
+                  <li><strong>expo-image-picker</strong> &mdash; camera photos for reports</li>
+                  <li><strong>react-native-maps</strong> + <strong>expo-location</strong></li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           <!-- More Projects -->
@@ -80,6 +260,10 @@
               </a>
               <a href="project8.html" class="more-project-link">
                 <span class="more-project-name">Luminous Etching</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="project9.html" class="more-project-link">
+                <span class="more-project-name">CrossRoad</span>
                 <i class="ri-arrow-right-line more-project-arrow"></i>
               </a>
             </div>
