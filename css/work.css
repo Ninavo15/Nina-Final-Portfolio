@@ -165,15 +165,6 @@
   transition: transform 0.5s ease;
 }
 
-/* Whole image in view; the pink beside it matches the cover's own background */
-.case-img--contain {
-  object-fit: contain;
-}
-
-.case-media--mom {
-  background: #fedfe4;
-}
-
 .project-case:hover .case-img {
   transform: scale(1.03);
 }
