@@ -1,57 +1,3 @@
-/* ── Code ── */
-.project-code {
-  padding: 3rem;
-  border-bottom: 0.0625rem solid #e8e2e0;
-}
-
-.code-intro {
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.9375rem;
-  color: #888;
-  margin: 1.5rem 0 1rem;
-}
-
-.code-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-  align-items: start;
-}
-
-.code-item {
-  margin: 0;
-}
-
-.code-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 0.75rem;
-  border: 0.0625rem solid #e8e2e0;
-}
-
-.code-item figcaption {
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.875rem;
-  color: #444;
-  line-height: 1.6;
-  margin-top: 0.625rem;
-}
-
-.code-item figcaption strong {
-  color: #1a1a1a;
-  font-weight: 600;
-}
-
-.code-item figcaption code {
-  background: #f4f0ee;
-  border-radius: 0.25rem;
-  padding: 0.1rem 0.4rem;
-  font-size: 0.85em;
-  color: #642052;
-}
-
 /* ── Key features ── */
 .project-features {
   padding: 3rem;
@@ -94,7 +40,7 @@
 .feature-card p {
   font-family: "DM Sans", sans-serif;
   font-size: 0.9375rem;
-  color: #444;
+  color: #1a1a1a;
   line-height: 1.75;
   margin: 0;
 }
@@ -117,7 +63,7 @@
 .spec-intro {
   font-family: "DM Sans", sans-serif;
   font-size: 0.9375rem;
-  color: #888;
+  color: #1a1a1a;
   margin: 1.5rem 0 1rem;
 }
 
@@ -154,7 +100,7 @@
 .familycard-role {
   font-family: "DM Sans", sans-serif;
   font-size: 0.9375rem;
-  color: #444;
+  color: #1a1a1a;
   margin: 0 0 0.75rem;
 }
 
@@ -215,7 +161,7 @@
 .scale-row-meta {
   font-family: monospace;
   font-size: 0.75rem;
-  color: #888;
+  color: #1a1a1a;
   white-space: nowrap;
 }
 
@@ -264,20 +210,20 @@
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.7;
-  color: #444;
+  color: #1a1a1a;
   max-width: 40rem;
 }
 
 .spec-note {
   font-family: "DM Sans", sans-serif;
   font-size: 0.875rem;
-  color: #888;
+  color: #1a1a1a;
   line-height: 1.7;
   margin: 1.5rem 0 0;
 }
 
 .spec-note strong {
-  color: #444;
+  color: #1a1a1a;
 }
 
 .spec-note code {
@@ -324,14 +270,14 @@
 .swatch-hex {
   font-family: monospace;
   font-size: 0.75rem;
-  color: #888;
+  color: #1a1a1a;
   text-transform: uppercase;
 }
 
 .swatch-role {
   font-family: "DM Sans", sans-serif;
   font-size: 0.8125rem;
-  color: #444;
+  color: #1a1a1a;
 }
 
 /* ── Responsive ── */
@@ -351,4 +297,57 @@
   .scale-row-meta {
     white-space: normal;
   }
+}
+
+/* ── Colour swatch fills ── */
+.swatch-color--bb0d17 {
+  background: #bb0d17;
+}
+
+.swatch-color--eedda5 {
+  background: #eedda5;
+}
+
+.swatch-color--a30000 {
+  background: #a30000;
+}
+
+.swatch-color--7d0000 {
+  background: #7d0000;
+}
+
+.swatch-color--b0101c {
+  background: #b0101c;
+}
+
+.swatch-color--ffffff {
+  background: #ffffff;
+}
+
+.swatch-color--fff9e2 {
+  background: #fff9e2;
+}
+
+.swatch-color--f6f6f6 {
+  background: #f6f6f6;
+}
+
+.swatch-color--000000 {
+  background: #000000;
+}
+
+.swatch-color--333333 {
+  background: #333333;
+}
+
+.swatch-color--cccccc {
+  background: #cccccc;
+}
+
+.swatch-color--959595 {
+  background: rgb(149, 149, 149);
+}
+
+.swatch-color--black-40 {
+  background: rgba(0, 0, 0, 0.4);
 }

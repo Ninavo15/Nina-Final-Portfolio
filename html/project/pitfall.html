@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pitfall — Nina Vo</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/components/nav.css" />
+    <link rel="stylesheet" href="../../css/project.css" />
+    <link rel="stylesheet" href="../../css/projects/project5.css" />
+    <link rel="stylesheet" href="../../css/components/footer.css" />
+  </head>
+  <body>
+    <div id="nav-placeholder"></div>
+    <main class="page-body">
+      <div class="project-layout">
+        <div id="quicknav-placeholder"></div>
+
+        <div class="project-content">
+          <!-- Hero -->
+          <div class="project-hero">
+            <img
+              class="focus-center"
+              src="../../image/pitfall/cover.jpg"
+              alt="Pitfall title screen with an antlion reaching in from the left over a dirt background"
+            />
+          </div>
+
+          <!-- Header -->
+          <div class="project-header">
+            <div class="project-tags-row">
+              <span class="project-type-tag">Game Developer</span>
+              <span class="project-type-tag">3D Modeling</span>
+            </div>
+            <h1 class="project-title">Pitfall</h1>
+            <p class="project-tagline">
+              A 3D survival game where you play a tiny ant sneaking through an
+              antlion den to bring food home to your colony.
+            </p>
+          </div>
+
+          <!-- Overview + Meta -->
+          <div class="project-body" id="overview">
+            <div class="project-overview">
+              <p class="section-label">Overview</p>
+              <p>
+                The antlion has stolen your colony's food. You play a tiny ant
+                who has to venture into its underground caves, find the leaves,
+                carry them home one at a time and avoid the antlion patrolling
+                the dark tunnels. Some leaves are locked behind gates you open
+                with levers, and stepping into a sand pit brings every antlion
+                running.
+              </p>
+
+              <p class="section-label section-label--spaced">
+                Goal of the Project
+              </p>
+              <p>
+                We wanted a tense "cat-and-mouse" survival game for midcore to
+                hardcore players who like strategy and pressure: surviving the
+                chase, beating the objective and learning how the enemy
+                behaves (Survivors, Conquerors and Masterminds in BrainHex
+                terms). My part was to
+                bring the world and its main enemy to life, from modeling the
+                antlion to making it hunt you.
+              </p>
+            </div>
+            <aside class="project-meta">
+              <div class="meta-group">
+                <span class="meta-label">Role</span>
+                <span class="meta-value">3D Modeler &amp; Developer</span>
+              </div>
+              <div class="meta-group">
+                <span class="meta-label">Year</span>
+                <span class="meta-value">Summer 2026</span>
+              </div>
+              <div class="meta-group">
+                <span class="meta-label">Type</span>
+                <span class="meta-value"
+                  >Academic Team Project<br />Team Bungbees</span
+                >
+              </div>
+              <div class="meta-group">
+                <span class="meta-label">Collaboration</span>
+                <span class="meta-value"
+                  >Byunghee Choi<br />Jasper Ling<br />Zainab Shakeel</span
+                >
+              </div>
+              <div class="meta-group">
+                <span class="meta-label">Tools</span>
+                <div class="meta-tools">
+                  <span class="tool-chip"
+                    ><img
+                      src="../../image/software logo/unity.jpeg"
+                      alt=""
+                    />Unity</span
+                  >
+                  <span class="tool-chip">Maya</span>
+                  <span class="tool-chip">C#</span>
+                </div>
+              </div>
+            </aside>
+          </div>
+
+          <!-- My role -->
+          <div class="project-techstack" id="my-role">
+            <p class="section-label">My Role</p>
+            <div class="techstack-columns">
+              <div class="techstack-col">
+                <h4>Modeling &amp; Environment</h4>
+                <ul>
+                  <li>
+                    <strong>Antlion</strong> &mdash; modeled the main enemy,
+                    with glowing red eyes and big jaws.
+                  </li>
+                  <li>
+                    <strong>Mushrooms, rocks &amp; roots</strong> &mdash;
+                    modeled the props that fill the caves, and made the
+                    mushrooms glow.
+                  </li>
+                  <li>
+                    <strong>Environment</strong> &mdash; designed the look of
+                    the map by placing objects through the caves.
+                  </li>
+                  <li>
+                    <strong>Lighting</strong> &mdash; kept the caves dark and
+                    tense, and used the glowing mushrooms as landmarks so
+                    players can find their way.
+                  </li>
+                  <li>
+                    <strong>Leaf animation</strong> &mdash; animated the leaf
+                    item players collect.
+                  </li>
+                </ul>
+              </div>
+              <div class="techstack-col">
+                <h4>Gameplay &amp; Testing</h4>
+                <ul>
+                  <li>
+                    <strong>Antlion AI</strong> &mdash; made the antlion roam on
+                    its own, notice the player nearby, chase and attack.
+                  </li>
+                  <li>
+                    <strong>Game flow</strong> &mdash; built the menu flow and
+                    the win and lose scenes.
+                  </li>
+                  <li>
+                    <strong>Sound</strong> &mdash; added sound effects and
+                    background music for the menu and buttons.
+                  </li>
+                  <li>
+                    <strong>Testing &amp; feedback</strong> &mdash; debugged
+                    each level and helped run playtests to gather feedback.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Storyboard -->
+          <div class="project-code" id="storyboard">
+            <p class="section-label">Storyboard</p>
+            <p class="spec-intro">
+              Our first idea was "The AntLion Maze", a top-down game where the
+              ant collects candy in a maze while the antlion chases it. In
+              critique, it felt too much like Pac-Man. We redesigned it as a
+              first-person 3D game in underground caves, which made the antlion
+              feel bigger and scarier and gave players more room to explore,
+              hide and plan their route.
+            </p>
+            <div class="code-grid pitfall-storyboard">
+              <figure class="code-item">
+                <img
+                  src="../../image/pitfall/storyboard-old.jpg"
+                  alt="Original storyboard: The AntLion Maze, a top-down maze where an ant collects candy while being chased by an antlion"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <strong>Before</strong> &mdash; a top-down maze that looked
+                  like Pac-Man
+                </figcaption>
+              </figure>
+              <figure class="code-item">
+                <img
+                  src="../../image/pitfall/storyboard.png"
+                  alt="Revised storyboard in 12 captioned panels: main menu, select difficulty, prologue, objective splash, navigating the caves, a locked objective, unlocking with a lever, getting the leaf, returning home, the antlion in the way, avoiding pitfalls and depositing the leaf at home"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <strong>After</strong> &mdash; first-person caves with levers,
+                  pits and a home base
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <!-- Mechanics -->
+          <div class="project-techstack" id="mechanics">
+            <p class="section-label">Core Mechanics</p>
+            <p class="spec-intro">
+              The game loop is simple: explore, grab a leaf, avoid the
+              antlion and bring it home. You can only carry one leaf at a
+              time, so every trip is a new risk.
+            </p>
+            <div class="techstack-columns">
+              <div class="techstack-col">
+                <h4>Core</h4>
+                <ul>
+                  <li><strong>Cave navigation</strong> &mdash; connected cave rooms with pitfalls and dead ends, so every route needs planning.</li>
+                  <li><strong>Resource collection</strong> &mdash; find each leaf and carry it back to the colony, one at a time.</li>
+                  <li><strong>Antlion avoidance</strong> &mdash; the antlion patrols and chases, so players have to keep adapting.</li>
+                </ul>
+              </div>
+              <div class="techstack-col">
+                <h4>Satellite</h4>
+                <ul>
+                  <li><strong>Environmental obstacles</strong> &mdash; pitfalls slow you down and rocks block the antlion's view. Neither hurts you, but both shape your path.</li>
+                  <li><strong>Health</strong> &mdash; 3 hearts, lost to antlion bites.</li>
+                  <li><strong>Lever gates</strong> &mdash; some leaves are locked away until you find the lever that opens their gate.</li>
+                </ul>
+              </div>
+            </div>
+            <p class="spec-intro">
+              <strong>Changed from the pitch:</strong> we dropped the
+              speed-boost power-up for a simple stamina bar, switched the
+              antlion from line-of-sight to a detection radius, and built the
+              map by hand instead of generating it. We also added the lever
+              gates for more exploration, and an antlion freeze after each
+              bite to give players room to escape.
+            </p>
+          </div>
+
+          <!-- Models -->
+          <div class="project-code" id="models">
+            <p class="section-label">3D Models</p>
+            <p class="spec-intro">
+              I modeled these in Maya and brought them into Unity. The antlion
+              is smooth and detailed because it's the star of the game, while
+              the rocks and mushrooms stay low-poly so the caves can be filled
+              with them. I also modeled the roots that grow along the cave
+              walls.
+            </p>
+            <div class="code-grid pitfall-models">
+              <figure class="code-item">
+                <img
+                  src="../../image/pitfall/antlion.png"
+                  alt="Brown antlion model with six legs, large jaws and glowing red eyes"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <strong>Antlion</strong> &mdash; the hunter with glowing red
+                  eyes
+                </figcaption>
+              </figure>
+              <figure class="code-item">
+                <img
+                  src="../../image/pitfall/mushroom.png"
+                  alt="Three low-poly mushrooms with glowing magenta caps"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <strong>Glowing Mushrooms</strong> &mdash; light up the dark
+                  den
+                </figcaption>
+              </figure>
+              <figure class="code-item">
+                <img
+                  src="../../image/pitfall/rock.png"
+                  alt="Cluster of grey low-poly rocks"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <strong>Rocks</strong> &mdash; low-poly pieces to fill the
+                  tunnels
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <!-- Antlion AI -->
+          <div class="project-techstack" id="antlion-ai">
+            <p class="section-label">Antlion AI</p>
+            <p class="spec-intro">
+              The antlion uses Unity's NavMesh so it can find its own way around
+              the caves. We first planned for it to spot players by line of
+              sight, but switched to a simpler detection radius so the chase
+              feels fair and is easier to read.
+            </p>
+            <ol class="pipeline-steps">
+              <li>
+                <h4>Patrol</h4>
+                <p>
+                  It picks a random spot nearby and walks there. If it gets
+                  stuck or takes too long, it gives up and picks a new spot.
+                </p>
+              </li>
+              <li>
+                <h4>Detect</h4>
+                <p>
+                  When the player comes within its detection radius, it starts
+                  the chase, and the eye icon on screen opens to warn the
+                  player.
+                </p>
+              </li>
+              <li>
+                <h4>Chase</h4>
+                <p>
+                  It follows the player through the tunnels. If it bumps into a
+                  wall, it bounces off in a new direction instead of getting
+                  stuck.
+                </p>
+              </li>
+              <li>
+                <h4>Attack</h4>
+                <p>
+                  Once it's close enough, it bites and the player loses one of 3
+                  hearts. Then it freezes for a few seconds so the player has a
+                  chance to escape.
+                </p>
+              </li>
+              <li>
+                <h4>Pitfall alert</h4>
+                <p>
+                  If the player falls into a sand pit, every antlion in the den
+                  is alerted and heads straight for them.
+                </p>
+              </li>
+            </ol>
+          </div>
+
+          <!-- How to play -->
+          <div class="project-techstack" id="how-to-play">
+            <p class="section-label">How to Play</p>
+            <p class="spec-intro">
+              Move with <code>WASD</code>, hold <code>Shift</code> to sprint,
+              <code>Space</code> to jump and <code>E</code> to interact.
+            </p>
+            <ol class="pipeline-steps">
+              <li>
+                <h4>Pick a difficulty</h4>
+                <p>Easy needs 3 leaves, Medium needs 4 and Hard needs 5.</p>
+              </li>
+              <li>
+                <h4>Find a leaf</h4>
+                <p>
+                  Search the den and pick up a leaf. You can only carry one at a
+                  time.
+                </p>
+              </li>
+              <li>
+                <h4>Pull the levers</h4>
+                <p>
+                  Some leaves are locked away. Find a lever and press
+                  <code>E</code> to open the gate.
+                </p>
+              </li>
+              <li>
+                <h4>Bring it home</h4>
+                <p>
+                  Carry it back to your home hole and press <code>E</code> to
+                  drop it off.
+                </p>
+              </li>
+              <li>
+                <h4>Stay alive</h4>
+                <p>
+                  Sprinting uses stamina, and three antlion bites end the game.
+                  If you fall into a pit, spam <code>E</code> to climb out
+                  before you sink.
+                </p>
+              </li>
+              <li>
+                <h4>Feed the colony</h4>
+                <p>Bring home every leaf to win.</p>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Screens -->
+          <div class="project-code" id="screens">
+            <p class="section-label">Game Screens</p>
+            <p class="spec-intro">
+              I built the menu flow and the win and lose scenes. The pixel-art
+              title screen and buttons were drawn by Zainab Shakeel, using the
+              same dirt texture as the caves so the whole game feels
+              underground.
+            </p>
+            <div class="code-grid">
+              <figure class="code-item">
+                <img
+                  src="../../image/pitfall/screen-intro.jpg"
+                  alt="Intro screen with a glowing leaf and the text: Venture into the Ant Lion den to find food for your Ant Colony"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <strong>Intro</strong> &mdash; the mission
+                </figcaption>
+              </figure>
+              <figure class="code-item">
+                <img
+                  src="../../image/pitfall/screen-controls.jpg"
+                  alt="How to Play screen showing keyboard and mouse controls"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <strong>Controls</strong> &mdash; how to move and interact
+                </figcaption>
+              </figure>
+              <figure class="code-item">
+                <img
+                  src="../../image/pitfall/screen-easy.jpg"
+                  alt="Easy level intro showing three leaves to collect"
+                  loading="lazy"
+                />
+                <figcaption><strong>Easy</strong> &mdash; 3 leaves</figcaption>
+              </figure>
+              <figure class="code-item">
+                <img
+                  src="../../image/pitfall/screen-medium.jpg"
+                  alt="Medium level intro showing four leaves to collect"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <strong>Medium</strong> &mdash; 4 leaves
+                </figcaption>
+              </figure>
+              <figure class="code-item">
+                <img
+                  src="../../image/pitfall/screen-hard.jpg"
+                  alt="Hard level intro showing five leaves to collect"
+                  loading="lazy"
+                />
+                <figcaption><strong>Hard</strong> &mdash; 5 leaves</figcaption>
+              </figure>
+              <figure class="code-item">
+                <img
+                  src="../../image/pitfall/screen-win.jpg"
+                  alt="Congratulations screen: You collected all the food!"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <strong>Win</strong> &mdash; you collected all the food
+                </figcaption>
+              </figure>
+              <figure class="code-item">
+                <img
+                  src="../../image/pitfall/screen-lose.jpg"
+                  alt="Game Over screen: You died to the Ant Lion"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <strong>Game Over</strong> &mdash; caught by the antlion
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <!-- Playtesting -->
+          <div class="project-techstack" id="playtesting">
+            <p class="section-label">Playtesting</p>
+            <p class="spec-intro">
+              We ran 2 playtest sessions in class with 6 players aged
+              20&ndash;23 (1 casual, 2 intermediate and 3 experienced), who
+              enjoy strategy, survival and challenge games. They tried to
+              finish the main objective while thinking aloud, then we
+              interviewed them about the objective, the antlion, navigation
+              and how fun it felt.
+            </p>
+            <div class="techstack-columns">
+              <div class="techstack-col">
+                <h4>What worked</h4>
+                <ul>
+                  <li>Strong tension and an immersive atmosphere.</li>
+                  <li>Antlion encounters felt scary and exciting.</li>
+                  <li>
+                    Players hid behind rocks and cave corners, and planned their
+                    routes.
+                  </li>
+                  <li>
+                    Players paused at cave entrances before picking a route,
+                    and backtracked when they heard the chase audio.
+                  </li>
+                </ul>
+              </div>
+              <div class="techstack-col">
+                <h4>What didn't</h4>
+                <ul>
+                  <li>
+                    Players were so focused on surviving they forgot to collect
+                    food.
+                  </li>
+                  <li>
+                    Nobody was sure how close they could get before the antlion
+                    noticed.
+                  </li>
+                  <li>Players got lost in the bigger cave sections.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="pitfall-quotes">
+              <blockquote>
+                &ldquo;The chasing was the most exciting part.&rdquo;
+              </blockquote>
+              <blockquote>
+                &ldquo;I felt safe when I found a safe path back.&rdquo;
+              </blockquote>
+              <blockquote>
+                &ldquo;I was more focused on surviving than collecting
+                resources.&rdquo;
+              </blockquote>
+              <blockquote>
+                &ldquo;I wasn't sure if the Ant Lion could see through rocks or
+                walls.&rdquo;
+              </blockquote>
+            </div>
+          </div>
+
+          <!-- Revisions -->
+          <div class="project-techstack" id="revisions">
+            <p class="section-label">What We Changed</p>
+            <ol class="pipeline-steps">
+              <li>
+                <h4>Clearer objective</h4>
+                <p class="pitfall-issue">&ldquo;Running around was so much fun that I literally forgot I was supposed to find food.&rdquo;</p>
+                <p>
+                  Added eye-catching lever gates, stronger highlights on the
+                  food and a clearer objective tracker so players remember their
+                  goal.
+                </p>
+              </li>
+              <li>
+                <h4>Readable antlion</h4>
+                <p class="pitfall-issue">&ldquo;I'm not sure how close I can get before the Ant Lion notices me.&rdquo;</p>
+                <p>
+                  Added a pursuit icon and chase audio so players know when
+                  they're being hunted, and made the antlion freeze after a bite
+                  so players can escape.
+                </p>
+              </li>
+              <li>
+                <h4>Easier navigation</h4>
+                <p class="pitfall-issue">&ldquo;I feel like I'm running in circles. I don't know if I already visited this area...&rdquo;</p>
+                <p>
+                  Added landmarks, lighting cues and more distinct cave areas.
+                  The glowing mushrooms help players recognize where they've
+                  already been.
+                </p>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Challenges + reflection -->
+          <div class="project-techstack" id="reflection">
+            <p class="section-label">Challenges &amp; Reflection</p>
+            <div class="techstack-columns">
+              <div class="techstack-col">
+                <h4>Challenges</h4>
+                <ul>
+                  <li>
+                    Stopping the antlion from getting stuck on walls and rocks
+                    while it patrols.
+                  </li>
+                  <li>
+                    Making the caves dark enough to feel scary but still easy to
+                    find your way through.
+                  </li>
+                  <li>
+                    Getting the antlion to turn and face the way it moves.
+                  </li>
+                  <li>
+                    Testing every difficulty to make sure the game could always
+                    be won and lost fairly.
+                  </li>
+                </ul>
+              </div>
+              <div class="techstack-col">
+                <h4>Reflection</h4>
+                <p class="pitfall-reflection">
+                  Pitfall let me take a character all the way from a Maya model
+                  to a working enemy in the game. Watching playtesters run from
+                  the antlion showed me how much modeling, AI and lighting work
+                  together to create a feeling. Playtesting also taught me that
+                  players need clear signals, like a pursuit icon or a glowing
+                  landmark, to make smart choices under pressure.
+                </p>
+                <h4 class="pitfall-next">Next steps</h4>
+                <ul>
+                  <li>A home base that looks different from the antlion's cave, with a real model for dropping off leaves instead of a hole.</li>
+                  <li>A bigger map with more detailed rooms, hallways and cave plants.</li>
+                  <li>A way to fight back against the antlion, which players asked for.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Demo -->
+          <div class="project-techstack" id="demo">
+            <p class="section-label">Demo</p>
+            <p class="spec-intro">A walkthrough of Pitfall.</p>
+            <div class="project-video">
+              <iframe
+                src="https://www.youtube.com/embed/msj3gebes1g"
+                title="Pitfall game walkthrough"
+                loading="lazy"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <!-- Credits -->
+          <div class="project-techstack" id="credits">
+            <p class="section-label">Credits</p>
+            <div class="techstack-columns">
+              <div class="techstack-col">
+                <h4>Development &amp; 3D</h4>
+                <ul>
+                  <li><strong>Nina Vo</strong> &mdash; antlion, mushroom, rock and root models, antlion AI, menu flow, win and lose scenes, map decoration, leaf animation, and menu sound and music.</li>
+                  <li><strong>Byunghee Choi</strong> &mdash; player movement and states, map layout, post-processing, level balancing, the leaf drop-off, character art and animation, and the lever model and animation.</li>
+                </ul>
+              </div>
+              <div class="techstack-col">
+                <h4>UX, UI &amp; Pixel Art</h4>
+                <ul>
+                  <li><strong>Jasper Ling</strong> &mdash; UX and gameplay design: the interface, UI states for health, stamina and interactions, and how the mechanics connect.</li>
+                  <li><strong>Zainab Shakeel</strong> &mdash; pixel art for the health icon, stamina bar, leaf, pitfall, energy orb, pursuit icons and the dirt and root textures, plus the title screen, buttons and game screen style.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- More Projects -->
+          <div class="project-more" id="more-projects">
+            <p class="section-label">More Projects</p>
+            <div class="more-projects-list">
+              <a href="yummeal.html" class="more-project-link">
+                <span class="more-project-name">YumMeal Website</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="reciperemix.html" class="more-project-link">
+                <span class="more-project-name">RecipeRemix</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="luminous-etching.html" class="more-project-link">
+                <span class="more-project-name">Luminous Etching</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="dormmate.html" class="more-project-link">
+                <span class="more-project-name">DormMate</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="sweepy.html" class="more-project-link">
+                <span class="more-project-name">Sweepy</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="witch-caper.html" class="more-project-link">
+                <span class="more-project-name">Witch Caper</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="all-made-from-mom-luv.html" class="more-project-link">
+                <span class="more-project-name">All Made From Mom Luv</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="mystic-trail.html" class="more-project-link">
+                <span class="more-project-name">Mystic Trail</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="crossroad.html" class="more-project-link">
+                <span class="more-project-name">Crossroads</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="../../js/components.js"></script>
+    <script src="../../js/animations.js"></script>
+    <script src="../../js/project-quicknav.js"></script>
+  </body>
+</html>

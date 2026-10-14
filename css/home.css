@@ -279,7 +279,6 @@
     font-size: 4.5rem;
   }
 
-
   .home-btn {
     flex: 1 1 100%;
     justify-content: center;
@@ -370,6 +369,11 @@
   display: block;
 }
 
+/* Pixel-art covers stay crisp when scaled */
+.home-work-img.pixel-art {
+  image-rendering: pixelated;
+}
+
 .home-work-img--placeholder {
   background: #d4ceca;
 }
@@ -413,7 +417,7 @@
 .home-work-desc {
   font-family: var(--font-body);
   font-size: var(--text-xs);
-  color: #666;
+  color: #1a1a1a;
   line-height: 1.5;
 }
 
@@ -429,7 +433,6 @@
     padding: 3rem 1.5rem 3.5rem;
   }
 
-
   .home-works-grid {
     grid-template-columns: 1fr;
   }
@@ -441,5 +444,4 @@
     align-items: flex-start;
     gap: 0.75rem;
   }
-
 }

@@ -1,0 +1,266 @@
+/* ── Crossroads (project 9) ── */
+
+/* Every sprite and screenshot here is pixel art: keep the pixels sharp */
+.cr-pixel,
+.cr-sprite img {
+  image-rendering: pixelated;
+}
+
+/* Two-up and three-up image grids that fold to one column on phones */
+.code-grid.cr-grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+}
+
+/* Narrative diagrams: side by side, stacked on phones */
+.code-grid.cr-flow {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+}
+
+@media (max-width: 48rem) {
+  .code-grid.cr-flow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.code-grid.cr-grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+}
+
+/* ── Characters: transparent sprite, no background box, caption below ── */
+.code-grid.cr-cast {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 11rem), 1fr));
+}
+
+.project-content .cr-sprite {
+  display: grid;
+  place-items: center;
+  height: 11rem;
+}
+
+.project-content .cr-sprite img {
+  width: auto;
+  max-width: 80%;
+  max-height: 9rem;
+  border-radius: 0;
+}
+
+.project-content .cr-sprite--wide img {
+  max-width: 92%;
+}
+
+/* Tiny sprites are scaled up so they read at the same size as the rest */
+.project-content .cr-sprite--small img {
+  height: 6rem;
+}
+
+.cr-cast-group {
+  margin: 2rem 0 0;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.cr-cast-group span {
+  font-weight: 400;
+  color: #6b5d66;
+}
+
+/* ── Mini-game panels: a dark stage built from the game's own sprites ── */
+.cr-minigames {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.project-content .cr-minigame {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1rem;
+  background: var(--box-bg);
+  border-radius: var(--box-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.cr-minigame-text {
+  padding: 0.5rem 0.75rem 0.5rem 0;
+}
+
+.cr-minigame-text h4 {
+  margin: 0 0 0.25rem;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.cr-minigame-goal {
+  margin: 0 0 0.875rem;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #9b6fae;
+}
+
+.cr-minigame-text ul {
+  margin: 0;
+  padding: 0 0 0 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: #1a1a1a;
+}
+
+.cr-minigame-text code {
+  background: #f4f0ee;
+  border-radius: 0.25rem;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.85em;
+  color: #642052;
+}
+
+/* Real in-game screenshots of each mini-game */
+.project-content .cr-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+}
+
+/* ── Home scene: the room light flickers on the haunted interior ── */
+.project-content .cr-flicker {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+
+.project-content .cr-flicker img {
+  border-radius: 0;
+}
+
+.cr-flicker::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #000;
+  opacity: 0;
+  pointer-events: none;
+  animation: cr-flicker 5s steps(1, end) infinite;
+}
+
+@keyframes cr-flicker {
+  0%,
+  58%,
+  100% {
+    opacity: 0;
+  }
+  60%,
+  66% {
+    opacity: 0.92;
+  }
+  63%,
+  70% {
+    opacity: 0.1;
+  }
+  72%,
+  74% {
+    opacity: 0.85;
+  }
+}
+
+/* Haunting beats: compact timeline of the home scare */
+.cr-beats {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  gap: 1rem;
+}
+
+.project-content .cr-beats li {
+  padding: 1.25rem;
+  background: var(--box-bg);
+  border-radius: var(--box-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.cr-beats h4 {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.cr-beats p {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #1a1a1a;
+}
+
+/* Clue cards: Seen / Tells / Feels stacked with a little space */
+.cr-beats p + p {
+  margin-top: 0.5rem;
+}
+
+/* Ending cards lead with the ending's screen */
+.project-content .cr-ending-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.875rem;
+  border-radius: 0.5rem;
+}
+
+.project-content .cr-ending-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The house shot in Making It Scary sits on its own above the beats */
+.project-content .cr-home {
+  max-width: 40rem;
+  margin: 1.5rem 0 0;
+}
+
+/* Game map: tall, so keep it narrow and centred */
+.project-content .cr-map {
+  max-width: 32rem;
+  margin: 1.5rem auto 0;
+}
+
+.cr-reflection {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: #1a1a1a;
+}
+
+@media (max-width: 48rem) {
+  .project-content .cr-minigame {
+    grid-template-columns: 1fr;
+  }
+
+  .cr-minigame-text {
+    padding: 0.25rem 0.5rem 0.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cr-flicker::after {
+    animation: none;
+  }
+}

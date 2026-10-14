@@ -1,0 +1,932 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DormMate — Nina Vo</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/components/nav.css" />
+    <link rel="stylesheet" href="../../css/project.css" />
+    <link rel="stylesheet" href="../../css/projects/project3.css" />
+    <link rel="stylesheet" href="../../css/components/footer.css" />
+  </head>
+  <body>
+    <div id="nav-placeholder"></div>
+    <main class="page-body">
+      <div class="project-layout">
+        <div id="quicknav-placeholder"></div>
+
+        <div class="project-content">
+          <!-- Hero -->
+          <div class="project-hero">
+            <img
+              class="focus-center"
+              src="../../image/dormmate/DormMate.png"
+              alt="DormMate app screens: welcome, role selection and room issue reports"
+            />
+          </div>
+
+          <!-- Header -->
+          <div class="project-header">
+            <div class="project-tags-row">
+              <span class="project-type-tag">UI/UX</span>
+              <span class="project-type-tag">Application</span>
+            </div>
+            <h1 class="project-title">DormMate</h1>
+            <p class="project-tagline">
+              A mobile app for residence life. Students report maintenance
+              issues and answer building notices, and residence staff manage
+              them from one dashboard.
+            </p>
+          </div>
+
+          <!-- Overview + Meta -->
+          <div class="project-body" id="overview">
+            <div class="project-overview project-overview--stack">
+              <div class="dm-overview-card">
+                <p class="section-label">The Problem</p>
+                <p>
+                  Dorm maintenance runs on emails and paper notices. Students
+                  don't know whether anyone saw their report or when it will be
+                  fixed. Staff get every request in the same inbox, so a flooded
+                  bathroom can sit behind a slow Wi-Fi complaint. Notices like
+                  pest inspections go up on doors, and changing the time means
+                  tracking someone down.
+                </p>
+
+                <p class="section-label section-label--spaced">The Idea</p>
+                <p>
+                  DormMate puts all of this in one app with two sides: one for
+                  students and one for staff. Students report issues with
+                  photos, set priority with a limited supply of urgent tokens,
+                  and track each fix from Pending to Completed. Staff manage
+                  tickets and post announcements from one dashboard.
+                </p>
+              </div>
+              <div class="dm-facts">
+                <div class="dm-box">
+                  <span class="dm-box-label">Who it's for</span>
+                  <p>
+                    Residents who want a fix tracked without email chains, and
+                    residence staff who need one queue for every request.
+                  </p>
+                </div>
+                <div class="dm-box">
+                  <span class="dm-box-label">Design goals</span>
+                  <p>
+                    Calm over alarming. Status readable at a glance. One obvious
+                    action per screen.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <aside class="project-meta">
+              <div class="meta-group">
+                <span class="meta-label">Role</span>
+                <span class="meta-value"
+                  >UI Designer &amp; Front-end Developer</span
+                >
+              </div>
+              <div class="meta-group">
+                <span class="meta-label">Year</span>
+                <span class="meta-value">Fall 2025</span>
+              </div>
+              <div class="meta-group">
+                <span class="meta-label">Type</span>
+                <span class="meta-value">Academic Project</span>
+              </div>
+              <div class="meta-group">
+                <span class="meta-label">Collaboration</span>
+                <span class="meta-value">Tawshif Al Mehrab</span>
+              </div>
+              <div class="meta-group">
+                <span class="meta-label">Platform</span>
+                <span class="meta-value">iOS &amp; Android (Expo)</span>
+              </div>
+            </aside>
+          </div>
+
+          <!-- How it works -->
+          <div class="project-techstack" id="how-it-works">
+            <p class="section-label">How It Works</p>
+            <div class="techstack-columns">
+              <div class="techstack-col">
+                <h4>Student</h4>
+                <ul>
+                  <li>
+                    Opens a dashboard showing their room, open issues, and new
+                    announcements.
+                  </li>
+                  <li>
+                    Reports an issue by choosing up to two categories
+                    (electrical, plumbing, damage, parking, Wi-Fi, other),
+                    describing it, and taking photos with the camera.
+                  </li>
+                  <li>
+                    Spends a token to set priority:
+                    <strong>red for urgent</strong> (4 per student) or
+                    <strong>blue for normal</strong> (10 per student). The limit
+                    stops students from marking everything urgent.
+                  </li>
+                  <li>
+                    Follows the report on a tracker: Pending &rarr; In Progress
+                    &rarr; Completed.
+                  </li>
+                  <li>
+                    Reads announcements, acknowledges them, or requests a
+                    different time for things like a pest inspection.
+                  </li>
+                </ul>
+              </div>
+              <div class="techstack-col">
+                <h4>Staff</h4>
+                <ul>
+                  <li>Sees a dashboard of incoming work.</li>
+                  <li>
+                    Manages all reports in one list, with colour-coded status
+                    badges.
+                  </li>
+                  <li>
+                    Opens a ticket and moves it between Pending, In Progress,
+                    and Completed.
+                  </li>
+                  <li>
+                    Writes announcements with a category, a priority, a date, a
+                    time window, and a confirmation step before sending.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- My contribution -->
+          <div class="project-techstack" id="my-contribution">
+            <p class="section-label">My Contribution</p>
+            <p class="outcome-text dm-intro">
+              I designed the app's visual design and owned the front end: how
+              every screen looks, feels, and moves.
+            </p>
+            <div class="techstack-columns">
+              <div class="techstack-col">
+                <h4>Design &amp; UI</h4>
+                <ul>
+                  <li>
+                    <strong>UI polish across the whole app</strong> &mdash;
+                    restyled every student and staff screen so they share the
+                    same spacing, colours, cards, and headers, from the welcome
+                    and login screens through to the staff ticket view.
+                  </li>
+                  <li>
+                    <strong>Announcements and acknowledgement</strong> &mdash;
+                    designed the student announcement feed and detail screen,
+                    with an &ldquo;Urgent&rdquo; badge, an Acknowledge button,
+                    and a path to the time-change request.
+                  </li>
+                  <li>
+                    <strong>Report and progress screens</strong> &mdash;
+                    designed the report-history list and the step-by-step
+                    progress tracker, so students can see exactly where their
+                    issue is.
+                  </li>
+                  <li>
+                    <strong>Icons and visual assets</strong> &mdash; added the
+                    category icons, the red and blue token graphics, and the map
+                    pin.
+                  </li>
+                </ul>
+              </div>
+              <div class="techstack-col">
+                <h4>Features &amp; Engineering</h4>
+                <ul>
+                  <li>
+                    <strong>Scheduling: time-change requests</strong> &mdash;
+                    built the flow where a student picks a new date and a start
+                    and end time to request a different slot for a building
+                    notice. Staff use the same date and time-window pickers to
+                    schedule announcements.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tech Stack -->
+          <div class="project-techstack" id="tech-stack">
+            <p class="section-label">Tech Stack</p>
+            <div class="techstack-columns">
+              <div class="techstack-col">
+                <h4>Front end</h4>
+                <ul>
+                  <li>
+                    <strong>React Native</strong> + <strong>TypeScript</strong>
+                  </li>
+                  <li>
+                    <strong>Expo Router</strong> &mdash; file-based, typed
+                    routes
+                  </li>
+                  <li>
+                    <strong>DateTimePicker</strong> &mdash; date and time-window
+                    scheduling
+                  </li>
+                  <li>
+                    <strong>react-native-modal</strong> &mdash; confirmation and
+                    detail sheets
+                  </li>
+                  <li><strong>Expo Haptics</strong> &mdash; touch feedback</li>
+                </ul>
+              </div>
+              <div class="techstack-col">
+                <h4>Backend &amp; device</h4>
+                <ul>
+                  <li>
+                    <strong>Firebase Auth</strong> &mdash; sign-in for students
+                    and staff
+                  </li>
+                  <li>
+                    <strong>Cloud Firestore</strong> &mdash; reports, tickets,
+                    announcements
+                  </li>
+                  <li><strong>AsyncStorage</strong> &mdash; local storage</li>
+                  <li>
+                    <strong>expo-image-picker</strong> &mdash; camera photos for
+                    reports
+                  </li>
+                  <li>
+                    <strong>react-native-maps</strong> +
+                    <strong>expo-location</strong>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Typography -->
+          <div class="project-typespec" id="typography">
+            <p class="section-label">Typography</p>
+            <p class="spec-intro">
+              DormMate uses the phone's own typeface, so it loads instantly and
+              feels native. Hierarchy comes from size and weight, not extra
+              fonts. Headings are blue, never black.
+            </p>
+            <div class="type-familycards">
+              <div class="type-familycard">
+                <h4 class="dm-family">SF Pro</h4>
+                <p class="familycard-role">iOS system font.</p>
+                <p class="familycard-meta">Bold 700 &middot; Semibold 600</p>
+              </div>
+              <div class="type-familycard">
+                <h4 class="dm-family">Roboto</h4>
+                <p class="familycard-role">Android system font.</p>
+                <p class="familycard-meta">Bold 700 &middot; Semibold 600</p>
+              </div>
+            </div>
+
+            <div class="type-scale">
+              <p class="scale-group-label">Headings, Bold 700</p>
+
+              <div class="scale-row">
+                <div class="scale-row-head">
+                  <span class="scale-row-name">Wordmark</span>
+                  <span class="scale-row-meta">42px &middot; Bold</span>
+                </div>
+                <p class="scale-sample dm-sample dm-type--wordmark">DormMate</p>
+              </div>
+
+              <div class="scale-row">
+                <div class="scale-row-head">
+                  <span class="scale-row-name">Screen title</span>
+                  <span class="scale-row-meta">32px &middot; Bold</span>
+                </div>
+                <p class="scale-sample dm-sample dm-type--screen-title">
+                  Room 106
+                </p>
+              </div>
+
+              <div class="scale-row">
+                <div class="scale-row-head">
+                  <span class="scale-row-name">Section title</span>
+                  <span class="scale-row-meta">20px &middot; Bold</span>
+                </div>
+                <p class="scale-sample dm-sample dm-type--section-title">
+                  Issue Reports
+                </p>
+              </div>
+
+              <div class="scale-row">
+                <div class="scale-row-head">
+                  <span class="scale-row-name">Card title &middot; Button</span>
+                  <span class="scale-row-meta"
+                    >18px &middot; Bold / Semibold</span
+                  >
+                </div>
+                <p class="scale-sample dm-sample dm-type--card-title">
+                  Water Leak
+                </p>
+              </div>
+
+              <p class="scale-group-label scale-group-label--spaced">
+                Body &amp; labels
+              </p>
+
+              <div class="scale-row">
+                <div class="scale-row-head">
+                  <span class="scale-row-name">Label &middot; Input</span>
+                  <span class="scale-row-meta">16px &middot; Semibold</span>
+                </div>
+                <p class="scale-sample dm-sample dm-type--label">
+                  School Email
+                </p>
+              </div>
+
+              <div class="scale-row">
+                <div class="scale-row-head">
+                  <span class="scale-row-name">Meta</span>
+                  <span class="scale-row-meta">14px &middot; Regular</span>
+                </div>
+                <p class="scale-sample dm-sample dm-type--meta">
+                  Plumbing &bull; Wifi
+                </p>
+              </div>
+
+              <div class="scale-row scale-row--last">
+                <div class="scale-row-head">
+                  <span class="scale-row-name">Caption</span>
+                  <span class="scale-row-meta">13px &middot; Regular</span>
+                </div>
+                <p class="scale-sample dm-sample dm-type--caption">
+                  View, update, and track all student requests.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Color Palette -->
+          <div class="project-colorspec" id="color-palette">
+            <p class="section-label">Color Palette</p>
+            <p class="spec-intro">
+              One deep blue does most of the work, with a warm cream so a
+              stressful moment, like a leak at midnight, still feels handled.
+              Status and alert colours only appear when something needs
+              attention.
+            </p>
+
+            <p class="scale-group-label">Core</p>
+            <div class="color-swatches">
+              <div class="swatch">
+                <span class="swatch-color swatch-color--1f5b7a"></span>
+                <span class="swatch-name">DormMate Blue</span>
+                <span class="swatch-hex">#1f5b7a</span>
+                <span class="swatch-role">headers, buttons, headings</span>
+              </div>
+              <div class="swatch">
+                <span class="swatch-color swatch-color--01354e"></span>
+                <span class="swatch-name">Staff Navy</span>
+                <span class="swatch-hex">#01354e</span>
+                <span class="swatch-role">staff screen headers</span>
+              </div>
+              <div class="swatch">
+                <span class="swatch-color swatch-color--f5efe7"></span>
+                <span class="swatch-name">Dorm Cream</span>
+                <span class="swatch-hex">#f5efe7</span>
+                <span class="swatch-role">content panels</span>
+              </div>
+              <div class="swatch">
+                <span class="swatch-color swatch-color--ffffff"></span>
+                <span class="swatch-name">White</span>
+                <span class="swatch-hex">#ffffff</span>
+                <span class="swatch-role">cards, inputs, nav bar</span>
+              </div>
+              <div class="swatch">
+                <span class="swatch-color swatch-color--6c7a86"></span>
+                <span class="swatch-name">Secondary</span>
+                <span class="swatch-hex">#6c7a86</span>
+                <span class="swatch-role">categories, inactive tabs</span>
+              </div>
+            </div>
+
+            <p class="scale-group-label scale-group-label--spaced">
+              Report status
+            </p>
+            <div class="color-swatches">
+              <div class="swatch">
+                <span class="swatch-color swatch-color--b0bbc9"></span>
+                <span class="swatch-name">Pending</span>
+                <span class="swatch-hex">#b0bbc9</span>
+                <span class="swatch-role">received, not started</span>
+              </div>
+              <div class="swatch">
+                <span class="swatch-color swatch-color--c9a33b"></span>
+                <span class="swatch-name">In Progress</span>
+                <span class="swatch-hex">#c9a33b</span>
+                <span class="swatch-role">someone is on it</span>
+              </div>
+              <div class="swatch">
+                <span class="swatch-color swatch-color--5ca96c"></span>
+                <span class="swatch-name">Completed</span>
+                <span class="swatch-hex">#5ca96c</span>
+                <span class="swatch-role">fixed</span>
+              </div>
+            </div>
+
+            <p class="scale-group-label scale-group-label--spaced">
+              Alerts, priority &amp; tokens
+            </p>
+            <div class="color-swatches">
+              <div class="swatch">
+                <span class="swatch-color swatch-color--7a2727"></span>
+                <span class="swatch-name">Urgent Burgundy</span>
+                <span class="swatch-hex">#7a2727</span>
+                <span class="swatch-role">urgent announcements</span>
+              </div>
+              <div class="swatch">
+                <span class="swatch-color swatch-color--c62828"></span>
+                <span class="swatch-name">Alert Red</span>
+                <span class="swatch-hex">#c62828</span>
+                <span class="swatch-role">"Urgent" badge, red token</span>
+              </div>
+              <div class="swatch">
+                <span class="swatch-color swatch-color--c97a2b"></span>
+                <span class="swatch-name">High Orange</span>
+                <span class="swatch-hex">#c97a2b</span>
+                <span class="swatch-role">high priority chip</span>
+              </div>
+              <div class="swatch">
+                <span class="swatch-color swatch-color--1565c0"></span>
+                <span class="swatch-name">Token Blue</span>
+                <span class="swatch-hex">#1565c0</span>
+                <span class="swatch-role">blue token</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Layout -->
+          <div class="project-typespec" id="layout">
+            <p class="section-label">Layout</p>
+            <p class="spec-intro">
+              Every screen stacks the same four layers, so people know where to
+              look after one visit.
+            </p>
+            <div class="dm-layers">
+              <div class="type-familycard">
+                <p class="familycard-meta">Layer 1</p>
+                <h4 class="dm-layer-title">Blue header</h4>
+                <p class="familycard-role">
+                  The room number or screen name in bold white, with a back
+                  arrow.
+                </p>
+              </div>
+              <div class="type-familycard">
+                <p class="familycard-meta">Layer 2</p>
+                <h4 class="dm-layer-title">Cream panel</h4>
+                <p class="familycard-role">
+                  Slides up over the header with rounded top corners.
+                </p>
+              </div>
+              <div class="type-familycard">
+                <p class="familycard-meta">Layer 3</p>
+                <h4 class="dm-layer-title">White cards</h4>
+                <p class="familycard-role">
+                  Radius 20, padding 18, a soft shadow and 18px between cards.
+                </p>
+              </div>
+              <div class="type-familycard">
+                <p class="familycard-meta">Layer 4</p>
+                <h4 class="dm-layer-title">Button + tab bar</h4>
+                <p class="familycard-role">
+                  A round + button for new reports above four bottom tabs.
+                </p>
+              </div>
+            </div>
+
+            <div class="dm-phones">
+              <figure class="dm-phone-wrap">
+                <div
+                  class="dm-phone"
+                  role="img"
+                  aria-label="Student home screen: Room 106 with issue reports and a pest inspection announcement"
+                >
+                  <div class="dm-p-head">Room 106</div>
+                  <div class="dm-p-panel">
+                    <div class="dm-p-sec">Issue Reports</div>
+                    <div class="dm-p-card">
+                      <div>
+                        <div class="t">Wifi Slow</div>
+                        <div class="c">Wifi</div>
+                        <div class="d">Oct 11, 2025</div>
+                      </div>
+                      <span class="dm-p-badge dm-fill--completed"
+                        >Completed</span
+                      >
+                    </div>
+                    <div class="dm-p-card">
+                      <div>
+                        <div class="t">Water Leak</div>
+                        <div class="c">Plumbing</div>
+                        <div class="d">Oct 10, 2025</div>
+                      </div>
+                      <span class="dm-p-badge dm-fill--in-progress"
+                        >In Progress</span
+                      >
+                    </div>
+                    <div class="dm-p-card">
+                      <div>
+                        <div class="t">Broken Chair</div>
+                        <div class="c">Damage</div>
+                        <div class="d">Oct 9, 2025</div>
+                      </div>
+                      <span class="dm-p-badge dm-fill--pending">Pending</span>
+                    </div>
+                    <div class="dm-p-sec dm-p-gap">New Announcements</div>
+                    <div class="dm-p-ann">
+                      <div class="t">Pest Inspection</div>
+                      <div class="d">
+                        Oct 14 &middot; 12:00 pm &ndash; 3:00 pm
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dm-p-fab">
+                    <i class="ri-add-line" aria-hidden="true"></i>
+                  </div>
+                  <div class="dm-p-nav">
+                    <div class="on">
+                      <i class="ri-home-5-line" aria-hidden="true"></i>Home
+                    </div>
+                    <div>
+                      <i class="ri-edit-box-line" aria-hidden="true"></i>Reports
+                    </div>
+                    <div>
+                      <i class="ri-notification-3-line" aria-hidden="true"></i
+                      >Announce
+                    </div>
+                    <div>
+                      <i class="ri-map-pin-line" aria-hidden="true"></i>Map
+                    </div>
+                  </div>
+                </div>
+                <figcaption>Student &middot; Home</figcaption>
+              </figure>
+
+              <figure class="dm-phone-wrap">
+                <div
+                  class="dm-phone"
+                  role="img"
+                  aria-label="Sign in screen with school email and password fields"
+                >
+                  <div class="dm-p-center">
+                    <div class="w1">Welcome To</div>
+                    <div class="w2">DormMate</div>
+                    <div class="dm-p-box">
+                      <div class="dm-p-label">School Email</div>
+                      <div class="dm-p-input">email@sfu.ca</div>
+                      <div class="dm-p-label dm-p-gap">Password</div>
+                      <div class="dm-p-input">
+                        &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;
+                      </div>
+                      <div class="dm-p-btn">Sign In</div>
+                    </div>
+                  </div>
+                </div>
+                <figcaption>Sign in</figcaption>
+              </figure>
+
+              <figure class="dm-phone-wrap">
+                <div
+                  class="dm-phone"
+                  role="img"
+                  aria-label="Staff dashboard with Manage Reports and Create Announcement"
+                >
+                  <div class="dm-p-staffhead">
+                    <i class="ri-arrow-left-s-line" aria-hidden="true"></i>
+                    <div class="h">Dashboard</div>
+                  </div>
+                  <div class="dm-p-staffpanel">
+                    <div class="dm-p-dash">
+                      <span class="ic"
+                        ><i class="ri-inbox-archive-line" aria-hidden="true"></i
+                      ></span>
+                      <div class="txt">
+                        <div class="t">Manage Reports</div>
+                        <div class="s">
+                          View, update, and track all student requests.
+                        </div>
+                      </div>
+                      <i
+                        class="ri-arrow-right-s-line go"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                    <div class="dm-p-dash">
+                      <span class="ic"
+                        ><i
+                          class="ri-notification-3-line"
+                          aria-hidden="true"
+                        ></i
+                      ></span>
+                      <div class="txt">
+                        <div class="t">Create Announcement</div>
+                        <div class="s">
+                          Publish notices for student residents.
+                        </div>
+                      </div>
+                      <i
+                        class="ri-arrow-right-s-line go"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+                <figcaption>Staff &middot; Dashboard</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <!-- Components -->
+          <div class="project-typespec" id="components">
+            <p class="section-label">Components</p>
+            <p class="spec-intro">
+              Each sample uses the app's real sizes and colours.
+            </p>
+            <div class="dm-comps">
+              <div class="type-familycard dm-comp">
+                <h4 class="dm-layer-title">Primary button</h4>
+                <div class="dm-stage">
+                  <span class="dm-btn">Get Started</span
+                  ><span class="dm-btn dm-btn--ghost">Cancel</span>
+                </div>
+                <p class="familycard-role">
+                  Pill shape, radius 30, 18px Semibold white text with a soft
+                  shadow. Every tap gives a light haptic tick.
+                </p>
+              </div>
+              <div class="type-familycard dm-comp">
+                <h4 class="dm-layer-title">Status badges</h4>
+                <div class="dm-stage">
+                  <span class="dm-badge dm-fill--pending">Pending</span
+                  ><span class="dm-badge dm-fill--in-progress">In Progress</span
+                  ><span class="dm-badge dm-fill--completed">Completed</span>
+                </div>
+                <p class="familycard-role">
+                  Bold white text on a solid fill, radius 14. Home sorts
+                  Completed first, then In Progress, then Pending.
+                </p>
+              </div>
+              <div class="type-familycard dm-comp">
+                <h4 class="dm-layer-title">Issue card</h4>
+                <div class="dm-stage">
+                  <div class="dm-card">
+                    <div class="txt">
+                      <div class="t">Water Leak</div>
+                      <div class="c">Plumbing &bull; Electrical</div>
+                      <div class="d">October 10, 2025</div>
+                    </div>
+                    <span class="dm-badge dm-fill--in-progress"
+                      >In Progress</span
+                    >
+                  </div>
+                </div>
+                <p class="familycard-role">
+                  Title 18/700, categories in grey, date in a lighter grey. Tap
+                  to open the progress view.
+                </p>
+              </div>
+              <div class="type-familycard dm-comp">
+                <h4 class="dm-layer-title">Announcement cards</h4>
+                <div class="dm-stage dm-stage--col">
+                  <div class="dm-ann dm-ann--urgent">
+                    <div class="t">Pest Inspection</div>
+                    <div class="d">
+                      Oct 14 &middot; 12:00 pm &ndash; 3:00 pm
+                    </div>
+                    <span class="tag">Urgent</span>
+                  </div>
+                  <div class="dm-ann">
+                    <div class="t">Wifi Maintenance</div>
+                    <div class="d">
+                      Oct 16 &middot; 12:00 pm &ndash; 3:00 pm
+                    </div>
+                  </div>
+                </div>
+                <p class="familycard-role">
+                  An urgent announcement fills the card with burgundy and adds a
+                  red badge. Normal ones stay white.
+                </p>
+              </div>
+              <div class="type-familycard dm-comp">
+                <h4 class="dm-layer-title">Category picker</h4>
+                <div class="dm-stage">
+                  <span class="dm-cat on"
+                    ><i class="ri-drop-line" aria-hidden="true"></i
+                    >Plumbing</span
+                  >
+                  <span class="dm-cat"
+                    ><i class="ri-wifi-line" aria-hidden="true"></i>Wifi</span
+                  >
+                  <span class="dm-cat"
+                    ><i class="ri-flashlight-line" aria-hidden="true"></i
+                    >Electrical</span
+                  >
+                </div>
+                <p class="familycard-role">
+                  Pale blue tiles that flip to solid blue when selected.
+                  Students can pick up to two.
+                </p>
+              </div>
+              <div class="type-familycard dm-comp">
+                <h4 class="dm-layer-title">Priority chips</h4>
+                <div class="dm-stage">
+                  <span class="dm-chip dm-fill--urgent">Critical</span>
+                  <span class="dm-chip dm-fill--high">High</span>
+                  <span class="dm-chip dm-fill--normal">Normal</span>
+                  <span class="dm-chip dm-chip--off">Low</span>
+                </div>
+                <p class="familycard-role">
+                  Staff set priority when publishing. Each level fills its chip
+                  with its own colour when selected.
+                </p>
+              </div>
+              <div class="type-familycard dm-comp">
+                <h4 class="dm-layer-title">Progress tracker</h4>
+                <div class="dm-stage dm-stage--col">
+                  <div class="dm-steps">
+                    <span class="dot on"></span><span class="bar on"></span
+                    ><span class="dot on"></span><span class="bar"></span
+                    ><span class="dot"></span>
+                  </div>
+                  <div class="dm-steps-l">
+                    <span>Pending</span><span>In Progress</span
+                    ><span>Completed</span>
+                  </div>
+                </div>
+                <p class="familycard-role">
+                  Dots joined by a line. Completed steps are blue; later steps
+                  stay a pale blue-grey.
+                </p>
+              </div>
+              <div class="type-familycard dm-comp">
+                <h4 class="dm-layer-title">Text field</h4>
+                <div class="dm-stage dm-stage--col">
+                  <span class="dm-p-label dm-p-label--lg">School Email</span>
+                  <span class="dm-input">email@sfu.ca</span>
+                </div>
+                <p class="familycard-role">
+                  White fill, 1.5px light border, radius 10, blue input text.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Icons -->
+          <div class="project-typespec" id="icons">
+            <p class="section-label">Icons</p>
+            <p class="spec-intro">
+              The app uses simple outline icons at 22px for the tab bar,
+              dashboard and report categories. They're shown here with matching
+              <a
+                href="https://remixicon.com/"
+                class="dm-link"
+                target="_blank"
+                rel="noopener"
+                >Remix Icon</a
+              >
+              outlines.
+            </p>
+            <div class="dm-icons">
+              <div class="dm-box dm-ico">
+                <i class="ri-home-5-line" aria-hidden="true"></i
+                ><span>Home</span>
+              </div>
+              <div class="dm-box dm-ico">
+                <i class="ri-edit-box-line" aria-hidden="true"></i
+                ><span>Reports</span>
+              </div>
+              <div class="dm-box dm-ico">
+                <i class="ri-notification-3-line" aria-hidden="true"></i
+                ><span>Announce</span>
+              </div>
+              <div class="dm-box dm-ico">
+                <i class="ri-map-pin-line" aria-hidden="true"></i
+                ><span>Map</span>
+              </div>
+              <div class="dm-box dm-ico">
+                <i class="ri-inbox-archive-line" aria-hidden="true"></i
+                ><span>Manage reports</span>
+              </div>
+              <div class="dm-box dm-ico">
+                <i class="ri-search-line" aria-hidden="true"></i
+                ><span>Search</span>
+              </div>
+              <div class="dm-box dm-ico">
+                <i class="ri-arrow-left-s-line" aria-hidden="true"></i
+                ><span>Back</span>
+              </div>
+              <div class="dm-box dm-ico">
+                <i class="ri-add-line" aria-hidden="true"></i
+                ><span>New report</span>
+              </div>
+              <div class="dm-box dm-ico">
+                <i class="ri-drop-line" aria-hidden="true"></i
+                ><span>Plumbing</span>
+              </div>
+              <div class="dm-box dm-ico">
+                <i class="ri-wifi-line" aria-hidden="true"></i><span>Wifi</span>
+              </div>
+              <div class="dm-box dm-ico">
+                <i class="ri-flashlight-line" aria-hidden="true"></i
+                ><span>Electrical</span>
+              </div>
+              <div class="dm-box dm-ico">
+                <i class="ri-tools-line" aria-hidden="true"></i
+                ><span>Damage</span>
+              </div>
+              <div class="dm-box dm-ico">
+                <i class="ri-car-line" aria-hidden="true"></i
+                ><span>Parking</span>
+              </div>
+              <div class="dm-box dm-ico">
+                <i class="ri-error-warning-line" aria-hidden="true"></i
+                ><span>Other</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Next iteration -->
+          <div class="project-typespec" id="next-iteration">
+            <p class="section-label">Next Iteration</p>
+            <p class="spec-intro">Where DormMate goes next.</p>
+            <div class="dm-next">
+              <div class="dm-box">
+                <span class="dm-box-title">Dark mode</span>
+                <p>
+                  Night-time versions of navy and cream for students reporting
+                  issues late at night.
+                </p>
+              </div>
+              <div class="dm-box">
+                <span class="dm-box-title">More UI for the map page</span>
+                <p>
+                  Help students find their room and places around campus, like
+                  the food court.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- More Projects -->
+          <div class="project-more" id="more-projects">
+            <p class="section-label">More Projects</p>
+            <div class="more-projects-list">
+              <a href="yummeal.html" class="more-project-link">
+                <span class="more-project-name">YumMeal Website</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="reciperemix.html" class="more-project-link">
+                <span class="more-project-name">RecipeRemix</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="luminous-etching.html" class="more-project-link">
+                <span class="more-project-name">Luminous Etching</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="sweepy.html" class="more-project-link">
+                <span class="more-project-name">Sweepy</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="witch-caper.html" class="more-project-link">
+                <span class="more-project-name">Witch Caper</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="pitfall.html" class="more-project-link">
+                <span class="more-project-name">Pitfall</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="all-made-from-mom-luv.html" class="more-project-link">
+                <span class="more-project-name">All Made From Mom Luv</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="mystic-trail.html" class="more-project-link">
+                <span class="more-project-name">Mystic Trail</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="crossroad.html" class="more-project-link">
+                <span class="more-project-name">Crossroads</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="../../js/components.js"></script>
+    <script src="../../js/animations.js"></script>
+    <script src="../../js/project-quicknav.js"></script>
+  </body>
+</html>

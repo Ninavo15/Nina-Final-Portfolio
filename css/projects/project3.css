@@ -1,0 +1,759 @@
+.dm-sample,
+.dm-phone,
+.dm-stage {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "SF Pro Text", Roboto, "Helvetica Neue",
+    sans-serif;
+}
+
+.dm-sample {
+  color: #1f5b7a;
+}
+
+.type-familycard h4.dm-family {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", Roboto,
+    "Helvetica Neue", sans-serif;
+  color: #1f5b7a;
+}
+
+/* ── Layout layers ── */
+.dm-layers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.dm-layer-title {
+  margin: 0.35rem 0 0.4rem;
+}
+
+.type-familycard .familycard-role {
+  margin-bottom: 0;
+}
+
+/* ── Phone mockups ── */
+.dm-phones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.dm-phone-wrap {
+  margin: 0;
+  display: grid;
+  justify-items: center;
+  gap: 0.75rem;
+}
+
+.dm-phone-wrap figcaption {
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  font-weight: 600;
+  letter-spacing: var(--label-spacing);
+  text-transform: uppercase;
+  color: #b89aaa;
+}
+
+.dm-phone {
+  position: relative;
+  width: 16rem;
+  max-width: 100%;
+  height: 33rem;
+  border-radius: 2.5rem;
+  border: 0.5rem solid #15212a;
+  background: #1f5b7a;
+  overflow: hidden;
+  box-shadow: 0 1.25rem 2.5rem rgba(1, 53, 78, 0.22);
+}
+
+.dm-phone::before {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5rem;
+  height: 1.375rem;
+  border-radius: 0.75rem;
+  background: #15212a;
+  z-index: 5;
+}
+
+.dm-p-head {
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 3rem 1rem 1.4rem;
+}
+
+.dm-p-panel {
+  height: 100%;
+  margin-top: -0.5rem;
+  padding: 1rem 0.875rem;
+  border-radius: 1rem 1rem 0 0;
+  background: #f5efe7;
+}
+
+.dm-p-sec {
+  margin: 0 0 0.55rem 0.2rem;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #1f5b7a;
+}
+
+.dm-p-card {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.625rem;
+  padding: 0.7rem 0.75rem;
+  border-radius: 0.95rem;
+  background: #fff;
+  box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.1);
+}
+
+.dm-p-card .t,
+.dm-p-ann .t {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #1f5b7a;
+}
+
+.dm-p-card .c {
+  font-size: 0.66rem;
+  color: #6c7a86;
+}
+
+.dm-p-card .d {
+  font-size: 0.625rem;
+  color: #9ca5ac;
+}
+
+.dm-p-badge {
+  margin-left: auto;
+  padding: 0.25rem 0.55rem;
+  border-radius: 0.7rem;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.dm-p-ann {
+  padding: 0.7rem 0.75rem;
+  border-radius: 0.875rem;
+  background: #7a2727;
+  box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.12);
+}
+
+.dm-p-ann .t {
+  color: #fff;
+}
+
+.dm-p-ann .d {
+  margin-top: 0.15rem;
+  font-size: 0.625rem;
+  color: #f0dcdc;
+}
+
+.dm-p-fab {
+  position: absolute;
+  right: 1rem;
+  bottom: 4.4rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #1f5b7a;
+  color: #fff;
+  font-size: 1.4rem;
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.25);
+}
+
+.dm-p-nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem 0 0.875rem;
+  border-top: 0.0625rem solid #dadada;
+  background: #fff;
+}
+
+.dm-p-nav div {
+  display: grid;
+  justify-items: center;
+  gap: 0.05rem;
+  font-size: 0.5625rem;
+  color: #6c7a86;
+}
+
+.dm-p-nav i {
+  font-size: 1.05rem;
+}
+
+.dm-p-nav div.on {
+  color: #1f5b7a;
+  font-weight: 700;
+}
+
+.dm-p-center {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  padding: 1.25rem;
+  color: #fff;
+  text-align: center;
+}
+
+.dm-p-center .w1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.dm-p-center .w2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.dm-p-box {
+  width: 100%;
+  margin-top: 1.6rem;
+  padding: 1.25rem 1.1rem;
+  border-radius: 1.25rem;
+  background: #f5efe7;
+  text-align: left;
+}
+
+.dm-p-label {
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #1f5b7a;
+}
+
+.dm-p-input {
+  padding: 0.5rem 0.625rem;
+  border: 0.09rem solid #d0d6dc;
+  border-radius: 0.5rem;
+  background: #fff;
+  font-size: 0.75rem;
+  color: #9ca5ac;
+}
+
+.dm-p-btn {
+  margin-top: 1.25rem;
+  padding: 0.7rem;
+  border-radius: 1.4rem;
+  background: #1f5b7a;
+  color: #fff;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.2);
+}
+
+.dm-p-staffhead {
+  position: relative;
+  z-index: 1;
+  padding: 2.75rem 1rem 1.6rem;
+  border-radius: 0 0 1.5rem 1.5rem;
+  background: #01354e;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.dm-p-staffhead .h {
+  margin-top: 0.25rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.dm-p-staffpanel {
+  height: 100%;
+  margin-top: -1.1rem;
+  padding: 2.1rem 0.875rem;
+  display: grid;
+  align-content: start;
+  gap: 0.875rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  background: #f5efe7;
+}
+
+.dm-p-dash {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.75rem;
+  border-radius: 0.95rem;
+  background: #fff;
+  box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.1);
+}
+
+.dm-p-dash .ic {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex: none;
+  border-radius: 0.75rem;
+  background: #e3eef4;
+  color: #1f5b7a;
+  font-size: 1.3rem;
+}
+
+.dm-p-dash .txt {
+  flex: 1;
+  min-width: 0;
+}
+
+.dm-p-dash .t {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #1f5b7a;
+}
+
+.dm-p-dash .s {
+  font-size: 0.625rem;
+  line-height: 1.3;
+  color: #6c7a86;
+}
+
+.dm-p-dash .go {
+  color: #1f5b7a;
+}
+
+/* ── Components ── */
+.dm-comps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: 1.25rem;
+}
+
+.dm-comp {
+  display: grid;
+  align-content: start;
+  gap: 0.875rem;
+  min-width: 0;
+}
+
+.dm-comp .dm-layer-title {
+  margin: 0;
+}
+
+.dm-stage {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 1.25rem;
+  border-radius: 0.875rem;
+  background: #ebe2d6;
+}
+
+.dm-stage--col {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.dm-btn {
+  padding: 0.75rem 2rem;
+  border-radius: 1.875rem;
+  background: #1f5b7a;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.2);
+}
+
+.dm-btn--ghost {
+  padding: 0.65rem 1.5rem;
+  border: 0.09rem solid #1f5b7a;
+  background: transparent;
+  color: #1f5b7a;
+  box-shadow: none;
+}
+
+.dm-badge {
+  padding: 0.35rem 0.8rem;
+  border-radius: 0.875rem;
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.dm-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 1rem;
+  border-radius: 1.25rem;
+  background: #fff;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.12);
+}
+
+.dm-card .txt {
+  flex: 1;
+  min-width: 0;
+}
+
+.dm-card .t {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1f5b7a;
+}
+
+.dm-card .c {
+  margin-top: 0.15rem;
+  font-size: 0.8125rem;
+  color: #6c7a86;
+}
+
+.dm-card .d {
+  margin-top: 0.15rem;
+  font-size: 0.8125rem;
+  color: #9ca5ac;
+}
+
+.dm-ann {
+  padding: 1rem;
+  border-radius: 1.1rem;
+  background: #fff;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.15);
+}
+
+.dm-ann .t {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1f5b7a;
+}
+
+.dm-ann .d {
+  margin-top: 0.15rem;
+  font-size: 0.8125rem;
+  color: #6c7a86;
+}
+
+.dm-ann--urgent {
+  background: #7a2727;
+}
+
+.dm-ann--urgent .t {
+  color: #fff;
+}
+
+.dm-ann--urgent .d {
+  color: #f0dcdc;
+}
+
+.dm-ann .tag {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 0.5rem;
+  background: #c62828;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.dm-cat {
+  width: 4.9rem;
+  display: grid;
+  justify-items: center;
+  gap: 0.35rem;
+  padding: 0.875rem 0 0.625rem;
+  border-radius: 1.1rem;
+  background: #d9e3ea;
+  color: #1f5b7a;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.dm-cat i {
+  font-size: 1.6rem;
+}
+
+.dm-cat.on {
+  background: #1f5b7a;
+  color: #fff;
+}
+
+.dm-chip {
+  padding: 0.5rem 0.875rem;
+  border-radius: 1.25rem;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.dm-chip--off {
+  border: 0.09rem solid #d3d9de;
+  background: #fff;
+  color: #6c7a86;
+}
+
+.dm-steps {
+  display: flex;
+  align-items: center;
+}
+
+.dm-steps .dot {
+  width: 1.125rem;
+  height: 1.125rem;
+  flex: none;
+  border-radius: 50%;
+  background: #c4d2d9;
+}
+
+.dm-steps .bar {
+  flex: 1;
+  height: 0.125rem;
+  background: #c4d2d9;
+}
+
+.dm-steps .on {
+  background: #1f5b7a;
+}
+
+.dm-steps-l {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #6c7a86;
+}
+
+.dm-input {
+  padding: 0.75rem;
+  border: 0.09rem solid #d0d6dc;
+  border-radius: 0.625rem;
+  background: #fff;
+  font-size: 1rem;
+  color: #9ca5ac;
+}
+
+@media (max-width: 30rem) {
+  .dm-phone {
+    width: 15rem;
+    height: 31rem;
+  }
+}
+
+/* Small fact cards ("Who it's for", "Design goals") */
+.dm-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 1.25rem;
+}
+
+.dm-box {
+  display: grid;
+  align-content: start;
+  gap: 0.4rem;
+  padding: 1.5rem;
+}
+
+.dm-box p {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #1a1a1a;
+}
+
+.dm-box-label {
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  font-weight: 600;
+  letter-spacing: var(--label-spacing);
+  text-transform: uppercase;
+  color: #9b6fae;
+}
+
+.dm-box-title {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* Icons */
+.dm-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+  gap: 0.875rem;
+}
+
+.dm-ico {
+  justify-items: center;
+  gap: 0.6rem;
+  padding: 1.25rem 0.5rem 1rem;
+  text-align: center;
+}
+
+.dm-ico i {
+  font-size: 1.75rem;
+  line-height: 1;
+  color: #1f5b7a;
+}
+
+.dm-ico span {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  color: #1a1a1a;
+}
+
+/* Next iteration */
+.dm-next {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  gap: 1.25rem;
+}
+
+.dm-link {
+  color: #642052;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-color: #d8c3d1;
+  transition: text-decoration-color 0.2s ease;
+}
+
+.dm-link:hover {
+  text-decoration-color: #642052;
+}
+
+/* ── Colour swatch fills ── */
+.swatch-color--1f5b7a {
+  background: #1f5b7a;
+}
+
+.swatch-color--01354e {
+  background: #01354e;
+}
+
+.swatch-color--f5efe7 {
+  background: #f5efe7;
+}
+
+.swatch-color--ffffff {
+  background: #ffffff;
+}
+
+.swatch-color--6c7a86 {
+  background: #6c7a86;
+}
+
+.swatch-color--b0bbc9 {
+  background: #b0bbc9;
+}
+
+.swatch-color--c9a33b {
+  background: #c9a33b;
+}
+
+.swatch-color--5ca96c {
+  background: #5ca96c;
+}
+
+.swatch-color--7a2727 {
+  background: #7a2727;
+}
+
+.swatch-color--c62828 {
+  background: #c62828;
+}
+
+.swatch-color--c97a2b {
+  background: #c97a2b;
+}
+
+.swatch-color--1565c0 {
+  background: #1565c0;
+}
+
+/* ── Type scale samples ── */
+.dm-sample.dm-type--wordmark {
+  font-size: 2.625rem;
+  font-weight: 700;
+  color: #1f4e63;
+}
+
+.dm-sample.dm-type--screen-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.dm-sample.dm-type--section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.dm-sample.dm-type--card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.dm-sample.dm-type--label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.dm-sample.dm-type--meta {
+  font-size: 0.875rem;
+  color: #6c7a86;
+}
+
+.dm-sample.dm-type--caption {
+  font-size: 0.8125rem;
+  color: #6c7a86;
+}
+
+/* ── Status, priority and token fills (badges and chips) ── */
+.dm-fill--pending {
+  background: #b0bbc9;
+}
+
+.dm-fill--in-progress {
+  background: #c9a33b;
+}
+
+.dm-fill--completed {
+  background: #5ca96c;
+}
+
+.dm-fill--urgent {
+  background: #7a2727;
+}
+
+.dm-fill--high {
+  background: #c97a2b;
+}
+
+.dm-fill--normal {
+  background: #1f5b7a;
+}
+
+/* ── Small spacing helpers inside the phone and component samples ── */
+.dm-p-gap {
+  margin-top: 0.75rem;
+}
+
+.dm-p-label.dm-p-label--lg {
+  font-size: 1rem;
+}
+
+/* Intro line above the My Contribution cards */
+.outcome-text.dm-intro {
+  margin: 0 0 1.5rem;
+  max-width: 46rem;
+}

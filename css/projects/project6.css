@@ -1,0 +1,163 @@
+/* ── All Made From Mom Luv (project 6) ── */
+
+.mom-split {
+  display: grid;
+  grid-template-columns: minmax(0, 22rem) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+  margin-top: 1.5rem;
+}
+
+.mom-text,
+.mom-reflection {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: 1.85;
+  color: #1a1a1a;
+}
+
+.mom-reflection {
+  font-size: 0.9375rem;
+  line-height: 1.75;
+}
+
+/* Folder screenshots are tall and narrow */
+.code-grid.mom-folders {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr));
+}
+
+@media (max-width: 48rem) {
+  .mom-split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ── Colour swatch fills ── */
+.swatch-color--fff2f5 {
+  background: #fff2f5;
+}
+
+.swatch-color--ffeed6 {
+  background: #ffeed6;
+}
+
+.swatch-color--ffccd8 {
+  background: #ffccd8;
+}
+
+.swatch-color--e5919d {
+  background: #e5919d;
+}
+
+.swatch-color--e57282 {
+  background: #e57282;
+}
+
+.swatch-color--936368 {
+  background: #936368;
+}
+
+.swatch-color--ffeee3 {
+  background: #ffeee3;
+}
+
+.swatch-color--a5562f {
+  background: #a5562f;
+}
+
+.swatch-color--6b483a {
+  background: #6b483a;
+}
+
+.swatch-color--e579a8 {
+  background: #e579a8;
+}
+
+.swatch-color--e54e91 {
+  background: #e54e91;
+}
+
+.swatch-color--fffaf6 {
+  background: #fffaf6;
+}
+
+.swatch-color--efb995 {
+  background: #efb995;
+}
+
+.swatch-color--e16a43 {
+  background: #e16a43;
+}
+
+.swatch-color--db6b46 {
+  background: #db6b46;
+}
+
+.swatch-color--fe6f6d {
+  background: #fe6f6d;
+}
+
+.swatch-color--68a724 {
+  background: #68a724;
+}
+
+/* ── Drawing assets (same sprite cards as the other game pages) ── */
+.code-grid.mom-assets {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 11rem), 1fr));
+}
+
+/* Scenes fill the card, two across like the other game pages */
+.code-grid.mom-scenes {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+}
+
+.project-content .mom-sprite {
+  display: grid;
+  place-items: center;
+  height: 11rem;
+}
+
+.project-content .mom-sprite img {
+  width: auto;
+  max-width: 80%;
+  max-height: 9rem;
+  border-radius: 0;
+}
+
+.project-content .mom-sprite--wide img {
+  max-width: 92%;
+}
+
+/* Tiny boards are scaled up so they read at the same size as the rest */
+.project-content .mom-sprite--small img {
+  width: 80%;
+}
+
+.mom-asset-group {
+  margin: 2rem 0 0;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.mom-asset-group span {
+  font-weight: 400;
+  color: #6b5d66;
+}
+
+/* Final design screens share one 3:2 frame */
+.project-content .code-grid.mom-screens img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+/* Every card in a grid matches the tallest one, across all rows */
+.project-content .code-grid.mom-scenes,
+.project-content .code-grid.mom-assets,
+.project-content .code-grid.mom-screens,
+.project-content .code-grid.mom-folders {
+  align-items: stretch;
+  grid-auto-rows: 1fr;
+}

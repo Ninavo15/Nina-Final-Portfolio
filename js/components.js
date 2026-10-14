@@ -96,41 +96,6 @@ function setupFooterChat(footer) {
 
 // ── Back to top ──
 (function () {
-  const style = document.createElement("style");
-  style.textContent = `
-    #back-to-top {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      width: 3rem;
-      height: 3rem;
-      border-radius: 50%;
-      border: none;
-      background: #642052;
-      color: var(--text-light);
-      font-size: 1.25rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      opacity: 0;
-      pointer-events: none;
-      transform: translateY(0.5rem);
-      transition: opacity 0.25s ease, transform 0.25s ease, background 0.2s ease;
-      z-index: 600;
-      box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.25);
-    }
-    #back-to-top.visible {
-      opacity: 1;
-      pointer-events: auto;
-      transform: translateY(0);
-    }
-    #back-to-top:hover {
-      background: #7d2a68;
-    }
-  `;
-  document.head.appendChild(style);
-
   const btn = document.createElement("button");
   btn.id = "back-to-top";
   btn.setAttribute("aria-label", "Back to top");

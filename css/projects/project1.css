@@ -10,51 +10,6 @@
   object-fit: contain;
 }
 
-/* ── Code ── */
-.project-code {
-  padding: 3rem;
-  border-bottom: 0.0625rem solid #e8e2e0;
-}
-
-.code-intro {
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.9375rem;
-  color: #888;
-  margin: 1.5rem 0 1rem;
-}
-
-.code-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-  align-items: start;
-}
-
-.code-item {
-  margin: 0;
-}
-
-.code-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 0.75rem;
-  border: 0.0625rem solid #e8e2e0;
-}
-
-.code-item figcaption {
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.875rem;
-  color: #444;
-  margin-top: 0.625rem;
-}
-
-.code-item figcaption strong {
-  color: #1a1a1a;
-  font-weight: 600;
-}
-
 /* ── Tech stack ── */
 .project-techstack {
   padding: 3rem;
@@ -98,7 +53,7 @@
 .techstack-col li {
   font-family: "DM Sans", sans-serif;
   font-size: 0.9375rem;
-  color: #444;
+  color: #1a1a1a;
   line-height: 1.6;
   padding-left: 1rem;
   position: relative;
@@ -131,123 +86,9 @@
   border-color: #642052;
 }
 
-/* ── Typography / color spec sections ── */
-.project-typespec,
-.project-colorspec {
-  padding: 3rem;
-  border-bottom: 0.0625rem solid #e8e2e0;
-}
-
-.spec-intro {
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.9375rem;
-  color: #888;
-  margin: 1.5rem 0 1rem;
-}
-
-.spec-intro code {
-  background: #f4f0ee;
-  border-radius: 0.25rem;
-  padding: 0.1rem 0.4rem;
-  font-size: 0.85em;
-  color: #642052;
-}
-
-/* ── Font family cards ── */
-.type-familycards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
-  margin-bottom: 2.5rem;
-}
-
-.type-familycard {
-  border: 0.0625rem solid #e8e2e0;
-  border-radius: 0.75rem;
-  padding: 1.5rem;
-}
-
+/* YumMeal family cards use its own display face */
 .type-familycard h4 {
   font-family: "Passion One", sans-serif;
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: #1a1a1a;
-  margin: 0 0 0.5rem;
-}
-
-.familycard-role {
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.9375rem;
-  color: #444;
-  margin: 0 0 0.75rem;
-}
-
-.familycard-meta {
-  font-family: monospace;
-  font-size: 0.75rem;
-  letter-spacing: 0.02em;
-  color: #b089a8;
-  margin: 0;
-}
-
-/* ── Type scale ── */
-.scale-group-label {
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: #b89aaa;
-  margin: 0 0 0.5rem;
-}
-
-.scale-group-label--spaced {
-  margin-top: 2.5rem;
-}
-
-.scale-row {
-  padding: 1.25rem 0;
-  border-bottom: 0.0625rem solid #e8e2e0;
-}
-
-.scale-row--last {
-  border-bottom: none;
-}
-
-.scale-row-head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 0.75rem;
-}
-
-.scale-row-name {
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.9375rem;
-  font-weight: 600;
-  color: #1a1a1a;
-}
-
-.scale-row-name code {
-  font-family: monospace;
-  font-weight: 400;
-  color: #b089a8;
-  margin-left: 0.35rem;
-}
-
-.scale-row-meta {
-  font-family: monospace;
-  font-size: 0.75rem;
-  color: #888;
-  white-space: nowrap;
-}
-
-.scale-sample {
-  margin: 0;
-  line-height: 1.1;
-  color: #1a1a1a;
-  overflow-wrap: break-word;
 }
 
 .demo-title {
@@ -273,60 +114,8 @@
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.7;
-  color: #444;
+  color: #1a1a1a;
   max-width: 40rem;
-}
-
-.spec-note {
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.875rem;
-  color: #888;
-  line-height: 1.7;
-  margin: 1.5rem 0 0;
-}
-
-.spec-note strong {
-  color: #444;
-}
-
-.color-swatches {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
-  gap: 1.25rem;
-  margin-top: 0.5rem;
-}
-
-.swatch {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-
-.swatch-color {
-  width: 100%;
-  height: 4rem;
-  border-radius: 0.5rem;
-  border: 0.0625rem solid rgba(0, 0, 0, 0.08);
-  display: block;
-}
-
-.swatch-name {
-  font-family: monospace;
-  font-size: 0.8125rem;
-  color: #642052;
-}
-
-.swatch-hex {
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.8125rem;
-  color: #888;
-  text-transform: uppercase;
-}
-
-.swatch-role {
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.8125rem;
-  color: #444;
 }
 
 /* ── Responsive ── */
@@ -335,16 +124,29 @@
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+}
 
-  .type-familycards {
-    grid-template-columns: 1fr;
-  }
+/* ── Colour swatch fills ── */
+.swatch-color--f6f1ed {
+  background: #f6f1ed;
+}
 
-  .scale-row-head {
-    flex-wrap: wrap;
-  }
+.swatch-color--e1dad7 {
+  background: #e1dad7;
+}
 
-  .scale-row-meta {
-    white-space: normal;
-  }
+.swatch-color--570000 {
+  background: #570000;
+}
+
+.swatch-color--9e3b3b {
+  background: #9e3b3b;
+}
+
+.swatch-color--e47281 {
+  background: #e47281;
+}
+
+.swatch-color--e98c00 {
+  background: #e98c00;
 }

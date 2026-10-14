@@ -1,0 +1,59 @@
+/* ── Pitfall (project 5) ── */
+
+.code-grid.pitfall-models {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr));
+}
+
+/* 3D models: transparent renders, no background box */
+.pitfall-models .code-item img {
+  height: 12rem;
+  object-fit: contain;
+  border: none;
+  border-radius: 0;
+  background: none;
+}
+
+.pitfall-reflection {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: #1a1a1a;
+}
+
+/* Playtester quotes */
+.pitfall-quotes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.pitfall-quotes blockquote {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  border-left: 0.1875rem solid #642052;
+  border-radius: 0.5rem;
+  background: #f8f3f1;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.0625rem;
+  line-height: 1.5;
+  color: #1a1a1a;
+}
+
+/* Old vs new storyboard, side by side on wide screens */
+.code-grid.pitfall-storyboard {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+}
+
+/* Player quote that started each revision */
+.pitfall-issue {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: #6b5d66;
+}
+
+.pitfall-next {
+  margin-top: 1.25rem;
+}

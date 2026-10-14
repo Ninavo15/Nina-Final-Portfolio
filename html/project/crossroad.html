@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crossroads — Nina Vo</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/components/nav.css" />
+    <link rel="stylesheet" href="../../css/project.css" />
+    <link rel="stylesheet" href="../../css/projects/project9.css" />
+    <link rel="stylesheet" href="../../css/components/footer.css" />
+  </head>
+  <body>
+    <div id="nav-placeholder"></div>
+    <main class="page-body">
+      <div class="project-layout">
+        <div id="quicknav-placeholder"></div>
+
+        <div class="project-content">
+          <!-- Hero -->
+          <div class="project-hero">
+            <img class="cr-pixel focus-center-75" src="../../image/crossroad/game cover.png" alt="Crossroads pixel-art title screen: a blood-stained light blue car on a highway at night, with Start and How to Play buttons" />
+          </div>
+
+          <!-- Header -->
+          <div class="project-header">
+            <div class="project-tags-row">
+              <span class="project-type-tag">Game Developer</span>
+              <span class="project-type-tag">Pixel Art</span>
+            </div>
+            <h1 class="project-title">Crossroads</h1>
+            <p class="project-tagline">
+              A pixel-art psychological horror game about a drive home that
+              slowly turns into a confession.
+            </p>
+          </div>
+
+          <!-- Overview + Meta -->
+          <div class="project-body" id="overview">
+            <div class="project-overview">
+              <p class="section-label">Overview</p>
+              <p>
+                You're driving alone at night. You hear a crash, and a deer
+                runs across the road, so it must have been the deer. Then the
+                road starts showing blood, there's blood on your car at the gas
+                station, and a missing girl is on the news. Crossroads is a 2D
+                psychological horror driving game where the player slowly
+                relives a drunk hit-and-run they caused, and the choices they
+                make decide how it ends.
+              </p>
+
+              <p class="section-label section-label--spaced">Goal of the Project</p>
+              <p>
+                We wanted players to piece the story together themselves,
+                without being told what happened. The game never says it
+                outright. The truth comes out through exploration, through
+                clues in the world like blood stains, posters, CCTV footage
+                and hallucinations, and through ordinary tasks done under
+                pressure that stands in for the driver's guilt.
+              </p>
+            </div>
+            <aside class="project-meta">
+              <div class="meta-group">
+                <span class="meta-label">Role</span>
+                <span class="meta-value">Developer &amp; Visual Artist</span>
+              </div>
+              <div class="meta-group">
+                <span class="meta-label">Year</span>
+                <span class="meta-value">Summer 2026</span>
+              </div>
+              <div class="meta-group">
+                <span class="meta-label">Type</span>
+                <span class="meta-value">Academic Team Project<br />Team Bungbees</span>
+              </div>
+              <div class="meta-group">
+                <span class="meta-label">Collaboration</span>
+                <span class="meta-value">Byunghee Choi<br />Jasper Ling<br />Zainab Shakeel</span>
+              </div>
+              <div class="meta-group">
+                <span class="meta-label">Tools</span>
+                <div class="meta-tools">
+                  <span class="tool-chip"><img src="../../image/software logo/unity.jpeg" alt="" />Unity</span>
+                  <span class="tool-chip">C#</span>
+                  <span class="tool-chip">Pixel Art</span>
+                </div>
+              </div>
+            </aside>
+          </div>
+
+          <!-- My role -->
+          <div class="project-techstack" id="my-role">
+            <p class="section-label">My Role</p>
+            <div class="techstack-columns">
+              <div class="techstack-col">
+                <h4>Game Logic &amp; Interaction</h4>
+                <ul>
+                  <li><strong>Game flow</strong> &mdash; revised the story flow from playtest feedback and connected the scenes so each choice leads to the right next scene and ending.</li>
+                  <li><strong>Interaction logic</strong> &mdash; built the <code>E</code>-to-interact prompts, and made each one turn off once it's been used.</li>
+                  <li><strong>Asset integration</strong> &mdash; brought the team's art and sounds into Unity and made them interactable.</li>
+                  <li><strong>Character movement</strong> &mdash; side-scrolling walking, facing, footstep sounds and freezing the player during dialogue and fades.</li>
+                  <li><strong>Debugging</strong> &mdash; went through every scene to catch errors and missing logic.</li>
+                </ul>
+              </div>
+              <div class="techstack-col">
+                <h4>Mini-games, Scenes &amp; Mood</h4>
+                <ul>
+                  <li><strong>4 mini-games</strong> &mdash; wiping the car, tearing the poster, filling fuel and choosing an item, including all of their UI.</li>
+                  <li><strong>Scenes</strong> &mdash; the gas station, convenience store, the road back home and the home scene.</li>
+                  <li><strong>Pixel art</strong> &mdash; drew the home, the haunted room and the CCTV footage screen.</li>
+                  <li><strong>Horror</strong> &mdash; flickering lights, background music, sound effects and the ghost haunting at home.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story + game flow -->
+          <div class="project-techstack" id="game-flow">
+            <p class="section-label">Story &amp; Game Flow</p>
+            <p class="spec-intro">
+              Crossroads follows Siegel's nine-act structure with two plots at
+              once. In the <strong>mystery plot</strong>, the player uncovers
+              what happened to the missing girl. In the <strong>emotional
+              plot</strong>, the driver's guilt slowly breaks them down. The
+              story moves from denial, to suspicion, to realisation, and then
+              to one of several endings.
+            </p>
+            <p class="spec-intro">
+              The scenes run in a fixed order, and the fork folds back to the
+              gas station whichever way you go. What branches the story is
+              the item you buy at the store.
+            </p>
+            <p class="spec-intro">
+              Underneath it all is a hidden <strong>stress</strong> level that
+              stands in for the driver's guilt. Failing a mini-game or getting
+              jumpscared raises it, and the higher it gets, the worse the
+              hallucinations become.
+            </p>
+            <ol class="pipeline-steps">
+              <li>
+                <h4>The prologue</h4>
+                <p>Only sound: a car, a crash, footsteps and a trunk closing. Players only understand it later.</p>
+              </li>
+              <li>
+                <h4>Forest highway &amp; the fork</h4>
+                <p>A deer runs across the road. At the fork, pick a path with <code>Q</code>/<code>E</code> and confirm with <code>Space</code>. One path brings blood on the road, the girl, and a heartbeat mini-game.</p>
+              </li>
+              <li>
+                <h4>Gas station</h4>
+                <p>You're low on fuel and have to get out. There's blood on the car and a missing poster on the wall. Wipe the car, tear down the poster and fill the tank.</p>
+              </li>
+              <li>
+                <h4>Convenience store</h4>
+                <p>CCTV footage and the news show what happened. With your last $5, buy bleach, scissors or a wrench.</p>
+              </li>
+              <li>
+                <h4>Motel</h4>
+                <p>You wash up at the mirror and find blood on your shirt. If your stress is high, you hallucinate. Then the police knock, and a countdown starts to use the item you bought.</p>
+              </li>
+              <li>
+                <h4>Bleach or scissors &rarr; home</h4>
+                <p>You get rid of the stain and open the door. The officer asks about a missing girl, and you say you know nothing. The next day you drive back home, get out of the car and go inside, where she's waiting.</p>
+              </li>
+              <li>
+                <h4>Wrench &rarr; the chase</h4>
+                <p>You smash the window and run. Hit an obstacle and you're captured. Dodge them all and you drive off a cliff and die: <em>&ldquo;You cannot escape the karma.&rdquo;</em></p>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Mini-games -->
+          <div class="project-techstack" id="mini-games">
+            <p class="section-label">Mini-games</p>
+            <p class="spec-intro">
+              I designed and built all four mini-games, including their intro,
+              HUD and win/lose screens. Each one turns an ordinary task into
+              an act of covering up the crime, so the gameplay itself makes
+              the player feel guilty. The round starts on your first input,
+              and failing one raises your stress.
+            </p>
+
+            <div class="cr-minigames">
+              <!-- Wipe -->
+              <article class="cr-minigame">
+                <img class="cr-shot cr-pixel" src="../../image/crossroad/mg-wipe.jpg" alt="Wipe mini-game: the light blue car spattered with blood at the gas station, a Blood On Car bar, a 10 second timer and the instruction Hold and Move Mouse to Wipe" loading="lazy" />
+                <div class="cr-minigame-text">
+                  <h4>Wipe the Car</h4>
+                  <p class="cr-minigame-goal">Clean 75% of the blood in 10s</p>
+                  <ul>
+                    <li>Hold the mouse and drag across the car. The faster you scrub, the faster it cleans.</li>
+                    <li>The bloody sprite is cut into a 10&times;7 grid of tiles, and each one fades as the cloth passes over it, so only the spot you wipe gets clean.</li>
+                    <li>If you win, the car stays clean in the scenes after this one.</li>
+                  </ul>
+                </div>
+              </article>
+
+              <!-- Rip -->
+              <article class="cr-minigame">
+                <img class="cr-shot cr-pixel" src="../../image/crossroad/mg-rip.jpg" alt="Rip mini-game: the driver reaching up to the half-torn missing poster on the store wall, the worker behind the glass with a !! warning, two hearts left, a 12 second timer, the Click Button To Rip panel and a Click to Rip button" loading="lazy" />
+                <div class="cr-minigame-text">
+                  <h4>Tear the Poster</h4>
+                  <p class="cr-minigame-goal">20 clicks in 15s, 3 hearts</p>
+                  <ul>
+                    <li>Each click tears off a piece of the poster, and the driver flashes a hand-up pose.</li>
+                    <li>The worker turns back and forth on a random timer. A <strong>!</strong> &rarr; <strong>!!</strong> &rarr; <strong>!!!</strong> countdown warns you 2 seconds before they turn around, and it flips to a red <strong>[!]</strong> if they catch you.</li>
+                    <li>Getting caught mid-rip costs a heart. Lose all three, or run out of time, and your stress goes up.</li>
+                  </ul>
+                </div>
+              </article>
+
+              <!-- Fuel -->
+              <article class="cr-minigame">
+                <img class="cr-shot cr-pixel" src="../../image/crossroad/mg-fuel.jpg" alt="Fuel mini-game: the bloody car at the gas pumps, a Car Fuel bar from E to F, a 00:13 timer, a vertical gauge with an orange indicator inside the green zone and the panel HOLD z TO PUMP, Keep the indicator in the GREEN zone" loading="lazy" />
+                <div class="cr-minigame-text">
+                  <h4>Fill the Fuel</h4>
+                  <p class="cr-minigame-goal">Pump 100 L in 20s</p>
+                  <ul>
+                    <li>Hold <code>Z</code> to push the indicator up, and let go to let it fall back down.</li>
+                    <li>Fuel only flows while the indicator stays inside the green zone, and the zone jumps to a new spot every 5 seconds.</li>
+                    <li>Your best time is saved, so players can come back and beat it.</li>
+                  </ul>
+                </div>
+              </article>
+
+              <!-- Choose -->
+              <article class="cr-minigame">
+                <img class="cr-shot cr-pixel" src="../../image/crossroad/mg-choose.jpg" alt="Choose mini-game: a store shelf with scissors for $4.0, bleach for $3.0 and a wrench for $4.5, with the driver looking on" loading="lazy" />
+                <div class="cr-minigame-text">
+                  <h4>Choose an Item</h4>
+                  <p class="cr-minigame-goal">$5 left, one choice</p>
+                  <ul>
+                    <li>Scissors, bleach or a wrench. You can only afford one.</li>
+                    <li>The pick is saved for the rest of the game, and the shelf stops offering a prompt.</li>
+                    <li>At the motel, only the item you bought can be used, and it decides which ending you're heading for.</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Endings -->
+          <div class="project-techstack" id="endings">
+            <p class="section-label">The Endings</p>
+            <p class="spec-intro">
+              The item you buy decides which ending you reach, and every one
+              ends with the truth coming out. Even winning the chase isn't an
+              escape: getting away with it is treated as a dead end.
+            </p>
+            <ol class="cr-beats">
+              <li>
+                <div class="cr-flicker cr-ending-img">
+                  <img class="cr-pixel" src="../../image/crossroad/home-inside.png" alt="Dark room with MURDERER written in dripping blood above a static-filled TV, missing posters on the walls, lit by a single beam of light" loading="lazy" />
+                </div>
+                <h4>Home ending</h4>
+                <p>Bleach or scissors. After the haunting, a news report says the homeowner was found unconscious, and Ann's body was found in the trunk of the car outside.</p>
+              </li>
+              <li>
+                <img class="cr-ending-img cr-pixel" src="../../image/crossroad/radio ending.png" alt="Pixel-art car radio with two dials, a frequency display and five buttons" loading="lazy" />
+                <h4>Capture ending</h4>
+                <p>Wrench, then hit an obstacle in the chase. The car radio reports the runaway driver was caught by the police.</p>
+              </li>
+              <li>
+                <img class="cr-ending-img cr-pixel" src="../../image/crossroad/radio ending.png" alt="Pixel-art car radio with two dials, a frequency display and five buttons" loading="lazy" />
+                <h4>Cliff ending</h4>
+                <p>Wrench, and dodge every obstacle. The car goes over a cliff and the driver dies, and the radio reports the crash: <em>&ldquo;You cannot escape the karma.&rdquo;</em></p>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Haunting -->
+          <div class="project-techstack" id="haunting">
+            <p class="section-label">Making It Scary</p>
+            <p class="spec-intro">
+              The home ending is the payoff, so I drew the house and the
+              haunted room (shown in the Home ending above) in pixel art, and
+              scripted the scene beat by beat with light, sound and the
+              ghost. Each flicker gets faster, and
+              the scene gives the player a fake moment of relief right before
+              the last scare.
+            </p>
+            <figure class="code-item cr-home">
+              <img class="cr-pixel" src="../../image/crossroad/home-outside.png" alt="Small red-roofed house beside the road at night with dark pine trees and mountains" loading="lazy" />
+              <figcaption><strong>Home</strong> &mdash; the safe place you've been driving to</figcaption>
+            </figure>
+            <ol class="cr-beats">
+              <li>
+                <h4>Lights on</h4>
+                <p>&ldquo;I need to find a way to get rid of all the evidence.&rdquo; Press <code>E</code> to switch on the light.</p>
+              </li>
+              <li>
+                <h4>Flicker</h4>
+                <p>The light flickers faster and faster, with a click each time. Every time it comes on, the girl is standing in the room.</p>
+              </li>
+              <li>
+                <h4>The TV</h4>
+                <p>Static, and her face on the screen. The room light flickers in sync with the TV. &ldquo;That's the girl! The one I hit.&rdquo;</p>
+              </li>
+              <li>
+                <h4>Closer</h4>
+                <p>She pops out of the TV and jumps closer three times, bigger each time. &ldquo;No! Stay away!&rdquo;</p>
+              </li>
+              <li>
+                <h4>False relief</h4>
+                <p>The light stays on. Breathing and a heartbeat play. &ldquo;Is it over?&rdquo;</p>
+              </li>
+              <li>
+                <h4>Jumpscare</h4>
+                <p>She appears right in front of you with a scream, then the screen cuts to the ending.</p>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Characters -->
+          <div class="project-code" id="characters">
+            <p class="section-label">Characters &amp; Assets</p>
+            <p class="spec-intro">
+              The cast is small on purpose, so every character points back to
+              the accident. The character art was drawn by Jasper Ling and
+              Zainab Shakeel. I brought the characters into each scene and
+              set up their movement, facing and poses.
+            </p>
+
+            <p class="cr-cast-group">The Driver <span>&mdash; the player</span></p>
+            <div class="code-grid cr-cast">
+              <figure class="code-item">
+                <div class="cr-sprite"><img src="../../image/crossroad/char-front.png" alt="Driver with messy brown hair, a navy T-shirt and jeans, front view" loading="lazy" /></div>
+                <figcaption><strong>Front</strong> &mdash; idle</figcaption>
+              </figure>
+              <figure class="code-item">
+                <div class="cr-sprite"><img src="../../image/crossroad/char-side.png" alt="Driver walking, side view" loading="lazy" /></div>
+                <figcaption><strong>Side</strong> &mdash; walking</figcaption>
+              </figure>
+              <figure class="code-item">
+                <div class="cr-sprite"><img src="../../image/crossroad/char-handup.png" alt="Driver from the side, reaching up with one hand" loading="lazy" /></div>
+                <figcaption><strong>Hand up</strong> &mdash; flashes on every rip</figcaption>
+              </figure>
+              <figure class="code-item">
+                <div class="cr-sprite cr-sprite--wide"><img src="../../image/crossroad/char-reflection.png" alt="The driver's reflection in the motel mirror, with a blood stain on the shirt" loading="lazy" /></div>
+                <figcaption><strong>Reflection</strong> &mdash; blood on the shirt</figcaption>
+              </figure>
+            </div>
+            <p class="spec-intro">
+              An unnamed driver who doesn't remember, or won't admit, what
+              they did. Keeping them unnamed lets the player step into their
+              guilt. The small blood stain in the mirror is one of the clues.
+            </p>
+
+            <p class="cr-cast-group">Ann <span>&mdash; the missing girl</span></p>
+            <div class="code-grid cr-cast">
+              <figure class="code-item">
+                <div class="cr-sprite"><img src="../../image/crossroad/girl.png" alt="Pale girl in a white dress with long black hair covering her face" loading="lazy" /></div>
+                <figcaption><strong>Ghost</strong> &mdash; seen in hallucinations</figcaption>
+              </figure>
+              <figure class="code-item">
+                <div class="cr-sprite cr-sprite--wide"><img src="../../image/crossroad/girl-jumpscare.png" alt="Close-up of a pale hand and face behind long black hair, used for the jumpscare" loading="lazy" /></div>
+                <figcaption><strong>Jumpscare</strong> &mdash; she reaches for you</figcaption>
+              </figure>
+              <figure class="code-item">
+                <div class="cr-sprite"><img src="../../image/crossroad/missing-poster.jpg" alt="Missing poster: Name Ann, eyes brown, hair long black, last seen highway" loading="lazy" /></div>
+                <figcaption><strong>Missing poster</strong> &mdash; name, photo, last seen</figcaption>
+              </figure>
+            </div>
+            <p class="spec-intro">
+              The victim, and the centre of the mystery. She is never shown
+              alive. Players only meet her through posters, the news and
+              hallucinations that get worse as the stress grows.
+            </p>
+
+            <p class="cr-cast-group">The Store Worker <span>&mdash; the witness</span></p>
+            <div class="code-grid cr-cast">
+              <figure class="code-item">
+                <div class="cr-sprite"><img src="../../image/crossroad/worker.png" alt="Convenience store worker in a blue cap and uniform" loading="lazy" /></div>
+                <figcaption><strong>Store worker</strong> &mdash; the one you can't let see you</figcaption>
+              </figure>
+            </div>
+            <p class="spec-intro">
+              The worker is the "eyes" the driver is afraid of. Getting caught
+              tearing down the poster is what later brings the police to the
+              motel door.
+            </p>
+
+            <p class="cr-cast-group">Game Assets <span>&mdash; props and UI</span></p>
+            <p class="spec-intro">
+              The sprites behind the mini-games and the item choice. I drew
+              the wiping hand. The car and the three items were drawn by
+              Zainab Shakeel.
+            </p>
+            <div class="code-grid cr-cast">
+              <figure class="code-item">
+                <div class="cr-sprite cr-sprite--wide"><img src="../../image/crossroad/car-bloody.png" alt="Light blue car from the side, dented at the front and spattered with blood" loading="lazy" /></div>
+                <figcaption><strong>The car</strong> &mdash; the evidence you have to clean</figcaption>
+              </figure>
+              <figure class="code-item">
+                <div class="cr-sprite"><img src="../../image/crossroad/wipe-hand.png" alt="Pixel-art hand holding a crumpled white cloth" loading="lazy" /></div>
+                <figcaption><strong>Wiping hand</strong> &mdash; follows your mouse in the wipe mini-game</figcaption>
+              </figure>
+              <figure class="code-item">
+                <div class="cr-sprite cr-sprite--small"><img src="../../image/crossroad/heart.png" alt="Dark red anatomical heart" loading="lazy" /></div>
+                <figcaption><strong>Heart</strong> &mdash; your lives in the poster mini-game</figcaption>
+              </figure>
+              <figure class="code-item">
+                <div class="cr-sprite cr-sprite--small"><img src="../../image/crossroad/item-bleach.png" alt="White bleach bottle with a blue cap" loading="lazy" /></div>
+                <figcaption><strong>Bleach</strong> &mdash; wipe the stain, lie to the officer</figcaption>
+              </figure>
+              <figure class="code-item">
+                <div class="cr-sprite cr-sprite--small"><img src="../../image/crossroad/item-scissors.png" alt="Red-handled scissors" loading="lazy" /></div>
+                <figcaption><strong>Scissors</strong> &mdash; cut the stain out of the shirt</figcaption>
+              </figure>
+              <figure class="code-item">
+                <div class="cr-sprite cr-sprite--small"><img src="../../image/crossroad/item-wrench.png" alt="Grey wrench" loading="lazy" /></div>
+                <figcaption><strong>Wrench</strong> &mdash; break the window and run</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <!-- Gameplay progression -->
+          <div class="project-code" id="progression">
+            <p class="section-label">Gameplay Progression</p>
+            <p class="spec-intro">
+              How each part of the game moves the player forward, and the
+              clues in the world that tell the story without saying it.
+            </p>
+
+            <p class="cr-cast-group">Scene 1&ndash;2 <span>&mdash; Siegel acts 0&ndash;2</span></p>
+            <div class="code-grid cr-grid-2">
+              <figure class="code-item">
+                <img class="cr-pixel" src="../../image/crossroad/road.jpg" alt="Top-down view of the car driving along a dark forest highway at night, a deer at the roadside" loading="lazy" />
+                <figcaption><strong>The drive</strong> &mdash; a deer runs past</figcaption>
+              </figure>
+              <figure class="code-item">
+                <img class="cr-pixel" src="../../image/crossroad/fork.jpg" alt="Car at a fork in the road with a red arrow and the prompt: Use q,e to select the path and Space to confirm" loading="lazy" />
+                <figcaption><strong>The fork</strong> &mdash; the first real choice</figcaption>
+              </figure>
+              <figure class="code-item">
+                <img class="cr-pixel" src="../../image/crossroad/prog-blood-road.jpg" alt="Car on the dark highway with a trail of blood marks down the centre line" loading="lazy" />
+                <figcaption><strong>Blood on the road</strong> &mdash; the right path</figcaption>
+              </figure>
+              <figure class="code-item">
+                <img class="cr-pixel" src="../../image/crossroad/hallucination.jpg" alt="View from the driver's seat: a ghostly girl standing in the road ahead, with a heartbeat bar on the dashboard" loading="lazy" />
+                <figcaption><strong>Hallucination</strong> &mdash; the heartbeat mini-game</figcaption>
+              </figure>
+            </div>
+            <p class="spec-intro">
+              <strong>Gameplay:</strong> the player drives alone at night and
+              reaches a fork. The left road is short and quiet. The right road
+              brings blood, the girl and a heartbeat mini-game.
+            </p>
+            <ol class="cr-beats">
+              <li>
+                <h4>The deer</h4>
+                <p><strong>Seen:</strong> A deer runs across the highway right after the crash sound.</p>
+                <p><strong>Tells:</strong> You think you hit an animal. It's a false lead: it was a person.</p>
+                <p><strong>Feels:</strong> Relief at first, then unease once the truth comes out.</p>
+              </li>
+              <li>
+                <h4>The night</h4>
+                <p><strong>Seen:</strong> A night sky, with the headlights as the only light.</p>
+                <p><strong>Tells:</strong> The darkness sets the tone for the whole game.</p>
+                <p><strong>Feels:</strong> Tense and closed in.</p>
+              </li>
+              <li>
+                <h4>Blood &amp; the girl</h4>
+                <p><strong>Seen:</strong> Blood and obstacles on the road, and the girl, with a heartbeat to calm.</p>
+                <p><strong>Tells:</strong> Hints at what happened, and the obstacles steer where you drive.</p>
+                <p><strong>Feels:</strong> Fear, the urge to escape, and doubt about what's real.</p>
+              </li>
+            </ol>
+
+            <p class="cr-cast-group">Scene 3&ndash;4 <span>&mdash; Siegel acts 3&ndash;4</span></p>
+            <div class="code-grid cr-grid-3">
+              <figure class="code-item">
+                <img class="cr-pixel" src="../../image/crossroad/prog-gas-station.jpg" alt="The light blue car parked at the gas pumps at night beside the lit convenience store" loading="lazy" />
+                <figcaption><strong>Gas station</strong> &mdash; every path folds back here</figcaption>
+              </figure>
+              <figure class="code-item">
+                <img class="cr-pixel" src="../../image/crossroad/prog-poster.jpg" alt="The driver standing outside the store, looking at a missing poster on the wall" loading="lazy" />
+                <figcaption><strong>Missing poster</strong> &mdash; tear it down</figcaption>
+              </figure>
+              <figure class="code-item">
+                <img class="cr-pixel" src="../../image/crossroad/store.png" alt="Pixel-art convenience store interior with a counter, shelves, a drinks fridge and a washroom" loading="lazy" />
+                <figcaption><strong>Convenience store</strong> &mdash; pick one of three items</figcaption>
+              </figure>
+            </div>
+            <p class="spec-intro">
+              <strong>Gameplay:</strong> whichever road you took, you end up at
+              the gas station, low on fuel. Outside the car there's blood on
+              the door and a missing poster on the wall, and you can get rid
+              of both. Then you go into the store and buy the item you'll
+              need later.
+            </p>
+            <ol class="cr-beats">
+              <li>
+                <h4>Blood on the car</h4>
+                <p><strong>Seen:</strong> Blood on the side of the car, which you can wipe away.</p>
+                <p><strong>Tells:</strong> The driver hit someone, which the player doesn't know yet.</p>
+                <p><strong>Feels:</strong> You start piecing it together, and wonder why you're hiding it.</p>
+              </li>
+              <li>
+                <h4>Missing poster</h4>
+                <p><strong>Seen:</strong> A poster of the girl on the side of the building.</p>
+                <p><strong>Tells:</strong> Who the victim is, and that someone is looking for her.</p>
+                <p><strong>Feels:</strong> A growing suspicion that you're involved.</p>
+              </li>
+            </ol>
+
+            <p class="cr-cast-group">Scene 5&ndash;Ending <span>&mdash; Siegel acts 5&ndash;8</span></p>
+            <div class="code-grid cr-grid-3">
+              <figure class="code-item">
+                <img class="cr-pixel" src="../../image/crossroad/prog-motel.jpg" alt="Motel room and bathroom in pixel art, with the prompt Press E to wash" loading="lazy" />
+                <figcaption><strong>Motel</strong> &mdash; wash up at the mirror</figcaption>
+              </figure>
+              <figure class="code-item">
+                <img class="cr-pixel" src="../../image/crossroad/prog-mirror.jpg" alt="The driver's reflection in the bathroom mirror, a blood stain on the shirt circled in red" loading="lazy" />
+                <figcaption><strong>The mirror</strong> &mdash; blood on the shirt</figcaption>
+              </figure>
+              <figure class="code-item">
+                <img class="cr-pixel" src="../../image/crossroad/prog-chase.jpg" alt="Car speeding down the dark road at night past a fallen log and blood marks" loading="lazy" />
+                <figcaption><strong>The chase</strong> &mdash; dodge the obstacles</figcaption>
+              </figure>
+            </div>
+            <p class="spec-intro">
+              <strong>Gameplay:</strong> at the motel, you wash up at the
+              mirror. If your stress is high, you hallucinate. Then the police
+              knock, and you use the item you bought. Bleach or scissors means
+              cleaning the shirt, lying to the officer and going home. The
+              wrench means breaking out the window and running from the
+              police.
+            </p>
+            <ol class="cr-beats">
+              <li>
+                <h4>Blood on the shirt</h4>
+                <p><strong>Seen:</strong> A small spot of blood in the mirror.</p>
+                <p><strong>Tells:</strong> Confirms what the player has started to suspect.</p>
+                <p><strong>Feels:</strong> The suspicion turns into certainty.</p>
+              </li>
+              <li>
+                <h4>Blood on the chase road</h4>
+                <p><strong>Seen:</strong> Blood marks on the road during the escape.</p>
+                <p><strong>Tells:</strong> The road re-enacts the crash.</p>
+                <p><strong>Feels:</strong> Even while escaping, you're reminded of the crash.</p>
+              </li>
+              <li>
+                <h4>The radio</h4>
+                <p><strong>Seen:</strong> A news report on the car radio at the ending.</p>
+                <p><strong>Tells:</strong> Fills in any gaps in the story.</p>
+                <p><strong>Feels:</strong> The puzzle finally clicks into place.</p>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Diagram + map -->
+          <div class="project-code" id="diagram-map">
+            <p class="section-label">Narrative Diagram &amp; Map</p>
+            <p class="spec-intro">
+              The narrative diagram we planned the branches with. Purple boxes
+              are locations, teal boxes are hallucinations and choices, red
+              boxes raise stress, and yellow boxes are endings.
+            </p>
+            <div class="code-grid cr-flow">
+              <figure class="code-item">
+                <img src="../../image/crossroad/flow-1.jpg" alt="Narrative diagram, part 1: car crash sound, the car drives off, then at the fork the left road leads straight to the gas station, while the right road brings a girl ghost and a heartbeat mini-game, where failing means a jumpscare and stress up" loading="lazy" />
+                <figcaption><strong>Part 1</strong> &mdash; the prologue and the fork, folding back to the gas station</figcaption>
+              </figure>
+              <figure class="code-item">
+                <img src="../../image/crossroad/flow-2.jpg" alt="Narrative diagram, part 2: the gas station wipe, fuel and poster mini-games, the convenience store item choice, the motel mirror and police knock, then the wrench, bleach and scissors branches leading to the cliff, capture and home endings" loading="lazy" />
+                <figcaption><strong>Part 2</strong> &mdash; gas station, store and motel, branching into the three endings</figcaption>
+              </figure>
+            </div>
+            <p class="spec-intro">
+              The whole game on one map: the forest highway and fork, the gas
+              station and store, the motel, and the roads to each ending.
+            </p>
+            <figure class="code-item cr-map">
+              <img class="cr-pixel" src="../../image/crossroad/Game Map.png" alt="Overview map of Crossroads: a road winds from the forest highway and fork down to the gas station and store, then the motel, then splits into the last road to the death and captured endings and the road home to the home ending" loading="lazy" />
+            </figure>
+          </div>
+
+          <!-- Playtesting -->
+          <div class="project-techstack" id="playtesting">
+            <p class="section-label">Playtesting</p>
+            <p class="spec-intro">
+              For the final round we ran 3 remote playtests over Discord with
+              players aged 20&ndash;23 (1 intermediate, 2 experienced, all
+              into horror or narrative games). They shared their screen,
+              played with no help and thought aloud, then answered questions
+              about flow, story clarity and fun.
+            </p>
+            <div class="techstack-columns">
+              <div class="techstack-col">
+                <h4>What worked</h4>
+                <ul>
+                  <li>Every player reached an ending, and some replayed to find another.</li>
+                  <li>By the end, all of them understood the driver caused the hit-and-run from the blood, the poster and the hallucinations.</li>
+                  <li>The jumpscares and the police chase were the favourite parts.</li>
+                  <li>The mini-game instructions and timers made it clear when to act.</li>
+                </ul>
+              </div>
+              <div class="techstack-col">
+                <h4>What was still rough</h4>
+                <ul>
+                  <li>A few optional interactions were still a little unclear.</li>
+                  <li>Small frustration in the chase when players hit obstacles or just missed a turn.</li>
+                  <li>Players who rushed spent less time on the side clues.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Revisions -->
+          <div class="project-techstack" id="revisions">
+            <p class="section-label">What We Changed</p>
+            <ol class="pipeline-steps">
+              <li>
+                <h4>Mini-games instead of clicks</h4>
+                <p>Early playtests felt passive: click, see the result. Now key actions are mini-games, like physically wiping the blood off the car, so effort is tied to the outcome.</p>
+              </li>
+              <li>
+                <h4>Dialogue vs. instructions</h4>
+                <p>Players mixed up system prompts and the driver's lines. Dialogue now shows with an avatar and cinematic black bars, and instructions don't.</p>
+              </li>
+              <li>
+                <h4>Transitional scenes</h4>
+                <p>Jumping straight between locations felt like teleporting. We added short driving scenes before arriving at the gas station or the motel.</p>
+              </li>
+              <li>
+                <h4>One visual style</h4>
+                <p>We redrew the environments in one consistent 2.5D style and angle, so every location feels like the same world.</p>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Challenges + reflection -->
+          <div class="project-techstack" id="reflection">
+            <p class="section-label">Challenges &amp; Reflection</p>
+            <div class="techstack-columns">
+              <div class="techstack-col">
+                <h4>Challenges</h4>
+                <ul>
+                  <li>Remembering results across scenes, like a clean car, a torn poster, fuel pumped or the item bought, so later scenes react to them.</li>
+                  <li>Bringing the player back to the same spot after a mini-game instead of resetting the scene.</li>
+                  <li>Making sure each interaction only fires once, so a finished mini-game can't be replayed.</li>
+                  <li>Timing a scare: getting the flickers, sound and silence to land together.</li>
+                </ul>
+              </div>
+              <div class="techstack-col">
+                <h4>Reflection</h4>
+                <p class="cr-reflection">
+                  Crossroads taught me that in a story game, mechanics can carry
+                  the feeling. Wiping blood off a car is a simple drag, but
+                  it feels heavy once you know what the blood is. Building
+                  the home scene showed me that horror is mostly timing:
+                  making the player wait, letting them relax, then
+                  breaking that. Playtesting reminded me that clues only work if
+                  players actually find them, which is why we turned
+                  them into things you have to do.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Credits -->
+          <div class="project-techstack" id="credits">
+            <p class="section-label">Credits</p>
+            <div class="techstack-columns">
+              <div class="techstack-col">
+                <h4>Visual Art</h4>
+                <ul>
+                  <li><strong>Nina Vo</strong> &mdash; the CCTV footage screen, the wiping art, the house and the murder scene.</li>
+                  <li><strong>Jasper Ling</strong> &mdash; night sky, gas station, convenience store, motel and interior, cliff, main menu UI, the driver and the police officer.</li>
+                  <li><strong>Zainab Shakeel</strong> &mdash; cars and car animation, police car, the missing girl and her poster, GPS bubble UI, beer ad, the driver's idle and walking animation, POV drawings and the buyable items.</li>
+                  <li><strong>Byunghee Choi</strong> &mdash; road POV art, broken trees, skid marks, blood spots on the road and the jumpscare animations.</li>
+                </ul>
+              </div>
+              <div class="techstack-col">
+                <h4>Audio &amp; Tutorials</h4>
+                <ul>
+                  <li><strong>Sound effects</strong> &mdash; ProSoundEffects and Pixabay.</li>
+                  <li><strong>News reporter voice</strong> &mdash; generated with ElevenLabs text-to-speech.</li>
+                  <li><strong>Unity tutorials</strong> &mdash; Vignette Effect in Unity Explained, Learn Unity 2D Beginner Complete Course, and Realistic 2D Lights &amp; Shadows in Unity.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- More Projects -->
+          <div class="project-more" id="more-projects">
+            <p class="section-label">More Projects</p>
+            <div class="more-projects-list">
+              <a href="yummeal.html" class="more-project-link">
+                <span class="more-project-name">YumMeal Website</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="reciperemix.html" class="more-project-link">
+                <span class="more-project-name">RecipeRemix</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="luminous-etching.html" class="more-project-link">
+                <span class="more-project-name">Luminous Etching</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="dormmate.html" class="more-project-link">
+                <span class="more-project-name">DormMate</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="sweepy.html" class="more-project-link">
+                <span class="more-project-name">Sweepy</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="witch-caper.html" class="more-project-link">
+                <span class="more-project-name">Witch Caper</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="pitfall.html" class="more-project-link">
+                <span class="more-project-name">Pitfall</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="all-made-from-mom-luv.html" class="more-project-link">
+                <span class="more-project-name">All Made From Mom Luv</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="mystic-trail.html" class="more-project-link">
+                <span class="more-project-name">Mystic Trail</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="../../js/components.js"></script>
+    <script src="../../js/animations.js"></script>
+    <script src="../../js/project-quicknav.js"></script>
+  </body>
+</html>

@@ -88,7 +88,7 @@
   max-width: 28rem;
   font-family: var(--font-body);
   font-size: var(--text-small);
-  color: #6b5b65;
+  color: #1a1a1a;
   line-height: 1.6;
   text-align: right;
 }
@@ -221,7 +221,7 @@
   font-family: var(--font-body);
   font-size: var(--text-lead);
   line-height: 1.7;
-  color: #4a4447;
+  color: #1a1a1a;
   margin: 0;
 }
 
@@ -263,5 +263,9 @@
   .case-img {
     height: 13rem;
   }
+}
 
+/* Pixel-art covers stay crisp when scaled */
+.case-img.pixel-art {
+  image-rendering: pixelated;
 }

@@ -3,7 +3,6 @@
 }
 
 /* ── Page header ── */
-/* Title and subtitle stacked and centred */
 .extra-header {
   display: flex;
   flex-direction: column;
@@ -66,7 +65,7 @@
   max-width: 28rem;
   font-family: var(--font-body);
   font-size: var(--text-small);
-  color: #6b5b65;
+  color: #1a1a1a;
   line-height: 1.6;
   text-align: right;
 }
@@ -348,7 +347,6 @@
   .film-thumb--ticket {
     width: 8.5rem;
   }
-
 }
 
 @media (max-width: 30rem) {

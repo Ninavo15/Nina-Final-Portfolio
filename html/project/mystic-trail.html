@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mystic Trail — Nina Vo</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/components/nav.css" />
+    <link rel="stylesheet" href="../../css/project.css" />
+    <link rel="stylesheet" href="../../css/projects/project7.css" />
+    <link rel="stylesheet" href="../../css/components/footer.css" />
+  </head>
+  <body>
+    <div id="nav-placeholder"></div>
+    <main class="page-body">
+      <div class="project-layout">
+        <div id="quicknav-placeholder"></div>
+
+        <div class="project-content">
+          <!-- Hero -->
+          <div class="project-hero">
+            <img
+              class="focus-center-10"
+              src="../../image/mystic/Instruction.png"
+              alt="Mystic Trails title screen"
+            />
+          </div>
+
+          <!-- Header -->
+          <div class="project-header">
+            <div class="project-tags-row">
+              <span class="project-type-tag">Game Developer</span>
+              <span class="project-type-tag">UI</span>
+            </div>
+            <h1 class="project-title">Mystic Trail</h1>
+            <p class="project-tagline">
+              A top-down forest shooter where a little angel girl fights off
+              ghosts, collects tokens and takes on the devil boss.
+            </p>
+          </div>
+
+          <!-- Overview + Meta -->
+          <div class="project-body" id="overview">
+            <div class="project-overview">
+              <p class="section-label">Overview</p>
+              <p>
+                Mystic Trails is a top-down shooter set on a sunlit forest
+                trail. You play a little angel girl who has to clear the path of
+                mischievous ghosts. Some ghosts just bump into you, devil ghosts
+                shoot back, and one cute helper drops hearts to keep you going.
+                Score enough points and the devil boss appears for the final
+                fight.
+              </p>
+
+              <p class="section-label section-label--spaced">
+                Goal of the Project
+              </p>
+              <p>
+                I wanted to build a full game loop from scratch in Processing,
+                with menus, movement, shooting, enemies with different
+                behaviours, power-ups and a boss. I also wanted it to look cute
+                instead of scary, so every character is a soft, hand-drawn ghost
+                with pink cheeks.
+              </p>
+            </div>
+            <aside class="project-meta">
+              <div class="meta-group">
+                <span class="meta-label">Role</span>
+                <span class="meta-value">Designer &amp; Developer</span>
+              </div>
+              <div class="meta-group">
+                <span class="meta-label">Year</span>
+                <span class="meta-value">2024</span>
+              </div>
+              <div class="meta-group">
+                <span class="meta-label">Type</span>
+                <span class="meta-value">Academic Project</span>
+              </div>
+              <div class="meta-group">
+                <span class="meta-label">Tools</span>
+                <div class="meta-tools">
+                  <span class="tool-chip">Processing</span>
+                  <span class="tool-chip"
+                    ><img
+                      src="../../image/software logo/ibis.jpeg"
+                      alt=""
+                    />IbisPaint</span
+                  >
+                  <span class="tool-chip"
+                    ><img
+                      src="../../image/software logo/pro.jpeg"
+                      alt=""
+                    />Procreate</span
+                  >
+                  <span class="tool-chip">Canva</span>
+                </div>
+              </div>
+            </aside>
+          </div>
+
+          <!-- My role -->
+          <div class="project-techstack" id="my-role">
+            <p class="section-label">My Role</p>
+            <div class="techstack-columns">
+              <div class="techstack-col">
+                <h4>Design</h4>
+                <ul>
+                  <li>
+                    <strong>Characters</strong> &mdash; drew the player, three
+                    ghost enemies and the devil boss, plus their defeated poses.
+                  </li>
+                  <li>
+                    <strong>Animation</strong> &mdash; drew frame sets for
+                    standing, walking and attacking in each direction.
+                  </li>
+                  <li>
+                    <strong>UI design</strong> &mdash; designed the title
+                    screen, instruction card, health bar and score badge.
+                  </li>
+                </ul>
+              </div>
+              <div class="techstack-col">
+                <h4>Development</h4>
+                <ul>
+                  <li>
+                    <strong>Programming</strong> &mdash; built the game in
+                    Processing (Java), from the menu to the boss fight.
+                  </li>
+                  <li>
+                    <strong>Sound</strong> &mdash; added background music and
+                    sound effects for shooting and collecting tokens.
+                  </li>
+                  <li>
+                    <strong>Testing &amp; tuning</strong> &mdash; balanced enemy
+                    health, spawn timers and boss timing through playtesting.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- How to play -->
+          <div class="project-techstack" id="how-to-play">
+            <p class="section-label">How to Play</p>
+            <p class="spec-intro">
+              Everything is played on the keyboard. The background keeps
+              scrolling to make it feel like you're moving down the trail.
+            </p>
+            <ol class="pipeline-steps">
+              <li>
+                <h4>Start or read the instructions</h4>
+                <p>
+                  On the title screen, press <code>Enter</code> to start, or
+                  <code>M</code> to open the instruction card first.
+                </p>
+              </li>
+              <li>
+                <h4>Move and shoot</h4>
+                <p>
+                  Use the arrow keys to move and <code>Space</code> to shoot in
+                  the direction you last faced.
+                </p>
+              </li>
+              <li>
+                <h4>Avoid the ghosts</h4>
+                <p>
+                  Bumping into a ghost or getting hit by a devil ghost's shot
+                  lowers your HP bar at the top of the screen.
+                </p>
+              </li>
+              <li>
+                <h4>Collect tokens</h4>
+                <p>
+                  Hearts restore health and shields block damage for five
+                  seconds. Watch out for the skull, which cuts your health in
+                  half.
+                </p>
+              </li>
+              <li>
+                <h4>Beat the boss</h4>
+                <p>
+                  Once your score is high enough, the devil boss enters. Defeat
+                  it to win, or lose all your HP and try again.
+                </p>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Characters -->
+          <div class="project-code" id="characters">
+            <p class="section-label">Characters</p>
+            <p class="spec-intro">
+              I drew every character myself in the same soft, round style. Each
+              ghost has a small detail, like a bow, horns or wings, so players
+              can tell them apart at a glance in the middle of a fight.
+            </p>
+            <div class="code-grid mystic-cast">
+              <figure class="code-item">
+                <div class="mystic-sprite">
+                  <img
+                    src="../../image/mystic/player-walk.png"
+                    alt="Player: a pink-haired angel girl in a yellow dress with small white wings"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption>
+                  <strong>Player</strong> &mdash; the angel girl, 15 HP
+                </figcaption>
+              </figure>
+              <figure class="code-item">
+                <div class="mystic-sprite">
+                  <img
+                    src="../../image/mystic/enemy.png"
+                    alt="Enemy: an angry white ghost with a pink bow"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption>
+                  <strong>Enemy</strong> &mdash; hurts you on contact
+                </figcaption>
+              </figure>
+              <figure class="code-item">
+                <div class="mystic-sprite">
+                  <img
+                    src="../../image/mystic/devil-enemy.png"
+                    alt="Devil enemy: a white ghost with red horns and a trident"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption>
+                  <strong>Devil Enemy</strong> &mdash; shoots at you
+                </figcaption>
+              </figure>
+              <figure class="code-item">
+                <div class="mystic-sprite">
+                  <img
+                    src="../../image/mystic/good-enemy.png"
+                    alt="Good enemy: a smiling ghost with mouse ears holding a heart"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption>
+                  <strong>Good Enemy</strong> &mdash; drops health hearts
+                </figcaption>
+              </figure>
+              <figure class="code-item">
+                <div class="mystic-sprite">
+                  <img
+                    src="../../image/mystic/boss.png"
+                    alt="Boss: a large devil ghost with horns, wings, fangs and a forked tail"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption>
+                  <strong>Boss</strong> &mdash; the final fight
+                </figcaption>
+              </figure>
+            </div>
+
+            <p class="section-label section-label--spaced">Tokens</p>
+            <div class="code-grid mystic-tokens">
+              <figure class="code-item">
+                <div class="mystic-sprite">
+                  <img
+                    src="../../image/mystic/token-health.png"
+                    alt="Red heart token"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption><strong>Health</strong> &mdash; +1 HP</figcaption>
+              </figure>
+              <figure class="code-item">
+                <div class="mystic-sprite">
+                  <img
+                    src="../../image/mystic/token-shield.png"
+                    alt="Red and gold shield token"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption>
+                  <strong>Shield</strong> &mdash; 5s of protection
+                </figcaption>
+              </figure>
+              <figure class="code-item">
+                <div class="mystic-sprite">
+                  <img
+                    src="../../image/mystic/token-death.png"
+                    alt="Skull token"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption>
+                  <strong>Death</strong> &mdash; halves your HP
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <!-- Animation -->
+          <div class="project-code" id="animation">
+            <p class="section-label">Animation</p>
+            <p class="spec-intro">
+              The player switches between frame sets depending on what she's
+              doing. Each set loops every few frames, and the sprite flips
+              horizontally when she turns left or right.
+            </p>
+            <div class="code-grid mystic-cast">
+              <figure class="code-item">
+                <div class="mystic-sprite">
+                  <img
+                    src="../../image/mystic/player-stand.png"
+                    alt="Player standing, facing forward"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption><strong>Stand</strong> &mdash; 3 frames</figcaption>
+              </figure>
+              <figure class="code-item">
+                <div class="mystic-sprite">
+                  <img
+                    src="../../image/mystic/player-walk.png"
+                    alt="Player walking, seen from the side"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption><strong>Walk</strong> &mdash; 6 frames</figcaption>
+              </figure>
+              <figure class="code-item">
+                <div class="mystic-sprite">
+                  <img
+                    src="../../image/mystic/player-attack.png"
+                    alt="Player attacking upward, seen from behind"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption>
+                  <strong>Attack</strong> &mdash; 2 frames per direction
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <!-- Color palette -->
+          <div class="project-colorspec" id="color-palette">
+            <p class="section-label">Color Palette</p>
+
+            <p class="scale-group-label">Menus</p>
+            <div class="color-swatches">
+              <div class="swatch">
+                <span class="swatch-color swatch-color--fcdd4f"></span
+                ><span class="swatch-hex">#fcdd4f</span>
+              </div>
+              <div class="swatch">
+                <span class="swatch-color swatch-color--ffc5d3"></span
+                ><span class="swatch-hex">#ffc5d3</span>
+              </div>
+              <div class="swatch">
+                <span class="swatch-color swatch-color--e18aaa"></span
+                ><span class="swatch-hex">#e18aaa</span>
+              </div>
+              <div class="swatch">
+                <span class="swatch-color swatch-color--612e41"></span
+                ><span class="swatch-hex">#612e41</span>
+              </div>
+            </div>
+
+            <p class="scale-group-label scale-group-label--spaced">In-game</p>
+            <div class="color-swatches">
+              <div class="swatch">
+                <span class="swatch-color swatch-color--ff6d6a"></span
+                ><span class="swatch-hex">#ff6d6a</span>
+              </div>
+              <div class="swatch">
+                <span class="swatch-color swatch-color--5cb3ff"></span
+                ><span class="swatch-hex">#5cb3ff</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Screens -->
+          <div class="project-code" id="screens">
+            <p class="section-label">Final Design</p>
+            <p class="spec-intro">
+              The menus use the same forest trail as the game, with a bold
+              yellow title and soft pink cards, so the look stays the same from
+              the first screen to the boss fight.
+            </p>
+            <div class="code-grid">
+              <figure class="code-item">
+                <img
+                  src="../../image/mystic/Instruction.png"
+                  alt="Title screen with Press ENTER to start and Press M to see instruction buttons"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <strong>Title</strong> &mdash; start or open the instructions
+                </figcaption>
+              </figure>
+              <figure class="code-item">
+                <img
+                  src="../../image/mystic/screen-instruction.png"
+                  alt="Instruction card explaining each enemy and the health, shield and death tokens"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <strong>Instructions</strong> &mdash; meet the ghosts and
+                  tokens
+                </figcaption>
+              </figure>
+              <figure class="code-item">
+                <img
+                  src="../../image/mystic/Game.png"
+                  alt="Forest trail background with the Mystic Trails title"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <strong>Forest trail</strong> &mdash; the scrolling game
+                  background
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <!-- Code structure -->
+          <div class="project-techstack" id="code-structure">
+            <p class="section-label">Code Structure</p>
+            <p class="spec-intro">
+              Built in Processing with the Minim library for sound. A single
+              game state decides which screen to draw each frame, and every
+              object on screen shares one moving-object base class.
+            </p>
+            <div class="techstack-columns">
+              <div class="techstack-col">
+                <h4>How it's built</h4>
+                <ul>
+                  <li>
+                    <strong>Game states</strong> &mdash; the main loop switches
+                    between title, instructions, gameplay, boss intro, win and
+                    lose.
+                  </li>
+                  <li>
+                    <strong>Physics</strong> &mdash; arrow keys add force to the
+                    player, and damping slows her down smoothly when keys are
+                    released.
+                  </li>
+                  <li>
+                    <strong>Timed spawns</strong> &mdash; shield and death
+                    tokens appear every 15 and 12 seconds, and devil ghosts fire
+                    every 3 seconds.
+                  </li>
+                  <li>
+                    <strong>Boss trigger</strong> &mdash; once the score is high
+                    enough, regular enemies clear and the boss intro plays.
+                  </li>
+                </ul>
+              </div>
+              <div class="techstack-col">
+                <h4>Object-oriented design</h4>
+                <ul>
+                  <li>
+                    <strong>Base class</strong> &mdash;
+                    <code>MovingObject</code> handles position, velocity, walls
+                    and collisions for everything.
+                  </li>
+                  <li>
+                    <strong>Inheritance</strong> &mdash; <code>Player</code> and
+                    <code>Enemy</code> extend <code>Character</code>;
+                    <code>EvilEnemy</code>, <code>GoodEnemy</code> and
+                    <code>Boss</code> build on <code>Enemy</code>.
+                  </li>
+                  <li>
+                    <strong>Overriding</strong> &mdash; each token subclass of
+                    <code>Pickup</code> overrides <code>takeEffect()</code> with
+                    its own power-up.
+                  </li>
+                  <li>
+                    <strong>Feedback</strong> &mdash; enemies show health bars,
+                    and devil ghosts show a countdown ring before they shoot.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Challenges + reflection -->
+          <div class="project-techstack" id="reflection">
+            <p class="section-label">Challenges &amp; Reflection</p>
+            <div class="techstack-columns">
+              <div class="techstack-col">
+                <h4>Challenges</h4>
+                <ul>
+                  <li>
+                    Picking the right animation frames for each direction while
+                    moving and shooting at the same time.
+                  </li>
+                  <li>
+                    Keeping many enemies, bullets and tokens updating together
+                    without slowing the game down.
+                  </li>
+                  <li>
+                    Balancing enemy health and spawn timers so the game feels
+                    fair but still challenging.
+                  </li>
+                  <li>
+                    Timing the switch from regular enemies to the boss so it
+                    feels like a real climax.
+                  </li>
+                </ul>
+              </div>
+              <div class="techstack-col">
+                <h4>Reflection</h4>
+                <p class="mystic-reflection">
+                  Mystic Trails taught me how much a clear class structure helps
+                  a game grow. Once the base classes were in place, adding a new
+                  enemy or token only took a small subclass. Drawing my own
+                  characters and animation frames also showed me how art and
+                  code have to plan around each other, from sprite sizes to
+                  frame counts.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- More Projects -->
+          <div class="project-more" id="more-projects">
+            <p class="section-label">More Projects</p>
+            <div class="more-projects-list">
+              <a href="yummeal.html" class="more-project-link">
+                <span class="more-project-name">YumMeal Website</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="reciperemix.html" class="more-project-link">
+                <span class="more-project-name">RecipeRemix</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="luminous-etching.html" class="more-project-link">
+                <span class="more-project-name">Luminous Etching</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="dormmate.html" class="more-project-link">
+                <span class="more-project-name">DormMate</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="sweepy.html" class="more-project-link">
+                <span class="more-project-name">Sweepy</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="witch-caper.html" class="more-project-link">
+                <span class="more-project-name">Witch Caper</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="pitfall.html" class="more-project-link">
+                <span class="more-project-name">Pitfall</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="all-made-from-mom-luv.html" class="more-project-link">
+                <span class="more-project-name">All Made From Mom Luv</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="crossroad.html" class="more-project-link">
+                <span class="more-project-name">Crossroads</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="../../js/components.js"></script>
+    <script src="../../js/animations.js"></script>
+    <script src="../../js/project-quicknav.js"></script>
+  </body>
+</html>

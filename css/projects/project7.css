@@ -1,0 +1,66 @@
+/* ── Mystic Trail (project 7) ── */
+
+/* Characters & tokens: transparent sprite, no background box, caption below */
+.code-grid.mystic-cast {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 11rem), 1fr));
+}
+
+.code-grid.mystic-tokens {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 9rem), 1fr));
+}
+
+.project-content .mystic-sprite {
+  display: grid;
+  place-items: center;
+  height: 9rem;
+}
+
+.project-content .mystic-sprite img {
+  width: auto;
+  max-width: 80%;
+  max-height: 7rem;
+  border-radius: 0;
+}
+
+/* Tokens are 40px pixel sprites: keep them small and crisp */
+.mystic-tokens .mystic-sprite {
+  height: 6rem;
+}
+
+.project-content .mystic-tokens .mystic-sprite img {
+  max-height: 3.5rem;
+  image-rendering: pixelated;
+}
+
+.mystic-reflection {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: #1a1a1a;
+}
+
+/* ── Colour swatch fills ── */
+.swatch-color--fcdd4f {
+  background: #fcdd4f;
+}
+
+.swatch-color--ffc5d3 {
+  background: #ffc5d3;
+}
+
+.swatch-color--e18aaa {
+  background: #e18aaa;
+}
+
+.swatch-color--612e41 {
+  background: #612e41;
+}
+
+.swatch-color--ff6d6a {
+  background: #ff6d6a;
+}
+
+.swatch-color--5cb3ff {
+  background: #5cb3ff;
+}

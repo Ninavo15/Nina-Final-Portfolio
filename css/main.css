@@ -20,7 +20,11 @@
 
   /* Type scale — use these instead of one-off sizes */
   --text-h1: clamp(2.25rem, 1.5rem + 3.2vw, 4.25rem); /* page titles */
-  --text-page-hero: clamp(2.75rem, 1.6rem + 4vw, 5.25rem); /* centred Work / Extra titles */
+  --text-page-hero: clamp(
+    2.75rem,
+    1.6rem + 4vw,
+    5.25rem
+  ); /* centred Work / Extra titles */
   --text-h2: clamp(2rem, 1.4rem + 2.6vw, 3.75rem); /* section headings */
   --text-lead: 1.125rem; /* intro paragraphs */
   --text-body: 1rem;
@@ -55,4 +59,71 @@ body {
 .fade-up.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ── Image focus ──
+   Which part of a cropped cover image stays in view (object-fit: cover). */
+img.focus-top {
+  object-position: top;
+}
+
+img.focus-left-top {
+  object-position: left top;
+}
+
+img.focus-10-0 {
+  object-position: 10% 0%;
+}
+
+img.focus-center {
+  object-position: center;
+}
+
+img.focus-center-10 {
+  object-position: center 10%;
+}
+
+img.focus-center-30 {
+  object-position: center 30%;
+}
+
+img.focus-center-75 {
+  object-position: center 75%;
+}
+
+/* ── Back to top button (added to every page by components.js) ── */
+#back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: none;
+  background: #642052;
+  color: var(--text-light);
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0.5rem);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    background 0.2s ease;
+  z-index: 600;
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+#back-to-top:hover {
+  background: #7d2a68;
 }

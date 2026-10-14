@@ -774,12 +774,6 @@
     height: 3rem;
   }
 
-
-
-
-
-
-
   .quote-section {
     padding: 3.5rem 1.5rem;
   }
@@ -839,13 +833,9 @@
   .quote-stars--bl .quote-star--3 {
     left: 5.1rem;
   }
-
 }
 
 @media (max-width: 30rem) {
-
-
-
   .quote-text,
   .quote-sig {
     font-size: 1.375rem;
@@ -901,5 +891,4 @@
   .quote-stars--bl .quote-star--3 {
     left: 3.7rem;
   }
-
 }

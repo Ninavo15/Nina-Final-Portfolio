@@ -1,0 +1,107 @@
+/* ── Witch Caper (project 4) ── */
+.code-grid.witch-models {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr));
+}
+
+.project-content .witch-stage {
+  display: grid;
+  place-items: center;
+  height: 15rem;
+}
+
+.project-content .witch-stage img {
+  width: auto;
+  max-width: 80%;
+  max-height: 12rem;
+  border: none;
+  border-radius: 0;
+}
+
+/* Guide letters are tall A4 pages */
+.code-grid.witch-letters {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 12rem), 1fr));
+}
+
+.witch-reflection {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: #1a1a1a;
+}
+
+/* Storyboards are square sketches */
+.code-grid.witch-board {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+}
+
+/* Small / normal / large POV, always three across so the views compare */
+.project-content .code-grid.witch-pov {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.project-content .code-grid.witch-pov .code-item {
+  padding: 0.5rem 0.5rem 0.75rem;
+}
+
+@media (max-width: 40rem) {
+  .project-content .code-grid.witch-pov {
+    grid-template-columns: 1fr;
+  }
+}
+
+.code-grid.witch-pov img,
+.code-grid.witch-env img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* Environment: three across on top, statues + windmill as a pair below */
+.project-content .code-grid.witch-env {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.project-content .code-grid.witch-env .code-item {
+  grid-column: span 2;
+}
+
+.project-content .code-grid.witch-env .code-item:nth-child(n + 4) {
+  grid-column: span 3;
+}
+
+/* Same height across both rows; wider bottom tiles just crop a little */
+.project-content .code-grid.witch-env img {
+  aspect-ratio: auto;
+  height: 12rem;
+}
+
+@media (max-width: 40rem) {
+  .project-content .code-grid.witch-env {
+    grid-template-columns: 1fr;
+  }
+
+  .project-content .code-grid.witch-env .code-item,
+  .project-content .code-grid.witch-env .code-item:nth-child(n + 4) {
+    grid-column: auto;
+  }
+
+  .project-content .code-grid.witch-env img {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+.witch-reflection + .witch-reflection {
+  margin-top: 0.875rem;
+}
+
+/* Every card in a grid matches the tallest one, across all rows */
+.project-content .code-grid.witch-models,
+.project-content .code-grid.witch-letters,
+.project-content .code-grid.witch-board,
+.project-content .code-grid.witch-pov,
+.project-content .code-grid.witch-env {
+  align-items: stretch;
+  grid-auto-rows: 1fr;
+}
