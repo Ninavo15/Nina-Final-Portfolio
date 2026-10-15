@@ -401,51 +401,90 @@
           <!-- Gallery -->
           <div class="project-gallery" id="gallery">
             <p class="section-label">Final Design</p>
-            <div class="gallery-carousel" data-carousel>
-              <div class="carousel-viewport">
-                <div class="carousel-track">
-                  <div class="carousel-slide">
-                    <img
-                      src="../../image/reciperemix/screen-input.jpg"
-                      alt="Start screen: upload a fridge photo or type ingredients, then set diet, allergy and cooking time"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="carousel-slide">
-                    <img
-                      src="../../image/reciperemix/screen-retrieved.jpg"
-                      alt="Retrieved inspiration recipes that ground the remix"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="carousel-slide">
-                    <img
-                      src="../../image/reciperemix/screen-output.jpg"
-                      alt="Agent output: Spicy Peach and Bell Pepper Wraps with time, difficulty, ingredients, steps and a generated photo"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="carousel-slide">
-                    <img
-                      src="../../image/reciperemix/screen-nutrition.jpg"
-                      alt="Why this works, a cooking tip, nutrition per serving and the Refine This Recipe controls"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="carousel-slide">
-                    <img
-                      src="../../image/reciperemix/screen-refined.jpg"
-                      alt="Refined recipe: Fiery Spicy Peach and Bell Pepper Wraps at medium difficulty"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
+            <div class="spotlight" data-spotlight data-name="RecipeRemix" style="--shot-ratio: 1717 / 978">
+              <div class="spot-main">
+                <button type="button" class="spot-view" aria-label="Open Input full screen">
+                  <img src="../../image/reciperemix/screen-input.jpg" alt="RecipeRemix Input page: Upload a fridge photo or type ingredients, then set diet, allergy and cooking time." />
+                </button>
+                <p class="spot-cap"><strong>Input</strong> &mdash; Upload a fridge photo or type ingredients, then set diet, allergy and cooking time.</p>
               </div>
-              <div
-                class="carousel-dots"
-                role="tablist"
-                aria-label="Final Design"
-              ></div>
+              <ul class="spot-list" aria-label="Pages">
+                <li>
+                  <button
+                    type="button"
+                    class="spot-thumb"
+                    data-src="../../image/reciperemix/screen-input.jpg"
+                    data-name="Input"
+                    data-desc="Upload a fridge photo or type ingredients, then set diet, allergy and cooking time."
+                    aria-pressed="true"
+                  >
+                    <span class="spot-thumb-img"
+                      ><img src="../../image/reciperemix/screen-input.jpg" alt="" loading="lazy"
+                    /></span>
+                    <span class="spot-thumb-name">Input</span>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="spot-thumb"
+                    data-src="../../image/reciperemix/screen-retrieved.jpg"
+                    data-name="Retrieved Recipes"
+                    data-desc="Inspiration recipes that ground the remix."
+                    aria-pressed="false"
+                  >
+                    <span class="spot-thumb-img"
+                      ><img src="../../image/reciperemix/screen-retrieved.jpg" alt="" loading="lazy"
+                    /></span>
+                    <span class="spot-thumb-name">Retrieved Recipes</span>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="spot-thumb"
+                    data-src="../../image/reciperemix/screen-output.jpg"
+                    data-name="Agent Output"
+                    data-desc="The remixed recipe with time, difficulty, steps and a generated photo."
+                    aria-pressed="false"
+                  >
+                    <span class="spot-thumb-img"
+                      ><img src="../../image/reciperemix/screen-output.jpg" alt="" loading="lazy"
+                    /></span>
+                    <span class="spot-thumb-name">Agent Output</span>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="spot-thumb"
+                    data-src="../../image/reciperemix/screen-nutrition.jpg"
+                    data-name="Nutrition &amp; Refine"
+                    data-desc="Why it works, nutrition per serving and the refine controls."
+                    aria-pressed="false"
+                  >
+                    <span class="spot-thumb-img"
+                      ><img src="../../image/reciperemix/screen-nutrition.jpg" alt="" loading="lazy"
+                    /></span>
+                    <span class="spot-thumb-name">Nutrition &amp; Refine</span>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="spot-thumb"
+                    data-src="../../image/reciperemix/screen-refined.jpg"
+                    data-name="Refined Recipe"
+                    data-desc="The spicier, medium-difficulty version."
+                    aria-pressed="false"
+                  >
+                    <span class="spot-thumb-img"
+                      ><img src="../../image/reciperemix/screen-refined.jpg" alt="" loading="lazy"
+                    /></span>
+                    <span class="spot-thumb-name">Refined Recipe</span>
+                  </button>
+                </li>
+              </ul>
             </div>
           </div>
 
@@ -520,6 +559,6 @@
     <script src="../../js/components.js"></script>
     <script src="../../js/animations.js"></script>
     <script src="../../js/project-quicknav.js"></script>
-    <script src="../../js/gallery-carousel.js"></script>
+    <script src="../../js/spotlight.js"></script>
   </body>
 </html>

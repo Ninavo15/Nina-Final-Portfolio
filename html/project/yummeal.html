@@ -403,65 +403,120 @@
           <!-- Gallery -->
           <div class="project-gallery" id="gallery">
             <p class="section-label">Final Design</p>
-            <div class="gallery-carousel" data-carousel>
-              <div class="carousel-viewport">
-                <div class="carousel-track">
-                  <div class="carousel-slide">
-                    <img
-                      src="../../image/yummeal/image2.png"
-                      alt="YumMeal home page"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="carousel-slide">
-                    <img
-                      src="../../image/yummeal/image11.png"
-                      alt="Find recipes by ingredient"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="carousel-slide">
-                    <img
-                      src="../../image/yummeal/image12.png"
-                      alt="Favourite recipes page"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="carousel-slide">
-                    <img
-                      src="../../image/yummeal/image4.png"
-                      alt="Add your recipes page"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="carousel-slide">
-                    <img
-                      src="../../image/yummeal/image8.png"
-                      alt="Meal plan page with weekly schedule"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="carousel-slide">
-                    <img
-                      src="../../image/yummeal/image13.png"
-                      alt="Empty meal plan schedule"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="carousel-slide">
-                    <img
-                      src="../../image/yummeal/image6.png"
-                      alt="User profile page"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
+            <div class="spotlight" data-spotlight data-name="YumMeal Website" style="--shot-ratio: 1999 / 1250">
+              <div class="spot-main">
+                <button type="button" class="spot-view" aria-label="Open Home full screen">
+                  <img src="../../image/yummeal/image2.png" alt="YumMeal Website Home page: Search, featured recipes and the main navigation." />
+                </button>
+                <p class="spot-cap"><strong>Home</strong> &mdash; Search, featured recipes and the main navigation.</p>
               </div>
-              <div
-                class="carousel-dots"
-                role="tablist"
-                aria-label="Final Design"
-              ></div>
+              <ul class="spot-list" aria-label="Pages">
+                <li>
+                  <button
+                    type="button"
+                    class="spot-thumb"
+                    data-src="../../image/yummeal/image2.png"
+                    data-name="Home"
+                    data-desc="Search, featured recipes and the main navigation."
+                    aria-pressed="true"
+                  >
+                    <span class="spot-thumb-img"
+                      ><img src="../../image/yummeal/image2.png" alt="" loading="lazy"
+                    /></span>
+                    <span class="spot-thumb-name">Home</span>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="spot-thumb"
+                    data-src="../../image/yummeal/image11.png"
+                    data-name="Find Recipes"
+                    data-desc="Search by the ingredients you already have."
+                    aria-pressed="false"
+                  >
+                    <span class="spot-thumb-img"
+                      ><img src="../../image/yummeal/image11.png" alt="" loading="lazy"
+                    /></span>
+                    <span class="spot-thumb-name">Find Recipes</span>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="spot-thumb"
+                    data-src="../../image/yummeal/image12.png"
+                    data-name="Favourites"
+                    data-desc="Saved recipes, ready to cook again."
+                    aria-pressed="false"
+                  >
+                    <span class="spot-thumb-img"
+                      ><img src="../../image/yummeal/image12.png" alt="" loading="lazy"
+                    /></span>
+                    <span class="spot-thumb-name">Favourites</span>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="spot-thumb"
+                    data-src="../../image/yummeal/image4.png"
+                    data-name="Add Recipe"
+                    data-desc="Share your own recipe with the community."
+                    aria-pressed="false"
+                  >
+                    <span class="spot-thumb-img"
+                      ><img src="../../image/yummeal/image4.png" alt="" loading="lazy"
+                    /></span>
+                    <span class="spot-thumb-name">Add Recipe</span>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="spot-thumb"
+                    data-src="../../image/yummeal/image8.png"
+                    data-name="Meal Plan"
+                    data-desc="A weekly schedule filled with chosen meals."
+                    aria-pressed="false"
+                  >
+                    <span class="spot-thumb-img"
+                      ><img src="../../image/yummeal/image8.png" alt="" loading="lazy"
+                    /></span>
+                    <span class="spot-thumb-name">Meal Plan</span>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="spot-thumb"
+                    data-src="../../image/yummeal/image13.png"
+                    data-name="Empty Meal Plan"
+                    data-desc="The planner before anything is added."
+                    aria-pressed="false"
+                  >
+                    <span class="spot-thumb-img"
+                      ><img src="../../image/yummeal/image13.png" alt="" loading="lazy"
+                    /></span>
+                    <span class="spot-thumb-name">Empty Meal Plan</span>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="spot-thumb"
+                    data-src="../../image/yummeal/image6.png"
+                    data-name="Profile"
+                    data-desc="Your account and recipe activity."
+                    aria-pressed="false"
+                  >
+                    <span class="spot-thumb-img"
+                      ><img src="../../image/yummeal/image6.png" alt="" loading="lazy"
+                    /></span>
+                    <span class="spot-thumb-name">Profile</span>
+                  </button>
+                </li>
+              </ul>
             </div>
           </div>
 
@@ -536,6 +591,6 @@
     <script src="../../js/components.js"></script>
     <script src="../../js/animations.js"></script>
     <script src="../../js/project-quicknav.js"></script>
-    <script src="../../js/gallery-carousel.js"></script>
+    <script src="../../js/spotlight.js"></script>
   </body>
 </html>
