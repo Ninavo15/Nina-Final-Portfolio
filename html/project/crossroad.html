@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A pixel-art psychological horror game about a drive home that slowly turns into a confession." />
     <title>Crossroads — Nina Vo</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap"
@@ -81,15 +82,19 @@
                 <span class="meta-value">Academic Team Project<br />Team Bungbees</span>
               </div>
               <div class="meta-group">
-                <span class="meta-label">Collaboration</span>
+                <span class="meta-label">Collaborators</span>
                 <span class="meta-value">Byunghee Choi<br />Jasper Ling<br />Zainab Shakeel</span>
               </div>
               <div class="meta-group">
                 <span class="meta-label">Tools</span>
                 <div class="meta-tools">
                   <span class="tool-chip"><img src="../../image/software logo/unity.jpeg" alt="" />Unity</span>
-                  <span class="tool-chip">C#</span>
-                  <span class="tool-chip">Pixel Art</span>
+                  <span class="tool-chip"
+                    ><span class="tool-chip-mark" aria-hidden="true">C#</span>C#</span
+                  >
+                  <span class="tool-chip"
+                    ><span class="tool-chip-mark" aria-hidden="true">P</span>Pixel Art</span
+                  >
                 </div>
               </div>
             </aside>
@@ -389,7 +394,7 @@
             <p class="cr-cast-group">Game Assets <span>&mdash; props and UI</span></p>
             <p class="spec-intro">
               The sprites behind the mini-games and the item choice. I drew
-              the wiping hand. The car and the three items were drawn by
+              the wiping cloth. The car and the three items were drawn by
               Zainab Shakeel.
             </p>
             <div class="code-grid cr-cast">
@@ -398,8 +403,12 @@
                 <figcaption><strong>The car</strong> &mdash; the evidence you have to clean</figcaption>
               </figure>
               <figure class="code-item">
-                <div class="cr-sprite"><img src="../../image/crossroad/wipe-hand.png" alt="Pixel-art hand holding a crumpled white cloth" loading="lazy" /></div>
-                <figcaption><strong>Wiping hand</strong> &mdash; follows your mouse in the wipe mini-game</figcaption>
+                <div class="cr-sprite"><img src="../../image/crossroad/wipe-cloth.png" alt="Pixel-art white cloth, clean" loading="lazy" /></div>
+                <figcaption><strong>Wiping cloth</strong> &mdash; follows your mouse in the wipe mini-game</figcaption>
+              </figure>
+              <figure class="code-item">
+                <div class="cr-sprite"><img src="../../image/crossroad/wipe-cloth-blood.png" alt="Pixel-art white cloth with blood on its tip" loading="lazy" /></div>
+                <figcaption><strong>Bloodied cloth</strong> &mdash; the same cloth stained red</figcaption>
               </figure>
               <figure class="code-item">
                 <div class="cr-sprite cr-sprite--small"><img src="../../image/crossroad/heart.png" alt="Dark red anatomical heart" loading="lazy" /></div>
@@ -670,20 +679,34 @@
             <p class="section-label">Credits</p>
             <div class="techstack-columns">
               <div class="techstack-col">
-                <h4>Visual Art</h4>
+                <h4>Development</h4>
                 <ul>
-                  <li><strong>Nina Vo</strong> &mdash; the CCTV footage screen, the wiping art, the house and the murder scene.</li>
-                  <li><strong>Jasper Ling</strong> &mdash; night sky, gas station, convenience store, motel and interior, cliff, main menu UI, the driver and the police officer.</li>
-                  <li><strong>Zainab Shakeel</strong> &mdash; cars and car animation, police car, the missing girl and her poster, GPS bubble UI, beer ad, the driver's idle and walking animation, POV drawings and the buyable items.</li>
+                  <li><strong>Nina Vo</strong> &mdash; game flow, interaction logic, asset integration, character movement and debugging, the four mini-games and their UI, the gas station, convenience store, road home and home scenes, the horror lighting, sound and haunting, and pixel art for the house and haunted room, the murder scene, the CCTV footage screen and the wiping cloth.</li>
                   <li><strong>Byunghee Choi</strong> &mdash; road POV art, broken trees, skid marks, blood spots on the road and the jumpscare animations.</li>
                 </ul>
               </div>
               <div class="techstack-col">
-                <h4>Audio &amp; Tutorials</h4>
+                <h4>Art</h4>
+                <ul>
+                  <li><strong>Jasper Ling</strong> &mdash; night sky, gas station, convenience store, motel and interior, cliff, main menu UI, the driver and the police officer.</li>
+                  <li><strong>Zainab Shakeel</strong> &mdash; cars and car animation, police car, the missing girl and her poster, GPS bubble UI, beer ad, the driver's idle and walking animation, POV drawings and the buyable items.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="techstack-columns">
+              <div class="techstack-col">
+                <h4>Audio</h4>
                 <ul>
                   <li><strong>Sound effects</strong> &mdash; ProSoundEffects and Pixabay.</li>
                   <li><strong>News reporter voice</strong> &mdash; generated with ElevenLabs text-to-speech.</li>
-                  <li><strong>Unity tutorials</strong> &mdash; Vignette Effect in Unity Explained, Learn Unity 2D Beginner Complete Course, and Realistic 2D Lights &amp; Shadows in Unity.</li>
+                </ul>
+              </div>
+              <div class="techstack-col">
+                <h4>Tutorials</h4>
+                <ul>
+                  <li><strong>Vignette Effect in Unity Explained</strong></li>
+                  <li><strong>Learn Unity 2D</strong> &mdash; Beginner Complete Course</li>
+                  <li><strong>Realistic 2D Lights &amp; Shadows in Unity</strong></li>
                 </ul>
               </div>
             </div>

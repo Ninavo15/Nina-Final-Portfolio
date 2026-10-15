@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A cozy cooking simulator for Banh Bot Loc, a Vietnamese dumpling, with Mom as your guide." />
     <title>All Made From Mom Luv — Nina Vo</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap"
@@ -29,7 +30,7 @@
           <div class="project-hero">
             <img
               src="../../image/allmadefrommomluv/web/cover.jpg"
-              alt="Made From Mom Love title screen: Mom holding a plate of Banh Bot Loc with Start and Menu buttons"
+              alt="All Made From Mom Luv cover: Mom holding a plate of Banh Bot Loc under the Made From Mom Love title, with Start and Menu buttons"
             />
           </div>
 
@@ -59,9 +60,7 @@
                 on along the way.
               </p>
 
-              <p class="section-label section-label--spaced">
-                Story of the Project
-              </p>
+              <p class="section-label section-label--spaced">Goal of the Project</p>
               <p>
                 As an international student, I often miss the comforting
                 flavours of home, especially Banh Bot Loc. I noticed there
@@ -112,7 +111,12 @@
                       alt=""
                     />Illustrator</span
                   >
-                  <span class="tool-chip">Canva</span>
+                  <span class="tool-chip"
+                    ><img
+                      src="../../image/software logo/canva.png"
+                      alt=""
+                    />Canva</span
+                  >
                 </div>
               </div>
             </aside>
@@ -166,36 +170,70 @@
               <li>
                 <h4>Start or read the menu</h4>
                 <p>
-                  The title screen shows Mom with the dish. Hover over Start or
-                  Menu to see a hint, or open the instructions first.
+                  The title screen shows Mom with the dish. Hover over Menu or Start to see a hint, or open the instructions first.
                 </p>
               </li>
               <li>
                 <h4>Turn on the light</h4>
                 <p>
-                  The kitchen starts dark at night. Click the lamp switch and
-                  the scene changes to morning.
+                  The kitchen starts dark at night. Mom asks you to turn on the light, so click the lamp switch and the scene changes to morning.
                 </p>
               </li>
               <li>
                 <h4>Get ingredients from the fridge</h4>
                 <p>
-                  Click the fridge to open it, then drag the pork belly and
-                  shrimp out onto the cutting board.
+                  Click the fridge to open it, then drag the pork belly and shrimp onto the cutting board.
                 </p>
               </li>
               <li>
                 <h4>Mince on the cutting board</h4>
-                <p>Click the board three times to chop the ingredients.</p>
+                <p>
+                  Click the board three times to mince the pork and shrimp.
+                </p>
               </li>
               <li>
-                <h4>Finish and celebrate</h4>
+                <h4>Marinate the filling</h4>
                 <p>
-                  Press Finish to see the end screen, with sparkles and Mom
-                  holding the dish. Restart to cook again.
+                  Drag the minced filling into the bowl and wait for it to marinate.
+                </p>
+              </li>
+              <li>
+                <h4>Wrap the dumplings</h4>
+                <p>
+                  Put the marinated filling into the dough to make the tapioca dumplings.
+                </p>
+              </li>
+              <li>
+                <h4>Boil until cooked</h4>
+                <p>
+                  Drop the wrapped dumplings into the pot and wait until they are fully cooked.
+                </p>
+              </li>
+              <li>
+                <h4>Plate and finish</h4>
+                <p>
+                  Move the dumplings onto the plate, then press Done. The end screen asks if you want to cook the dish again, and Restart takes you back to the title.
                 </p>
               </li>
             </ol>
+          </div>
+
+          <!-- Sketching -->
+          <div class="project-techstack" id="storyboard">
+            <p class="section-label">Storyboard</p>
+            <p class="spec-intro">
+              I always start by sketching the idea to understand the flow and
+              how the simulator works, step by step. Sketching helps me picture
+              the experience and tells me what I need to code, and in which
+              order.
+            </p>
+            <figure class="project-figure project-figure--narrow">
+              <img
+                src="../../image/allmadefrommomluv/web/storyboard.jpg"
+                alt="Hand-drawn storyboard of each simulator scene, from the intro screen to the end screen"
+                loading="lazy"
+              />
+            </figure>
           </div>
 
           <!-- UI design -->
@@ -209,7 +247,8 @@
                   loading="lazy"
                 />
                 <figcaption>
-                  Mom, drawn from my own mom, holding the finished dish.
+                  <strong>Mom</strong> &mdash; drawn from my own mom, holding
+                  the finished dish
                 </figcaption>
               </figure>
               <p class="mom-text">
@@ -307,24 +346,6 @@
                 ><span class="swatch-hex">#68a724</span>
               </div>
             </div>
-          </div>
-
-          <!-- Sketching -->
-          <div class="project-techstack" id="storyboard">
-            <p class="section-label">Storyboard</p>
-            <p class="spec-intro">
-              I always start by sketching the idea to understand the flow and
-              how the simulator works, step by step. Sketching helps me picture
-              the experience and tells me what I need to code, and in which
-              order.
-            </p>
-            <figure class="project-figure project-figure--narrow">
-              <img
-                src="../../image/allmadefrommomluv/web/storyboard.jpg"
-                alt="Hand-drawn storyboard of each simulator scene, from the intro screen to the end screen"
-                loading="lazy"
-              />
-            </figure>
           </div>
 
           <!-- Drawing assets -->
@@ -777,12 +798,12 @@
             <div class="code-grid mom-screens">
               <figure class="code-item">
                 <img
-                  src="../../image/allmadefrommomluv/web/cover.jpg"
+                  src="../../image/allmadefrommomluv/web/screen-title.jpg"
                   alt="Title screen: Mom holding a plate of Banh Bot Loc with Start and Menu buttons"
                   loading="lazy"
                 />
                 <figcaption>
-                  <strong>Title</strong> &mdash; Start or open the menu
+                  <strong>Title</strong> &mdash; open the menu or start cooking
                 </figcaption>
               </figure>
               <figure class="code-item">
@@ -798,7 +819,7 @@
               <figure class="code-item">
                 <img
                   src="../../image/allmadefrommomluv/web/screen-end.jpg"
-                  alt="End screen asking Do You Want Cook This Dish Again with a Restart button"
+                  alt="End screen: Do You Want Cook This Dish Again, a large Restart button and two hands holding the finished plate"
                   loading="lazy"
                 />
                 <figcaption>
@@ -1038,7 +1059,7 @@
             </p>
             <div class="project-video">
               <iframe
-                src="https://www.youtube.com/embed/N_Y8vBoH2RM"
+                src="https://www.youtube.com/embed/VUtHq0C9QSc"
                 title="All Made From Mom Luv simulator demo"
                 loading="lazy"
                 allow="

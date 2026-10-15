@@ -345,7 +345,8 @@
 }
 
 .home-work-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   background: #fff;
   border-radius: 1rem;
   overflow: hidden;
@@ -363,6 +364,7 @@
 }
 
 .home-work-img {
+  flex-shrink: 0;
   width: 100%;
   height: 16rem;
   object-fit: cover;
@@ -379,6 +381,8 @@
 }
 
 .home-work-info {
+  /* Fills the rest of the card so cards in a row end on the same tint */
+  flex: 1;
   padding: 0.875rem 1rem 1.25rem;
   background: #faf7f5;
 }

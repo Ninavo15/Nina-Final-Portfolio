@@ -658,6 +658,22 @@
   border-radius: 0.2rem;
 }
 
+/* Tools without a logo get a letter badge the same size as a logo */
+.tool-chip-mark {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 0.2rem;
+  background: #642052;
+  color: #ffffff;
+  font-size: 0.5625rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
 /* ── Outcome ── */
 .project-outcome {
   padding: 3rem;
@@ -1321,4 +1337,69 @@
   .project-content .swatch-color {
     height: 4rem;
   }
+}
+
+/* ── Consistent card heights across every project page ──
+   Cards in the same row always match, asset stages share one height,
+   and screenshots sit in one frame size per grid. */
+.project-content .code-grid {
+  align-items: stretch;
+}
+
+/* Asset cards: one stage height for drawn sprites, models and icons */
+.project-content .mom-sprite,
+.project-content .mystic-sprite,
+.project-content .mystic-tokens .mystic-sprite,
+.project-content .cr-sprite,
+.project-content .witch-stage {
+  height: 11rem;
+}
+
+.project-content .mom-sprite img,
+.project-content .mystic-sprite img,
+.project-content .cr-sprite img,
+.project-content .witch-stage img {
+  max-height: 9rem;
+}
+
+.project-content .mystic-tokens .mystic-sprite img {
+  max-height: 4rem;
+}
+
+.project-content .pitfall-models .code-item img {
+  height: 11rem;
+}
+
+/* Game screens: one 16:9 frame */
+.project-content .pitfall-screens img,
+.project-content .cr-grid-2 img,
+.project-content .cr-grid-3 img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* Code and folder screenshots: whole image in one frame, letterboxed in the
+   editor's own dark background so the frame reads as part of the screenshot */
+.project-content #code .code-item img,
+.project-content .mom-folders .code-item img {
+  height: 20rem;
+  object-fit: contain;
+  background: #121314;
+}
+
+/* YumMeal's schemas are wide, so their frame is wide too */
+.project-content #code .yum-code .code-item img {
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.project-content .mom-folders .code-item img {
+  background: #2f2f2f;
+}
+
+/* Storyboards: whole sheet in one frame */
+.project-content .pitfall-storyboard .code-item img {
+  height: 20rem;
+  object-fit: contain;
+  background: #f4f0ee;
 }

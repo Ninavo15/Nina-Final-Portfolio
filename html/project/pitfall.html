@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A 3D survival game where you play a tiny ant sneaking through an antlion den to bring food home to your colony." />
     <title>Pitfall — Nina Vo</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap"
@@ -60,9 +61,7 @@
                 running.
               </p>
 
-              <p class="section-label section-label--spaced">
-                Goal of the Project
-              </p>
+              <p class="section-label section-label--spaced">Goal of the Project</p>
               <p>
                 We wanted a tense "cat-and-mouse" survival game for midcore to
                 hardcore players who like strategy and pressure: surviving the
@@ -89,7 +88,7 @@
                 >
               </div>
               <div class="meta-group">
-                <span class="meta-label">Collaboration</span>
+                <span class="meta-label">Collaborators</span>
                 <span class="meta-value"
                   >Byunghee Choi<br />Jasper Ling<br />Zainab Shakeel</span
                 >
@@ -103,8 +102,12 @@
                       alt=""
                     />Unity</span
                   >
-                  <span class="tool-chip">Maya</span>
-                  <span class="tool-chip">C#</span>
+                  <span class="tool-chip"
+                    ><span class="tool-chip-mark" aria-hidden="true">M</span>Maya</span
+                  >
+                  <span class="tool-chip"
+                    ><span class="tool-chip-mark" aria-hidden="true">C#</span>C#</span
+                  >
                 </div>
               </div>
             </aside>
@@ -163,6 +166,54 @@
                 </ul>
               </div>
             </div>
+          </div>
+
+          <!-- How to play -->
+          <div class="project-techstack" id="how-to-play">
+            <p class="section-label">How to Play</p>
+            <p class="spec-intro">
+              Move with <code>WASD</code>, hold <code>Shift</code> to sprint,
+              <code>Space</code> to jump and <code>E</code> to interact.
+            </p>
+            <ol class="pipeline-steps">
+              <li>
+                <h4>Pick a difficulty</h4>
+                <p>Easy needs 3 leaves, Medium needs 4 and Hard needs 5.</p>
+              </li>
+              <li>
+                <h4>Find a leaf</h4>
+                <p>
+                  Search the den and pick up a leaf. You can only carry one at a
+                  time.
+                </p>
+              </li>
+              <li>
+                <h4>Pull the levers</h4>
+                <p>
+                  Some leaves are locked away. Find a lever and press
+                  <code>E</code> to open the gate.
+                </p>
+              </li>
+              <li>
+                <h4>Bring it home</h4>
+                <p>
+                  Carry it back to your home hole and press <code>E</code> to
+                  drop it off.
+                </p>
+              </li>
+              <li>
+                <h4>Stay alive</h4>
+                <p>
+                  Sprinting uses stamina, and three antlion bites end the game.
+                  If you fall into a pit, spam <code>E</code> to climb out
+                  before you sink.
+                </p>
+              </li>
+              <li>
+                <h4>Feed the colony</h4>
+                <p>Bring home every leaf to win.</p>
+              </li>
+            </ol>
           </div>
 
           <!-- Storyboard -->
@@ -336,64 +387,16 @@
             </ol>
           </div>
 
-          <!-- How to play -->
-          <div class="project-techstack" id="how-to-play">
-            <p class="section-label">How to Play</p>
-            <p class="spec-intro">
-              Move with <code>WASD</code>, hold <code>Shift</code> to sprint,
-              <code>Space</code> to jump and <code>E</code> to interact.
-            </p>
-            <ol class="pipeline-steps">
-              <li>
-                <h4>Pick a difficulty</h4>
-                <p>Easy needs 3 leaves, Medium needs 4 and Hard needs 5.</p>
-              </li>
-              <li>
-                <h4>Find a leaf</h4>
-                <p>
-                  Search the den and pick up a leaf. You can only carry one at a
-                  time.
-                </p>
-              </li>
-              <li>
-                <h4>Pull the levers</h4>
-                <p>
-                  Some leaves are locked away. Find a lever and press
-                  <code>E</code> to open the gate.
-                </p>
-              </li>
-              <li>
-                <h4>Bring it home</h4>
-                <p>
-                  Carry it back to your home hole and press <code>E</code> to
-                  drop it off.
-                </p>
-              </li>
-              <li>
-                <h4>Stay alive</h4>
-                <p>
-                  Sprinting uses stamina, and three antlion bites end the game.
-                  If you fall into a pit, spam <code>E</code> to climb out
-                  before you sink.
-                </p>
-              </li>
-              <li>
-                <h4>Feed the colony</h4>
-                <p>Bring home every leaf to win.</p>
-              </li>
-            </ol>
-          </div>
-
           <!-- Screens -->
           <div class="project-code" id="screens">
-            <p class="section-label">Game Screens</p>
+            <p class="section-label">Final Design</p>
             <p class="spec-intro">
               I built the menu flow and the win and lose scenes. The pixel-art
               title screen and buttons were drawn by Zainab Shakeel, using the
               same dirt texture as the caves so the whole game feels
               underground.
             </p>
-            <div class="code-grid">
+            <div class="code-grid pitfall-screens">
               <figure class="code-item">
                 <img
                   src="../../image/pitfall/screen-intro.jpg"

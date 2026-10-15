@@ -12,23 +12,23 @@
 .project-content .mystic-sprite {
   display: grid;
   place-items: center;
-  height: 9rem;
+  height: 11rem;
 }
 
 .project-content .mystic-sprite img {
   width: auto;
   max-width: 80%;
-  max-height: 7rem;
+  max-height: 9rem;
   border-radius: 0;
 }
 
 /* Tokens are 40px pixel sprites: keep them small and crisp */
 .mystic-tokens .mystic-sprite {
-  height: 6rem;
+  height: 11rem;
 }
 
 .project-content .mystic-tokens .mystic-sprite img {
-  max-height: 3.5rem;
+  max-height: 4rem;
   image-rendering: pixelated;
 }
 

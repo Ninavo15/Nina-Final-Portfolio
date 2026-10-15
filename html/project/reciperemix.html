@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AI-powered recipe recommendations based on preferences, restrictions, and cuisine fusion." />
     <title>RecipeRemix — Nina Vo</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap"
@@ -66,7 +67,7 @@
                 retrieval-augmented generation.
               </p>
 
-              <p class="section-label section-label--spaced">Motivation</p>
+              <p class="section-label section-label--spaced">Goal of the Project</p>
               <p>
                 Coming up with good recipes can take a lot of time, and
                 sometimes I cannot think of anything to cook or lack the
@@ -81,15 +82,6 @@
               </p>
             </div>
             <aside class="project-meta">
-              <span class="meta-label">Links</span>
-              <div class="meta-links">
-                <a
-                  href="https://github.com/Ninavo15/Recipe-Remix"
-                  class="meta-link-btn"
-                  target="_blank"
-                  ><i class="ri-github-fill"></i> View Code</a
-                >
-              </div>
               <div class="meta-group">
                 <span class="meta-label">Role</span>
                 <span class="meta-value">Web Developer</span>
@@ -108,24 +100,36 @@
                   <span class="tool-chip">
                     <img
                       src="../../image/reciperemix/openai-icon.png"
-                      alt="OpenAI"
+                      alt=""
                     />
                     OpenAI
                   </span>
                   <span class="tool-chip">
                     <img
                       src="../../image/reciperemix/streamlit-icon.png"
-                      alt="Streamlit"
+                      alt=""
                     />
                     Streamlit
                   </span>
                   <span class="tool-chip">
                     <img
                       src="../../image/software logo/Visual Code.jpeg"
-                      alt="VS Code"
+                      alt=""
                     />
                     VS Code
                   </span>
+                </div>
+              </div>
+              <div class="meta-group">
+                <span class="meta-label">Links</span>
+                <div class="meta-links">
+                  <a
+                    href="https://github.com/Ninavo15/Recipe-Remix"
+                    class="meta-link-btn"
+                    target="_blank"
+                    rel="noopener"
+                    ><i class="ri-github-fill"></i> View Code</a
+                  >
                 </div>
               </div>
             </aside>
@@ -396,12 +400,52 @@
 
           <!-- Gallery -->
           <div class="project-gallery" id="gallery">
-            <p class="section-label">Process &amp; Screens</p>
-            <div class="gallery-grid">
-              <div class="gallery-item gallery-item--wide"></div>
-              <div class="gallery-item gallery-item--sq"></div>
-              <div class="gallery-item gallery-item--sq"></div>
-              <div class="gallery-item gallery-item--lg"></div>
+            <p class="section-label">Final Design</p>
+            <div class="gallery-carousel" data-carousel>
+              <div class="carousel-viewport">
+                <div class="carousel-track">
+                  <div class="carousel-slide">
+                    <img
+                      src="../../image/reciperemix/screen-input.jpg"
+                      alt="Start screen: upload a fridge photo or type ingredients, then set diet, allergy and cooking time"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="carousel-slide">
+                    <img
+                      src="../../image/reciperemix/screen-retrieved.jpg"
+                      alt="Retrieved inspiration recipes that ground the remix"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="carousel-slide">
+                    <img
+                      src="../../image/reciperemix/screen-output.jpg"
+                      alt="Agent output: Spicy Peach and Bell Pepper Wraps with time, difficulty, ingredients, steps and a generated photo"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="carousel-slide">
+                    <img
+                      src="../../image/reciperemix/screen-nutrition.jpg"
+                      alt="Why this works, a cooking tip, nutrition per serving and the Refine This Recipe controls"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="carousel-slide">
+                    <img
+                      src="../../image/reciperemix/screen-refined.jpg"
+                      alt="Refined recipe: Fiery Spicy Peach and Bell Pepper Wraps at medium difficulty"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="carousel-dots"
+                role="tablist"
+                aria-label="Final Design"
+              ></div>
             </div>
           </div>
 
@@ -476,5 +520,6 @@
     <script src="../../js/components.js"></script>
     <script src="../../js/animations.js"></script>
     <script src="../../js/project-quicknav.js"></script>
+    <script src="../../js/gallery-carousel.js"></script>
   </body>
 </html>

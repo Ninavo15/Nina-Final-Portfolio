@@ -6,7 +6,7 @@
 
 /* 3D models: transparent renders, no background box */
 .pitfall-models .code-item img {
-  height: 12rem;
+  height: 11rem;
   object-fit: contain;
   border: none;
   border-radius: 0;

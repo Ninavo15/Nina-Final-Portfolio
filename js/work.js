@@ -7,19 +7,12 @@ const setActive = (id) => {
   });
 };
 
-// Alternate image left/right across whichever projects are showing
-const reflowSides = () => {
-  const visible = document.querySelectorAll(".work-section:not([hidden]) .project-case");
-  visible.forEach((card, i) => card.classList.toggle("project-case--flip", i % 2 === 1));
-};
-
 // Show only the section that matches the tag ("all" shows every section)
 const applyFilter = (id) => {
   setActive(id);
   sections.forEach((section) => {
     section.hidden = id !== "all" && section.id !== id;
   });
-  reflowSides();
 };
 
 filterBtns.forEach((btn) => {
