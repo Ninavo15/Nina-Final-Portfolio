@@ -481,13 +481,13 @@
   }
 
   .footer-chat-note {
-    left: -9rem;
+    left: -7rem;
     top: 18rem;
     font-size: 1.5rem;
   }
 
   .footer-chat-arrow {
-    left: -4rem;
+    left: -2.25rem;
     top: 20rem;
     font-size: 2.25rem;
   }
@@ -634,18 +634,17 @@
     display: block;
   }
 
+  /* Sits just left of the phone (phone is 13rem wide, 1.25rem from the edge) */
   .footer-chat-note {
-    left: 1.25rem;
+    left: max(1.25rem, calc(100% - 22rem));
     top: 5rem;
     font-size: 1.625rem;
-    color: #f0b8d0;
   }
 
   .footer-chat-arrow {
-    left: 3rem;
+    left: max(3rem, calc(100% - 20.25rem));
     top: 7.25rem;
     font-size: 1.75rem;
-    color: #f0b8d0;
     transform: rotate(80deg);
   }
 
@@ -656,8 +655,9 @@
     font-size: 1.5rem;
   }
 
+  /* Measured from the phone, like the "text me?" note */
   .footer-spark--sm {
-    left: 1.75rem;
+    left: max(1.75rem, calc(100% - 21.5rem));
     top: 3rem;
     font-size: 1rem;
   }
@@ -667,5 +667,12 @@
     z-index: 3;
     margin-top: 0;
     background: #642052;
+  }
+}
+
+/* Sparkles only on big screens */
+@media (max-width: 48rem) {
+  .footer-spark {
+    display: none;
   }
 }
