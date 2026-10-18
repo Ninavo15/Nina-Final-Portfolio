@@ -262,6 +262,17 @@
   color: #cc0000;
 }
 
+/* A film with more than one link (YouTube + project website) */
+.film-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+}
+
+.film-card .film-watch--site {
+  color: #642052;
+}
+
 /* ── 02 Design: gallery wall ── */
 .poster-wall {
   display: grid;

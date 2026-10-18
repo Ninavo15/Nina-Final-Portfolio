@@ -9,15 +9,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   const list = document.querySelector(".quicknav-list");
   const sections = Array.from(content.children).filter((el) => el.id);
 
-  // Project name at the top of the side rail
-  const title = document.querySelector(".quicknav-title");
-  const projectTitle = content.querySelector(".project-title");
-  if (title) {
-    if (projectTitle) title.textContent = projectTitle.textContent.trim();
-    else title.remove();
+  if (!sections.length) {
+    document.querySelector(".quicknav-toggle")?.remove();
+    return;
   }
-
-  if (!sections.length) return;
 
   sections.forEach((section) => {
     const label =
@@ -34,9 +29,32 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const links = list.querySelectorAll("a");
 
-  // Phone / tablet layout shows the sections as a chip row (matches project.css)
-  const chipRow = window.matchMedia("(max-width: 56rem)");
+  // Phone / tablet layout shows the sections in a burger menu (matches project.css)
+  const burgerLayout = window.matchMedia("(max-width: 56rem)");
+  const quicknav = document.querySelector(".project-quicknav");
+  const rail = document.querySelector(".project-quicknav-rail");
+  const toggle = document.querySelector(".quicknav-toggle");
   let activeId = null;
+
+  const setOpen = (open) => {
+    quicknav.classList.toggle("is-open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+  };
+
+  toggle.addEventListener("click", () => {
+    setOpen(!quicknav.classList.contains("is-open"));
+  });
+
+  // Close on a tap outside the menu, or on Escape
+  document.addEventListener("click", (e) => {
+    if (!quicknav.contains(e.target)) setOpen(false);
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && quicknav.classList.contains("is-open")) {
+      setOpen(false);
+      toggle.focus();
+    }
+  });
 
   const setActive = (id) => {
     if (id === activeId) return;
@@ -46,22 +64,12 @@ document.addEventListener("DOMContentLoaded", async () => {
       link.classList.toggle("active", isActive);
       if (isActive) link.setAttribute("aria-current", "true");
       else link.removeAttribute("aria-current");
-
-      // Keep the active chip in view by scrolling the row sideways only
-      if (isActive && chipRow.matches) {
-        const linkBox = link.getBoundingClientRect();
-        const listBox = list.getBoundingClientRect();
-        const left =
-          list.scrollLeft +
-          (linkBox.left - listBox.left) -
-          (list.clientWidth - linkBox.width) / 2;
-        list.scrollTo({ left, behavior: "smooth" });
-      }
     });
   };
 
-  // px below the fixed nav (desktop) or the nav + chip row (phone)
-  const triggerOffset = () => (chipRow.matches ? 176 : 140);
+  // px below the fixed nav (desktop) or just below the burger bar (phone)
+  const triggerOffset = () =>
+    burgerLayout.matches ? rail.getBoundingClientRect().bottom + 32 : 140;
 
   const updateActive = () => {
     let current = sections[0];
@@ -79,6 +87,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   links.forEach((link) => {
     link.addEventListener("click", () => {
       setActive(link.getAttribute("href").slice(1));
+      setOpen(false);
     });
   });
 });

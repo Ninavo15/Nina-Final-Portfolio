@@ -21,8 +21,11 @@
   );
 }
 
+/* Side/bottom padding as variables so Featured Works can run edge to edge */
 .home-page .page-body {
-  padding: 3rem 3rem 4rem;
+  --home-pad-x: 3rem;
+  --home-pad-b: 4rem;
+  padding: 3rem var(--home-pad-x) var(--home-pad-b);
 }
 
 /* Border matches the page here, so don't paint it over the lanyard */
@@ -249,7 +252,9 @@
 
 @media (max-width: 64rem) {
   .home-page .page-body {
-    padding: 2.5rem 2rem 3rem;
+    --home-pad-x: 2rem;
+    --home-pad-b: 3rem;
+    padding: 2.5rem var(--home-pad-x) var(--home-pad-b);
   }
 
   .home-name {
@@ -263,12 +268,14 @@
 
 @media (max-width: 48rem) {
   .home-page .page-body {
-    padding: 2rem 1.5rem 3rem;
+    --home-pad-x: 1.5rem;
+    --home-pad-b: 3rem;
+    padding: 2rem var(--home-pad-x) var(--home-pad-b);
   }
 
   .home-hero {
-    flex-direction: column-reverse;
     gap: 1.5rem;
+    overflow-x: clip;
   }
 
   .home-intro {
@@ -284,18 +291,65 @@
     justify-content: center;
   }
 
+  /* Tablet: card stays on the right, lanyard runs up under the tabs */
+  /* Grows with the screen (15rem → 17.5rem); the lift scales with it */
+  .home-photo-wrap {
+    --card-w: clamp(15rem, 2.5rem + 30vw, 17.5rem);
+    width: var(--card-w);
+    margin-top: calc(var(--card-w) * -0.53);
+  }
+}
+
+/* Tablet: slightly smaller intro text and buttons beside the card */
+@media (min-width: 36.0625rem) and (max-width: 48rem) {
+  .home-intro {
+    gap: 1.125rem;
+  }
+
+  .home-eyebrow {
+    font-size: 0.6875rem;
+  }
+
+  .home-hello {
+    font-size: 2rem;
+  }
+
+  .home-name {
+    font-size: 3.75rem;
+  }
+
+  .home-bio {
+    font-size: 0.9375rem;
+  }
+
+  .home-btn {
+    height: 3rem;
+    font-size: 0.9375rem;
+  }
+
+  .home-status {
+    font-size: 0.8125rem;
+  }
+}
+
+/* Phones: card on top, text below. The card hangs from just under the tabs */
+@media (max-width: 36rem) {
+  .home-hero {
+    flex-direction: column-reverse;
+  }
+
   .home-photo-wrap {
     width: 14rem;
-    margin: 0 auto;
+    margin: -7.5rem auto 0;
   }
 }
 
 /* ── Featured Works (moved from About): all projects ── */
+/* Cream panel edge to edge inside the plum frame, like the other pages */
 .home-works {
-  margin-top: 5rem;
+  margin: 5rem calc(-1 * var(--home-pad-x)) calc(-1 * var(--home-pad-b));
   padding: 4rem 3rem 5rem;
   background: #f6f1ed;
-  border-radius: 1.5rem;
 }
 
 .home-works-header {
@@ -363,10 +417,12 @@
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
 }
 
+/* Same 16:9 frame as the Work page cards, so wide covers aren't cropped */
 .home-work-img {
   flex-shrink: 0;
   width: 100%;
-  height: 16rem;
+  height: auto;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   display: block;
 }
@@ -374,10 +430,6 @@
 /* Pixel-art covers stay crisp when scaled */
 .home-work-img.pixel-art {
   image-rendering: pixelated;
-}
-
-.home-work-img--placeholder {
-  background: #d4ceca;
 }
 
 .home-work-info {

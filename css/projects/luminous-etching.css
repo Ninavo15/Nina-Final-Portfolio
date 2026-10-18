@@ -214,26 +214,6 @@
   max-width: 40rem;
 }
 
-.spec-note {
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.875rem;
-  color: #1a1a1a;
-  line-height: 1.7;
-  margin: 1.5rem 0 0;
-}
-
-.spec-note strong {
-  color: #1a1a1a;
-}
-
-.spec-note code {
-  background: #f4f0ee;
-  border-radius: 0.25rem;
-  padding: 0.1rem 0.4rem;
-  font-size: 0.85em;
-  color: #642052;
-}
-
 /* ── Color swatches ── */
 .color-swatches {
   display: grid;

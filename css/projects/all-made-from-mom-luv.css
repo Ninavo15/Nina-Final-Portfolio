@@ -129,11 +129,6 @@
   max-width: 92%;
 }
 
-/* Tiny boards are scaled up so they read at the same size as the rest */
-.project-content .mom-sprite--small img {
-  width: 80%;
-}
-
 .mom-asset-group {
   margin: 2rem 0 0;
   font-family: var(--font-body);

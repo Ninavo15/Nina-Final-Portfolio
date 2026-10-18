@@ -16,19 +16,22 @@ body {
   flex: 1;
 }
 
-/* Plum frame thickness */
 :root {
   --frame: 1rem;
+  --nav-bar: 5.625rem;
 }
 
 /* ── Shared site navbar ── */
 
 .site-nav {
+  /* One corner radius for every tab: ~53% of the word-tab height,
+     so tabs keep the same shape at every size */
+  --tab-radius: 1.8125rem;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: calc(5.625rem + var(--frame));
+  height: calc(var(--nav-bar) + var(--frame));
   background: linear-gradient(
     to bottom,
     #ca91b4 calc(100% - var(--frame)),
@@ -47,7 +50,6 @@ body {
 
 .nav-tab {
   --tab-bg: transparent;
-  --tab-radius: 1.8125rem;
   display: inline-flex;
   align-items: flex-end;
   justify-content: center;
@@ -69,16 +71,12 @@ body {
 }
 
 /* Tab shape drawn behind the label */
-.nav-tab::before,
-.nav-tab::after {
+.nav-tab::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: var(--tab-radius) var(--tab-radius) 0 0;
   pointer-events: none;
-}
-
-.nav-tab::before {
   background: var(--tab-bg);
   /* Soft shadow up and around each tab so they lift off the bar */
   box-shadow: 0 -0.125rem 0.625rem rgba(60, 10, 45, 0.22);
@@ -87,8 +85,7 @@ body {
 }
 
 /* Home only*/
-.tab-home::before,
-.tab-home::after {
+.tab-home::before {
   transform: perspective(6rem) rotateX(14deg);
   transform-origin: bottom left;
 }
@@ -97,17 +94,9 @@ body {
   box-shadow: 0 -0.125rem 0.625rem rgba(60, 10, 45, 0.22);
 }
 
-.nav-tab::after {
-  background: url("../image/folder_texture.png") 50% / cover no-repeat;
-  opacity: 0.58;
-  mix-blend-mode: multiply;
-  z-index: -1;
-}
-
 /* Home: the big plum folder tab on the left */
 .tab-home {
   --tab-bg: #642052;
-  --tab-radius: 1.75rem;
   margin-right: auto;
   width: 35rem;
   height: 4.75rem;
@@ -150,21 +139,11 @@ body {
   color: #764969;
 }
 
-.nav-tab.active::after,
-.nav-tab:hover::after {
-  opacity: 0;
-}
-
 /* Active tab runs down through the plum strip into the cream page */
 .nav-tab.active:not(.tab-home)::before {
   box-shadow:
     0 var(--frame) 0 #f6f1ed,
     0 -0.125rem 0.625rem rgba(60, 10, 45, 0.22);
-}
-
-/* Home tab keeps its look on hover */
-.tab-home:hover::after {
-  opacity: 0.58;
 }
 
 .tab-home-label {
@@ -184,7 +163,7 @@ body {
 /* ── Page body under the navbar ── */
 .page-body {
   background: #f6f1ed;
-  margin-top: 5.625rem;
+  margin-top: var(--nav-bar);
   min-height: 100dvh;
   /* Plum frame on the top and sides, in the home tab color */
   border: var(--frame) solid #642052;
@@ -206,65 +185,174 @@ body {
   pointer-events: none;
 }
 
-/* ── Responsive nav ── */
-@media (max-width: 48rem) {
-  .site-nav {
-    padding: 0 1rem var(--frame);
-    gap: 0.25rem;
-    overflow-x: auto;
-    scrollbar-width: none;
+/* Short heart label, only shown on phones */
+.tab-home-short {
+  display: none;
+}
+
+/* ── Laptop / tablet nav ──
+   The full-size tabs need ~1340px. Below that the tabs and their words get
+   smaller, and the home tab shrinks, fading its hearts out instead of wrapping. */
+@media (max-width: 85rem) {
+  .nav-tab {
+    width: 10rem;
+    font-size: 1.75rem;
   }
 
-  .site-nav::-webkit-scrollbar {
+  .tab-home {
+    flex: 1 1 auto;
+    width: auto;
+    max-width: 35rem;
+    min-width: 0;
+    font-size: 1.75rem;
+  }
+
+  .tab-home-label {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, #000 80%, transparent);
+    mask-image: linear-gradient(to right, #000 80%, transparent);
+  }
+}
+
+@media (max-width: 64rem) {
+  .site-nav {
+    --tab-radius: 1.5625rem;
+    padding: 0 1.5rem var(--frame);
+  }
+
+  .nav-tab {
+    width: 8.25rem;
+    height: 3rem;
+    font-size: 1.4375rem;
+  }
+
+  .tab-home {
+    height: 4.25rem;
+    padding-left: 1.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 56rem) {
+  .nav-tab {
+    width: 7.25rem;
+    font-size: 1.25rem;
+  }
+}
+
+/* ── Responsive nav ──
+   Phones: every tab fits on screen (no hidden sideways scroll).
+   The home tab shrinks to a single heart and the others share the rest. */
+@media (max-width: 48rem) {
+  :root {
+    --frame: 0.5rem;
+    --nav-bar: 3.5rem;
+  }
+
+  .site-nav {
+    --tab-radius: 1.25rem;
+    padding: 0 1rem var(--frame);
+    gap: 0.25rem;
+  }
+
+  .nav-tab {
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
+    height: 2.3125rem;
+    /* Scales with the screen so the words always fit their tabs */
+    font-size: clamp(0.875rem, 3.6vw, 1.125rem);
+    padding-bottom: 0.25rem;
+    white-space: nowrap;
+  }
+
+  .tab-home {
+    flex: 0 0 auto;
+    width: 3.5rem;
+    height: 2.75rem;
+    margin-right: 0.25rem;
+    padding-left: 0;
+    justify-content: center;
+    font-size: 1.375rem;
+  }
+
+  .tab-home-label {
     display: none;
   }
 
-  :root {
-    --frame: 0.5rem;
+  .tab-home-short {
+    display: inline-block;
+    padding-bottom: 0.25rem;
   }
 
+  .tab-home:hover .tab-home-short {
+    color: #f0b8d0;
+  }
+}
+
+@media (min-width: 36.0625rem) and (max-width: 48rem) {
   .nav-tab {
-    width: 7.5rem;
-    height: 3.0625rem;
-    font-size: 1.375rem;
-    flex-shrink: 0;
+    flex: 0 1 7.5rem;
   }
 
   .tab-home {
-    width: 11rem;
-    height: 3.75rem;
+    flex: 0 3 15rem;
+    width: auto;
+    min-width: 5.5rem;
+    margin-right: auto;
+    justify-content: flex-start;
     padding-left: 1.25rem;
+    font-size: 1.25rem;
+  }
+  .tab-home-label {
+    display: inline-block;
+  }
+
+  @supports (width: round(down, 10px, 3px)) {
+    .tab-home-label {
+      max-width: calc(round(down, 100% - 0.75em, 2.1em) + 0.75em);
+      -webkit-mask-image: none;
+      mask-image: none;
+    }
+  }
+
+  .tab-home-short {
+    display: none;
   }
 }
 
-@media (max-width: 30rem) {
-  .nav-tab {
-    width: 6rem;
-    font-size: 1.125rem;
-  }
-
-  .tab-home {
-    width: 9rem;
-    padding-left: 1rem;
-  }
-}
-
-@media (max-width: 24rem) {
+@media (max-width: 26rem) {
   .site-nav {
-    padding: 0 0.5rem var(--frame);
-    gap: 0.2rem;
+    padding: 0 0.625rem var(--frame);
+    gap: 0.1875rem;
   }
 
   .nav-tab {
-    width: 4.6rem;
-    height: 2.5rem;
-    font-size: 0.8125rem;
-    --tab-radius: 1.25rem;
+    letter-spacing: 0;
   }
 
   .tab-home {
-    width: 6.9rem;
-    height: 3rem;
-    padding-left: 0.75rem;
+    width: 2.75rem;
+    height: 2.5rem;
+    font-size: 1.125rem;
+    margin-right: 0.125rem;
+  }
+}
+
+@media (max-width: 22rem) {
+  .site-nav {
+    --tab-radius: 1.125rem;
+  }
+
+  .nav-tab {
+    font-size: 0.75rem;
+    height: 2.125rem;
+  }
+
+  /* Keep the heart tab a little taller than the others */
+  .tab-home {
+    height: 2.375rem;
   }
 }

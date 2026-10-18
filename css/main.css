@@ -79,14 +79,6 @@ img.focus-center {
   object-position: center;
 }
 
-img.focus-center-10 {
-  object-position: center 10%;
-}
-
-img.focus-center-30 {
-  object-position: center 30%;
-}
-
 img.focus-center-75 {
   object-position: center 75%;
 }
