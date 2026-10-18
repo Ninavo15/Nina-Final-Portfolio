@@ -2,17 +2,233 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- The home page lives in html/index.html. GitHub Pages serves this
-         file at ninavo15.github.io/Nina-Final-Portfolio/, so it just sends
-         visitors there. -->
-    <meta http-equiv="refresh" content="0; url=html/index.html" />
-    <link rel="canonical" href="html/index.html" />
-    <title>Nina Vo</title>
-    <script>
-      location.replace("html/index.html" + location.search + location.hash);
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nina Vo — Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Newsreader:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/components/nav.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/components/footer.css" />
   </head>
-  <body>
-    <a href="html/index.html">Go to Nina Vo's portfolio</a>
+  <body class="home-page">
+    <div id="nav-placeholder"></div>
+    <main class="page-body">
+      <!-- Hero: intro on the left, ID card hangs on the right -->
+      <div class="home-hero">
+        <div class="home-intro">
+          <p class="home-eyebrow">
+            CREATIVE DEVELOPER <span aria-hidden="true">✦</span> UI/UX DESIGNER <span aria-hidden="true">✦</span> 2D/3D ARTIST
+          </p>
+          <p class="home-hello">Hello there, I'm</p>
+          <h1 class="home-name">Nina Vo</h1>
+          <p class="home-bio">
+            A creative developer with a love for building
+            digital experiences — blending engineering and UI design to make interactions feel effortless.
+          </p>
+          <div class="home-actions">
+            <a href="html/main-page/work.html" class="home-btn home-btn--primary">
+              Open my work <i class="ri-arrow-right-line" aria-hidden="true"></i>
+            </a>
+            <a
+              href="files/nina-vo-resume.pdf"
+              target="_blank"
+              rel="noopener"
+              class="home-btn home-btn--outline"
+            >
+              <i class="ri-file-text-line" aria-hidden="true"></i> Resume
+            </a>
+            <span class="home-status">
+              <span class="home-status-dot" aria-hidden="true"></span>Open for
+              work
+            </span>
+          </div>
+        </div>
+
+        <div class="home-note" aria-hidden="true">
+          <span class="home-note-text">that's me!</span>
+          <span class="home-note-arrow">⤴</span>
+        </div>
+
+        <div class="home-photo-wrap">
+          <img
+            src="image/id-card.png"
+            alt="Nina Vo ID Card"
+            class="home-photo"
+          />
+        </div>
+      </div>
+      <!-- Featured Works: all projects -->
+      <section class="home-works">
+        <div class="home-works-header">
+          <h2 class="home-works-title">Featured Works</h2>
+          <a href="html/main-page/work.html" class="home-works-view-all"
+            >View All <i class="ri-arrow-right-line"></i
+          ></a>
+        </div>
+        <div class="home-works-grid">
+          <a href="html/project/yummeal.html" class="home-work-card fade-up">
+            <img
+              class="home-work-img focus-top"
+              src="image/yummeal/cover.jpg"
+              alt="YumMeal"
+            />
+            <div class="home-work-info">
+              <div class="home-work-tags">
+                <span class="home-work-tag">UI DESIGN</span>
+                <span class="home-work-tag">WEBSITE</span>
+              </div>
+              <h3 class="home-work-name">YumMeal Website</h3>
+              <p class="home-work-desc">
+                An all-in-one meal planning web app that helps users plan their meals, find recipes, share their own recipes, and save their favorite dishes.
+              </p>
+            </div>
+          </a>
+          <a href="html/project/reciperemix.html" class="home-work-card fade-up">
+            <img
+              class="home-work-img focus-left-top"
+              src="image/reciperemix/poster.jpg"
+              alt="RecipeRemix"
+            />
+            <div class="home-work-info">
+              <div class="home-work-tags">
+                <span class="home-work-tag">AI</span>
+                <span class="home-work-tag">WEBSITE</span>
+              </div>
+              <h3 class="home-work-name">RecipeRemix</h3>
+              <p class="home-work-desc">
+                AI-powered recipe recommendation website that suggests meals based on user preferences and dietary restrictions and give cuisine mix recipes.
+              </p>
+            </div>
+          </a>
+          <a href="html/project/luminous-etching.html" class="home-work-card fade-up">
+            <img
+              class="home-work-img focus-10-0"
+              src="image/luminous-etching/cover.png"
+              alt="Luminous Etching"
+            />
+            <div class="home-work-info">
+              <div class="home-work-tags">
+                <span class="home-work-tag">Website</span>
+              </div>
+              <h3 class="home-work-name">Luminous Etching</h3>
+              <p class="home-work-desc">
+                A commercial website for a small business that sells and customizes car taillights, with a shop, product pages, cart and checkout.
+              </p>
+            </div>
+          </a>
+          <a href="html/project/dormmate.html" class="home-work-card fade-up">
+            <img
+              class="home-work-img"
+              src="image/dormmate/cover.png"
+              alt="DormMate app screens: welcome, role selection and room issue reports"
+            />
+            <div class="home-work-info">
+              <div class="home-work-tags">
+                <span class="home-work-tag">UI/UX</span>
+                <span class="home-work-tag">APPLICATION</span>
+              </div>
+              <h3 class="home-work-name">DormMate</h3>
+              <p class="home-work-desc">
+                A mobile app where students report dorm maintenance issues and track each fix, and residence staff manage them from one dashboard.
+              </p>
+            </div>
+          </a>
+          <a href="html/project/witch-caper.html" class="home-work-card fade-up">
+            <img
+              class="home-work-img"
+              src="image/witch-caper/cover.jpg"
+              alt="The Wicked Cat Caper title screen over a forest with a windmill"
+            />
+            <div class="home-work-info">
+              <div class="home-work-tags">
+                <span class="home-work-tag">Game Developer</span>
+                <span class="home-work-tag">3D VR</span>
+              </div>
+              <h3 class="home-work-name">Witch Caper</h3>
+              <p class="home-work-desc">
+                A VR puzzle adventure where you shrink and grow with a magic potion to rescue your cat. I built the environment and modeled the cage, key, letter and flying island.
+              </p>
+            </div>
+          </a>
+          <a href="html/project/pitfall.html" class="home-work-card fade-up">
+            <img
+              class="home-work-img"
+              src="image/pitfall/cover.jpg"
+              alt="Pitfall title screen with an antlion reaching in from the left"
+            />
+            <div class="home-work-info">
+              <div class="home-work-tags">
+                <span class="home-work-tag">Game Developer</span>
+                <span class="home-work-tag">3D Modeling</span>
+              </div>
+              <h3 class="home-work-name">Pitfall</h3>
+              <p class="home-work-desc">
+                A 3D survival game where a tiny ant sneaks through an antlion den. I modeled the antlion, mushrooms and rocks, and made the antlion patrol and chase the player.
+              </p>
+            </div>
+          </a>
+          <a href="html/project/all-made-from-mom-luv.html" class="home-work-card fade-up">
+            <img
+              class="home-work-img"
+              src="image/all-made-from-mom-luv/web/cover.jpg"
+              alt="All Made From Mom Luv cover: Mom holding a plate of Banh Bot Loc under the Made From Mom Love title, with Start and Menu buttons"
+            />
+            <div class="home-work-info">
+              <div class="home-work-tags">
+                <span class="home-work-tag">Game Developer</span>
+                <span class="home-work-tag">Interactive Simulation</span>
+              </div>
+              <h3 class="home-work-name">All Made From Mom Luv</h3>
+              <p class="home-work-desc">
+                A cozy Java cooking simulator where Mom guides you through making Banh Bot Loc, a traditional Vietnamese dumpling.
+              </p>
+            </div>
+          </a>
+          <a href="html/project/mystic-trail.html" class="home-work-card fade-up">
+            <img
+              class="home-work-img"
+              src="image/mystic-trail/cover.jpg"
+              alt="Mystic Trails cover: the yellow title over a sunny forest path, with Press ENTER to start and Press M to see instruction buttons"
+            />
+            <div class="home-work-info">
+              <div class="home-work-tags">
+                <span class="home-work-tag">Game Developer</span>
+                <span class="home-work-tag">UI</span>
+              </div>
+              <h3 class="home-work-name">Mystic Trail</h3>
+              <p class="home-work-desc">
+                A cute top-down Processing shooter where an angel girl fights off ghosts, collects tokens and takes on a devil boss.
+              </p>
+            </div>
+          </a>
+          <a href="html/project/crossroad.html" class="home-work-card fade-up">
+            <img
+              class="home-work-img pixel-art focus-center-75"
+              src="image/crossroad/cover.png"
+              alt="Crossroads pixel-art title screen: a blood-stained light blue car on a highway at night, with Start and How to Play buttons"
+            />
+            <div class="home-work-info">
+              <div class="home-work-tags">
+                <span class="home-work-tag">Game Developer</span>
+              </div>
+              <h3 class="home-work-name">Crossroads</h3>
+              <p class="home-work-desc">
+                A pixel-art narrative game about a night drive gone wrong. Hide the evidence, keep your stress down and choose your path to one of several endings.
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="js/components.js"></script>
+    <script src="js/animations.js"></script>
   </body>
 </html>
