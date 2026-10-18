@@ -339,6 +339,7 @@
 
 /* Doodles */
 .footer-chat-arrow {
+  font-variant-emoji: text; /* iPhones show ⤴ as an emoji otherwise */
   position: absolute;
   left: 3rem;
   top: 11.75rem;
