@@ -191,7 +191,7 @@ body {
 }
 
 /* ── Laptop / tablet nav ──
-   The full-size tabs need ~1340px. Below that the tabs and their words get
+   The full-size tabs need ~84rem. Below that the tabs and their words get
    smaller, and the home tab shrinks, fading its hearts out instead of wrapping. */
 @media (max-width: 85rem) {
   .nav-tab {
@@ -310,7 +310,7 @@ body {
     display: inline-block;
   }
 
-  @supports (width: round(down, 10px, 3px)) {
+  @supports (width: round(down, 1rem, 0.25rem)) {
     .tab-home-label {
       max-width: calc(round(down, 100% - 0.75em, 2.1em) + 0.75em);
       -webkit-mask-image: none;

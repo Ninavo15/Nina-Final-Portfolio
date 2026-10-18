@@ -281,7 +281,7 @@
   text-transform: uppercase;
   color: #b089a8;
   border: 0.0625rem solid #ddd0d8;
-  border-radius: 999px;
+  border-radius: 999rem;
   padding: 0.3rem 0.875rem;
 }
 
@@ -633,7 +633,7 @@
   font-weight: 500;
   color: #642052;
   border: 0.0625rem solid #ddd0d8;
-  border-radius: 999px;
+  border-radius: 999rem;
   padding: 0.35rem 0.875rem;
   text-decoration: none;
   transition:
@@ -846,8 +846,8 @@
   display: grid;
   grid-template-rows: auto minmax(0, 1fr) auto;
   gap: 0.75rem;
-  padding: calc(env(safe-area-inset-top, 0px) + 0.75rem) 0.75rem
-    calc(env(safe-area-inset-bottom, 0px) + 0.75rem);
+  padding: calc(env(safe-area-inset-top, 0rem) + 0.75rem) 0.75rem
+    calc(env(safe-area-inset-bottom, 0rem) + 0.75rem);
   background: #140a10;
   color: #f6f1ee;
   font-family: var(--font-body);
@@ -897,7 +897,7 @@
   min-height: 2.75rem;
   min-width: 2.75rem;
   padding: 0.4rem 1rem;
-  border-radius: 999px;
+  border-radius: 999rem;
   border: 0.0625rem solid rgba(246, 241, 238, 0.35);
   background: transparent;
   color: #f6f1ee;
@@ -957,7 +957,7 @@
   gap: 0.5rem;
   margin-top: 0.75rem;
   padding: 0.75rem 1.5rem;
-  border-radius: 999px;
+  border-radius: 999rem;
   border: 0.0625rem solid #642052;
   font-family: var(--font-body);
   font-size: var(--text-small);

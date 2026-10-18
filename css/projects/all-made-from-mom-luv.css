@@ -220,7 +220,7 @@
   position: absolute;
   top: 0.75rem;
   padding: 0.2rem 0.65rem;
-  border-radius: 999px;
+  border-radius: 999rem;
   font-family: var(--font-body);
   font-size: var(--text-label);
   font-weight: 600;

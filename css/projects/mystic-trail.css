@@ -22,7 +22,7 @@
   border-radius: 0;
 }
 
-/* Tokens are 40px pixel sprites: keep them small and crisp */
+/* Tokens are tiny pixel sprites (40 × 40): keep them small and crisp */
 .mystic-tokens .mystic-sprite {
   height: 11rem;
 }
