@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="#000" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Hand-drawn arrow: runs right, then curves up (same direction as ⤴) -->
+  <path d="M5 36c9 1.6 19 1.2 25-3.8 4.6-3.8 6.4-10 6.6-18.2"/>
+  <path d="M29.4 20.6 36.6 13l5.6 8.6"/>
+</svg>

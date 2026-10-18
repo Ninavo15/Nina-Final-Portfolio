@@ -178,9 +178,14 @@
   font-weight: 700;
 }
 
-/* Same "⤴" arrow character as the About page notes, turned toward the card */
+/* Same drawn arrow as the About and footer notes, turned toward the card */
 .home-note-arrow {
-  font-variant-emoji: text; /* iPhones show ⤴ as an emoji otherwise */
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background: currentColor;
+  -webkit-mask: url("../image/note-arrow.svg") center / contain no-repeat;
+  mask: url("../image/note-arrow.svg") center / contain no-repeat;
   font-size: 2.75rem;
   line-height: 1;
   transform: rotate(80deg);
@@ -246,9 +251,6 @@
     padding-left: 1rem;
   }
 
-  .home-note {
-    display: none;
-  }
 }
 
 @media (max-width: 64rem) {
@@ -342,6 +344,78 @@
   .home-photo-wrap {
     width: 14rem;
     margin: -7.5rem auto 0;
+  }
+}
+
+/* ── "that's me!" note at smaller sizes ── */
+/* Laptop: beside the headline, pointing down at the card */
+@media (max-width: 64rem) {
+  .home-note {
+    right: 20.5rem;
+    top: 8rem;
+  }
+
+  .home-note-text {
+    font-size: 1.75rem;
+  }
+
+  .home-note-arrow {
+    font-size: 2.25rem;
+  }
+}
+
+/* Tablet: under the card, pointing up at it */
+@media (min-width: 36.0625rem) and (max-width: 48rem) {
+  .home-note {
+    top: auto;
+    bottom: -0.5rem;
+    right: 3rem;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 0.25rem;
+  }
+
+  .home-note-text {
+    font-size: 1.5rem;
+  }
+
+  .home-note-arrow {
+    font-size: 2rem;
+    margin: 0 0 0.75rem;
+    transform: rotate(-15deg);
+  }
+}
+
+/* Phone: to the right of the card, pointing back at it */
+@media (max-width: 36rem) {
+  .home-note {
+    top: 10rem;
+    right: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .home-note-text {
+    font-size: 1.5rem;
+  }
+
+  .home-note-arrow {
+    font-size: 2rem;
+    margin: 0 0 0 0.5rem;
+    transform: scaleX(-1) rotate(80deg);
+  }
+}
+
+@media (max-width: 22.5rem) {
+  .home-note {
+    right: 0.25rem;
+  }
+
+  .home-note-text {
+    font-size: 1.25rem;
+  }
+
+  .home-note-arrow {
+    font-size: 1.75rem;
   }
 }
 

@@ -192,7 +192,7 @@ body {
 
 /* ── Laptop / tablet nav ──
    The full-size tabs need ~84rem. Below that the tabs and their words get
-   smaller, and the home tab shrinks, fading its hearts out instead of wrapping. */
+   smaller, and the home tab shrinks, showing fewer whole hearts instead of wrapping. */
 @media (max-width: 85rem) {
   .nav-tab {
     width: 10rem;
@@ -211,8 +211,19 @@ body {
     max-width: 100%;
     white-space: nowrap;
     overflow: hidden;
+    /* Fallback for older browsers: fade the hearts that don't fit */
     -webkit-mask-image: linear-gradient(to right, #000 80%, transparent);
     mask-image: linear-gradient(to right, #000 80%, transparent);
+  }
+
+  /* Show only whole hearts, no fade: each "⊹ ❤︎" pair is 2.1em wide,
+     plus the closing ⊹ */
+  @supports (width: round(down, 1rem, 0.25rem)) {
+    .tab-home-label {
+      max-width: calc(round(down, 100% - 0.75em, 2.1em) + 0.75em);
+      -webkit-mask-image: none;
+      mask-image: none;
+    }
   }
 }
 
@@ -308,14 +319,6 @@ body {
   }
   .tab-home-label {
     display: inline-block;
-  }
-
-  @supports (width: round(down, 1rem, 0.25rem)) {
-    .tab-home-label {
-      max-width: calc(round(down, 100% - 0.75em, 2.1em) + 0.75em);
-      -webkit-mask-image: none;
-      mask-image: none;
-    }
   }
 
   .tab-home-short {

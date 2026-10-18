@@ -72,7 +72,12 @@
 }
 
 .collage-arrow {
-  font-variant-emoji: text; /* iPhones show ⤴ as an emoji otherwise */
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background: currentColor;
+  -webkit-mask: url("../image/note-arrow.svg") center / contain no-repeat;
+  mask: url("../image/note-arrow.svg") center / contain no-repeat;
   position: absolute;
   z-index: 5;
   font-size: 2.5rem;
@@ -620,12 +625,6 @@
     padding: 2rem 1.5rem 3rem;
   }
 
-  /* Notes don't fit around the smaller phone collage */
-  .collage-note,
-  .collage-arrow {
-    display: none;
-  }
-
   .about-hero {
     padding-top: 2rem;
   }
@@ -767,5 +766,79 @@
   .quote-stars--tr .quote-star--3 {
     top: 0;
     right: 4.2rem;
+  }
+}
+
+/* ── Collage notes at smaller sizes ── */
+/* Laptop: the collage is smaller, so the notes sit closer */
+@media (max-width: 64rem) {
+  .collage-note {
+    font-size: 1.25rem;
+  }
+
+  .collage-arrow {
+    font-size: 2rem;
+  }
+
+  .collage-note--main {
+    left: 13rem;
+    top: 0.5rem;
+  }
+
+  .collage-arrow--main {
+    left: 11rem;
+    top: 1.25rem;
+  }
+
+  .collage-note--bottom {
+    left: -2.75rem;
+    bottom: 3.25rem;
+  }
+
+  .collage-arrow--bottom {
+    left: 1.75rem;
+    bottom: 1.75rem;
+  }
+}
+
+/* Tablet / phone: notes move into the collage's empty corners so they
+   never run off the screen */
+@media (max-width: 48rem) {
+  .collage-note {
+    font-size: 1.25rem;
+    white-space: normal;
+    text-align: right;
+  }
+
+  .collage-arrow {
+    font-size: 1.75rem;
+  }
+
+  /* "me wearing Ao Dai": above the side photo, pointing at the main one */
+  .collage-note--main {
+    left: auto;
+    right: 0;
+    top: 0.75rem;
+    max-width: 40%;
+  }
+
+  .collage-arrow--main {
+    left: 58%;
+    top: 2.5rem;
+  }
+
+  /* "Smileeee": beside the bottom photo, pointing at it */
+  .collage-note--bottom {
+    left: auto;
+    right: 0;
+    bottom: 4rem;
+    max-width: 26%;
+  }
+
+  .collage-arrow--bottom {
+    left: auto;
+    right: 24%;
+    bottom: 1.75rem;
+    transform: scaleX(-1) rotate(35deg);
   }
 }

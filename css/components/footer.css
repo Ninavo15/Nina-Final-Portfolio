@@ -339,7 +339,12 @@
 
 /* Doodles */
 .footer-chat-arrow {
-  font-variant-emoji: text; /* iPhones show ⤴ as an emoji otherwise */
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background: currentColor;
+  -webkit-mask: url("../../image/note-arrow.svg") center / contain no-repeat;
+  mask: url("../../image/note-arrow.svg") center / contain no-repeat;
   position: absolute;
   left: 3rem;
   top: 11.75rem;
@@ -392,10 +397,23 @@
     left: 2rem;
   }
 
-  .footer-chat-note,
-  .footer-chat-arrow,
   .footer-spark--sm {
     display: none;
+  }
+
+  /* Let the note sit outside the chat area, in the space under the icons */
+  .footer-chat-wrap {
+    overflow: visible clip;
+  }
+
+  .footer-chat-note {
+    left: -10rem;
+    top: 19rem;
+  }
+
+  .footer-chat-arrow {
+    left: -4.5rem;
+    top: 21rem;
   }
 
   .footer-spark--lg {
@@ -460,6 +478,18 @@
     left: auto;
     right: 0.25rem;
     top: 1.5rem;
+  }
+
+  .footer-chat-note {
+    left: -9rem;
+    top: 18rem;
+    font-size: 1.5rem;
+  }
+
+  .footer-chat-arrow {
+    left: -4rem;
+    top: 20rem;
+    font-size: 2.25rem;
   }
 }
 
