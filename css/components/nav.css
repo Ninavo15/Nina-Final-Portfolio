@@ -5,7 +5,10 @@ html {
 
 body {
   min-height: 100dvh;
-  background: #ca91b4;
+  /* Plum like the footer: iPhone Safari tints the area behind its
+     bottom toolbar with the body colour. The pink behind the tabs
+     comes from .site-nav, so it doesn't need the body. */
+  background: #642052;
   overflow-x: hidden;
   font-family: var(--font);
   display: flex;
