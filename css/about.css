@@ -301,10 +301,11 @@
 
 /* ── Experience ── */
 .about-experience {
-  padding: 0 2rem 5rem;
+  padding: 4.5rem 2rem;
+  border-top: 0.0625rem solid #e6dae0;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 2.75rem;
   width: 100%;
 }
 
@@ -436,17 +437,11 @@
 
 /* ── My Life: masonry wall of photos ── */
 .about-life {
-  padding: 0 2rem 5rem;
+  padding: 4.5rem 2rem 5rem;
+  border-top: 0.0625rem solid #e6dae0;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-}
-
-.life-head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
+  gap: 2.75rem;
 }
 
 .life-note {
