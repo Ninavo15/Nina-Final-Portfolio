@@ -148,6 +148,130 @@
             </aside>
           </div>
 
+          <!-- User flow -->
+          <div class="project-typespec" id="user-flow">
+            <p class="section-label">User Flow</p>
+            <p class="spec-intro">
+              Everyone lands on Home after logging in. From there, each tab in
+              the navigation is its own path, and every path can end on a
+              recipe.
+            </p>
+            <div class="ym-flow">
+              <div class="ym-flow-entry">
+                <span class="ym-node ym-node--end">Open YumMeal</span>
+                <span class="ym-arrow" aria-hidden="true">→</span>
+                <span class="ym-node">Log in / Sign up</span>
+                <span class="ym-arrow" aria-hidden="true">→</span>
+                <span class="ym-node ym-node--main">Home</span>
+                <span class="ym-note">"Welcome back" and your favourites</span>
+              </div>
+
+              <ol class="ym-lanes" aria-label="Paths from the navigation">
+                <li class="ym-lane">
+                  <span class="ym-node ym-node--tab">Find Recipes</span>
+                  <span class="ym-arrow" aria-hidden="true">→</span>
+                  <span class="ym-node">Add ingredients</span>
+                  <span class="ym-arrow" aria-hidden="true">→</span>
+                  <span class="ym-node">Search</span>
+                  <span class="ym-arrow" aria-hidden="true">→</span>
+                  <span class="ym-node">Refine results</span>
+                  <span class="ym-arrow" aria-hidden="true">→</span>
+                  <span class="ym-node ym-node--end">Recipe</span>
+                  <span class="ym-note">Cook time, cuisine, dietary, dish type</span>
+                </li>
+                <li class="ym-lane">
+                  <span class="ym-node ym-node--tab">Favourite Recipes</span>
+                  <span class="ym-arrow" aria-hidden="true">→</span>
+                  <span class="ym-node">Filter by type</span>
+                  <span class="ym-arrow" aria-hidden="true">→</span>
+                  <span class="ym-node ym-node--end">Recipe</span>
+                  <span class="ym-note">Saved with the ♥ on any recipe card</span>
+                </li>
+                <li class="ym-lane">
+                  <span class="ym-node ym-node--tab">Add Your Recipes</span>
+                  <span class="ym-arrow" aria-hidden="true">→</span>
+                  <span class="ym-node">Fill in the recipe</span>
+                  <span class="ym-arrow" aria-hidden="true">→</span>
+                  <span class="ym-node ym-node--end">Shared with the community</span>
+                </li>
+                <li class="ym-lane">
+                  <span class="ym-node ym-node--tab">Your Meal Plan</span>
+                  <span class="ym-arrow" aria-hidden="true">→</span>
+                  <span class="ym-node">Empty week</span>
+                  <span class="ym-arrow" aria-hidden="true">→</span>
+                  <span class="ym-node">Add meals</span>
+                  <span class="ym-arrow" aria-hidden="true">→</span>
+                  <span class="ym-node ym-node--end">Weekly schedule</span>
+                </li>
+                <li class="ym-lane">
+                  <span class="ym-node ym-node--tab">My Profile</span>
+                  <span class="ym-arrow" aria-hidden="true">→</span>
+                  <span class="ym-node ym-node--end">Account and recipe activity</span>
+                </li>
+                <li class="ym-lane ym-lane--admin">
+                  <span class="ym-node ym-node--tab">Admin</span>
+                  <span class="ym-arrow" aria-hidden="true">→</span>
+                  <span class="ym-node">Manage users</span>
+                  <span class="ym-node">Team recipes</span>
+                  <span class="ym-node">Moderate content</span>
+                  <span class="ym-note">Admins only, behind a protected route</span>
+                </li>
+              </ol>
+            </div>
+            <p class="ym-flow-caption">
+              User flow: from logging in to every page in the navigation.
+              Filled boxes are tabs, rounded ends are where a path finishes.
+            </p>
+          </div>
+
+          <!-- Early version -->
+          <div class="project-typespec" id="early-version">
+            <p class="section-label">Early Version</p>
+            <p class="spec-intro">
+              The biggest change was the nav bar. The first version had only
+              four tabs, so search, favourites and the meal plan were all
+              packed onto Home. The final nav gives each job its own tab and
+              page.
+            </p>
+            <div class="ym-early">
+              <figure class="project-figure ym-early-shot">
+                <img
+                  src="../../image/yummeal/homepage.png"
+                  alt="First version of the YumMeal home page: a food photo hero, an ingredient list banner, recipe search with cuisine and type filters, recommended recipe cards and a meal plan promo"
+                  loading="lazy"
+                />
+                <figcaption>Version 1: one long Home page.</figcaption>
+              </figure>
+              <div class="ym-changes">
+                <p class="ym-changes-title">What changed in the final design</p>
+                <div class="ym-box">
+                  <span class="ym-box-title">A nav tab for every job</span>
+                  <p>
+                    Home, Recipes, Schedule and Profile became Home, Find
+                    Recipes, Favourite Recipes, Add Your Recipes and Your Meal
+                    Plan. Each feature now has its own page, and each tab says
+                    what you can do there.
+                  </p>
+                </div>
+                <div class="ym-box">
+                  <span class="ym-box-title">Chip rows became a sidebar</span>
+                  <p>
+                    Cuisine and type chips sat above every search. The final
+                    "Refine results" panel adds cook time and dietary filters,
+                    and fills in after you search.
+                  </p>
+                </div>
+                <div class="ym-box">
+                  <span class="ym-box-title">The meal plan got its own tab</span>
+                  <p>
+                    It started as a "Member Exclusive" banner at the bottom of
+                    Home. Now it is one click away in the navigation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <!-- Tech Stack -->
           <div class="project-techstack" id="tech-stack">
             <p class="section-label">Tech Stack</p>
@@ -586,6 +710,10 @@
               </a>
               <a href="luminous-etching.html" class="more-project-link">
                 <span class="more-project-name">Luminous Etching</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="research-space.html" class="more-project-link">
+                <span class="more-project-name">SFU Research Space Website</span>
                 <i class="ri-arrow-right-line more-project-arrow"></i>
               </a>
               <a href="dormmate.html" class="more-project-link">

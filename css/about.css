@@ -308,12 +308,130 @@
   width: 100%;
 }
 
-.experience-text {
+/* Timeline: dates on the left, a line with a dot per entry */
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: 8.5rem minmax(0, 1fr);
+}
+
+.experience-date {
+  padding: 0.3rem 1.25rem 2.5rem 0;
+  text-align: right;
   font-family: var(--font-body);
-  font-size: var(--text-lead);
-  line-height: 1.8;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: #8a5a7c;
+}
+
+.experience-body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 0 2.5rem 1.75rem;
+  border-left: 0.125rem solid #e0c5d3;
+}
+
+/* Filled plum dot for the current role, hollow pink for past ones */
+.experience-body::before {
+  content: "";
+  position: absolute;
+  top: 0.4rem;
+  left: -0.5625rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: #642052;
+  box-shadow: 0 0 0 0.25rem #f6f1ed;
+}
+
+.experience-item--past .experience-body::before {
+  background: #f6f1ed;
+  border: 0.125rem solid #ca91b4;
+}
+
+.experience-item:last-child .experience-date,
+.experience-item:last-child .experience-body {
+  padding-bottom: 0;
+}
+
+.experience-role {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
   color: #3f3a3d;
   margin: 0;
+}
+
+.experience-org {
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  line-height: 1.5;
+  color: #6b6468;
+  margin: 0;
+}
+
+.experience-list {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: 1.7;
+  color: #3f3a3d;
+  margin: 0.25rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.experience-link {
+  align-self: flex-start;
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: 600;
+  color: #642052;
+  text-decoration: none;
+}
+
+.experience-link:hover {
+  text-decoration: underline;
+}
+
+.experience-text {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: 1.7;
+  color: #3f3a3d;
+  margin: 0;
+}
+
+/* Phones: date sits above each entry, on the same line */
+@media (max-width: 40rem) {
+  .experience-item {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .experience-date {
+    padding: 0 0 0.5rem 1.75rem;
+    text-align: left;
+    border-left: 0.125rem solid #e0c5d3;
+  }
+
+  .experience-date br {
+    display: none;
+  }
+
+  .experience-body::before {
+    top: -1.6rem;
+  }
+
+  .experience-item:last-child .experience-date {
+    padding-bottom: 0.5rem;
+  }
 }
 
 /* ── My Life: masonry wall of photos ── */

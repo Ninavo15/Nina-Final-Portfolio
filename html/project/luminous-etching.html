@@ -217,6 +217,74 @@
             </div>
           </div>
 
+          <!-- Accessibility testing -->
+          <div class="project-features" id="accessibility">
+            <p class="section-label">Accessibility Testing</p>
+            <p class="spec-intro">
+              A shop only works if everyone can use it. I built accessibility
+              in from the start, then checked every page against the WCAG
+              guidelines with the WCAG tester our course provided for
+              developers.
+            </p>
+            <div class="features-grid">
+              <div class="feature-card">
+                <h4>1. Build it in</h4>
+                <p>
+                  Product cards, quantity steppers and remove icons were
+                  written as keyboard-friendly buttons with clear labels from
+                  the first version, not added at the end.
+                </p>
+              </div>
+              <div class="feature-card">
+                <h4>2. Test every page</h4>
+                <p>
+                  I ran Home, Shop, Product, Cart, Checkout, About and Contact
+                  through the WCAG tester to catch anything that broke the
+                  rules.
+                </p>
+              </div>
+              <div class="feature-card">
+                <h4>3. Fix and re-test</h4>
+                <p>
+                  Anything the tester flagged was fixed and the page was run
+                  again, until every page passed.
+                </p>
+              </div>
+            </div>
+            <p class="spec-intro">What I checked on each page:</p>
+            <div class="features-grid">
+              <div class="feature-card">
+                <h4>Colour contrast</h4>
+                <p>
+                  Text stays readable on the bold reds. Gold
+                  <code>#EEDDA5</code> on primary red <code>#BB0D17</code> is
+                  4.88:1, above the 4.5:1 that WCAG AA asks for.
+                </p>
+              </div>
+              <div class="feature-card">
+                <h4>Keyboard only</h4>
+                <p>
+                  Every card, button and icon can be reached with Tab and
+                  used with Enter or Space, with a visible focus state.
+                </p>
+              </div>
+              <div class="feature-card">
+                <h4>Screen readers</h4>
+                <p>
+                  Images have alt text, icons have labels, and the cart count
+                  and add-to-cart actions are read out loud.
+                </p>
+              </div>
+              <div class="feature-card">
+                <h4>Structure</h4>
+                <p>
+                  Headings go in order and form fields on Checkout and Contact
+                  have labels, so the pages make sense without seeing them.
+                </p>
+              </div>
+            </div>
+          </div>
+
           <!-- Code -->
           <div class="project-code" id="code">
             <p class="section-label">Code</p>
@@ -700,6 +768,10 @@
               </a>
               <a href="reciperemix.html" class="more-project-link">
                 <span class="more-project-name">RecipeRemix</span>
+                <i class="ri-arrow-right-line more-project-arrow"></i>
+              </a>
+              <a href="research-space.html" class="more-project-link">
+                <span class="more-project-name">SFU Research Space Website</span>
                 <i class="ri-arrow-right-line more-project-arrow"></i>
               </a>
               <a href="dormmate.html" class="more-project-link">

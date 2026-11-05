@@ -289,7 +289,7 @@
   font-family: var(--font-display);
   font-size: var(--text-h1);
   font-weight: 700;
-  color: #1a1a1a;
+  color: #642052;
   margin: 0 0 0.5rem;
   line-height: 1.1;
 }
@@ -1229,6 +1229,7 @@
 .project-content .project-soon,
 .project-content .dm-overview-card,
 .project-content .dm-box,
+.project-content .ym-box,
 .project-content .project-figure,
 .project-content .project-video {
   background: var(--box-bg);
@@ -1419,6 +1420,11 @@
 
 .project-figure--narrow {
   max-width: 40rem;
+}
+
+/* Space below figures stacked inside a spec section */
+.project-typespec > .project-figure {
+  margin-bottom: 1.25rem;
 }
 
 /* ── Embedded video (16:9) in a card ── */
