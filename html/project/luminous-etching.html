@@ -81,6 +81,13 @@
                 <div class="meta-tools">
                   <span class="tool-chip">
                     <img
+                      src="../../image/software-logos/figma.png"
+                      alt=""
+                    />
+                    Figma
+                  </span>
+                  <span class="tool-chip">
+                    <img
                       src="../../image/software-logos/vscode.jpeg"
                       alt=""
                     />
@@ -108,6 +115,87 @@
                 </div>
               </div>
             </aside>
+          </div>
+
+          <!-- User flow -->
+          <div class="project-typespec" id="user-flow">
+            <p class="section-label">User Flow</p>
+            <p class="spec-intro">
+              Shoppers land on Home. Each tab in the navigation is its own
+              path, and the cart icon is always there to take them to
+              checkout.
+            </p>
+            <div class="le-flow">
+              <div class="le-flow-entry">
+                <span class="le-node le-node--end">Open Luminous Etching</span>
+                <span class="le-arrow" aria-hidden="true">→</span>
+                <span class="le-node le-node--main">Home</span>
+                <span class="le-note">Three featured taillights link straight to their product pages</span>
+              </div>
+
+              <ol class="le-lanes" aria-label="Paths from the navigation">
+                <li class="le-lane">
+                  <span class="le-node le-node--tab">About</span>
+                  <span class="le-arrow" aria-hidden="true">→</span>
+                  <span class="le-node le-node--end">The shop's story</span>
+                  <span class="le-note">Links on to Custom</span>
+                </li>
+                <li class="le-lane">
+                  <span class="le-node le-node--tab">Shop</span>
+                  <span class="le-arrow" aria-hidden="true">→</span>
+                  <span class="le-node">Browse six taillights</span>
+                  <span class="le-arrow" aria-hidden="true">→</span>
+                  <span class="le-node">Product page</span>
+                  <span class="le-arrow" aria-hidden="true">→</span>
+                  <span class="le-node le-node--end">Add to cart</span>
+                  <span class="le-note">Add To Cart on any Home or Shop card skips the product page</span>
+                </li>
+                <li class="le-lane">
+                  <span class="le-node le-node--tab">Custom</span>
+                  <span class="le-arrow" aria-hidden="true">→</span>
+                  <span class="le-node">Describe your idea</span>
+                  <span class="le-arrow" aria-hidden="true">→</span>
+                  <span class="le-node">Request sent</span>
+                  <span class="le-arrow" aria-hidden="true">→</span>
+                  <span class="le-node le-node--end">Back to Home</span>
+                  <span class="le-note">The shop follows up by email or Instagram</span>
+                </li>
+                <li class="le-lane le-lane--cart">
+                  <span class="le-node le-node--tab">Cart icon</span>
+                  <span class="le-arrow" aria-hidden="true">→</span>
+                  <span class="le-node">Review and change quantities</span>
+                  <span class="le-arrow" aria-hidden="true">→</span>
+                  <span class="le-node">Checkout</span>
+                  <span class="le-arrow" aria-hidden="true">→</span>
+                  <span class="le-node">Order confirmed</span>
+                  <span class="le-arrow" aria-hidden="true">→</span>
+                  <span class="le-node le-node--end">Continue shopping</span>
+                  <span class="le-note">An empty cart links back to Home or Shop</span>
+                </li>
+              </ol>
+
+              <ul class="le-legend" aria-label="Legend">
+                <li>
+                  <span class="le-key le-key--tab" aria-hidden="true"></span>
+                  Nav tab
+                </li>
+                <li>
+                  <span class="le-key le-key--cart" aria-hidden="true"></span>
+                  Cart icon
+                </li>
+                <li>
+                  <span class="le-key" aria-hidden="true"></span>
+                  Step
+                </li>
+                <li>
+                  <span class="le-key le-key--end" aria-hidden="true"></span>
+                  End of a path
+                </li>
+              </ul>
+            </div>
+            <p class="le-flow-caption">
+              User flow: from landing on Home to every page in the navigation.
+            </p>
           </div>
 
           <!-- Tech Stack -->
