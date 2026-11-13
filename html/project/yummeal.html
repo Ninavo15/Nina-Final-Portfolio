@@ -36,7 +36,7 @@
           <!-- Header -->
           <div class="project-header">
             <div class="project-tags-row">
-              <span class="project-type-tag">UI Design</span>
+              <span class="project-type-tag">Full Stack</span>
               <span class="project-type-tag">Website</span>
             </div>
             <h1 class="project-title">YumMeal Website</h1>
@@ -222,6 +222,37 @@
               User flow: from logging in to every page in the navigation.
               Filled boxes are tabs, rounded ends are where a path finishes.
             </p>
+          </div>
+
+          <!-- Routes -->
+          <div class="project-typespec" id="routes">
+            <p class="section-label">Routes</p>
+            <p class="spec-intro">
+              Every route in <code>App.js</code>, who can open it, and how it
+              is reached from the navbar. Member and admin pages sit behind
+              <code>ProtectedRoute</code> and <code>AdminProtectedRoute</code>.
+            </p>
+            <div class="ym-tablewrap">
+              <table class="ym-routes">
+                <thead>
+                  <tr><th>Path</th><th>Page</th><th>Access</th><th>Navbar label</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><code>/</code></td><td>Redirect</td><td class="ym-who ym-who--guest">Public</td><td>&rarr; <code>/home</code></td></tr>
+                  <tr><td><code>/home</code></td><td>Home</td><td class="ym-who ym-who--guest">Public</td><td>Home</td></tr>
+                  <tr><td><code>/find-recipes</code></td><td>FindRecipes</td><td class="ym-who ym-who--guest">Public</td><td>Find Recipes</td></tr>
+                  <tr><td><code>/recipe/:id</code></td><td>RecipeDetail</td><td class="ym-who ym-who--guest">Public</td><td>&ndash;</td></tr>
+                  <tr><td><code>/my-recipe/:id</code></td><td>MyRecipeDetails</td><td class="ym-who ym-who--guest">Public</td><td>&ndash;</td></tr>
+                  <tr><td><code>/team-recipe/:id</code></td><td>TeamRecipeDetails</td><td class="ym-who ym-who--guest">Public</td><td>&ndash;</td></tr>
+                  <tr><td><code>/login</code>, <code>/signup</code></td><td>Login, Signup</td><td class="ym-who ym-who--guest">Public</td><td>Header buttons</td></tr>
+                  <tr><td><code>/pantry</code></td><td>Pantry</td><td class="ym-who ym-who--member">Member</td><td>Favourite Recipes</td></tr>
+                  <tr><td><code>/saved-recipes</code></td><td>SavedRecipes</td><td class="ym-who ym-who--member">Member</td><td>Add Your Recipes</td></tr>
+                  <tr><td><code>/meal-plan</code></td><td>MealPlan</td><td class="ym-who ym-who--member">Member</td><td>Your Meal Plan</td></tr>
+                  <tr><td><code>/profile</code></td><td>UserProfile</td><td class="ym-who ym-who--member">Member</td><td>My Profile button</td></tr>
+                  <tr><td><code>/admin</code></td><td>MainAdmin</td><td class="ym-who ym-who--admin">Admin</td><td>Reached after admin login</td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
           <!-- Early version -->

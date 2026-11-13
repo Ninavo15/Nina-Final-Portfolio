@@ -238,6 +238,69 @@
   color: #6b6468;
 }
 
+/* ── Routes: every App.js route and who can open it ── */
+.ym-tablewrap {
+  overflow-x: auto;
+  border-radius: 1.25rem;
+  background: #ffffff;
+  padding: 0.5rem 1rem;
+}
+
+.ym-routes {
+  width: 100%;
+  min-width: 36rem;
+  border-collapse: collapse;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: #1a1a1a;
+}
+
+.ym-routes th,
+.ym-routes td {
+  padding: 0.6rem 0.875rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 0.0625rem solid #e8e2e0;
+}
+
+.ym-routes th {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6b6468;
+}
+
+.ym-routes tr:last-child td {
+  border-bottom: 0;
+}
+
+.ym-routes code {
+  background: #f4f0ee;
+  border-radius: 0.25rem;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.85em;
+  color: #570000;
+  white-space: nowrap;
+}
+
+.ym-who {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.ym-who--guest {
+  color: #c27400;
+}
+
+.ym-who--member {
+  color: #d2566a;
+}
+
+.ym-who--admin {
+  color: #570000;
+}
+
 /* ── Early version: old screenshot beside what changed ── */
 .ym-early {
   display: grid;
